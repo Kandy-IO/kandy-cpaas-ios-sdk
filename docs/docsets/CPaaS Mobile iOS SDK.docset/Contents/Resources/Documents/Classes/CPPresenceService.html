@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CPPresenceService Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/CPPresenceService" class="dashAnchor"></a>
+    <a title="CPPresenceService Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">CPaaS Mobile iOS SDK Docs</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">CPaaS Mobile iOS SDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        CPPresenceService Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CPAudioCodec.html">CPAudioCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAudioCodecConfiguration.html">CPAudioCodecConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAudioSessionConfiguration.html">CPAudioSessionConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPCallService.html">CPCallService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPCallState.html">CPCallState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPCallStatistic.html">CPCallStatistic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)CPCodec">CPCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPCodecSet.html">CPCodecSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPConfig.html">CPConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPError.html">CPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPICEServer.html">CPICEServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPICEServers.html">CPICEServers</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPMediaAttributes.html">CPMediaAttributes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPUriAddress.html">CPUriAddress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPValue.html">CPValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPVideoCodec.html">CPVideoCodec</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@CPCallServiceVersionNumber">CPCallServiceVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@CPCallServiceVersionString">CPCallServiceVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CPAudioCodecTypes.html">CPAudioCodecTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPCallStates.html">CPCallStates</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPCameraOrientationMode.html">CPCameraOrientationMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPErrorType.html">CPErrorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPICEOptions.html">CPICEOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPLogLevel.html">CPLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPVideoCodecTypes.html">CPVideoCodecTypes</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/CPCallApplicationDelegate.html">CPCallApplicationDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPCallDelegate.html">CPCallDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPIncomingCallDelegate.html">CPIncomingCallDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPLoggingDelegate.html">CPLoggingDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPOutgoingCallDelegate.html">CPOutgoingCallDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPCodecSet.h@T@CPAudioCodecTypes">CPAudioCodecTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPCallStates.h@T@CPCallStates">CPCallStates</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPCameraOrientationModes.h@T@CPCameraOrientationMode">CPCameraOrientationMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPErrorType.h@T@CPErrorType">CPErrorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPICEOptions.h@T@CPICEOptions">CPICEOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPLogType.h@T@CPLogLevel">CPLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPCodecSet.h@T@CPVideoCodecTypes">CPVideoCodecTypes</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CPActivityHandle.html">CPActivityHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAddressBook.html">CPAddressBook</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAddressBook/FieldType.html">– FieldType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAddressBook/OrderType.html">– OrderType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAddressBookList.html">CPAddressBookList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAddressBookService.html">CPAddressBookService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAuthenticationService.html">CPAuthenticationService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatConversation.html">CPChatConversation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatGroup.html">CPChatGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatGroupConversation.html">CPChatGroupConversation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatGroupInvitation.html">CPChatGroupInvitation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatGroupParticipant.html">CPChatGroupParticipant</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatService.html">CPChatService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPContact.html">CPContact</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPConversation.html">CPConversation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPFilePart.html">CPFilePart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPInboundMessage.html">CPInboundMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPIsComposingMessage.html">CPIsComposingMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPMessage.html">CPMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:@M@CPMessagingService@objc(cs)CPMessagePart">CPMessagePart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPMessageStatus.html">CPMessageStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPOutboundMessage.html">CPOutboundMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPresenceService.html">CPPresenceService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPresenceSource.html">CPPresenceSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPresentity.html">CPPresentity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPresentityList.html">CPPresentityList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPresentityListHandle.html">CPPresentityListHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPushService.html">CPPushService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPSearch.html">CPSearch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPSearchFilter.html">CPSearchFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPSearchResult.html">CPSearchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPSmsService.html">CPSmsService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPTextPart.html">CPTextPart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPThumbnailPart.html">CPThumbnailPart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPaaS.html">CPaaS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FetchCriteria.html">FetchCriteria</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FetchOptions.html">FetchOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FetchResult.html">FetchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:@M@CPMessagingService@objc(cs)FetchedObjects">FetchedObjects</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MessageService.html">MessageService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PresenceActivity.html">PresenceActivity</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CPChatParticipantStatus.html">CPChatParticipantStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPConnectionState.html">CPConnectionState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPPresenceActivities.html">CPPresenceActivities</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPUriFormat.html">CPUriFormat</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/CPAuthenticationDelegate.html">CPAuthenticationDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPChatDelegate.html">CPChatDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPPresenceDelegate.html">CPPresenceDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPSmsDelegate.html">CPSmsDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService24ComposingCompletionBlocka">ComposingCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService20CreateChatGroupBlocka">CreateChatGroupBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService35CreatePresenceSourceCompletionBlocka">CreatePresenceSourceCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService35CreatePresentityListCompletionBlocka">CreatePresentityListCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService23DownloadCompletionBlocka">DownloadCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService23FetchAllChatGroupsBlocka">FetchAllChatGroupsBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService10FetchBlocka">FetchBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService19FetchChatGroupBlocka">FetchChatGroupBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService17FetchMessageBlocka">FetchMessageBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService18FetchMessagesBlocka">FetchMessagesBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService34FetchPresenceSourceCompletionBlocka">FetchPresenceSourceCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService38FetchPresenceSourceListCompletionBlocka">FetchPresenceSourceListCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService34FetchPresentityListCompletionBlocka">FetchPresentityListCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService35FetchPresentityListsCompletionBlocka">FetchPresentityListsCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService19SendCompletionBlocka">SendCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService21UploadCompletionBlocka">UploadCompletionBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>CPPresenceService</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">CPPresenceService</span> <span class="p">:</span> <span class="kt">CPRestClientBase</span><span class="p">,</span> <span class="kt">CPServiceProtocol</span></code></pre>
+
+                </div>
+              </div>
+            <p>This class is used to manage presence services such as presence source publishing and presentity watching.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPPresenceService@objc(cs)CPPresenceService(py)delegate"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPPresenceService@objc(cs)CPPresenceService(py)delegate">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An application that needs notifications should implement a PresenceDelegate compliant class and set this member as an instance of that class.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/CPPresenceDelegate.html">CPPresenceDelegate</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPPresenceService@objc(cs)CPPresenceService(py)subscriptionDuration"></a>
+                    <a name="//apple_ref/swift/Property/subscriptionDuration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPPresenceService@objc(cs)CPPresenceService(py)subscriptionDuration">subscriptionDuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A subscription to watch a PresentityList will expire. Use this member variable to specify a custom duration in seconds. The default value is 86400 seconds, one day.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">subscriptionDuration</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17CPPresenceServiceAAC8userInfo4infoABSo06CPUserD0C_11CPUtilities09CPServiceD0Ctcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(userInfo:info:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17CPPresenceServiceAAC8userInfo4infoABSo06CPUserD0C_11CPUtilities09CPServiceD0Ctcfc">init(userInfo:info:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes presence service instance with given configuration.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">userInfo</span><span class="p">:</span> <span class="kt">CPUserInfo</span><span class="p">,</span> <span class="nv">info</span><span class="p">:</span> <span class="kt">CPServiceInfo</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>userInfo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>User Information.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>tag</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Name identifying the service. Used in logging.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>serviceApi</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Service API name used in building service URL.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/ServiceProtocol%20methods"></a>
+                <a name="//apple_ref/swift/Section/ServiceProtocol methods" class="dashAnchor"></a>
+                <a href="#/ServiceProtocol%20methods">
+                  <h3 class="section-name">ServiceProtocol methods</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)serviceInfo"></a>
+                    <a name="//apple_ref/swift/Method/serviceInfo()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)serviceInfo">serviceInfo()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Delegate method to get a service&rsquo;s information</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">serviceInfo</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">CPServiceInfo</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>service information object with service type and preferences.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)notifications"></a>
+                    <a name="//apple_ref/swift/Method/notifications()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)notifications">notifications()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Delegate method to get a list of notfications the service expects</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">notifications</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>list of notification names. These should match what is returned by subscribe() in completion callback.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)subscribeWithChannelID:completion:"></a>
+                    <a name="//apple_ref/swift/Method/subscribe(channelID:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)subscribeWithChannelID:completion:">subscribe(channelID:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Delegate method to subscribe for notifications from a remote channel</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">subscribe</span><span class="p">(</span><span class="nv">channelID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">SubscribeCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channelID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The channel on which to subscribe for notifications.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Code block to execute upon subscription completion.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)unsubscribeWithChannelID:completion:"></a>
+                    <a name="//apple_ref/swift/Method/unsubscribe(channelID:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)unsubscribeWithChannelID:completion:">unsubscribe(channelID:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Delegate method to unsubscribe for notifications</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unsubscribe</span><span class="p">(</span><span class="nv">channelID</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">UnsubscribeCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channelID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The channel from which to unsubscribe for notifications.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Code block to execute upon subscription completion.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)refreshSubscriptionsWithExpiringInSeconds:completion:"></a>
+                    <a name="//apple_ref/swift/Method/refreshSubscriptions(expiringInSeconds:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)refreshSubscriptionsWithExpiringInSeconds:completion:">refreshSubscriptions(expiringInSeconds:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Utility method for refreshing all PresentityList subscriptions that are near expiration.
+Typically an application will want to refresh a subscription before it expires. If a
+subscription will expire before the next period in which an application will attempt the
+refresh action, use the interval of the period as the expiringInSeconds value. Alternately,
+an application could periodically refresh any subscriptions that will expire within the
+next day, in this case use expiringInSeconds value of (24 * 60 * 60.0)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">refreshSubscriptions</span><span class="p">(</span><span class="nv">expiringInSeconds</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ErrorCompletionBlock</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>expiringInSeconds</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Number of seconds within which the subscription will expire.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Code block to execute upon subscription refresh completion. The
+                    completion block will be called for any subscription that is
+                    refreshed. This means that it is possible that the completion block
+                    will not be called in the case that no subscription is refereshed</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Presence%20source%20publishing"></a>
+                <a name="//apple_ref/swift/Section/Presence source publishing" class="dashAnchor"></a>
+                <a href="#/Presence%20source%20publishing">
+                  <h3 class="section-name">Presence source publishing</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)createPresenceSourceWithActivity:completion:"></a>
+                    <a name="//apple_ref/swift/Method/createPresenceSource(activity:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)createPresenceSourceWithActivity:completion:">createPresenceSource(activity:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a presence source on the server.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">createPresenceSource</span><span class="p">(</span><span class="nv">activity</span><span class="p">:</span> <span class="kt"><a href="../Classes/PresenceActivity.html">PresenceActivity</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:17CPPresenceService35CreatePresenceSourceCompletionBlocka">CreatePresenceSourceCompletionBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>activity</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Presence activity object representing the activity of the presentity</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Code block to call after the create operation completes.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)updatePresenceSourceWithSource:activity:completion:"></a>
+                    <a name="//apple_ref/swift/Method/updatePresenceSource(source:activity:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)updatePresenceSourceWithSource:activity:completion:">updatePresenceSource(source:activity:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Update a presence source on the server.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">updatePresenceSource</span><span class="p">(</span><span class="nv">source</span><span class="p">:</span><span class="kt"><a href="../Classes/CPPresenceSource.html">CPPresenceSource</a></span><span class="p">,</span> <span class="nv">activity</span><span class="p">:</span><span class="kt"><a href="../Classes/PresenceActivity.html">PresenceActivity</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:17CPPresenceService35CreatePresenceSourceCompletionBlocka">CreatePresenceSourceCompletionBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>source</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Current presence source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>activity</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Presence activity object representing the activity of the presentity</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Code block to call after the update operation completes.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)fetchPresenceSourceWithCompletion:"></a>
+                    <a name="//apple_ref/swift/Method/fetchPresenceSource(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)fetchPresenceSourceWithCompletion:">fetchPresenceSource(completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch presence source associated with the local client</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchPresenceSource</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:17CPPresenceService34FetchPresenceSourceCompletionBlocka">FetchPresenceSourceCompletionBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Code block to execute upon fetch compeletion.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)fetchPresenceSourceWithSource:completion:"></a>
+                    <a name="//apple_ref/swift/Method/fetchPresenceSource(source:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)fetchPresenceSourceWithSource:completion:">fetchPresenceSource(source:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch presence source matching the passed in source</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchPresenceSource</span><span class="p">(</span><span class="nv">source</span><span class="p">:</span><span class="kt"><a href="../Classes/CPPresenceSource.html">CPPresenceSource</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:17CPPresenceService34FetchPresenceSourceCompletionBlocka">FetchPresenceSourceCompletionBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>source</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Presence source to match against when fetching.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Code block to execute upon fetch compeletion.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)deletePresenceSourceWithSource:completion:"></a>
+                    <a name="//apple_ref/swift/Method/deletePresenceSource(source:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)deletePresenceSourceWithSource:completion:">deletePresenceSource(source:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Delete a presence source from the server.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">deletePresenceSource</span><span class="p">(</span><span class="nv">source</span><span class="p">:</span> <span class="kt"><a href="../Classes/CPPresenceSource.html">CPPresenceSource</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">DeleteCompletionBlock</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>source</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Presence source object representing the source to delete from the server.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Code block to execute upon delete completion.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Presentity%20watching"></a>
+                <a name="//apple_ref/swift/Section/Presentity watching" class="dashAnchor"></a>
+                <a href="#/Presentity%20watching">
+                  <h3 class="section-name">Presentity watching</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)createPresentityListWithName:presentities:completion:"></a>
+                    <a name="//apple_ref/swift/Method/createPresentityList(name:presentities:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)createPresentityListWithName:presentities:completion:">createPresentityList(name:presentities:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a presentity list on the server.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">createPresentityList</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">presentities</span><span class="p">:[</span><span class="kt">String</span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:17CPPresenceService35CreatePresentityListCompletionBlocka">CreatePresentityListCompletionBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Presentity list name.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>presentities</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Array of desired presentities to monitor.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Code block to call after the create operation completes.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)fetchAllPresentityListsWithCompletion:"></a>
+                    <a name="//apple_ref/swift/Method/fetchAllPresentityLists(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)fetchAllPresentityListsWithCompletion:">fetchAllPresentityLists(completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch an array of all PresentityLists.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchAllPresentityLists</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:17CPPresenceService35FetchPresentityListsCompletionBlocka">FetchPresentityListsCompletionBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>compeletion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Code block to execute upon fetch compeletion.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)fetchPresentityListWithPresentityList:completion:"></a>
+                    <a name="//apple_ref/swift/Method/fetchPresentityList(presentityList:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)fetchPresentityListWithPresentityList:completion:">fetchPresentityList(presentityList:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch PresentityList from backend that matches the passed in PresentityList.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchPresentityList</span><span class="p">(</span><span class="nv">presentityList</span><span class="p">:</span><span class="kt"><a href="../Classes/CPPresentityList.html">CPPresentityList</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:17CPPresenceService34FetchPresentityListCompletionBlocka">FetchPresentityListCompletionBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>presentityList</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>PresentityList to match against when fetching.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>compeletion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Code block to execute upon fetch compeletion.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)deletePresentityListWithPresentityList:completion:"></a>
+                    <a name="//apple_ref/swift/Method/deletePresentityList(presentityList:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPPresenceService@objc(cs)CPPresenceService(im)deletePresentityListWithPresentityList:completion:">deletePresentityList(presentityList:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Delete PresentityList from backend that matches the passed in PresentityList.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">deletePresentityList</span><span class="p">(</span><span class="nv">presentityList</span><span class="p">:</span><span class="kt"><a href="../Classes/CPPresentityList.html">CPPresentityList</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">DeleteCompletionBlock</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>presentityList</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>PresentityList to match against when deleting.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>compeletion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Code block to execute upon delete compeletion.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2019-05-02)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

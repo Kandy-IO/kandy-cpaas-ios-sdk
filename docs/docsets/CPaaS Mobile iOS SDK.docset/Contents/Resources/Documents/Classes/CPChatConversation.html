@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CPChatConversation Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/CPChatConversation" class="dashAnchor"></a>
+    <a title="CPChatConversation Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">CPaaS Mobile iOS SDK Docs</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">CPaaS Mobile iOS SDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        CPChatConversation Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CPAudioCodec.html">CPAudioCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAudioCodecConfiguration.html">CPAudioCodecConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAudioSessionConfiguration.html">CPAudioSessionConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPCallService.html">CPCallService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPCallState.html">CPCallState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPCallStatistic.html">CPCallStatistic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)CPCodec">CPCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPCodecSet.html">CPCodecSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPConfig.html">CPConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPError.html">CPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPICEServer.html">CPICEServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPICEServers.html">CPICEServers</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPMediaAttributes.html">CPMediaAttributes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPUriAddress.html">CPUriAddress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPValue.html">CPValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPVideoCodec.html">CPVideoCodec</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@CPCallServiceVersionNumber">CPCallServiceVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@CPCallServiceVersionString">CPCallServiceVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CPAudioCodecTypes.html">CPAudioCodecTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPCallStates.html">CPCallStates</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPCameraOrientationMode.html">CPCameraOrientationMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPErrorType.html">CPErrorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPICEOptions.html">CPICEOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPLogLevel.html">CPLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPVideoCodecTypes.html">CPVideoCodecTypes</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/CPCallApplicationDelegate.html">CPCallApplicationDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPCallDelegate.html">CPCallDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPIncomingCallDelegate.html">CPIncomingCallDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPLoggingDelegate.html">CPLoggingDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPOutgoingCallDelegate.html">CPOutgoingCallDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPCodecSet.h@T@CPAudioCodecTypes">CPAudioCodecTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPCallStates.h@T@CPCallStates">CPCallStates</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPCameraOrientationModes.h@T@CPCameraOrientationMode">CPCameraOrientationMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPErrorType.h@T@CPErrorType">CPErrorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPICEOptions.h@T@CPICEOptions">CPICEOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPLogType.h@T@CPLogLevel">CPLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPCodecSet.h@T@CPVideoCodecTypes">CPVideoCodecTypes</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CPActivityHandle.html">CPActivityHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAddressBook.html">CPAddressBook</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAddressBook/FieldType.html">– FieldType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAddressBook/OrderType.html">– OrderType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAddressBookList.html">CPAddressBookList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAddressBookService.html">CPAddressBookService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAuthenticationService.html">CPAuthenticationService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatConversation.html">CPChatConversation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatGroup.html">CPChatGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatGroupConversation.html">CPChatGroupConversation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatGroupInvitation.html">CPChatGroupInvitation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatGroupParticipant.html">CPChatGroupParticipant</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatService.html">CPChatService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPContact.html">CPContact</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPConversation.html">CPConversation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPFilePart.html">CPFilePart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPInboundMessage.html">CPInboundMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPIsComposingMessage.html">CPIsComposingMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPMessage.html">CPMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:@M@CPMessagingService@objc(cs)CPMessagePart">CPMessagePart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPMessageStatus.html">CPMessageStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPOutboundMessage.html">CPOutboundMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPresenceService.html">CPPresenceService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPresenceSource.html">CPPresenceSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPresentity.html">CPPresentity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPresentityList.html">CPPresentityList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPresentityListHandle.html">CPPresentityListHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPushService.html">CPPushService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPSearch.html">CPSearch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPSearchFilter.html">CPSearchFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPSearchResult.html">CPSearchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPSmsService.html">CPSmsService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPTextPart.html">CPTextPart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPThumbnailPart.html">CPThumbnailPart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPaaS.html">CPaaS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FetchCriteria.html">FetchCriteria</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FetchOptions.html">FetchOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FetchResult.html">FetchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:@M@CPMessagingService@objc(cs)FetchedObjects">FetchedObjects</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MessageService.html">MessageService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PresenceActivity.html">PresenceActivity</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CPChatParticipantStatus.html">CPChatParticipantStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPConnectionState.html">CPConnectionState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPPresenceActivities.html">CPPresenceActivities</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPUriFormat.html">CPUriFormat</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/CPAuthenticationDelegate.html">CPAuthenticationDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPChatDelegate.html">CPChatDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPPresenceDelegate.html">CPPresenceDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPSmsDelegate.html">CPSmsDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService24ComposingCompletionBlocka">ComposingCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService20CreateChatGroupBlocka">CreateChatGroupBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService35CreatePresenceSourceCompletionBlocka">CreatePresenceSourceCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService35CreatePresentityListCompletionBlocka">CreatePresentityListCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService23DownloadCompletionBlocka">DownloadCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService23FetchAllChatGroupsBlocka">FetchAllChatGroupsBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService10FetchBlocka">FetchBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService19FetchChatGroupBlocka">FetchChatGroupBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService17FetchMessageBlocka">FetchMessageBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService18FetchMessagesBlocka">FetchMessagesBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService34FetchPresenceSourceCompletionBlocka">FetchPresenceSourceCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService38FetchPresenceSourceListCompletionBlocka">FetchPresenceSourceListCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService34FetchPresentityListCompletionBlocka">FetchPresentityListCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService35FetchPresentityListsCompletionBlocka">FetchPresentityListsCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService19SendCompletionBlocka">SendCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService21UploadCompletionBlocka">UploadCompletionBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>CPChatConversation</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">CPChatConversation</span> <span class="p">:</span> <span class="kt"><a href="../Classes/CPConversation.html">CPConversation</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>This class is used to manage an exchange of chat messages between two parties. Create a ChatConversation using the ChatService createConversation(withParticipant:) method</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPMessagingService@objc(cs)CPChatConversation(py)url"></a>
+                    <a name="//apple_ref/swift/Property/url" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPMessagingService@objc(cs)CPChatConversation(py)url">url</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The url of the conversation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="k">override</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPMessagingService@objc(cs)CPChatConversation(py)messagesUrl"></a>
+                    <a name="//apple_ref/swift/Property/messagesUrl" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPMessagingService@objc(cs)CPChatConversation(py)messagesUrl">messagesUrl</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The url of the conversation messages</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">messagesUrl</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPMessagingService@objc(cs)CPChatConversation(im)sendWithFile:progress:completion:"></a>
+                    <a name="//apple_ref/swift/Method/send(withFile:progress:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPMessagingService@objc(cs)CPChatConversation(im)sendWithFile:progress:completion:">send(withFile:progress:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Public method to send a file attachment.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="nv">withFile</span><span class="p">:</span><span class="kt">URL</span><span class="p">,</span> <span class="nv">progress</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">UploadProgressBlock</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:18CPMessagingService19SendCompletionBlocka">SendCompletionBlock</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/CPActivityHandle.html">CPActivityHandle</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withFile</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>URL of file attachment.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Code block to execute upon send completion.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Opaque activity handle with a cancel method that can be used to cancel the upload operation.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPMessagingService@objc(cs)CPChatConversation(im)sendWithText:withFile:progress:completion:"></a>
+                    <a name="//apple_ref/swift/Method/send(text:withFile:progress:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPMessagingService@objc(cs)CPChatConversation(im)sendWithText:withFile:progress:completion:">send(text:withFile:progress:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Public method to send a text with a file attachment.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="nv">text</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="nv">withFile</span><span class="p">:</span><span class="kt">URL</span><span class="p">,</span> <span class="nv">progress</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">UploadProgressBlock</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:18CPMessagingService19SendCompletionBlocka">SendCompletionBlock</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/CPActivityHandle.html">CPActivityHandle</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>text</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text message to send.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withFile</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>URL of file attachment.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Code block to execute upon send completion.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Opaque activity handle with a cancel method that can be used to cancel the upload operation.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPMessagingService@objc(cs)CPChatConversation(im)composingWithActive:refresh:lastActive::"></a>
+                    <a name="//apple_ref/swift/Method/composing(active:refresh:lastActive:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPMessagingService@objc(cs)CPChatConversation(im)composingWithActive:refresh:lastActive::">composing(active:refresh:lastActive:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicate to a participant that a message is being composed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">composing</span><span class="p">(</span><span class="nv">active</span><span class="p">:</span><span class="kt">Bool</span><span class="p">,</span> <span class="nv">refresh</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="nv">lastActive</span><span class="p">:</span> <span class="kt">UInt64</span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:18CPMessagingService24ComposingCompletionBlocka">ComposingCompletionBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>active</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Composition state. Use <code>true</code> for active and <code>false</code> for idle.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>refresh</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Number of seconds since last activity before which the remote should expect a refresh of composing state.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lastActive</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Epoch timestamp of last activity.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Code block to execute upon completion.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPMessagingService@objc(cs)CPChatConversation(im)displayedWithMessage::"></a>
+                    <a name="//apple_ref/swift/Method/displayed(message:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPMessagingService@objc(cs)CPChatConversation(im)displayedWithMessage::">displayed(message:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicate to a participant a message has been displayed to the user.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">displayed</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span><span class="kt"><a href="../Classes/CPMessage.html">CPMessage</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ErrorCompletionBlock</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message object that has been displayed to the user.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Code block to execute upon send completion. This block returns an error if one occurred or nil.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPMessagingService@objc(cs)CPChatConversation(im)fetchMessagesWithFetchOptions:completion:"></a>
+                    <a name="//apple_ref/swift/Method/fetchMessages(fetchOptions:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPMessagingService@objc(cs)CPChatConversation(im)fetchMessagesWithFetchOptions:completion:">fetchMessages(fetchOptions:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Interface to fetch messages from the server.
+Overrides base class Conversation abstract method.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchMessages</span><span class="p">(</span><span class="nv">fetchOptions</span><span class="p">:</span><span class="kt"><a href="../Classes/FetchOptions.html">FetchOptions</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:18CPMessagingService10FetchBlocka">FetchBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>start</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>MessageId after which to start fetching messages. A nil value indicates start at most recent messageId.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>count</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Maximum number of messages to fetch from the server.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Code block to execute once the fetch has completed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPMessagingService@objc(cs)CPChatConversation(im)deleteMessageWithResourceUrl:completion:"></a>
+                    <a name="//apple_ref/swift/Method/deleteMessage(withResourceUrl:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPMessagingService@objc(cs)CPChatConversation(im)deleteMessageWithResourceUrl:completion:">deleteMessage(withResourceUrl:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Public interface to delete a single message from the server.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteMessage</span><span class="p">(</span><span class="nv">withResourceUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">DeleteCompletionBlock</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Unique identifier of the message to delete.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Code block to execute once the delete has completed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPMessagingService@objc(cs)CPChatConversation(im)extendWithName:type:subject:image:participants:completion:"></a>
+                    <a name="//apple_ref/swift/Method/extend(name:type:subject:image:participants:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPMessagingService@objc(cs)CPChatConversation(im)extendWithName:type:subject:image:participants:completion:">extend(name:type:subject:image:participants:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Public method used to create a chat group using this chat conversation. New chat group will have the complete chat history and particpants of this conversation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">extend</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="nv">subject</span><span class="p">:</span><span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">image</span><span class="p">:</span><span class="kt">URL</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">participants</span><span class="p">:[</span><span class="kt"><a href="../Classes/CPChatGroupParticipant.html">CPChatGroupParticipant</a></span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:18CPMessagingService20CreateChatGroupBlocka">CreateChatGroupBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>User-friendly name of the chat group</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><q>open</q> or <q>closed</q> - only <q>closed</q> supported in v1</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>subject</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Topic of discussion for the chat group</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>URL of an image file to be used for the chat group</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>particpants</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of participant members of the chat group</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Code block to execute upon completion of chat group creation</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2019-05-02)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

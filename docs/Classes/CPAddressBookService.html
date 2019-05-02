@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CPAddressBookService Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/CPAddressBookService" class="dashAnchor"></a>
+    <a title="CPAddressBookService Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">CPaaS Mobile iOS SDK Docs</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">CPaaS Mobile iOS SDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        CPAddressBookService Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CPAudioCodec.html">CPAudioCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAudioCodecConfiguration.html">CPAudioCodecConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAudioSessionConfiguration.html">CPAudioSessionConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPCallService.html">CPCallService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPCallState.html">CPCallState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPCallStatistic.html">CPCallStatistic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)CPCodec">CPCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPCodecSet.html">CPCodecSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPConfig.html">CPConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPError.html">CPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPICEServer.html">CPICEServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPICEServers.html">CPICEServers</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPMediaAttributes.html">CPMediaAttributes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPUriAddress.html">CPUriAddress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPValue.html">CPValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPVideoCodec.html">CPVideoCodec</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@CPCallServiceVersionNumber">CPCallServiceVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@CPCallServiceVersionString">CPCallServiceVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CPAudioCodecTypes.html">CPAudioCodecTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPCallStates.html">CPCallStates</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPCameraOrientationMode.html">CPCameraOrientationMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPErrorType.html">CPErrorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPICEOptions.html">CPICEOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPLogLevel.html">CPLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPVideoCodecTypes.html">CPVideoCodecTypes</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/CPCallApplicationDelegate.html">CPCallApplicationDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPCallDelegate.html">CPCallDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPIncomingCallDelegate.html">CPIncomingCallDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPLoggingDelegate.html">CPLoggingDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPOutgoingCallDelegate.html">CPOutgoingCallDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPCodecSet.h@T@CPAudioCodecTypes">CPAudioCodecTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPCallStates.h@T@CPCallStates">CPCallStates</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPCameraOrientationModes.h@T@CPCameraOrientationMode">CPCameraOrientationMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPErrorType.h@T@CPErrorType">CPErrorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPICEOptions.h@T@CPICEOptions">CPICEOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPLogType.h@T@CPLogLevel">CPLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPCodecSet.h@T@CPVideoCodecTypes">CPVideoCodecTypes</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CPActivityHandle.html">CPActivityHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAddressBook.html">CPAddressBook</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAddressBook/FieldType.html">– FieldType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAddressBook/OrderType.html">– OrderType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAddressBookList.html">CPAddressBookList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAddressBookService.html">CPAddressBookService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAuthenticationService.html">CPAuthenticationService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatConversation.html">CPChatConversation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatGroup.html">CPChatGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatGroupConversation.html">CPChatGroupConversation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatGroupInvitation.html">CPChatGroupInvitation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatGroupParticipant.html">CPChatGroupParticipant</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatService.html">CPChatService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPContact.html">CPContact</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPConversation.html">CPConversation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPFilePart.html">CPFilePart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPInboundMessage.html">CPInboundMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPIsComposingMessage.html">CPIsComposingMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPMessage.html">CPMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:@M@CPMessagingService@objc(cs)CPMessagePart">CPMessagePart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPMessageStatus.html">CPMessageStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPOutboundMessage.html">CPOutboundMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPresenceService.html">CPPresenceService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPresenceSource.html">CPPresenceSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPresentity.html">CPPresentity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPresentityList.html">CPPresentityList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPresentityListHandle.html">CPPresentityListHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPushService.html">CPPushService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPSearch.html">CPSearch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPSearchFilter.html">CPSearchFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPSearchResult.html">CPSearchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPSmsService.html">CPSmsService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPTextPart.html">CPTextPart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPThumbnailPart.html">CPThumbnailPart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPaaS.html">CPaaS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FetchCriteria.html">FetchCriteria</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FetchOptions.html">FetchOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FetchResult.html">FetchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:@M@CPMessagingService@objc(cs)FetchedObjects">FetchedObjects</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MessageService.html">MessageService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PresenceActivity.html">PresenceActivity</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CPChatParticipantStatus.html">CPChatParticipantStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPConnectionState.html">CPConnectionState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPPresenceActivities.html">CPPresenceActivities</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPUriFormat.html">CPUriFormat</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/CPAuthenticationDelegate.html">CPAuthenticationDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPChatDelegate.html">CPChatDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPPresenceDelegate.html">CPPresenceDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPSmsDelegate.html">CPSmsDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService24ComposingCompletionBlocka">ComposingCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService20CreateChatGroupBlocka">CreateChatGroupBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService35CreatePresenceSourceCompletionBlocka">CreatePresenceSourceCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService35CreatePresentityListCompletionBlocka">CreatePresentityListCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService23DownloadCompletionBlocka">DownloadCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService23FetchAllChatGroupsBlocka">FetchAllChatGroupsBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService10FetchBlocka">FetchBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService19FetchChatGroupBlocka">FetchChatGroupBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService17FetchMessageBlocka">FetchMessageBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService18FetchMessagesBlocka">FetchMessagesBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService34FetchPresenceSourceCompletionBlocka">FetchPresenceSourceCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService38FetchPresenceSourceListCompletionBlocka">FetchPresenceSourceListCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService34FetchPresentityListCompletionBlocka">FetchPresentityListCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService35FetchPresentityListsCompletionBlocka">FetchPresentityListsCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService19SendCompletionBlocka">SendCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService21UploadCompletionBlocka">UploadCompletionBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>CPAddressBookService</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">CPAddressBookService</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">CPServiceProtocol</span></code></pre>
+
+                </div>
+              </div>
+            <p>Store, manage and search contacts through address books, lists and directories.</p>
+<div class="aside aside-since">
+    <p class="aside-title">Since</p>
+    1.0.0
+
+</div>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:20CPAddressBookServiceAAC0aB13RetrieveBlocka"></a>
+                    <a name="//apple_ref/swift/Alias/CPAddressBookRetrieveBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/s:20CPAddressBookServiceAAC0aB13RetrieveBlocka">CPAddressBookRetrieveBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Code block to execute after retrieving contact list</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">CPAddressBookRetrieveBlock</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Classes/CPError.html">CPError</a></span><span class="p">?,</span> <span class="n">_</span> <span class="nv">contactList</span><span class="p">:</span> <span class="kt">Array</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/CPContact.html">CPContact</a></span><span class="o">&gt;</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If operation fails returns as CPError, otherwise returns nil</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contactList</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Holds the list of contacts in user&rsquo;s addressbook. Array includes objects of Contact type</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:20CPAddressBookServiceAAC30CPDirectorySearchRetrieveBlocka"></a>
+                    <a name="//apple_ref/swift/Alias/CPDirectorySearchRetrieveBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/s:20CPAddressBookServiceAAC30CPDirectorySearchRetrieveBlocka">CPDirectorySearchRetrieveBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Code block to execute after retrieving directory search results</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">CPDirectorySearchRetrieveBlock</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Classes/CPError.html">CPError</a></span><span class="p">?,</span> <span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt"><a href="../Classes/CPSearchResult.html">CPSearchResult</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If operation fails returns as CPError, otherwise returns nil</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contactList</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Holds the search result object. Keeping this variable on safe is recommended,
+if upcoming search results will be needed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:20CPAddressBookServiceAAC0aB12SuccessBlocka"></a>
+                    <a name="//apple_ref/swift/Alias/CPAddressBookSuccessBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/s:20CPAddressBookServiceAAC0aB12SuccessBlocka">CPAddressBookSuccessBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Code block to execute after successfull insert,edit and delete operations</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">CPAddressBookSuccessBlock</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Classes/CPError.html">CPError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If operation fails returns as CPError, otherwise returns nil</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:20CPAddressBookServiceAAC22CPContactRetrieveBlocka"></a>
+                    <a name="//apple_ref/swift/Alias/CPContactRetrieveBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/s:20CPAddressBookServiceAAC22CPContactRetrieveBlocka">CPContactRetrieveBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Code block to execute after retrieving a single contact from backend</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">CPContactRetrieveBlock</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Classes/CPError.html">CPError</a></span><span class="p">?,</span> <span class="n">_</span> <span class="nv">contact</span><span class="p">:</span> <span class="kt"><a href="../Classes/CPContact.html">CPContact</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If operation fails returns as CPError, otherwise returns nil</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contact</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Holds the details of the contact in user&rsquo;s addressbook.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:20CPAddressBookServiceAAC0aB17ListRetrieveBlocka"></a>
+                    <a name="//apple_ref/swift/Alias/CPAddressBookListRetrieveBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/s:20CPAddressBookServiceAAC0aB17ListRetrieveBlocka">CPAddressBookListRetrieveBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Code block to execute after retrieving addressbook list</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">CPAddressBookListRetrieveBlock</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Classes/CPError.html">CPError</a></span><span class="p">?,</span> <span class="n">_</span> <span class="nv">addressBookLists</span><span class="p">:</span> <span class="kt">Array</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/CPAddressBookList.html">CPAddressBookList</a></span><span class="o">&gt;</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If operation fails returns as CPError, otherwise returns nil</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>addressBookLists</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Holds the list of addressbook list in user&rsquo;s addressbook. Array includes objects of CPAddressBookList type</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:20CPAddressBookServiceAAC0aB9ListBlocka"></a>
+                    <a name="//apple_ref/swift/Alias/CPAddressBookListBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/s:20CPAddressBookServiceAAC0aB9ListBlocka">CPAddressBookListBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Code block to execute after retrieving addressbook list</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">CPAddressBookListBlock</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Classes/CPError.html">CPError</a></span><span class="p">?,</span> <span class="n">_</span> <span class="nv">addressBookList</span><span class="p">:</span> <span class="kt"><a href="../Classes/CPAddressBookList.html">CPAddressBookList</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If operation fails returns as CPError, otherwise returns nil</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>addressBookList</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Holds the addressbooklist in user&rsquo;s addressbook. Array includes objects of CPAddressBookList type</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:20CPAddressBookServiceAAC8userInfo4infoABSo06CPUserE0C_11CPUtilities09CPServiceE0Ctcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(userInfo:info:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:20CPAddressBookServiceAAC8userInfo4infoABSo06CPUserE0C_11CPUtilities09CPServiceE0Ctcfc">init(userInfo:info:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes addressbook instance with given configuration.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">userInfo</span><span class="p">:</span> <span class="kt">CPUserInfo</span><span class="p">,</span> <span class="nv">info</span><span class="p">:</span> <span class="kt">CPServiceInfo</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>userInfo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>User Information</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>services</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Array of services that the application has configured for use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)addContactWithAddressBookId:contact:completion:"></a>
+                    <a name="//apple_ref/swift/Method/addContact(addressBookId:contact:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)addContactWithAddressBookId:contact:completion:">addContact(addressBookId:contact:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is for adding a contact to user&rsquo;s addressbook directory</p>
+<div class="aside aside-since">
+    <p class="aside-title">Since</p>
+    1.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addContact</span><span class="p">(</span><span class="nv">addressBookId</span><span class="p">:</span><span class="kt">String</span><span class="o">=</span><span class="s">"default"</span><span class="p">,</span> <span class="nv">contact</span><span class="p">:</span> <span class="kt"><a href="../Classes/CPContact.html">CPContact</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/CPAddressBookService.html#/s:20CPAddressBookServiceAAC0aB12SuccessBlocka">CPAddressBookSuccessBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contact</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>contact information that is going to be added to user&rsquo;s addressbook</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>completion block for adding contact</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)updateContactWithAddressBookId:contact:completion:"></a>
+                    <a name="//apple_ref/swift/Method/updateContact(addressBookId:contact:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)updateContactWithAddressBookId:contact:completion:">updateContact(addressBookId:contact:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is for updating(editing) a contact which is already in user&rsquo;s addressbook directory</p>
+<div class="aside aside-since">
+    <p class="aside-title">Since</p>
+    1.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateContact</span><span class="p">(</span><span class="nv">addressBookId</span><span class="p">:</span><span class="kt">String</span><span class="o">=</span><span class="s">"default"</span><span class="p">,</span> <span class="nv">contact</span><span class="p">:</span> <span class="kt"><a href="../Classes/CPContact.html">CPContact</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/CPAddressBookService.html#/s:20CPAddressBookServiceAAC0aB12SuccessBlocka">CPAddressBookSuccessBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contact</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>contact information that is going to be added to user&rsquo;s addressbook</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>completion block for updating contact</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)retrieveContactListWithAddressBookId:completion:"></a>
+                    <a name="//apple_ref/swift/Method/retrieveContactList(addressBookId:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)retrieveContactListWithAddressBookId:completion:">retrieveContactList(addressBookId:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is getting all the contacts in user&rsquo;s addressbook directory</p>
+<div class="aside aside-since">
+    <p class="aside-title">Since</p>
+    1.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">retrieveContactList</span><span class="p">(</span><span class="nv">addressBookId</span><span class="p">:</span><span class="kt">String</span><span class="o">=</span><span class="s">"default"</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/CPAddressBookService.html#/s:20CPAddressBookServiceAAC0aB13RetrieveBlocka">CPAddressBookRetrieveBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>completion block for retrieving contact list</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)getContactWithAddressBookId:contactId:completion:"></a>
+                    <a name="//apple_ref/swift/Method/getContact(addressBookId:contactId:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)getContactWithAddressBookId:contactId:completion:">getContact(addressBookId:contactId:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is for adding a contact to user&rsquo;s addressbook directory</p>
+<div class="aside aside-since">
+    <p class="aside-title">Since</p>
+    1.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getContact</span><span class="p">(</span><span class="nv">addressBookId</span><span class="p">:</span><span class="kt">String</span><span class="o">=</span><span class="s">"default"</span><span class="p">,</span>  <span class="nv">contactId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/CPAddressBookService.html#/s:20CPAddressBookServiceAAC22CPContactRetrieveBlocka">CPContactRetrieveBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contactId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>identifier of contact to get (identifier is defined in client side, so make sure you set it unique)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>completion block for getting single contact</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)deleteContactWithAddressBookId:identifier:completion:"></a>
+                    <a name="//apple_ref/swift/Method/deleteContact(addressBookId:identifier:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)deleteContactWithAddressBookId:identifier:completion:">deleteContact(addressBookId:identifier:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is for deleting a contact from user&rsquo;s addressbook directory</p>
+<div class="aside aside-since">
+    <p class="aside-title">Since</p>
+    1.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteContact</span><span class="p">(</span><span class="nv">addressBookId</span><span class="p">:</span><span class="kt">String</span><span class="o">=</span><span class="s">"default"</span><span class="p">,</span><span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Classes/CPAddressBookService.html#/s:20CPAddressBookServiceAAC0aB12SuccessBlocka">CPAddressBookSuccessBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>identifier</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>identifier of contact to delete (identifier is defined in client side, so make sure you set it unique)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>completion block for adding contact</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)updateAttributeWithAddressBookId:contactIdentifier:attributeId:attributeVal:completion:"></a>
+                    <a name="//apple_ref/swift/Method/updateAttribute(addressBookId:contactIdentifier:attributeId:attributeVal:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)updateAttributeWithAddressBookId:contactIdentifier:attributeId:attributeVal:completion:">updateAttribute(addressBookId:contactIdentifier:attributeId:attributeVal:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is for updating a contact&rsquo;s single attribute in user&rsquo;s addressbook directory</p>
+<div class="aside aside-since">
+    <p class="aside-title">Since</p>
+    1.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateAttribute</span><span class="p">(</span><span class="nv">addressBookId</span><span class="p">:</span><span class="kt">String</span><span class="o">=</span><span class="s">"default"</span><span class="p">,</span> <span class="nv">contactIdentifier</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="nv">attributeId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">attributeVal</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Classes/CPAddressBookService.html#/s:20CPAddressBookServiceAAC0aB12SuccessBlocka">CPAddressBookSuccessBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contactIdentifier</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>identifier of contact to update its attribute (identifier is defined in client side, so make sure you set it unique)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>attributeId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>unique Id of attribute which needs to be updated</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>attributeVal</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>unique value of attribute which needs to be updated (this value is related with attributeId)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>completion block for adding contact</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)removeAttributeWithAddressBookId:contactIdentifier:attributeId:completion:"></a>
+                    <a name="//apple_ref/swift/Method/removeAttribute(addressBookId:contactIdentifier:attributeId:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)removeAttributeWithAddressBookId:contactIdentifier:attributeId:completion:">removeAttribute(addressBookId:contactIdentifier:attributeId:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is for removing a contact&rsquo;s single attribute</p>
+<div class="aside aside-since">
+    <p class="aside-title">Since</p>
+    1.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeAttribute</span><span class="p">(</span><span class="nv">addressBookId</span><span class="p">:</span><span class="kt">String</span><span class="o">=</span><span class="s">"default"</span><span class="p">,</span> <span class="nv">contactIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span><span class="nv">attributeId</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Classes/CPAddressBookService.html#/s:20CPAddressBookServiceAAC0aB12SuccessBlocka">CPAddressBookSuccessBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contactIdentifier</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>identifier of contact&rsquo;s attribute to remove (identifier is defined in client side, so make sure you set it unique)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>attributeId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>unique Id of attribute which needs to be removed</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>completion block for adding contact</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)retrieveAddressBookListWithAddressBookId:completion:"></a>
+                    <a name="//apple_ref/swift/Method/retrieveAddressBookList(addressBookId:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)retrieveAddressBookListWithAddressBookId:completion:">retrieveAddressBookList(addressBookId:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is getting all the contact lists in user&rsquo;s addressbook directory</p>
+<div class="aside aside-since">
+    <p class="aside-title">Since</p>
+    1.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">retrieveAddressBookList</span><span class="p">(</span><span class="nv">addressBookId</span><span class="p">:</span><span class="kt">String</span><span class="o">=</span><span class="s">"default"</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">CPAddressBookService</span><span class="o">.</span><span class="kt"><a href="../Classes/CPAddressBookService.html#/s:20CPAddressBookServiceAAC0aB17ListRetrieveBlocka">CPAddressBookListRetrieveBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>completion block for retrieving all contact lists</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)addAddressBookListWithAddressBookId:addressbookList:completion:"></a>
+                    <a name="//apple_ref/swift/Method/addAddressBookList(addressBookId:addressbookList:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)addAddressBookListWithAddressBookId:addressbookList:completion:">addAddressBookList(addressBookId:addressbookList:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is for adding a contact list to user&rsquo;s addressbook directory</p>
+<div class="aside aside-since">
+    <p class="aside-title">Since</p>
+    1.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addAddressBookList</span><span class="p">(</span><span class="nv">addressBookId</span><span class="p">:</span><span class="kt">String</span><span class="o">=</span><span class="s">"default"</span><span class="p">,</span><span class="nv">addressbookList</span><span class="p">:</span><span class="kt"><a href="../Classes/CPAddressBookList.html">CPAddressBookList</a></span><span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt">CPAddressBookService</span><span class="o">.</span><span class="kt"><a href="../Classes/CPAddressBookService.html#/s:20CPAddressBookServiceAAC0aB9ListBlocka">CPAddressBookListBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>addressbookId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>id of the addressbook which the operation  will apply to</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>addressbookList</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>contact list information that is going to be added to user&rsquo;s addressbook</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>completion block for adding contact list</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)updateAddressBookListWithAddressBookId:oldListId:addressbookList:completion:"></a>
+                    <a name="//apple_ref/swift/Method/updateAddressBookList(addressBookId:oldListId:addressbookList:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)updateAddressBookListWithAddressBookId:oldListId:addressbookList:completion:">updateAddressBookList(addressBookId:oldListId:addressbookList:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is for editing a contact list in user&rsquo;s addressbook directory</p>
+<div class="aside aside-since">
+    <p class="aside-title">Since</p>
+    1.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateAddressBookList</span><span class="p">(</span><span class="nv">addressBookId</span><span class="p">:</span><span class="kt">String</span><span class="o">=</span><span class="s">"default"</span><span class="p">,</span> <span class="nv">oldListId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span><span class="nv">addressbookList</span><span class="p">:</span><span class="kt"><a href="../Classes/CPAddressBookList.html">CPAddressBookList</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">CPAddressBookService</span><span class="o">.</span><span class="kt"><a href="../Classes/CPAddressBookService.html#/s:20CPAddressBookServiceAAC0aB9ListBlocka">CPAddressBookListBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>addressbookId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>id of the addressbook which the operation  will apply to</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>oldListId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>id of the old addressbook which is going to be replaced by the new one</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>addressbookList</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>contact list information that is going to be edited in the user&rsquo;s addressbook</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>completion block for editing contact list</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)deleteAddressBookListWithAddressBookId:listId:completion:"></a>
+                    <a name="//apple_ref/swift/Method/deleteAddressBookList(addressBookId:listId:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)deleteAddressBookListWithAddressBookId:listId:completion:">deleteAddressBookList(addressBookId:listId:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is for deleting a contact list from user&rsquo;s addressbook directory</p>
+<div class="aside aside-since">
+    <p class="aside-title">Since</p>
+    1.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteAddressBookList</span><span class="p">(</span><span class="nv">addressBookId</span><span class="p">:</span><span class="kt">String</span><span class="o">=</span><span class="s">"default"</span><span class="p">,</span><span class="nv">listId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt">CPAddressBookService</span><span class="o">.</span><span class="kt"><a href="../Classes/CPAddressBookService.html#/s:20CPAddressBookServiceAAC0aB12SuccessBlocka">CPAddressBookSuccessBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>addressbookId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>id of the addressbook which the operation  will apply to</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>listId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>identifier of contact list to delete (identifier is defined in client side, so make sure you set it unique)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>completion block for deleting contact</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)getAddressBookListWithAddressBookId:listId:completion:"></a>
+                    <a name="//apple_ref/swift/Method/getAddressBookList(addressBookId:listId:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)getAddressBookListWithAddressBookId:listId:completion:">getAddressBookList(addressBookId:listId:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is for getting a contact list in user&rsquo;s addressbook directory</p>
+<div class="aside aside-since">
+    <p class="aside-title">Since</p>
+    1.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getAddressBookList</span><span class="p">(</span><span class="nv">addressBookId</span><span class="p">:</span><span class="kt">String</span><span class="o">=</span><span class="s">"default"</span><span class="p">,</span>  <span class="nv">listId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">CPAddressBookService</span><span class="o">.</span><span class="kt"><a href="../Classes/CPAddressBookService.html#/s:20CPAddressBookServiceAAC0aB9ListBlocka">CPAddressBookListBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>addressbookId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>id of the addressbook which the operation  will apply to</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>listId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>identifier of contact list to get (identifier is defined in client side, so make sure you set it unique)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>completion block for getting single contact</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)searchWith:completion:"></a>
+                    <a name="//apple_ref/swift/Method/search(with:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)searchWith:completion:">search(with:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Searches Directory with the given parameters.</p>
+<div class="aside aside-since">
+    <p class="aside-title">Since</p>
+    1.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">search</span><span class="p">(</span><span class="n">with</span> <span class="nv">search</span><span class="p">:</span> <span class="kt"><a href="../Classes/CPSearch.html">CPSearch</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/CPAddressBookService.html#/s:20CPAddressBookServiceAAC30CPDirectorySearchRetrieveBlocka">CPDirectorySearchRetrieveBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>search</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>CPSearch object that contains necessary informations for directory search.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Completion block for search results. Returns <strong>CPSearchResult</strong> object, or error if any occurs.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Service%20Protocol%20Delegate%20Methods"></a>
+                <a name="//apple_ref/swift/Section/Service Protocol Delegate Methods" class="dashAnchor"></a>
+                <a href="#/Service%20Protocol%20Delegate%20Methods">
+                  <h3 class="section-name">Service Protocol Delegate Methods</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)serviceInfo"></a>
+                    <a name="//apple_ref/swift/Method/serviceInfo()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)serviceInfo">serviceInfo()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Delegate method to get a service&rsquo;s information</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">serviceInfo</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">CPServiceInfo</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>service information object with service type and preferences.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)subscribeWithChannelID:completion:"></a>
+                    <a name="//apple_ref/swift/Method/subscribe(channelID:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)subscribeWithChannelID:completion:">subscribe(channelID:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">subscribe</span><span class="p">(</span><span class="nv">channelID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">SubscribeCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)unsubscribeWithChannelID:completion:"></a>
+                    <a name="//apple_ref/swift/Method/unsubscribe(channelID:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)unsubscribeWithChannelID:completion:">unsubscribe(channelID:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unsubscribe</span><span class="p">(</span><span class="nv">channelID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">UnsubscribeCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)notifications"></a>
+                    <a name="//apple_ref/swift/Method/notifications()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPAddressBookService@objc(cs)CPAddressBookService(im)notifications">notifications()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Delegate method to get a list of notfications the service expects</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">notifications</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>list of notification names. These should match what is returned by subscribe() in completion callback.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2019-05-02)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

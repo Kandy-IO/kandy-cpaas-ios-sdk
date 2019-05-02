@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CPPresenceSource Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/CPPresenceSource" class="dashAnchor"></a>
+    <a title="CPPresenceSource Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">CPaaS Mobile iOS SDK Docs</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">CPaaS Mobile iOS SDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        CPPresenceSource Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CPAudioCodec.html">CPAudioCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAudioCodecConfiguration.html">CPAudioCodecConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAudioSessionConfiguration.html">CPAudioSessionConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPCallService.html">CPCallService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPCallState.html">CPCallState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPCallStatistic.html">CPCallStatistic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)CPCodec">CPCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPCodecSet.html">CPCodecSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPConfig.html">CPConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPError.html">CPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPICEServer.html">CPICEServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPICEServers.html">CPICEServers</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPMediaAttributes.html">CPMediaAttributes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPUriAddress.html">CPUriAddress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPValue.html">CPValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPVideoCodec.html">CPVideoCodec</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@CPCallServiceVersionNumber">CPCallServiceVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@CPCallServiceVersionString">CPCallServiceVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CPAudioCodecTypes.html">CPAudioCodecTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPCallStates.html">CPCallStates</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPCameraOrientationMode.html">CPCameraOrientationMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPErrorType.html">CPErrorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPICEOptions.html">CPICEOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPLogLevel.html">CPLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPVideoCodecTypes.html">CPVideoCodecTypes</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/CPCallApplicationDelegate.html">CPCallApplicationDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPCallDelegate.html">CPCallDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPIncomingCallDelegate.html">CPIncomingCallDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPLoggingDelegate.html">CPLoggingDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPOutgoingCallDelegate.html">CPOutgoingCallDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPCodecSet.h@T@CPAudioCodecTypes">CPAudioCodecTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPCallStates.h@T@CPCallStates">CPCallStates</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPCameraOrientationModes.h@T@CPCameraOrientationMode">CPCameraOrientationMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPErrorType.h@T@CPErrorType">CPErrorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPICEOptions.h@T@CPICEOptions">CPICEOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPLogType.h@T@CPLogLevel">CPLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPCodecSet.h@T@CPVideoCodecTypes">CPVideoCodecTypes</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CPActivityHandle.html">CPActivityHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAddressBook.html">CPAddressBook</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAddressBook/FieldType.html">– FieldType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAddressBook/OrderType.html">– OrderType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAddressBookList.html">CPAddressBookList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAddressBookService.html">CPAddressBookService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAuthenticationService.html">CPAuthenticationService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatConversation.html">CPChatConversation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatGroup.html">CPChatGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatGroupConversation.html">CPChatGroupConversation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatGroupInvitation.html">CPChatGroupInvitation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatGroupParticipant.html">CPChatGroupParticipant</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatService.html">CPChatService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPContact.html">CPContact</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPConversation.html">CPConversation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPFilePart.html">CPFilePart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPInboundMessage.html">CPInboundMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPIsComposingMessage.html">CPIsComposingMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPMessage.html">CPMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:@M@CPMessagingService@objc(cs)CPMessagePart">CPMessagePart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPMessageStatus.html">CPMessageStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPOutboundMessage.html">CPOutboundMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPresenceService.html">CPPresenceService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPresenceSource.html">CPPresenceSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPresentity.html">CPPresentity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPresentityList.html">CPPresentityList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPresentityListHandle.html">CPPresentityListHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPushService.html">CPPushService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPSearch.html">CPSearch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPSearchFilter.html">CPSearchFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPSearchResult.html">CPSearchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPSmsService.html">CPSmsService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPTextPart.html">CPTextPart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPThumbnailPart.html">CPThumbnailPart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPaaS.html">CPaaS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FetchCriteria.html">FetchCriteria</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FetchOptions.html">FetchOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FetchResult.html">FetchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:@M@CPMessagingService@objc(cs)FetchedObjects">FetchedObjects</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MessageService.html">MessageService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PresenceActivity.html">PresenceActivity</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CPChatParticipantStatus.html">CPChatParticipantStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPConnectionState.html">CPConnectionState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPPresenceActivities.html">CPPresenceActivities</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPUriFormat.html">CPUriFormat</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/CPAuthenticationDelegate.html">CPAuthenticationDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPChatDelegate.html">CPChatDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPPresenceDelegate.html">CPPresenceDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPSmsDelegate.html">CPSmsDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService24ComposingCompletionBlocka">ComposingCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService20CreateChatGroupBlocka">CreateChatGroupBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService35CreatePresenceSourceCompletionBlocka">CreatePresenceSourceCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService35CreatePresentityListCompletionBlocka">CreatePresentityListCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService23DownloadCompletionBlocka">DownloadCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService23FetchAllChatGroupsBlocka">FetchAllChatGroupsBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService10FetchBlocka">FetchBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService19FetchChatGroupBlocka">FetchChatGroupBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService17FetchMessageBlocka">FetchMessageBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService18FetchMessagesBlocka">FetchMessagesBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService34FetchPresenceSourceCompletionBlocka">FetchPresenceSourceCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService38FetchPresenceSourceListCompletionBlocka">FetchPresenceSourceListCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService34FetchPresentityListCompletionBlocka">FetchPresentityListCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService35FetchPresentityListsCompletionBlocka">FetchPresentityListsCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService19SendCompletionBlocka">SendCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService21UploadCompletionBlocka">UploadCompletionBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>CPPresenceSource</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">CPPresenceSource</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>This class represents a presence source. A presence source represents the presence status of a particular client.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPPresenceService@objc(cs)CPPresenceSource(py)activity"></a>
+                    <a name="//apple_ref/swift/Property/activity" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPPresenceService@objc(cs)CPPresenceSource(py)activity">activity</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The presentity status details of this presence source.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">activity</span><span class="p">:</span> <span class="kt"><a href="../Classes/PresenceActivity.html">PresenceActivity</a></span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPPresenceService@objc(cs)CPPresenceSource(py)duration"></a>
+                    <a name="//apple_ref/swift/Property/duration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPPresenceService@objc(cs)CPPresenceSource(py)duration">duration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The duration in seconds for which this source is active without refresh.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPPresenceService@objc(cs)CPPresenceSource(im)updateActivityWithActivity:completion:"></a>
+                    <a name="//apple_ref/swift/Method/updateActivity(activity:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPPresenceService@objc(cs)CPPresenceSource(im)updateActivityWithActivity:completion:">updateActivity(activity:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is used to update the presentity status details for this particular PresenceSource.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateActivity</span><span class="p">(</span><span class="nv">activity</span><span class="p">:</span><span class="kt"><a href="../Classes/PresenceActivity.html">PresenceActivity</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:17CPPresenceService35CreatePresenceSourceCompletionBlocka">CreatePresenceSourceCompletionBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>activity</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The updated PresenceActivity to apply to this presence source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>compeletion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The code block to execute upon activity update completion.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2019-05-02)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

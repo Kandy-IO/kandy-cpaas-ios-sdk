@@ -1,0 +1,215 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/AddressBookService/CPAddressBookService/CPAddressBookService.swift",
+      "line": 406,
+      "symbol": "CPAddressBookService.subscribe(channelID:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/AddressBookService/CPAddressBookService/CPAddressBookService.swift",
+      "line": 410,
+      "symbol": "CPAddressBookService.unsubscribe(channelID:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/CPCallService/CPCallService/API/CPCallService.h",
+      "line": 16,
+      "symbol": "CPCallServiceVersionNumber",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/CPCallService/CPCallService/API/CPCallService.h",
+      "line": 19,
+      "symbol": "CPCallServiceVersionString",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/MessagingService/CPMessaging/CPConversation.swift",
+      "line": 42,
+      "symbol": "CPConversation.fromAddress",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/MessagingService/CPMessaging/Message.swift",
+      "line": 94,
+      "symbol": "CPMessageStatus.conversationType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "line": 30,
+      "symbol": "FetchOptions",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "line": 31,
+      "symbol": "FetchOptions.max",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "line": 32,
+      "symbol": "FetchOptions.next",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "line": 33,
+      "symbol": "FetchOptions.lastMessageTime",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "line": 34,
+      "symbol": "FetchOptions.isNew",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "line": 37,
+      "symbol": "FetchCriteria",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "line": 38,
+      "symbol": "FetchCriteria.localAddress",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "line": 39,
+      "symbol": "FetchCriteria.participant",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "line": 40,
+      "symbol": "FetchCriteria.fetchOptions",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "line": 43,
+      "symbol": "FetchedObjects",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "line": 47,
+      "symbol": "FetchResult",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "line": 49,
+      "symbol": "FetchResult.hasNext",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "line": 50,
+      "symbol": "FetchResult.result",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "line": 59,
+      "symbol": "FetchResult.getNext(completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "line": 130,
+      "symbol": "MessageService.fetchConversations(withFetchCriteria:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/MessagingService/ChatService/CPChatGroupParticipant.swift",
+      "line": 20,
+      "symbol": "CPChatParticipantStatus.Unknown",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/MessagingService/ChatService/CPChatGroupParticipant.swift",
+      "line": 113,
+      "symbol": "CPChatGroupParticipant.hash",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/MessagingService/ChatService/CPChatGroupParticipant.swift",
+      "line": 117,
+      "symbol": "CPChatGroupParticipant.isEqual(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/PresenceService/CPPresenceService/CPPresentityList.swift",
+      "line": 84,
+      "symbol": "CPPresentityList.isEqual(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Utilities/CPUtilities/ConfigurableCodecSet/CPCodecSet.h",
+      "line": 65,
+      "symbol": "CPAudioCodec",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Utilities/CPUtilities/ConfigurableCodecSet/CPCodecSet.h",
+      "line": 67,
+      "symbol": "CPAudioCodec.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Utilities/CPUtilities/ConfigurableCodecSet/CPCodecSet.h",
+      "line": 86,
+      "symbol": "CPVideoCodec.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Utilities/CPUtilities/ConfigurableCodecSet/CPCodecSet.h",
+      "line": 136,
+      "symbol": "CPCodecSet.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Utilities/CPUtilities/Exception/Error/CPError.h",
+      "line": 47,
+      "symbol": "CPError.-initWithDomain:genericCode:description:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk"
+}

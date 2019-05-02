@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CPErrorType Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Enum/CPErrorType" class="dashAnchor"></a>
+    <a title="CPErrorType Enumeration Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">CPaaS Mobile iOS SDK Docs</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">CPaaS Mobile iOS SDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        CPErrorType Enumeration Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CPAudioCodec.html">CPAudioCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAudioCodecConfiguration.html">CPAudioCodecConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAudioSessionConfiguration.html">CPAudioSessionConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPCallService.html">CPCallService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPCallState.html">CPCallState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPCallStatistic.html">CPCallStatistic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)CPCodec">CPCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPCodecSet.html">CPCodecSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPConfig.html">CPConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPError.html">CPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPICEServer.html">CPICEServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPICEServers.html">CPICEServers</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPMediaAttributes.html">CPMediaAttributes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPUriAddress.html">CPUriAddress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPValue.html">CPValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPVideoCodec.html">CPVideoCodec</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@CPCallServiceVersionNumber">CPCallServiceVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@CPCallServiceVersionString">CPCallServiceVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CPAudioCodecTypes.html">CPAudioCodecTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPCallStates.html">CPCallStates</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPCameraOrientationMode.html">CPCameraOrientationMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPErrorType.html">CPErrorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPICEOptions.html">CPICEOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPLogLevel.html">CPLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPVideoCodecTypes.html">CPVideoCodecTypes</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/CPCallApplicationDelegate.html">CPCallApplicationDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPCallDelegate.html">CPCallDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPIncomingCallDelegate.html">CPIncomingCallDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPLoggingDelegate.html">CPLoggingDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPOutgoingCallDelegate.html">CPOutgoingCallDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPCodecSet.h@T@CPAudioCodecTypes">CPAudioCodecTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPCallStates.h@T@CPCallStates">CPCallStates</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPCameraOrientationModes.h@T@CPCameraOrientationMode">CPCameraOrientationMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPErrorType.h@T@CPErrorType">CPErrorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPICEOptions.h@T@CPICEOptions">CPICEOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPLogType.h@T@CPLogLevel">CPLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:CPCodecSet.h@T@CPVideoCodecTypes">CPVideoCodecTypes</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CPActivityHandle.html">CPActivityHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAddressBook.html">CPAddressBook</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAddressBook/FieldType.html">– FieldType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAddressBook/OrderType.html">– OrderType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAddressBookList.html">CPAddressBookList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAddressBookService.html">CPAddressBookService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPAuthenticationService.html">CPAuthenticationService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatConversation.html">CPChatConversation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatGroup.html">CPChatGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatGroupConversation.html">CPChatGroupConversation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatGroupInvitation.html">CPChatGroupInvitation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatGroupParticipant.html">CPChatGroupParticipant</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPChatService.html">CPChatService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPContact.html">CPContact</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPConversation.html">CPConversation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPFilePart.html">CPFilePart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPInboundMessage.html">CPInboundMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPIsComposingMessage.html">CPIsComposingMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPMessage.html">CPMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:@M@CPMessagingService@objc(cs)CPMessagePart">CPMessagePart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPMessageStatus.html">CPMessageStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPOutboundMessage.html">CPOutboundMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPresenceService.html">CPPresenceService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPresenceSource.html">CPPresenceSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPresentity.html">CPPresentity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPresentityList.html">CPPresentityList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPresentityListHandle.html">CPPresentityListHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPPushService.html">CPPushService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPSearch.html">CPSearch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPSearchFilter.html">CPSearchFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPSearchResult.html">CPSearchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPSmsService.html">CPSmsService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPTextPart.html">CPTextPart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPThumbnailPart.html">CPThumbnailPart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CPaaS.html">CPaaS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FetchCriteria.html">FetchCriteria</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FetchOptions.html">FetchOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FetchResult.html">FetchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:@M@CPMessagingService@objc(cs)FetchedObjects">FetchedObjects</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MessageService.html">MessageService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PresenceActivity.html">PresenceActivity</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CPChatParticipantStatus.html">CPChatParticipantStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPConnectionState.html">CPConnectionState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPPresenceActivities.html">CPPresenceActivities</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPUriFormat.html">CPUriFormat</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/CPAuthenticationDelegate.html">CPAuthenticationDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPChatDelegate.html">CPChatDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPPresenceDelegate.html">CPPresenceDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CPSmsDelegate.html">CPSmsDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService24ComposingCompletionBlocka">ComposingCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService20CreateChatGroupBlocka">CreateChatGroupBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService35CreatePresenceSourceCompletionBlocka">CreatePresenceSourceCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService35CreatePresentityListCompletionBlocka">CreatePresentityListCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService23DownloadCompletionBlocka">DownloadCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService23FetchAllChatGroupsBlocka">FetchAllChatGroupsBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService10FetchBlocka">FetchBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService19FetchChatGroupBlocka">FetchChatGroupBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService17FetchMessageBlocka">FetchMessageBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService18FetchMessagesBlocka">FetchMessagesBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService34FetchPresenceSourceCompletionBlocka">FetchPresenceSourceCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService38FetchPresenceSourceListCompletionBlocka">FetchPresenceSourceListCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService34FetchPresentityListCompletionBlocka">FetchPresentityListCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17CPPresenceService35FetchPresentityListsCompletionBlocka">FetchPresentityListsCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService19SendCompletionBlocka">SendCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18CPMessagingService21UploadCompletionBlocka">UploadCompletionBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>CPErrorType</h1>
+            <p>enum class for Error Types</p>
+<div class="aside aside-since">
+    <p class="aside-title">Since</p>
+    1.0.0
+
+</div>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@PARTIAL_SUCCESS"></a>
+                    <a name="//apple_ref/swift/Case/PARTIAL_SUCCESS" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@PARTIAL_SUCCESS">PARTIAL_SUCCESS</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Request is succeeded in partial manner</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_SYSTEM"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_SYSTEM" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_SYSTEM">ERROR_SYSTEM</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>System failure</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_INTERNAL_SERVER"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_INTERNAL_SERVER" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_INTERNAL_SERVER">ERROR_INTERNAL_SERVER</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Internal server error occurred</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_NETWORK"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_NETWORK" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_NETWORK">ERROR_NETWORK</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Network failures</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_SERVER"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_SERVER" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_SERVER">ERROR_SERVER</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Server failures</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_SECURITY"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_SECURITY" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_SECURITY">ERROR_SECURITY</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Https security failure</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_AUTHENTICATION"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_AUTHENTICATION" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_AUTHENTICATION">ERROR_AUTHENTICATION</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Authentication failure</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_AUTHORIZATION"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_AUTHORIZATION" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_AUTHORIZATION">ERROR_AUTHORIZATION</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Authorization failure</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_PROXY"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_PROXY" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_PROXY">ERROR_PROXY</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Error on defined Notification Proxy</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_LOCALIZATION"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_LOCALIZATION" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_LOCALIZATION">ERROR_LOCALIZATION</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Localization not found or malformed</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_VALIDATION"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_VALIDATION" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_VALIDATION">ERROR_VALIDATION</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Input structure is not validated</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_NULL_PARAMETER"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_NULL_PARAMETER" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_NULL_PARAMETER">ERROR_NULL_PARAMETER</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Input parameter is null</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_MESSAGE_PARSE"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_MESSAGE_PARSE" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_MESSAGE_PARSE">ERROR_MESSAGE_PARSE</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Received notification message can not be parsed</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_WEBRTC"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_WEBRTC" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_WEBRTC">ERROR_WEBRTC</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Failure on WebRTC library</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_METHOD_NOT_ALLOWED"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_METHOD_NOT_ALLOWED" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_METHOD_NOT_ALLOWED">ERROR_METHOD_NOT_ALLOWED</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Method can not be performed</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_MICROPHONE_ACCESS"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_MICROPHONE_ACCESS" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_MICROPHONE_ACCESS">ERROR_MICROPHONE_ACCESS</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Microphone access is not available</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_CAMERA_ACCESS"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_CAMERA_ACCESS" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_CAMERA_ACCESS">ERROR_CAMERA_ACCESS</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Camera access is not available</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_REMOTE_SERVER_BUSY"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_REMOTE_SERVER_BUSY" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_REMOTE_SERVER_BUSY">ERROR_REMOTE_SERVER_BUSY</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remote server busy error</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_SESSION_FAILED"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_SESSION_FAILED" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_SESSION_FAILED">ERROR_SESSION_FAILED</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Session failed</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_LOCAL_OFFER_IN_PROGRESS"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_LOCAL_OFFER_IN_PROGRESS" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_LOCAL_OFFER_IN_PROGRESS">ERROR_LOCAL_OFFER_IN_PROGRESS</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Another local offer is in progress</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_AUDIO_ROUTE"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_AUDIO_ROUTE" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_AUDIO_ROUTE">ERROR_AUDIO_ROUTE</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Audio Router setActiveAudioRoute error</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_INVALID_STATE"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_INVALID_STATE" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_INVALID_STATE">ERROR_INVALID_STATE</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Method called in invalid state</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_WEBSOCKET_TIMEOUT"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_WEBSOCKET_TIMEOUT" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_WEBSOCKET_TIMEOUT">ERROR_WEBSOCKET_TIMEOUT</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Websocket could not be connected</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_REQUEST_PENDING"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_REQUEST_PENDING" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_REQUEST_PENDING">ERROR_REQUEST_PENDING</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Request pending</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_INVALID_ACCESS_TOKEN"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_INVALID_ACCESS_TOKEN" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_INVALID_ACCESS_TOKEN">ERROR_INVALID_ACCESS_TOKEN</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An authentication error occurred because of an invalid access token</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_UNAUTHORIZED"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_UNAUTHORIZED" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_UNAUTHORIZED">ERROR_UNAUTHORIZED</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A generic authorization error occurred</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@CPErrorType@ERROR_EXPIRED_ACCESS_TOKEN"></a>
+                    <a name="//apple_ref/swift/Case/ERROR_EXPIRED_ACCESS_TOKEN" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@CPErrorType@ERROR_EXPIRED_ACCESS_TOKEN">ERROR_EXPIRED_ACCESS_TOKEN</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An authentication error occurred because of an expired access token</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2019-05-02)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
