@@ -9,6 +9,10 @@
 
 This section contains the required steps for beginning your mobile application development by using $KANDY$ Mobile SDK in the Xcode iOS project.
 
+## Compatible XCode and Swift Versions
+
+The applications which uses CPaaS MobileSDK can be built with the XCode 10.2+ and Swift 4.2+ versions.
+
 ## Creating the iOS project
 
 1. Open the Xcode application.

@@ -2,11 +2,17 @@
 
 SDK framework file can be found in the [SDK collection](https://github.com/Kandy-IO/kandy-cpaas-ios-sdk/tree/master/dist).
 
-MD5 Checksum for SDK collection : 9884d063cd9d9548ca61a740611477dc
+MD5 Checksum for SDK collection : b8912b6220d67884ce1767f7b3451ad3
 
 Compatible iOS versions :
 
 * iOS 9.X - iOS 12.X
+
+Compatible XCode and Swift Versions :
+
+* XCode 10.2+
+
+* Swift 4.2+
 
 ## Reference
 
