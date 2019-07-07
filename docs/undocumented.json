@@ -1,6 +1,13 @@
 {
   "warnings": [
     {
+      "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/CPaaSSDK/CPaaS.swift",
+      "line": 86,
+      "symbol": "CPaaS.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/erhanbayraktar/Documents/Projects/CPaaS/CPaaS_Mobile_SDKs/CPaaS_iOS_SDK/cpaas_ios_sdk/CPaaSSDK/Services/AddressBookService/CPAddressBookService/CPAddressBookService.swift",
       "line": 406,
       "symbol": "CPAddressBookService.subscribe(channelID:completion:)",

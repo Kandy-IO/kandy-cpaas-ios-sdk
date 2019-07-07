@@ -311,6 +311,65 @@ call.unmute()
 [call unmute];
 ```
 
+### Transfering call  
+  
+#### To blind transfer call  
+  
+To blind transfer call to another user, the call must be held first. Then `transferCall' method can be called by passing callee address as a parameter.
+  
+*Swift Code:*  
+```swift  
+call.transferCall(CPUriAddress.uriAddressWithUsername(user@cpaasdomain.com, domain: domain)  
+```  
+  
+*Objective-C Code:*  
+```objective-c  
+[_call transferCall:[CPUriAddressuriAddressWithUsername:@"user@cpaasdomain.com"withDomain:domain]];  
+```  
+  
+This type of transfer can be used if the user do not need to speak to the the user who receives transfer call. When the operation succeeds, the call disposes on the user who starts transferring call.  
+The user who receives transfer call can get caller address by using `getCallerAddres` method when the call notification is received. Likewise, the user who transferred can get address of callee by using `getCalleeAddress`. These methods should be called using call object.  
+  
+*Swift Code:*  
+```swift  
+call.callerAddress  
+call.getCalleeAddress  
+```  
+  
+*Objective-C Code:*  
+```objective-c  
+[_call callerAddress];  
+```  
+  
+Caller and callee address changes can be listened using key value observer.  
+  
+*Swift Code:*  
+```swift  
+call.addObserver(self,forKeyPath:”caleeAddress”,options: :
+(NSKeyValueObservingOptions.new |
+	NSKeyValueObservingOptions.old), context:nil)  
+```  
+  
+*Objective-C Code:*  
+```objective-c  
+[self.call addObserver:self
+	forKeyPath:@"calleeAddress"
+	options:(NSKeyValueObservingOptionNew |   
+        NSKeyValueObservingOptionOld)  
+    context:NULL];
+      
+[self.call addObserver:self
+	forKeyPath:@"callerAddress"
+		options:(NSKeyValueObservingOptionNew |
+			NSKeyValueObservingOptionOld)
+		context:NULL];
+
+-(void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:  
+(NSDictionary *)change context:(void *)context{
+
+// Caller address and callee address can be get from ‘object’ and ‘change’  
+```  
+
 ## Anonymous Calls
 
 $KANDY$ offers to make voice and video calls even if the application user does not have a $KANDY$ account to login. This functionality is called as Anonymous Call on $KANDY$ system. Anonymous call feature can be useful for applications such as customer service support. Since the application user does not have a $KANDY$ account, only an outgoing call can be made to a registered $KANDY$ user. An anonymous user cannot receive and incoming call with this feature.

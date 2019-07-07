@@ -5,6 +5,15 @@ CPaaS iOS SDK change log.
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
+## 1.7.0- 2019-07-05
+
+### Added
+- Blind (Direct) Transfer feature implemented `KAE-82`
+
+### Fixed
+- Error case that `fetchMessages(completion:)` method call causes on ChatService is fixed. `KAE-436`
+
+
 ## 1.6.0 - 2019-06-01
 
 ### Added
