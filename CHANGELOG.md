@@ -5,7 +5,16 @@ CPaaS iOS SDK change log.
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
-## 1.7.0- 2019-07-05
+## 1.8.0 - 2019-08-05
+
+### Added
+- Consultative Transfer feature implemented `KAE-84`
+
+### Fixed
+- Delete chat message fixed. `KAE-480`
+
+
+## 1.7.0 - 2019-07-05
 
 ### Added
 - Blind (Direct) Transfer feature implemented `KAE-82`

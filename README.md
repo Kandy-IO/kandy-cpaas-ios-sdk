@@ -2,7 +2,7 @@
 
 SDK framework file can be found in the [SDK collection](https://github.com/Kandy-IO/kandy-cpaas-ios-sdk/tree/master/dist).
 
-MD5 Checksum for SDK collection : f9f72834fc742c125be7fbf54637de0c
+MD5 Checksum for SDK collection : 01a4196fc74b9ff85fb03748faecb556
 
 Compatible iOS versions :
 
