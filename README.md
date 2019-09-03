@@ -14,6 +14,10 @@ Compatible XCode and Swift Versions :
 
 * Swift 4.2+
 
+Tested on :
+
+* iPhone 5S, 5C, 6S, 7, 7+, 8, X, iPad mini, iPad 4, and iPad Air
+
 ## Reference
 
 The information about tutorials and documents can be found in the links below
