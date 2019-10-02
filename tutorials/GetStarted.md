@@ -7,6 +7,32 @@
 ---
 # Get Started
 
+## Base URL
+
+This is the API Marketplace HTTPS entry point that you will use for authentication, REST services and WebSocket notifications.
+
+```
+$KANDYFQDN$
+```
+
+## ICE Servers
+
+Use these primary and secondary URIs as the ICE Servers in the JavaScript, iOS or Android SDKs configuration when connecting and making calls. This is needed in order to ensure that calls can be established even the call peers are on different networks, behind firewalls. When the ICE server connects, it will try the Primary URL first. If that fails, it will try the Secondary URL.
+
+#### Primary URL:
+
+```
+$KANDYICE1$
+```
+
+#### Secondary URL:
+
+```
+$KANDYICE2$
+```
+
+## Installation
+
 This section contains the required steps for beginning your mobile application development by using $KANDY$ Mobile SDK in the Xcode iOS project.
 
 ## Compatible XCode and Swift Versions
@@ -22,12 +48,22 @@ The applications which uses CPaaS MobileSDK can be built with the XCode 10.2+ an
 ![alt text](img/get_started_1.png)
 
 4. Type the project details and click **Create**.
-5. Go to project settings and navigate to **Build Phases**.
-6. Add **CPaaSSDK.framework** under **Link Binary With Libraries** section.
+5. Select one of the installation methods below
+
+### Cocoapods installation
+1. Add below pods to your Podfile (If you dont have any Podfile, visit this link to install cocoapods: https://guides.cocoapods.org/using/using-cocoapods.html)
+
+* pod 'KandyCPaaSMobileSDK'
+
+2. Go to project folder via command line and run "pod install" command and wait for cocoapods to finish installation of Kandy CPaaS MobileSDK & WebRTC frameworks and their dependencies
+
+### Manual Installation
+1. Go to project settings and navigate to **Build Phases**.
+2. Add **CPaaSSDK.framework** under **Link Binary With Libraries** section.
 
 ![alt text](img/get_started_2.png)
 
-7. Add the following frameworks to the project under the **Link Binary With Libraries**:
+3. Add the following frameworks to the project under the **Link Binary With Libraries**:
 	* AvFoundation.framework
 	* SystemConfiguration.framework
 	* CFNetwork.framework
@@ -48,31 +84,31 @@ The applications which uses CPaaS MobileSDK can be built with the XCode 10.2+ an
 	* libstdc++.tbd
 	* libicucore.tbd
 
-8. Add WebRTC.framework under the **Embedded Binaries** section in **General** tab on Project Settings. Select **Copy items if needed**.
-9. Under the **Build Settings** section, search for **Framework Search Paths** and add the following:
+4. Add WebRTC.framework under the **Embedded Binaries** section in **General** tab on Project Settings. Select **Copy items if needed**.
+5. Under the **Build Settings** section, search for **Framework Search Paths** and add the following:
 
   `$(PROJECT_DIR)/CPaaSSDK.framework/SubFrameworks/`
 
   **Note:** If framework is located in different place rather than main directory of project, above line should be modified accordingly.
 
-10. **CPaaS SDK** is now ready to implementation.
+**CPaaS SDK** is now ready to implementation.
 
-## Using the $KANDY$ Mobile SDK in the iOS Project
 
-The following part shows how to use **$KANDY$ Mobile SDK** with basic features. While codes are shared for both *Swift* and *Objective-C* languages, some parts may need different implementations, are also indicated.
+6. The following part shows how to use **$KANDY$ Mobile SDK** with basic features. While codes are shared for both *Swift* and *Objective-C* languages, some parts may need different implementations, are also indicated.
 
-**If the project language is selected as *Swift*, do the following:**
-* Navigate to the **Build Settings** in the project settings.
-* Search for **Other Linker Flags** listed under the **Linking** and click.
-* Click **+** button in the list appeared next under to the **Other Linker Flags**.
-* Type *-ObjC* and close the panel.
+  **If the project language is selected as *Swift*, do the following:**
+  * Navigate to the **Build Settings** in the project settings.
+  * Search for **Other Linker Flags** listed under the **Linking** and click.
+  * Click **+** button in the list appeared next under to the **Other Linker Flags**.
+  * Type *-ObjC* and close the panel.
 
-![alt text](img/get_started_3.png)
+  ![alt text](img/get_started_3.png)
 
-* In order to run framework, search for **Enable Bitcode** option listed under the **Build Options**, and change it to the **NO**.
+  * In order to run framework, search for **Enable Bitcode** option listed under the **Build Options**, and change it to the **NO**.
 
-$KANDY$ Mobile SDK is now ready to use in the application.
+  $KANDY$ Mobile SDK is now ready to use in the application.
 
+### Using the $KANDY$ Mobile SDK in the iOS Project
 1. Open *Main.storyboard* and create a basic user interface which contains username, password text fields, and login button.
 2. Set **AuthenticationDelegate** to view controller and add protocol stubs.
 

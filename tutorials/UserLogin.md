@@ -17,6 +17,12 @@ import CPaaSSDK
 let configuration = CPConfig.sharedInstance()
 configuration.restServerUrl = "cpaasapi.example.com"
 configuration.useSecureConnection = true
+
+// Setting ICE Servers
+let iceServers: CPICEServers = CPICEServers()
+iceServers.addICEServer("turns:turn-example.com:443?transport=tcp")
+iceServers.addICEServer("turn:turn-example.com:3535?transport=udp")
+configuration.iceServers = iceServers
 ```
 
 *Objective-C Code:*
@@ -26,78 +32,12 @@ configuration.useSecureConnection = true
 CPConfig *configuration = [CPConfig sharedInstance];
 configuration.restServerUrl = @"cpaasapi.example.com";
 configuration.useSecureConnection = YES;
-```
 
-### Example Configurations
-
-#### Call
-
-The Call configs are used to initialize call/network settings and to set the starting behavior of a call.
-
-*Swift Code:*
-```swift
-import CPaaSSDK
-
-let configuration = CPConfig.sharedInstance()
-configuration.earlyMediaEnabled = false
-configuration.auditFrequency = 30
-```
-
-*Objective-C Code:*
-```objective-c
-@import CPaaSSDK;
-
-CPConfig *configuration = [CPConfig sharedInstance];
-[configuration setEarlyMediaEnabled:NO];
-[configuration setAuditFrequence:30];
-```
-
-#### WebRTC
-
-The WebRTC configs are used to customize the advanced behavior of the SDK, like providing ICE Servers and corresponding options, setting a custom set of video and audio codecs, enabling or disabling encryption options of the WebRTC etc.
-
-*Swift Code:*
-```swift
-import CPaaSSDK
-
-let configuration = CPConfig.sharedInstance()
-configuration.dtlsEnabled = true
-configuration.iceOption = ICE_TRICKLE
-configuration.iceCollectionTimeout = 1
-
-// Setting custom ICE Servers
-let iceServers: CPICEServers = CPICEServers()
-iceServers.addICEServer("turns:turn-example.com:443?transport=tcp")
-iceServers.addICEServer("turn:turn-example.com:3535?transport=udp")
-configuration.iceServers = iceServers
-
-// Setting specific codecs, by default all codecs are in use
-let audioCodecSet = [NSNumber(value: AC_G722.rawValue), NSNumber(value: AC_OPUS.rawValue)]
-let videoCodecSet = [NSNumber(value: VC_H264.rawValue), NSNumber(value: VC_VP9.rawValue)]
-let codecSet = CPCodecSet.codecSet(withAudioCodecs: audioCodecSet, videoCodecs: videoCodecSet)
-configuration.preferredCodecSet = codecSet
-```
-
-*Objective-C Code:*
-```objective-c
-@import CPaaSSDK;
-
-CPConfig *configuration = [CPConfig sharedInstance];
-[configuration setDtlsEnabled:YES];
-[configuration setIceOption:ICE_TRICKLE];
-[configuration setICECollectionTimeout:1];
-
-// Setting custom ICE Servers
+// Setting ICE Servers
 CPICEServers *iceServers = [[CPICEServers alloc] init];
 [iceServers addICEServer:@"turns:turn-example.com:443?transport=tcp"];
 [iceServers addICEServer:@"turn:turn-example.com:3535?transport=udp"];
 [configuration setICEServers:iceServers];
-
-// Setting specific codecs, by default all codecs are in use
-NSArray *audioCodecSet = @{@(AC_G722),@(AC_OPUS)};
-NSArray *videoCodecSet = @{@(VC_H264),@(VC_VP9)};
-CPCodecSet *set = [CPCodecSet codecSetWithAudioCodecs:audioCodecSet videoCodecs:videoCodecSet];
-[configuration setPreferredCodecSet:set];
 ```
 
 #### Capturing Logs and Troubleshooting Problems
