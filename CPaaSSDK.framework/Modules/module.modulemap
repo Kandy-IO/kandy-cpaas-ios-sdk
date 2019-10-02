@@ -1,0 +1,11 @@
+framework module CPaaSSDK {
+  umbrella header "CPaaSSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module CPaaSSDK.Swift {
+    header "CPaaSSDK-Swift.h"
+    requires objc
+}

@@ -1,0 +1,4 @@
+framework module CPPresenceService {
+    header "CPPresenceService-Swift.h"
+    requires objc
+}

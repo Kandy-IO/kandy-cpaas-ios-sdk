@@ -1,0 +1,11 @@
+framework module RestManager {
+  umbrella header "RestManager.h"
+
+  export *
+  module * { export * }
+}
+
+module RestManager.Swift {
+    header "RestManager-Swift.h"
+    requires objc
+}
