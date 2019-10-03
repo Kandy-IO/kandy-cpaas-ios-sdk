@@ -5,6 +5,13 @@ CPaaS iOS SDK change log.
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
+## 2.0.0 - 2019-10-03
+
+### Added
+- Unified Plan Support `KAE-428`
+- Mobile SDK Distribution on CocoaPods `KAE-426`
+
+
 ## 1.8.0 - 2019-08-05
 
 ### Added
