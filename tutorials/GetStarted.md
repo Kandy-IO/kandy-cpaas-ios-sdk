@@ -37,7 +37,7 @@ This section contains the required steps for beginning your mobile application d
 
 ## Compatible XCode and Swift Versions
 
-The applications which uses CPaaS MobileSDK can be built with the XCode 10.2+ and Swift 4.2+ versions.
+The applications which uses $KANDY$ MobileSDK can be built with the XCode 10.2+ and Swift 4.2+ versions.
 
 ## Creating the iOS project
 
@@ -121,8 +121,8 @@ The applications which uses CPaaS MobileSDK can be built with the XCode 10.2+ an
 import CPaaSSDK
 
 let configuration = CPConfig.sharedInstance()
-configuration.restServerUrl = "serverURL"
-configuration.restServerPort = "port"
+configuration.restServerUrl = "$KANDYFQDN$"
+configuration.restServerPort = "443"
 configuration.useSecureConnection = true
 ```
 *Objective-C Code:*
@@ -130,8 +130,8 @@ configuration.useSecureConnection = true
 @import CPaaSSDK;
 
 CPConfig *configuration = [CPConfig sharedInstance];
-configuration.restServerUrl = @"serverURL";
-configuration.restServerPort = @"port";
+configuration.restServerUrl = @"$KANDYFQDN$";
+configuration.restServerPort = @"443";
 configuration.useSecureConnection = YES;
 ```
 

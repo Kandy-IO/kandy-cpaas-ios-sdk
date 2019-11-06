@@ -51,7 +51,7 @@ FOUNDATION_EXPORT const unsigned char CPCallServiceVersionString[];
  * Provides reference for sending callbacks to application
  * - Returns: CPCallApplicationDelegate
  */
-@property (nonatomic, strong, readonly) id<CPCallApplicationDelegate> callApplicationDelegate;
+@property (nonatomic, strong) id<CPCallApplicationDelegate> callApplicationDelegate;
 
 /**
  * If YES, MobileSDK will not initialize the audio unit automatically when an
@@ -88,14 +88,6 @@ FOUNDATION_EXPORT const unsigned char CPCallServiceVersionString[];
 - (id)initWithUserInfo:(CPUserInfo *)userInfo info:(CPServiceInfo *) serviceInfo;
 
 /**
- *  Set the event handler CallApplicationDelegate for the CPCallService.
- * @param app CallApplicationDelegate
- * - Since: 1.0.0
- */
-
--(void) setCallApplication :(id <CPCallApplicationDelegate>) app;
-
-/**
  *  This method is to create outgoing/mobile originated calls
  *
  * @param app delegete of application to return callbacks for call
@@ -109,6 +101,7 @@ FOUNDATION_EXPORT const unsigned char CPCallServiceVersionString[];
              andTerminator:(CPUriAddress *)terminator
                 completion:(void (^)(id<CPOutgoingCallDelegate> call, CPError *error))callHandler;
 
+
 /**
  *  This method is to create outgoing/mobile originated calls
  *
@@ -120,6 +113,21 @@ FOUNDATION_EXPORT const unsigned char CPCallServiceVersionString[];
 - (void) createOutGoingCall:(id <CPCallApplicationDelegate>)app
               andTerminator:(CPUriAddress *)terminator
                  completion:(void (^)(id<CPOutgoingCallDelegate> call, CPError *error))callHandler;
+
+
+/**
+ * @brief This method creates Three Way Call.
+ * For now this api just supports to merge two calls.
+ *
+ * @param firstCall specifies the first call which will be joined to ThreeWay Call
+ * @param secondCall specifies the second call which will be joined to ThreeWay Call
+ * @param completion completion block with call to establish call
+ *
+ * @since 2.1.0
+ */
+- (void) createThreeWayCallWithFirstCall:(id<CPCallDelegate>) firstCall
+                              secondCall:(id<CPCallDelegate>) secondCall
+                              completion:(void (^)(id<CPOutgoingCallDelegate> call, CPError *error))callHandler;
 
 /**
  *  Rotates camera to specified orientation

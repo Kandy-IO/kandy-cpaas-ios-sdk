@@ -11,25 +11,50 @@
 <body>
   <div id="app"></div>
   <script>
+
+    var params = new Map();
+    params.set('KANDY', 'Kandy CPaaS');
+    params.set('KANDYFQDN', 'oauth-cpaas.att.com');
+    params.set('KANDYICE1', 'turns:turn-ucc-1.genband.com:443?transport=tcp');
+    params.set('KANDYICE2', 'turns:turn-ucc-2.genband.com:443?transport=tcp');
+
+    var url = new URL(window.location.href);
+    var searchParams = new URLSearchParams(url.search);
+
+    for (const key of params.keys()) {
+      if (searchParams.has(key)) {
+        params.set(key, searchParams.get(key));
+      }
+    }
+
+    document.title = params.get('KANDY') + ' iOS SDK - User Guide';
+
     window.$docsify = {
-      loadSidebar: true,
+      loadSidebar: 'toc.md',
       autoHeader: true,
+      maxLevel: 4,
       subMaxLevel: 2,
       auto2top: true,
-      homepage: 'GetStarted.md',
-      name: 'Kandy CPaaS iOS SDK - User Guide',
+      name: document.title,
+      nameLink: window.location.href,
       repo: '',
       plugins: [
-    function(hook) {
+        function(hook) {
 
-      hook.beforeEach(function(content) {
-        // Invoked each time before parsing the Markdown file.
-        // ...
-        return content.replace(/\$KANDY\$/gsm, "CPaaS").replace(/---(.*?)---/gsm, '');
-      });
+          hook.beforeEach(function(content) {
+            // Invoked each time before parsing the Markdown file.
+            // ...
+            var temp = content.replace(/---([^]*?)---/g, '');
 
-    }
-  ]
+            for (const key of params.keys()) {
+              temp = temp.replace(new RegExp('\\$' + key + '\\$', 'g'), params.get(key));
+            }
+
+            return temp;
+          });
+
+        }
+      ]
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
