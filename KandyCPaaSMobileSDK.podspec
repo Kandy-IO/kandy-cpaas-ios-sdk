@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
-    s.name              = 'KandyLinkCPaaSSDK'
+    s.name              = 'KandyCPaaSMobileSDK'
     s.version           = '2.0.0'
-    s.summary           = 'KandyLinkCPaaSSDK'
+    s.summary           = 'KandyCPaaSMobileSDK'
     s.homepage          = 'https://github.com/Kandy-IO/kandy-cpaas-ios-sdk'
-    s.license 		      = { :type => 'MIT', :file => 'mit-license.txt'}
+    s.license 		= { :type => 'MIT', :file => 'mit-license.txt'}
     s.author            = { 'Name' => 'cpaassdk@netas.com.tr' }
     s.platform          = :ios
     s.source            = { :git => 'https://github.com/Kandy-IO/kandy-cpaas-ios-sdk.git', :tag => '2.0.0'}
