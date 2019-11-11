@@ -29,6 +29,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NSString *username;
 
 /**
+ * Domain value of the user .
+ * - Returns: String
+ * - Since: 2.1.0
+ */
+@property (nonatomic, strong, readonly) NSString *domain;
+
+/**
  * Name value of the user ID to be used in services.
  * - Returns: String
  * - Since: 1.0.0

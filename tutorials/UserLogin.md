@@ -15,13 +15,13 @@ The first step for any application that will use the $KANDY$ Mobile SDK is setti
 import CPaaSSDK
 
 let configuration = CPConfig.sharedInstance()
-configuration.restServerUrl = "cpaasapi.example.com"
+configuration.restServerUrl = "$KANDYFQDN$"
 configuration.useSecureConnection = true
 
 // Setting ICE Servers
 let iceServers: CPICEServers = CPICEServers()
-iceServers.addICEServer("turns:turn-example.com:443?transport=tcp")
-iceServers.addICEServer("turn:turn-example.com:3535?transport=udp")
+iceServers.addICEServer("$KANDYICE1$")
+iceServers.addICEServer("$KANDYICE2$")
 configuration.iceServers = iceServers
 ```
 
@@ -30,13 +30,13 @@ configuration.iceServers = iceServers
 @import CPaaSSDK;
 
 CPConfig *configuration = [CPConfig sharedInstance];
-configuration.restServerUrl = @"cpaasapi.example.com";
+configuration.restServerUrl = @"$KANDYFQDN$";
 configuration.useSecureConnection = YES;
 
 // Setting ICE Servers
 CPICEServers *iceServers = [[CPICEServers alloc] init];
-[iceServers addICEServer:@"turns:turn-example.com:443?transport=tcp"];
-[iceServers addICEServer:@"turn:turn-example.com:3535?transport=udp"];
+[iceServers addICEServer:@"$KANDYICE1$"];
+[iceServers addICEServer:@"$KANDYICE2$"];
 [configuration setICEServers:iceServers];
 ```
 

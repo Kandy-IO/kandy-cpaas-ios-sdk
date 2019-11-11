@@ -558,49 +558,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)CPCallService(im)setCallApplication:"></a>
-                    <a name="//apple_ref/swift/Method/-setCallApplication:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)CPCallService(im)setCallApplication:">-setCallApplication:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Set the event handler CallApplicationDelegate for the CPCallService.</p>
-<div class="aside aside-since">
-    <p class="aside-title">Since</p>
-    1.0.0
-
-</div>
-
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>app</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>CallApplicationDelegate</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/c:objc(cs)CPCallService(im)createOutGoingCall:andOriginator:andTerminator:completion:"></a>
                     <a name="//apple_ref/swift/Method/-createOutGoingCall:andOriginator:andTerminator:completion:" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)CPCallService(im)createOutGoingCall:andOriginator:andTerminator:completion:">-createOutGoingCall:andOriginator:andTerminator:completion:</a>
@@ -730,6 +687,71 @@
                               <td>
                                 <code>
                                 <em>callHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>completion block with call to establish call</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)CPCallService(im)createThreeWayCallWithFirstCall:secondCall:completion:"></a>
+                    <a name="//apple_ref/swift/Method/-createThreeWayCallWithFirstCall:secondCall:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)CPCallService(im)createThreeWayCallWithFirstCall:secondCall:completion:">-createThreeWayCallWithFirstCall:secondCall:completion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>@brief This method creates Three Way Call.
+ For now this api just supports to merge two calls.</p>
+
+<p>@since 2.1.0</p>
+
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>firstCall</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>specifies the first call which will be joined to ThreeWay Call</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>secondCall</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>specifies the second call which will be joined to ThreeWay Call</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
                                 </code>
                               </td>
                               <td>
@@ -966,7 +988,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2019-10-02)</p>
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2019-11-06)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -5,6 +5,15 @@ CPaaS iOS SDK change log.
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
+## 2.1.0 - 2019-11-04
+
+### Added
+- ThreeWayCall feature implemented `KAE-86`
+
+### Changed
+- setCallApplication method has been updated as setCallApplicationDelegate in CPCallService class
+
+
 ## 2.0.0 - 2019-10-03
 
 ### Added
