@@ -69,11 +69,6 @@
  **/
 -(void) addHeaderParameters;
 
-/**
- * This method gets DefaultHeaders.
- * @return _messageHeader
- **/
-- (SMRestHeader*) getDefaultHeaders;
 
 /**
  * Generate a session task for use by a connection

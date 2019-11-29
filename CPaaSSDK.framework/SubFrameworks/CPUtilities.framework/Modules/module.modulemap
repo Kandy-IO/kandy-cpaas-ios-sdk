@@ -12,6 +12,7 @@ framework module CPUtilities {
         header "CPThreadManager.h"
         header "SMRestResponseStatus.h"
         header "SMRestResponseStatusMapper.h"
+        header "CPConstants.h"
         
         export CPUtilities
     }
