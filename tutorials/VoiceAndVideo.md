@@ -171,6 +171,8 @@ func incomingCall(_ call: CPIncomingCallDelegate!) {
 
 An incoming call can be ignored by calling the ignoreCall: method on the incoming call instance.
 
+*Swift Code:*
+
 ```swift
 import CPaaSSDK
 
@@ -186,6 +188,32 @@ func incomingCall(_ call: CPIncomingCallDelegate!) {
 
 - (void)incomingCall:(id<CPIncomingCallDelegate>)call {
     [call ignoreCall];
+}
+```
+
+#### Forwarding Incoming Call
+
+An incoming call can be forwarded to another user by calling the forwardCall: method on the incoming call instance. After a successful invokation of the forward operation, call will be ended on the client which invoked the operation, the user whose address is given to forward operation will receive an incoming call from the originator side.
+
+*Swift Code:*
+
+```swift
+import CPaaSSDK
+
+func incomingCall(_ call: CPIncomingCallDelegate!) {
+    let targetAddress = CPUriAddress(primaryContact: "username@domain")
+    call.forwardCall(targetAddress)
+}
+```
+
+*Objective-C Code:*
+
+```objective-c
+@import CPaaSSDK;
+
+- (void)incomingCall:(id<CPIncomingCallDelegate>)call {
+    CPUriAddress *targetAddress = [[CPUriAddress alloc] initWithPrimaryContact:@"username@domain"];
+    [call forwardCall:targetAddress];
 }
 ```
 

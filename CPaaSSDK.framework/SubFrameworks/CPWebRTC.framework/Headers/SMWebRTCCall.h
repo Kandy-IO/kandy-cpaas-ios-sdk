@@ -323,9 +323,14 @@ typedef NS_ENUM(NSInteger, WRTCConnectionState) {
 
 /**
  * Retrieves the media state of the delegate(call) object
+ */
+- (void) setMediaState;
+
+/**
+ * Retrieves the media state of the delegate(call) object
  * @return MediaState media state of the call
  */
-- (SMWMediaState) mediaState;
+- (SMWMediaState) getMediaState;
 
 /**
  * Returns local description of PeerConnection

@@ -1,4 +1,4 @@
 # $KANDY$ iOS SDK - User Guide
-Version Number: **2.2.0**
+Version Number: **2.3.0**
 <br>
-Revision Date: **November 29, 2019**
+Revision Date: **January 9, 2020**

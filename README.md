@@ -1,16 +1,22 @@
 # Kandy CPaaS iOS SDK
 
+<p>
+    <img alt="Cocoapods platforms" src="https://img.shields.io/cocoapods/p/KandyCPaaSMobileSDK">
+    <img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/kandy-io/kandy-cpaas-ios-sdk">
+    <img alt="Cocoapods" src="https://img.shields.io/cocoapods/v/KandyCPaaSMobileSDK">
+</p>
+
 SDK framework file can be found in the [SDK collection](https://github.com/Kandy-IO/kandy-cpaas-ios-sdk/tree/master/dist).
 
 Compatible iOS versions :
 
-* iOS 10.X+
+* iOS 10.X+ (please note iOS 13 is not yet supported for push relevant scenarios)
 
 Compatible XCode and Swift Versions :
 
-* XCode 10.x (please note Xcode 11 is not yet supported)
+* XCode 11.X+
 
-* Swift 4.2+
+* Swift 5.1+
 
 Tested on :
 

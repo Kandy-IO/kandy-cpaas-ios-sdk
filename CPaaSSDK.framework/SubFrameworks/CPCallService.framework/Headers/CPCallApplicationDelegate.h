@@ -271,6 +271,24 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void) transferCallFailed:(id<CPCallDelegate>)call withError:(CPError*)error;
 
+
+/**
+ * Method invoked when attempt to forward a call has succeeded.
+ * @param call performed forward call successfully
+ * @see [CallDelegate transferCall:]
+ * @since 2.2.0
+ */
+- (void) forwardCallSucceed:(id<CPCallDelegate>)call;
+
+/**
+ * Method invoked when attempt to forward a call has failed.
+ * @param call couldn't succeed forward operation
+ * @param error reason of the failure
+ * @see [CallDelegate forwardCall:]
+ * @since 2.2.0
+ */
+- (void) forwardCallFailed:(id<CPCallDelegate>)call withError:(CPError*)error;
+
 @end
 
 NS_ASSUME_NONNULL_END

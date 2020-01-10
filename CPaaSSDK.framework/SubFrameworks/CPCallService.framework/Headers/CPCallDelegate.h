@@ -122,6 +122,14 @@
 - (void) consultativeTransfer: (id<CPCallDelegate> _Nonnull) call;
 
 /**
+ * @brief Method used by the application to forward this call to another participant.
+ *
+ * @param toAddress address information of the endpoint to forward this call to
+ * @since 2.2.0
+ */
+- (void) forwardCall:(CPUriAddress* _Nonnull)toAddress;
+
+/**
  *  Inserts Dual Tone Multi Frequency Signal to sending queue and returns the success
  * @param tone character value of DTMF tone. Can only be 0,1...,9,*,#,a,b,c,d,A,B,C,D;
  * @return YES if tone can be successfully inserted to queue otherwise NO

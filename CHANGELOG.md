@@ -5,6 +5,15 @@ CPaaS iOS SDK change log.
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
+## 2.3.0 - 2020-01-09
+
+### Added
+- Call forward feature `KAE-81`
+
+### Fixed
+- Background thread was trying to access UI thread is fixed. `KAE-580`
+
+
 ## 2.2.0 - 2019-11-29
 
 ### Added
