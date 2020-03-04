@@ -1,4 +1,4 @@
 framework module CPAddressBookService {
-    header "CPAddressBookService-Swift.h"
-    requires objc
+  header "CPAddressBookService-Swift.h"
+  requires objc
 }

@@ -1,4 +1,4 @@
 framework module CPMessagingService {
-    header "CPMessagingService-Swift.h"
-    requires objc
+  header "CPMessagingService-Swift.h"
+  requires objc
 }

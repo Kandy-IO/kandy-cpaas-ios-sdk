@@ -406,9 +406,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)CPConfig(py)deviceToken"></a>
-                    <a name="//apple_ref/swift/Property/deviceToken" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)CPConfig(py)deviceToken">deviceToken</a>
+                    <a name="/c:objc(cs)CPConfig(py)standardDeviceToken"></a>
+                    <a name="//apple_ref/swift/Property/standardDeviceToken" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)CPConfig(py)standardDeviceToken">standardDeviceToken</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -419,7 +419,7 @@
                         <p>Device token which is used when receiving remote notifications.</p>
 <div class="aside aside-since">
     <p class="aside-title">Since</p>
-    1.0.0
+    2.3.0
 
 </div>
 
@@ -428,12 +428,49 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">deviceToken</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">standardDeviceToken</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">deviceToken</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">standardDeviceToken</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)CPConfig(py)voipDeviceToken"></a>
+                    <a name="//apple_ref/swift/Property/voipDeviceToken" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)CPConfig(py)voipDeviceToken">voipDeviceToken</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Device token which is used when receiving remote notifications.</p>
+<div class="aside aside-since">
+    <p class="aside-title">Since</p>
+    2.3.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">voipDeviceToken</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">voipDeviceToken</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -609,11 +646,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Web socket Self signed certificate file data. Can be fetched from a file or string.
- @code
- NSString *cerPath = &#91;&#91;NSBundle mainBundle&#92; pathForResource:@&ldquo;myOwnCertificate&rdquo; ofType:@&ldquo;der&rdquo;&#92;;
- &#91;&#91;Configuration getInstance] setWebSocketCertificate:&#91;&#91;NSData alloc&#92; initWithContentsOfFile:cerPath&#92;&#92;;
- @endcode</p>
+                        <p>Web socket Self signed certificate file data. Can be fetched from a file or string.</p>
+<pre class="highlight objective_c"><code> <span class="n">NSString</span> <span class="o">*</span><span class="n">cerPath</span> <span class="o">=</span> <span class="o">&amp;</span><span class="err">#</span><span class="mi">91</span><span class="p">;</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">91</span><span class="p">;</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">92</span><span class="p">;</span> <span class="n">pathForResource</span><span class="o">:</span><span class="s">@"myOwnCertificate"</span> <span class="n">ofType</span><span class="o">:</span><span class="s">@"der"</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">92</span><span class="p">;;</span>
+ <span class="o">&amp;</span><span class="err">#</span><span class="mi">91</span><span class="p">;</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">91</span><span class="p">;</span><span class="n">Configuration</span> <span class="n">getInstance</span><span class="p">]</span> <span class="n">setWebSocketCertificate</span><span class="o">:&amp;</span><span class="err">#</span><span class="mi">91</span><span class="p">;</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">91</span><span class="p">;</span><span class="n">NSData</span> <span class="n">alloc</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">92</span><span class="p">;</span> <span class="n">initWithContentsOfFile</span><span class="o">:</span><span class="n">cerPath</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">92</span><span class="p">;</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">92</span><span class="p">;;</span>
+</code></pre>
 <div class="aside aside-since">
     <p class="aside-title">Since</p>
     1.0.0
@@ -919,11 +955,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Server certificate to be used in HTTPS connection.Certificate must be .DER format.
- @code
- NSString *cerPath = &#91;&#91;NSBundle mainBundle&#92; pathForResource:@&ldquo;myOwnCertificate&rdquo; ofType:@&ldquo;der&rdquo;&#92;;
- &#91;&#91;Configuration getInstance] setWebSocketCertificate:&#91;&#91;NSData alloc&#92; initWithContentsOfFile:cerPath&#92;&#92;;
- @endcode</p>
+                        <p>Server certificate to be used in HTTPS connection.Certificate must be .DER format.</p>
+<pre class="highlight objective_c"><code> <span class="n">NSString</span> <span class="o">*</span><span class="n">cerPath</span> <span class="o">=</span> <span class="o">&amp;</span><span class="err">#</span><span class="mi">91</span><span class="p">;</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">91</span><span class="p">;</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">92</span><span class="p">;</span> <span class="n">pathForResource</span><span class="o">:</span><span class="s">@"myOwnCertificate"</span> <span class="n">ofType</span><span class="o">:</span><span class="s">@"der"</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">92</span><span class="p">;;</span>
+ <span class="o">&amp;</span><span class="err">#</span><span class="mi">91</span><span class="p">;</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">91</span><span class="p">;</span><span class="n">Configuration</span> <span class="n">getInstance</span><span class="p">]</span> <span class="n">setWebSocketCertificate</span><span class="o">:&amp;</span><span class="err">#</span><span class="mi">91</span><span class="p">;</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">91</span><span class="p">;</span><span class="n">NSData</span> <span class="n">alloc</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">92</span><span class="p">;</span> <span class="n">initWithContentsOfFile</span><span class="o">:</span><span class="n">cerPath</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">92</span><span class="p">;</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">92</span><span class="p">;;</span>
+</code></pre>
 <div class="aside aside-since">
     <p class="aside-title">Since</p>
     1.0.0
@@ -1412,8 +1447,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-01-10)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-03-04)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

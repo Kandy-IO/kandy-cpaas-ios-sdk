@@ -750,7 +750,7 @@ Notifies services to act according to the message.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">injectPushMessage</span><span class="p">(</span><span class="nv">pushMessage</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span><span class="p">:</span><span class="kt">Any</span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Classes/CPError.html">CPError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">injectPushMessage</span><span class="p">(</span><span class="nv">pushMessage</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Classes/CPError.html">CPError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -779,9 +779,9 @@ Notifies services to act according to the message.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@CPPushService@objc(cs)CPPushService(im)refreshDeviceToken:completion:"></a>
-                    <a name="//apple_ref/swift/Method/refreshDeviceToken(_:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPPushService@objc(cs)CPPushService(im)refreshDeviceToken:completion:">refreshDeviceToken(_:completion:)</a>
+                    <a name="/c:@M@CPPushService@objc(cs)CPPushService(im)refreshDeviceToken:voipDeviceToken:completion:"></a>
+                    <a name="//apple_ref/swift/Method/refreshDeviceToken(_:voipDeviceToken:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPPushService@objc(cs)CPPushService(im)refreshDeviceToken:voipDeviceToken:completion:">refreshDeviceToken(_:voipDeviceToken:completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -797,7 +797,7 @@ Notifies services to act according to the message.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">refreshDeviceToken</span><span class="p">(</span><span class="n">_</span> <span class="nv">deviceToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/CPPushService.html#/s:13CPPushServiceAAC21PushSubscriptionBlocka">PushSubscriptionBlock</a></span><span class="p">)</span></code></pre>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">refreshDeviceToken</span><span class="p">(</span><span class="n">_</span> <span class="nv">standardDeviceToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">voipDeviceToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/CPPushService.html#/s:13CPPushServiceAAC21PushSubscriptionBlocka">PushSubscriptionBlock</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -808,7 +808,19 @@ Notifies services to act according to the message.</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>deviceToken</em>
+                                <em>standardDeviceToken</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The device token to use subscription operations.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>voipDeviceToken</em>
                                 </code>
                               </td>
                               <td>
@@ -840,8 +852,8 @@ Notifies services to act according to the message.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-01-10)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-03-04)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

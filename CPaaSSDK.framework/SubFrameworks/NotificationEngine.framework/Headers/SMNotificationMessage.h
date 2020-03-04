@@ -15,6 +15,11 @@
 
 typedef void(^PushCallback)(CPError* _Nullable error);
 
+typedef NS_ENUM(NSInteger, SMNotificationComingType) {
+    NOTIFICATION_COMING_PUSH,
+    NOTIFICATION_COMING_WS,
+};
+
 /**
  *  Utility class for NotificationMessage.
  * Global notification message object which includes the data of notifications coming from socket.
@@ -53,5 +58,6 @@ typedef void(^PushCallback)(CPError* _Nullable error);
  **/
 @property(nonatomic, strong) PushCallback completionCallback;
 @property(nonatomic, strong) NSMutableDictionary * params;
+@property(nonatomic) SMNotificationComingType notificationComingType;
 
 @end

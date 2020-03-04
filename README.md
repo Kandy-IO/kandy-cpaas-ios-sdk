@@ -10,13 +10,13 @@ SDK framework file can be found in the [SDK collection](https://github.com/Kandy
 
 Compatible iOS versions :
 
-* iOS 10.X+ (please note iOS 13 is not yet supported for push relevant scenarios)
+* iOS 10.X+
 
 Compatible XCode and Swift Versions :
 
-* XCode 11.X+
+* XCode 11.x+
 
-* Swift 5.1+
+* Swift 5.1.2+
 
 Tested on :
 

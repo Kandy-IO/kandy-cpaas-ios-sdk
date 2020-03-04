@@ -5,6 +5,15 @@ CPaaS iOS SDK change log.
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
+## 2.4.0 - 2020-03-02
+
+### Added
+- New PushService subscribe api was implemented `KAE-521`
+- Xcode 11 and Swift 5.1 support `KAE-499`
+
+### Fixed
+- Not able to send multimedia file upper than 1MB on IM `KAE-583`
+
 ## 2.3.0 - 2020-01-09
 
 ### Added

@@ -1,0 +1,96 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-module-flags: -target armv7-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CPUtilities
+@_exported import CPUtilities
+import Foundation
+import Swift
+public typealias DeleteCompletionBlock = (CPUtilities.CPError?) -> ()
+public typealias ErrorCompletionBlock = (CPUtilities.CPError?) -> ()
+public typealias FetchCompletionBlock = (CPUtilities.CPError?, [Swift.AnyHashable : Any]?) -> ()
+@objc public enum ServiceType : Swift.Int, Swift.RawRepresentable {
+  public typealias RawValue = Swift.String
+  case sms = 0
+  case chat = 1
+  case call = 2
+  case presence = 3
+  case addressbook = 4
+  public var rawValue: CPUtilities.ServiceType.RawValue {
+    get
+  }
+  public init?(rawValue: CPUtilities.ServiceType.RawValue)
+}
+@objc public enum CallEventType : Swift.Int, Swift.RawRepresentable {
+  public typealias RawValue = Swift.String
+  case ringing = 0
+  case sessionEnded = 1
+  case cancelled = 2
+  case transferCompleted = 3
+  case transferFailed = 4
+  public var rawValue: CPUtilities.CallEventType.RawValue {
+    get
+  }
+  public init?(rawValue: CPUtilities.CallEventType.RawValue)
+}
+@objc public enum CallNotificationType : Swift.Int, Swift.RawRepresentable {
+  public typealias RawValue = Swift.String
+  case event = 0
+  case answer = 1
+  case sessionInvitation = 2
+  case acceptance = 3
+  case ice = 4
+  public var rawValue: CPUtilities.CallNotificationType.RawValue {
+    get
+  }
+  public init?(rawValue: CPUtilities.CallNotificationType.RawValue)
+}
+@objc public class CPServiceInfo : ObjectiveC.NSObject {
+  final public let type: CPUtilities.ServiceType
+  final public let push: Swift.Bool!
+  public init(type: CPUtilities.ServiceType, push: Swift.Bool)
+  @objc public static func build(type: CPUtilities.ServiceType, push: Swift.Bool) -> CPUtilities.CPServiceInfo
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum CPSubscriptionState {
+  case pending
+  case failed
+  case subscribed
+  case unsubscribed
+  public static func == (a: CPUtilities.CPSubscriptionState, b: CPUtilities.CPSubscriptionState) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public class CPSubscriptionStatus {
+  public var error: CPUtilities.CPError? {
+    get
+    }
+  public init()
+  public func setState(notification: Swift.String, state: CPUtilities.CPSubscriptionState)
+  public func saveError(_ error: CPUtilities.CPError?)
+  public func complete() -> Swift.Bool
+  public func pendingSubscriptions() -> [Swift.String]
+  public func failed() -> Swift.Bool
+  @objc deinit
+}
+public typealias SubscribeCompletion = (Swift.String, CPUtilities.CPError?) -> ()
+public typealias UnsubscribeCompletion = (CPUtilities.CPError?) -> ()
+@objc public protocol CPServiceProtocol : ObjectiveC.NSObjectProtocol {
+  @objc func serviceInfo() -> CPUtilities.CPServiceInfo
+  @objc func notifications() -> [Swift.String]
+  @objc func subscribe(channelID: Swift.String, completion: @escaping CPUtilities.SubscribeCompletion)
+  @objc func unsubscribe(channelID: Swift.String, completion: @escaping CPUtilities.UnsubscribeCompletion)
+}
+open class CPSubscriptionInfo : Swift.Hashable {
+  public var hashValue: Swift.Int {
+    get
+  }
+  public static func == (lhs: CPUtilities.CPSubscriptionInfo, rhs: CPUtilities.CPSubscriptionInfo) -> Swift.Bool
+  final public let channelID: Swift.String
+  final public let resourceURL: Swift.String
+  public var expires: Swift.UInt64
+  public init(channelID: Swift.String, resourceURL: Swift.String)
+  @objc deinit
+  open func hash(into hasher: inout Swift.Hasher)
+}

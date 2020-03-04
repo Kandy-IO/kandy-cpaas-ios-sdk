@@ -439,7 +439,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="nv">withFile</span><span class="p">:</span><span class="kt">URL</span><span class="p">,</span> <span class="nv">progress</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">UploadProgressBlock</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:18CPMessagingService19SendCompletionBlocka">SendCompletionBlock</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/CPActivityHandle.html">CPActivityHandle</a></span></code></pre>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="nv">withFile</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">progress</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">UploadProgressBlock</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:18CPMessagingService19SendCompletionBlocka">SendCompletionBlock</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/CPActivityHandle.html">CPActivityHandle</a></span></code></pre>
 
                         </div>
                       </div>
@@ -502,7 +502,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="nv">text</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="nv">withFile</span><span class="p">:</span><span class="kt">URL</span><span class="p">,</span> <span class="nv">progress</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">UploadProgressBlock</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:18CPMessagingService19SendCompletionBlocka">SendCompletionBlock</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/CPActivityHandle.html">CPActivityHandle</a></span></code></pre>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="nv">text</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">withFile</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">progress</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">UploadProgressBlock</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:18CPMessagingService19SendCompletionBlocka">SendCompletionBlock</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/CPActivityHandle.html">CPActivityHandle</a></span></code></pre>
 
                         </div>
                       </div>
@@ -577,7 +577,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">composing</span><span class="p">(</span><span class="nv">active</span><span class="p">:</span><span class="kt">Bool</span><span class="p">,</span> <span class="nv">refresh</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="nv">lastActive</span><span class="p">:</span> <span class="kt">UInt64</span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:18CPMessagingService24ComposingCompletionBlocka">ComposingCompletionBlock</a></span><span class="p">)</span></code></pre>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">composing</span><span class="p">(</span><span class="nv">active</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">refresh</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="nv">lastActive</span><span class="p">:</span> <span class="kt">UInt64</span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:18CPMessagingService24ComposingCompletionBlocka">ComposingCompletionBlock</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -660,7 +660,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">displayed</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span><span class="kt"><a href="../Classes/CPMessage.html">CPMessage</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ErrorCompletionBlock</span><span class="p">)</span></code></pre>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">displayed</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span> <span class="kt"><a href="../Classes/CPMessage.html">CPMessage</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ErrorCompletionBlock</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -768,7 +768,7 @@ Overrides base class Conversation abstract method.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchMessages</span><span class="p">(</span><span class="nv">fetchOptions</span><span class="p">:</span><span class="kt"><a href="../Classes/FetchOptions.html">FetchOptions</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:18CPMessagingService10FetchBlocka">FetchBlock</a></span><span class="p">)</span></code></pre>
+<span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchMessages</span><span class="p">(</span><span class="nv">fetchOptions</span><span class="p">:</span> <span class="kt"><a href="../Classes/FetchOptions.html">FetchOptions</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:18CPMessagingService10FetchBlocka">FetchBlock</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -886,7 +886,7 @@ Overrides base class Conversation abstract method.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">extend</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="nv">subject</span><span class="p">:</span><span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">image</span><span class="p">:</span><span class="kt">URL</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">participants</span><span class="p">:[</span><span class="kt"><a href="../Classes/CPChatGroupParticipant.html">CPChatGroupParticipant</a></span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:18CPMessagingService20CreateChatGroupBlocka">CreateChatGroupBlock</a></span><span class="p">)</span></code></pre>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">extend</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">subject</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">participants</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/CPChatGroupParticipant.html">CPChatGroupParticipant</a></span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:18CPMessagingService20CreateChatGroupBlocka">CreateChatGroupBlock</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -977,8 +977,8 @@ Overrides base class Conversation abstract method.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-01-10)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-03-04)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

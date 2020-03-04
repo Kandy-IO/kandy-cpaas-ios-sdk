@@ -42,9 +42,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Device token which is used when receiving remote notifications.
- * - Since: 1.0.0
+ * - Since: 2.3.0
  */
-@property (nonatomic, strong) NSString *deviceToken;
+@property (nonatomic, strong) NSString *standardDeviceToken;
+
+/**
+ * Device token which is used when receiving remote notifications.
+ * - Since: 2.3.0
+ */
+@property (nonatomic, strong) NSString *voipDeviceToken;
 
 /**
  * Server IP information of the baseUrl used for REST request.

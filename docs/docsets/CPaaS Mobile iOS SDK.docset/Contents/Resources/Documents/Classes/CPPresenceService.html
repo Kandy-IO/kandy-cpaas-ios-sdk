@@ -352,7 +352,7 @@
               <div class="declaration">
                 <div class="language">
                   <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">CPPresenceService</span> <span class="p">:</span> <span class="kt">CPRestClientBase</span><span class="p">,</span> <span class="kt">CPServiceProtocol</span></code></pre>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">CPPresenceService</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">CPServiceProtocol</span></code></pre>
 
                 </div>
               </div>
@@ -362,6 +362,33 @@
           <section class="section task-group-section">
             <div class="task-group">
               <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17CPPresenceServiceAAC10restClient11RestManager06CPRestD4BaseCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/restClient" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17CPPresenceServiceAAC10restClient11RestManager06CPRestD4BaseCSgvp">restClient</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">restClient</span><span class="p">:</span> <span class="kt">CPRestClientBase</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -641,7 +668,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unsubscribe</span><span class="p">(</span><span class="nv">channelID</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">UnsubscribeCompletion</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unsubscribe</span><span class="p">(</span><span class="nv">channelID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">UnsubscribeCompletion</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -839,7 +866,7 @@ next day, in this case use expiringInSeconds value of (24 * 60 * 60.0)</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">updatePresenceSource</span><span class="p">(</span><span class="nv">source</span><span class="p">:</span><span class="kt"><a href="../Classes/CPPresenceSource.html">CPPresenceSource</a></span><span class="p">,</span> <span class="nv">activity</span><span class="p">:</span><span class="kt"><a href="../Classes/PresenceActivity.html">PresenceActivity</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:17CPPresenceService35CreatePresenceSourceCompletionBlocka">CreatePresenceSourceCompletionBlock</a></span><span class="p">)</span></code></pre>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">updatePresenceSource</span><span class="p">(</span><span class="nv">source</span><span class="p">:</span> <span class="kt"><a href="../Classes/CPPresenceSource.html">CPPresenceSource</a></span><span class="p">,</span> <span class="nv">activity</span><span class="p">:</span> <span class="kt"><a href="../Classes/PresenceActivity.html">PresenceActivity</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:17CPPresenceService35CreatePresenceSourceCompletionBlocka">CreatePresenceSourceCompletionBlock</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -957,7 +984,7 @@ next day, in this case use expiringInSeconds value of (24 * 60 * 60.0)</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchPresenceSource</span><span class="p">(</span><span class="nv">source</span><span class="p">:</span><span class="kt"><a href="../Classes/CPPresenceSource.html">CPPresenceSource</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:17CPPresenceService34FetchPresenceSourceCompletionBlocka">FetchPresenceSourceCompletionBlock</a></span><span class="p">)</span></code></pre>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchPresenceSource</span><span class="p">(</span><span class="nv">source</span><span class="p">:</span> <span class="kt"><a href="../Classes/CPPresenceSource.html">CPPresenceSource</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:17CPPresenceService34FetchPresenceSourceCompletionBlocka">FetchPresenceSourceCompletionBlock</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1088,7 +1115,7 @@ next day, in this case use expiringInSeconds value of (24 * 60 * 60.0)</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">createPresentityList</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">presentities</span><span class="p">:[</span><span class="kt">String</span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:17CPPresenceService35CreatePresentityListCompletionBlocka">CreatePresentityListCompletionBlock</a></span><span class="p">)</span></code></pre>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">createPresentityList</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">presentities</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:17CPPresenceService35CreatePresentityListCompletionBlocka">CreatePresentityListCompletionBlock</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1206,7 +1233,7 @@ next day, in this case use expiringInSeconds value of (24 * 60 * 60.0)</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchPresentityList</span><span class="p">(</span><span class="nv">presentityList</span><span class="p">:</span><span class="kt"><a href="../Classes/CPPresentityList.html">CPPresentityList</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:17CPPresenceService34FetchPresentityListCompletionBlocka">FetchPresentityListCompletionBlock</a></span><span class="p">)</span></code></pre>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchPresentityList</span><span class="p">(</span><span class="nv">presentityList</span><span class="p">:</span> <span class="kt"><a href="../Classes/CPPresentityList.html">CPPresentityList</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:17CPPresenceService34FetchPresentityListCompletionBlocka">FetchPresentityListCompletionBlock</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1265,7 +1292,7 @@ next day, in this case use expiringInSeconds value of (24 * 60 * 60.0)</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">deletePresentityList</span><span class="p">(</span><span class="nv">presentityList</span><span class="p">:</span><span class="kt"><a href="../Classes/CPPresentityList.html">CPPresentityList</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">DeleteCompletionBlock</span><span class="p">)</span></code></pre>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">deletePresentityList</span><span class="p">(</span><span class="nv">presentityList</span><span class="p">:</span> <span class="kt"><a href="../Classes/CPPresentityList.html">CPPresentityList</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">DeleteCompletionBlock</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1308,8 +1335,8 @@ next day, in this case use expiringInSeconds value of (24 * 60 * 60.0)</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-01-10)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-03-04)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

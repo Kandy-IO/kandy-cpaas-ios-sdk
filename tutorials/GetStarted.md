@@ -1,35 +1,11 @@
 ---
   topics:
-  - title: Creating the iOS project
-    body: In this section you will learn how to create the iOS project using XCode.
   - title: Using the $KANDY$ Mobile SDK in the iOS Project
     body: In this section you will learn how to use the $KANDY$ Mobile SDK in the iOS project.
+  - title: Creating the iOS project
+    body: In this section you will learn how to create the iOS project using XCode.
 ---
 # Get Started
-
-## Base URL
-
-This is the API Marketplace HTTPS entry point that you will use for authentication, REST services and WebSocket notifications.
-
-```
-$KANDYFQDN$
-```
-
-## ICE Servers
-
-Use these primary and secondary URIs as the ICE Servers in the JavaScript, iOS or Android SDKs configuration when connecting and making calls. This is needed in order to ensure that calls can be established even the call peers are on different networks, behind firewalls. When the ICE server connects, it will try the Primary URL first. If that fails, it will try the Secondary URL.
-
-#### Primary URL:
-
-```
-$KANDYICE1$
-```
-
-#### Secondary URL:
-
-```
-$KANDYICE2$
-```
 
 ## Installation
 
@@ -110,7 +86,7 @@ The applications which uses $KANDY$ MobileSDK can be built with the XCode 10.2+ 
 
 ### Using the $KANDY$ Mobile SDK in the iOS Project
 1. Open *Main.storyboard* and create a basic user interface which contains username, password text fields, and login button.
-2. Set **AuthenticationDelegate** to view controller and add protocol stubs.
+2. Set **CPAuthenticationDelegate** to view controller and add protocol stubs.
 
 ![alt text](img/get_started_4.png)
 
@@ -134,8 +110,9 @@ configuration.restServerUrl = @"$KANDYFQDN$";
 configuration.restServerPort = @"443";
 configuration.useSecureConnection = YES;
 ```
+4. Getting access and id token is explained in [**Getting Access and Id Token from $KANDY$**](#getting-access-and-id-token-from-kandy) section in detail.
 
-4. When all configurations are set correctly, connect method can be called as following.
+5. When all configurations are set correctly, connect method can be called as following.
 
 *Swift Code:*
 ```swift
@@ -164,7 +141,7 @@ NSArray* services= @[[CPServiceInfo buildWithType:CPServiceTypeSms push:YES],
 
 cpaas = [[CPaaS alloc] initWithServices: services];
 cpaas.authentication.delegate = self;
-[cpaas.authentication connectWithIdToken:<ID-Token> accessToken:<Access-Token> lifetime:lifetime completion:^(CPError * _Nullable error, NSString * _Nullable channelInfo) {
+[cpaas.authentication connectWithIdToken:<YOUR_ID_TOKEN> accessToken:<YOUR_ACCESS_TOKEN> lifetime:lifetime completion:^(CPError * _Nullable error, NSString * _Nullable channelInfo) {
         if (error) {
         	NSLog(@"error occured: %@", error.localizedDescription);
         	return
@@ -174,6 +151,108 @@ cpaas.authentication.delegate = self;
 }];
 ```
 
-5. When $KANDY$ is registered, **connectionStatusChanged(state:)** method will be called by *AuthenticationDelegate*.
+6. When $KANDY$ is registered, **connectionStatusChanged(state:)** method will be called by *CPAuthenticationDelegate*.
 
 ![alt text](img/get_started_5.png)
+
+## Getting Access And Id Token from $KANDY$
+
+*Swift Code:*
+```swift
+
+requestAccessToken(completion: @escaping (_ error: String?, _ accessToken: String?)->()) {
+    var request = createAuthenticationRequest(with: self.clientID)
+    var bodyStr = String(format: "grant_type=password&username=%@&password=%@&client_id=%@&scope=openid", UserConfigurations.sharedInstance.username!, self.password!, self.clientID)
+    bodyStr = self.clientSecret != nil && self.clientSecret != "" ? bodyStr+"&clientSecret="+self.clientSecret : bodyStr
+    request.httpBody = bodyStr.data(using: String.Encoding.utf8)
+    
+    self.makeAccessTokenRequest(request: request, completion: completion)
+}
+
+private func makeAccessTokenRequest(request:URLRequest, completion: @escaping (_ error: String?, _ accessToken: String?)->()) {
+    let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+        if let error = error {
+            logWith("Can't get access token - Error: \(error.localizedDescription)")
+            completion(error.localizedDescription, nil)
+            return
+        } else if let response = response as? HTTPURLResponse {
+            if response.statusCode < 300 {
+                if data != nil {
+                    guard let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions(rawValue: 0)),
+                        let jsonDictionary = json as? [String: AnyObject] else {
+                            logWith("Couldn't parse response body")
+                            completion("Couldn't parse response body", nil)
+                            return
+                    }
+                    //YOUR_ACCESS_TOKEN
+                    let accessToken = jsonDictionary["access_token"] as? String
+                    //YOUR_ID_TOKEN
+                    if let idToken = jsonDictionary["id_token"] as? String { UserConfigurations.sharedInstance.idToken = idToken }
+                    if let refreshT = jsonDictionary["refresh_token"] as? String {
+                        self.refreshToken = refreshT
+                    }
+                    
+                    if let accessTokenStr = accessToken {
+                        completion(nil, accessTokenStr)
+                    } else {
+                        completion("Can't get access token: \(jsonDictionary.description)", nil)
+                    }
+                }
+            } else {
+                // some http error code
+                completion("\(response.statusCode) - \(HTTPURLResponse.localizedString(forStatusCode: response.statusCode))", nil)
+            }
+        } else {
+            completion("Unexpected response.", nil)
+        }
+    }
+    task.resume()
+}
+
+```
+*Objective-C Code:*
+```objective-c
+
+
+(void)requestAccessToken: (void (^)(NSString *_Nullable error, NSString *_Nullable accessToken, NSString *_Nullable accessTokenTimeOut))completion {
+    NSMutableURLRequest *request = [self createAuthenticationRequestWithClientID:_clientID];
+    NSString *bodyStr = [NSString stringWithFormat:@"grant_type=password&username=%@&password=%@&client_id=%@&scope=openid", UserConfigurations.sharedInstance.username!, self.password!, self.clientID];
+    bodyStr = _clientSecret && ![_clientSecret isEqualToString:@""] ? [NSString stringWithFormat:@"%@&client_secret=%@", bodyStr, _clientSecret] : bodyStr;
+    
+    [request setHTTPBody:[bodyStr dataUsingEncoding:kCFStringEncodingUTF8]];
+    [self makeAccessTokenRequest:request completion:completion];
+}
+
+
+ (void)makeAccessTokenRequest:(NSMutableURLRequest *)request completion: (void (^)(NSString * _Nullable error, NSString * _Nullable accessToken, NSString * _Nullable accessTokenTimeOut))completion {
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error != nil) {
+            completion([NSString stringWithFormat:@"Can't get access token - Error: %@", error.localizedDescription], nil, nil);
+            return;
+        }
+        if (data != nil) {
+            NSError *e = nil;
+            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&e];
+            if (!dict) {
+                logWith(@"Couldn't parse response body - Error: %@", e);
+                completion([NSString stringWithFormat:@"Couldn't parse response body - Error: %@", e], nil, nil);
+            } else {
+                //YOUR_ACCESS_TOKEN
+                NSString *accessToken = dict[@"access_token"];
+                _refreshToken = dict[@"refresh_token"];
+                //YOUR_ID_TOKEN
+                NSString *idToken = dict[@"id_token"];
+                if (idToken) [[UserConfigurations sharedInstance] setIdToken:idToken];
+                if (accessToken) {
+                    [self.CPaaS.authenticationService setToken:accessToken];
+                    completion(nil, accessToken, dict[@"expires_in"]);
+                } else {
+                    completion([NSString stringWithFormat:@"Couldn't get access token - Error: %@", dict.description], nil, nil);
+                }
+            }
+        }
+    }];
+    [task resume];
+}
+
+```

@@ -13,7 +13,7 @@ SMS messaging is managed by the SMS Service which can be called from the `CPaaS`
 
 ### Initialize the SMS Service
 
-In order to use the SMS service, the service provider object must be properly initialized. When properly initialized, the application will be registered to receive SMS notifications from the server.
+In order to use the SMS service, the service provider object must be properly initialized. When properly initialized, the application will be registered to receive SMS notifications from the server.Note that,phone number should be assigned to the user before using the SMS Service.
 
 *Swift Code:*
 ```swift

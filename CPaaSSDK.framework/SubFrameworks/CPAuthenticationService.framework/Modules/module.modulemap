@@ -1,4 +1,4 @@
 framework module CPAuthenticationService {
-    header "CPAuthenticationService-Swift.h"
-    requires objc
+  header "CPAuthenticationService-Swift.h"
+  requires objc
 }

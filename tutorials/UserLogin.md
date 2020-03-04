@@ -8,7 +8,36 @@ When a connection is established, $KANDY$ Mobile SDK uses the given Authenticati
 
 ## Configurations
 
-The first step for any application that will use the $KANDY$ Mobile SDK is setting the configurations. When doing this, you can customize certain features by providing a configurations object. All feature configurations can be set with instance of the `CPConfig` class. Developers should set server related configurations before using any functionality of the SDK and all other customizations are optional.
+The first step for any application that will use the $KANDY$ Mobile SDK is setting the configurations. When doing this, you can customize certain features by providing a configurations object. All feature configurations can be set with instance of the `CPConfig` class. Developers should set server related configurations before using any functionality of the SDK and all other customizations are optional.Note that,config should be set before creating a service provider.
+
+
+## Base URL
+
+This is the API Marketplace HTTPS entry point that you will use for authentication, REST services and WebSocket notifications.
+
+```
+$KANDYFQDN$
+```
+
+## ICE Servers
+
+Use these primary and secondary URIs as the ICE Servers in the JavaScript, iOS or Android SDKs configuration when connecting and making calls. This is needed in order to ensure that calls can be established even the call peers are on different networks, behind firewalls. When the ICE server connects, it will try the Primary URL first. If that fails, it will try the Secondary URL.
+
+#### Primary URL:
+
+```
+$KANDYTURN1$
+
+$KANDYSTUN1$
+```
+
+#### Secondary URL:
+
+```
+$KANDYTURN2$
+
+$KANDYSTUN2$
+```
 
 *Swift Code:*
 ```swift
@@ -20,8 +49,10 @@ configuration.useSecureConnection = true
 
 // Setting ICE Servers
 let iceServers: CPICEServers = CPICEServers()
-iceServers.addICEServer("$KANDYICE1$")
-iceServers.addICEServer("$KANDYICE2$")
+iceServers.addICEServer("$KANDYTURN1$")
+iceServers.addICEServer("$KANDYTURN2$")
+iceServers.addICEServer("$KANDYSTUN1$")
+iceServers.addICEServer("$KANDYSTUN2$")
 configuration.iceServers = iceServers
 ```
 
@@ -35,8 +66,10 @@ configuration.useSecureConnection = YES;
 
 // Setting ICE Servers
 CPICEServers *iceServers = [[CPICEServers alloc] init];
-[iceServers addICEServer:@"$KANDYICE1$"];
-[iceServers addICEServer:@"$KANDYICE2$"];
+[iceServers addICEServer:@"$KANDYTURN1$"];
+[iceServers addICEServer:@"$KANDYTURN2$"];
+[iceServers addICEServer:@"$KANDYSTUN1$"];
+[iceServers addICEServer:@"$KANDYSTUN2$"];
 [configuration setICEServers:iceServers];
 ```
 
@@ -76,8 +109,8 @@ Authentication needs access token in order to get and establish Websocket subscr
 ```swift
 import CPaaSSDK
 
-cpaas.authentication.setToken("<ACCESS-TOKEN>")
-cpaas.authentication.connect(idToken: "<ID-TOKEN>", lifetime: 3600) {
+cpaas.authentication.setToken("<YOUR_ACCESS_TOKEN>")
+cpaas.authentication.connect(idToken: "<YOUR_ID_TOKEN>", lifetime: 3600) {
 (error, channelInfo) in
     if let error = error {
         print(error.localizedDescription)
@@ -91,8 +124,8 @@ cpaas.authentication.connect(idToken: "<ID-TOKEN>", lifetime: 3600) {
 ```Objective-C
 @import CPaaSSDK;
 
-[cpaas.authentication setToken: @"<ACCESS-TOKEN>"];
-[cpaas.authentication connectWithIdToken:@"<ID-TOKEN>" lifetime:3600 completion:^(CPError * _Nullable error, NSString * _Nullable channelInfo) {
+[cpaas.authentication setToken: @"<YOUR_ACCESS_TOKEN>"];
+[cpaas.authentication connectWithIdToken:@"<YOUR_ID_TOKEN>" lifetime:3600 completion:^(CPError * _Nullable error, NSString * _Nullable channelInfo) {
     if (error) {
         NSLog(error.localizedDescription);
         return;
@@ -110,7 +143,7 @@ Establishes a connection for the user with given ID Token, which will last until
 ```swift
 import CPaaSSDK
 
-cpaas.authentication.connect(idToken: "<ID-TOKEN>", accessToken: "<ACCESS-TOKEN>", lifetime: 3600) {
+cpaas.authentication.connect(idToken: "<YOUR_ID_TOKEN>", accessToken: "<YOUR_ACCESS_TOKEN>", lifetime: 3600) {
 (error, channelInfo) in
     if let error = error {
         print(error.localizedDescription)
@@ -124,7 +157,7 @@ cpaas.authentication.connect(idToken: "<ID-TOKEN>", accessToken: "<ACCESS-TOKEN>
 ```Objective-C
 @import CPaaSSDK;
 
-[cpaas.authentication connectWithIdToken:@"<ID-TOKEN>" accessToken: @"<ACCESS-TOKEN>" lifetime:3600 completion:^(CPError * _Nullable error, NSString * _Nullable channelInfo) {
+[cpaas.authentication connectWithIdToken:@"<YOUR_ID_TOKEN>" accessToken: @"<YOUR_ACCESS_TOKEN>" lifetime:3600 completion:^(CPError * _Nullable error, NSString * _Nullable channelInfo) {
     if (error) {
         NSLog(error.localizedDescription);
         return;
@@ -142,8 +175,8 @@ Channel-info consists of information about lifetime and channel URL of the Webso
 ```swift
 import CPaaSSDK
 
-cpaas.authentication.setToken("<ACCESS-TOKEN>")
-cpaas.authentication.connect(username: "<ID-TOKEN>", lifetime: 3600, channelInfo: "<CHANNEL-INFO>") {
+cpaas.authentication.setToken("<YOUR_ACCESS_TOKEN>")
+cpaas.authentication.connect(username: "<YOUR_ID_TOKEN>", lifetime: 3600, channelInfo: "<CHANNEL-INFO>") {
 (error, channelInfo) in
     if let error = error {
         print(error.localizedDescription)
@@ -157,8 +190,8 @@ cpaas.authentication.connect(username: "<ID-TOKEN>", lifetime: 3600, channelInfo
 ```Objective-C
 @import CPaaSSDK;
 
-[cpaas.authentication setToken: @"<ACCESS-TOKEN>"];
-[cpaas.authentication connectWithIdToken:@"<ID-TOKEN>" lifetime:3600 channelInfo: @"<CHANNEL-INFO>" completion:^(CPError * _Nullable error, NSString * _Nullable channelInfo) {
+[cpaas.authentication setToken: @"<YOUR_ACCESS_TOKEN>"];
+[cpaas.authentication connectWithIdToken:@"<YOUR_ID_TOKEN>" lifetime:3600 channelInfo: @"<CHANNEL-INFO>" completion:^(CPError * _Nullable error, NSString * _Nullable channelInfo) {
     if (error) {
         NSLog(error.localizedDescription);
         return;
@@ -176,7 +209,7 @@ Similar to the previous method, access token can be also given within the same m
 ```swift
 import CPaaSSDK
 
-cpaas.authentication.connect(idToken: "<ID-TOKEN>", accessToken: "<ACCESS-TOKEN>", lifetime: 3600, channelInfo: "<CHANNEL-INFO>") {
+cpaas.authentication.connect(idToken: "<YOUR_ID_TOKEN>", accessToken: "<YOUR_ACCESS_TOKEN>", lifetime: 3600, channelInfo: "<CHANNEL-INFO>") {
 (error, channelInfo) in
     if let error = error {
         print(error.localizedDescription)
@@ -190,7 +223,7 @@ cpaas.authentication.connect(idToken: "<ID-TOKEN>", accessToken: "<ACCESS-TOKEN>
 ```Objective-C
 @import CPaaSSDK;
 
-[cpaas.authentication connectWithIdToken:@"<ID-TOKEN>" accessToken:@"<ACCESS-TOKEN>" lifetime:3600 channelInfo: @"<CHANNEL-INFO>" completion:^(CPError * _Nullable error, NSString * _Nullable channelInfo) {
+[cpaas.authentication connectWithIdToken:@"<YOUR_ID_TOKEN>" accessToken:@"<YOUR_ACCESS_TOKEN>" lifetime:3600 channelInfo: @"<CHANNEL-INFO>" completion:^(CPError * _Nullable error, NSString * _Nullable channelInfo) {
     if (error) {
         NSLog(error.localizedDescription);
         return;

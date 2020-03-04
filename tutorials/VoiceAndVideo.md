@@ -90,7 +90,7 @@ When $KANDY$ Mobile SDK receives an incoming call, it calls incomingCall: method
 ```swift
 import CPaaSSDK
 
-cpaas.callService?.setCallApplication(self)
+cpaas.callService?.callApplicationDelegate = self
 ```
 
 *Objective-C Code:*
@@ -98,7 +98,7 @@ cpaas.callService?.setCallApplication(self)
 ```objective-c
 @import CPaaSSDK;
 
-[cpaas.callService setCallApplication:self];
+[cpaas.callService setCallApplicationDelegate:self];
 ```
 
 ### Managing Incoming Call
