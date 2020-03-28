@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
     s.dependency 	'KandyWebRTC'
     s.ios.deployment_target   = '10.0'
     s.library = ['c++','icucore','z','sqlite3','stdc++']
-    s.ios.frameworks = ['AvFoundation','SystemConfiguration','CFNetwork','Security','OpenGLES','QuartzCore','CoreAudio','CoreMedia','CoreVideo','CoreGraphics','GLKit','VideoToolbox','AudioToolbox','PushKit']
+    s.ios.frameworks = ['AVFoundation','SystemConfiguration','CFNetwork','Security','OpenGLES','QuartzCore','CoreAudio','CoreMedia','CoreVideo','CoreGraphics','GLKit','VideoToolbox','AudioToolbox','PushKit']
     s.vendored_frameworks = ['CPaaSSDK.framework','WebRTC.framework']
     s.preserve_paths = 'CPaaSSDK.framework/SubFrameworks/*.framework'
     s.user_target_xcconfig = {
