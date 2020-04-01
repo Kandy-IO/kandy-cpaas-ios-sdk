@@ -1,12 +1,19 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
-// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name CPPushService
+// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CPPushService
 @_exported import CPPushService
 import CPUtilities
 import NotificationEngine
 import CPUtilities.Private
 import RestManager
 import Swift
+@objc public class CPCKInfo : ObjectiveC.NSObject {
+  @objc public var callerDisplayInfo: Swift.String?
+  @objc public var callUUID: Foundation.UUID?
+  @objc public var error: CPUtilities.CPError?
+  @objc override dynamic public init()
+  @objc deinit
+}
 @objc public class CPPushService : ObjectiveC.NSObject {
   @objc public var userInfo: CPUtilities.CPUserInfo!
   public typealias PushSubscriptionBlock = (CPUtilities.CPError?, Swift.String?) -> ()
@@ -17,6 +24,7 @@ import Swift
   @objc public func checkPushSubscription(completion: @escaping CPPushService.CPPushService.PushSubscriptionBlock)
   @objc public func injectPushMessage(pushMessage: [Swift.AnyHashable : Any], completion: @escaping (CPUtilities.CPError?) -> Swift.Void)
   @objc public func refreshDeviceToken(_ standardDeviceToken: Swift.String, voipDeviceToken: Swift.String, completion: @escaping CPPushService.CPPushService.PushSubscriptionBlock)
+  @objc public func parsePushNotification(pushMessage: [Swift.AnyHashable : Any]) -> CPPushService.CPCKInfo
   @objc override dynamic public init()
   @objc deinit
 }

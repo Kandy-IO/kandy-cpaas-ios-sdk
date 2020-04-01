@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
-// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name CPMessagingService
+// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CPMessagingService
 import CPUtilities
 import Foundation
 import MobileCoreServices
@@ -393,3 +393,7 @@ public typealias SendCompletionBlock = (CPUtilities.CPError?, CPMessagingService
     get
   }
 }
+extension CPMessagingService.CPChatParticipantStatus : Swift.Equatable {}
+extension CPMessagingService.CPChatParticipantStatus : Swift.Hashable {}
+extension CPMessagingService.CPUriFormat : Swift.Hashable {}
+extension CPMessagingService.CPUriFormat : Swift.RawRepresentable {}

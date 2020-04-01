@@ -5,11 +5,20 @@ CPaaS iOS SDK change log.
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
+## 2.5.0 - 2020-03-30
+
+### Added
+- New PushService parse api for CallKit was implemented `KAE-605`
+
+### Temporary Limitation
+
+- Kandy CPaaS iOS SDK version <b>2.4.0</b> and <b>2.5.0</b> have a known limitation with supporting Objective-C based projects. Swift projects are supported only
+
 ## 2.4.0 - 2020-03-02
 
 ### Added
 - New PushService subscribe api was implemented `KAE-521`
-- Xcode 11 and Swift 5.1 support `KAE-499`
+- Xcode 11 and Swift 5.1.2 support `KAE-499`
 
 ### Fixed
 - Not able to send multimedia file upper than 1MB on IM `KAE-583`

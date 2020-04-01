@@ -80,6 +80,15 @@ FOUNDATION_EXPORT const unsigned char NotificationEngineVersionString[];
 + (void) onNotificationMessageReceived:(NSData *) messageData completion:(PushCallback)completion;
 
 /**
+* Broadcasts message to subscribers
+*
+* @param messageData message data that will be published
+* @param comingType Notification Coming Type SMNotificationComingType
+* @param completion Completion Block if message has PushCallBack
+*/
++ (void) onNotificationMessageReceived:(NSData *) messageData comingType:(SMNotificationComingType)comingType completion:(PushCallback)completion;
+
+/**
  * Checks socket connection
  **/
 -(BOOL)isConnected;

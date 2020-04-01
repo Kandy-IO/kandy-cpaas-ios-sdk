@@ -16,8 +16,8 @@
 typedef void(^PushCallback)(CPError* _Nullable error);
 
 typedef NS_ENUM(NSInteger, SMNotificationComingType) {
-    NOTIFICATION_COMING_PUSH,
-    NOTIFICATION_COMING_WS,
+    NOTIFICATION_COMING_PUSH NS_SWIFT_NAME(push),
+    NOTIFICATION_COMING_WS NS_SWIFT_NAME(websocket),
 };
 
 /**

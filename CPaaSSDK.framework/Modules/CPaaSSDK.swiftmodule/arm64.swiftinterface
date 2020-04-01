@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
-// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name CPaaSSDK
+// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CPaaSSDK
 import CPAddressBookService
 import CPAuthenticationService
 import CPCallService
@@ -37,5 +37,5 @@ import Swift
   @objc override dynamic public init()
 }
 extension CPaaS {
-  @objc dynamic public convenience init?(services: [CPUtilities.CPServiceInfo])
+  @objc convenience dynamic public init?(services: [CPUtilities.CPServiceInfo])
 }

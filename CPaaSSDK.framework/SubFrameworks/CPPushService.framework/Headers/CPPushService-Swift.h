@@ -183,6 +183,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import Foundation;
 @import ObjectiveC;
 #endif
 
@@ -201,8 +202,32 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
-@class CPUserInfo;
 @class CPError;
+
+/// <ul>
+///   <li>
+///     Contains informations about  incoming call by parsing the VOIP push notification.
+///   </li>
+///   <li>
+///     The datas in this class will be used to inform CallKit after receiving each voip notification
+///   </li>
+///   <li>
+///     <ul>
+///       <li>
+///         Since: 2.5.0
+///       </li>
+///     </ul>
+///   </li>
+/// </ul>
+SWIFT_CLASS("_TtC13CPPushService8CPCKInfo")
+@interface CPCKInfo : NSObject
+@property (nonatomic, copy) NSString * _Nullable callerDisplayInfo;
+@property (nonatomic, copy) NSUUID * _Nullable callUUID;
+@property (nonatomic, strong) CPError * _Nullable error;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class CPUserInfo;
 
 /// Manages push notifications and notifies relevant service.
 /// since:
@@ -242,6 +267,7 @@ SWIFT_CLASS("_TtC13CPPushService13CPPushService")
 /// \param completion Invokes <em>PushSubscriptionBlock</em> when operation is finished
 ///
 - (void)refreshDeviceToken:(NSString * _Nonnull)standardDeviceToken voipDeviceToken:(NSString * _Nonnull)voipDeviceToken completion:(void (^ _Nonnull)(CPError * _Nullable, NSString * _Nullable))completion;
+- (CPCKInfo * _Nonnull)parsePushNotificationWithPushMessage:(NSDictionary * _Nonnull)pushMessage SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -435,6 +461,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import Foundation;
 @import ObjectiveC;
 #endif
 
@@ -453,8 +480,32 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
-@class CPUserInfo;
 @class CPError;
+
+/// <ul>
+///   <li>
+///     Contains informations about  incoming call by parsing the VOIP push notification.
+///   </li>
+///   <li>
+///     The datas in this class will be used to inform CallKit after receiving each voip notification
+///   </li>
+///   <li>
+///     <ul>
+///       <li>
+///         Since: 2.5.0
+///       </li>
+///     </ul>
+///   </li>
+/// </ul>
+SWIFT_CLASS("_TtC13CPPushService8CPCKInfo")
+@interface CPCKInfo : NSObject
+@property (nonatomic, copy) NSString * _Nullable callerDisplayInfo;
+@property (nonatomic, copy) NSUUID * _Nullable callUUID;
+@property (nonatomic, strong) CPError * _Nullable error;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class CPUserInfo;
 
 /// Manages push notifications and notifies relevant service.
 /// since:
@@ -494,6 +545,7 @@ SWIFT_CLASS("_TtC13CPPushService13CPPushService")
 /// \param completion Invokes <em>PushSubscriptionBlock</em> when operation is finished
 ///
 - (void)refreshDeviceToken:(NSString * _Nonnull)standardDeviceToken voipDeviceToken:(NSString * _Nonnull)voipDeviceToken completion:(void (^ _Nonnull)(CPError * _Nullable, NSString * _Nullable))completion;
+- (CPCKInfo * _Nonnull)parsePushNotificationWithPushMessage:(NSDictionary * _Nonnull)pushMessage SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end

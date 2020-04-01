@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
-// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name CPPresenceService
+// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CPPresenceService
 import CPUtilities
 import Foundation
 import NotificationEngine
@@ -125,3 +125,5 @@ public typealias FetchPresentityListCompletionBlock = (CPUtilities.CPError?, CPP
   @objc func subscriptionExpired(presentityListHandle: CPPresenceService.CPPresentityListHandle)
   @objc func statusChanged(presentity: CPPresenceService.CPPresentity)
 }
+extension CPPresenceService.CPPresenceActivities : Swift.Equatable {}
+extension CPPresenceService.CPPresenceActivities : Swift.Hashable {}
