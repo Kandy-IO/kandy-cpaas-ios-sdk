@@ -5,6 +5,11 @@ CPaaS iOS SDK change log.
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
+## 2.5.1 - 2020-04-14
+
+### Fixed
+- Not able to support Objective-C based projects `KAE-642`
+
 ## 2.5.0 - 2020-03-30
 
 ### Added

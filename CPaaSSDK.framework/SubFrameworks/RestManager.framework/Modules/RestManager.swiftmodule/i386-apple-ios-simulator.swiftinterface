@@ -1,0 +1,56 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-module-flags: -target i386-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name RestManager
+import CPUtilities
+import MobileCoreServices
+import CPUtilities.Private
+@_exported import RestManager
+import Swift
+public typealias DownloadProgressBlock = (Swift.Int, Swift.Int) -> ()
+@objc public class CPRestDownloadRequest : RestManager.CPRestRequest {
+  public convenience init(header: RestManager.SMRestHeader, file: Foundation.URL, serviceUrl: Swift.String, progress: @escaping RestManager.DownloadProgressBlock)
+  public init(header: RestManager.SMRestHeader, file: Foundation.URL, serviceUrl: Swift.String)
+  @objc override dynamic public var messageHeader: RestManager.SMRestHeader {
+    @objc get
+  }
+  @objc override dynamic public var serviceUrl: Swift.String {
+    @objc get
+  }
+  @objc override dynamic public var urlRequest: Foundation.URLRequest {
+    @objc get
+  }
+  @objc override dynamic public func completion(_ context: ObjectiveC.NSObject?, error: Swift.Error?)
+  @objc override dynamic public func getTaskFor(_ session: Foundation.URLSession!, withResponseHander restResponseHandler: RestManager.CPRestResponseHandler!) -> Foundation.URLSessionTask!
+  @objc override dynamic public func handleProgress(_ progressBytes: Swift.Int, ofTotal: Swift.Int)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public typealias UploadProgressBlock = (Swift.Int, Swift.Int) -> ()
+@objc public class CPRestUploadRequest : RestManager.CPRestPutRequest {
+  public var encodeInMemoryThreshold: Swift.Int
+  public convenience init(header: RestManager.SMRestHeader, file: Foundation.URL, serviceUrl: Swift.String, progress: @escaping RestManager.UploadProgressBlock)
+  public init(header: RestManager.SMRestHeader, file: Foundation.URL, serviceUrl: Swift.String)
+  @objc deinit
+  @objc override dynamic public var httpMethodType: Swift.String {
+    @objc get
+  }
+  @objc override dynamic public var urlRequest: Foundation.URLRequest {
+    @objc get
+  }
+  @objc override dynamic public func getTaskFor(_ session: Foundation.URLSession!, withResponseHander restResponseHandler: RestManager.CPRestResponseHandler!) -> Foundation.URLSessionTask!
+  @objc override dynamic public func handleProgress(_ progressBytes: Swift.Int, ofTotal: Swift.Int)
+  @objc override dynamic public init!(_ messageHeader: RestManager.SMRestHeader!, andMessageBody messageBody: RestManager.CPRestBody!, andServiceUrl serviceUrl: Swift.String!)
+  @objc override dynamic public init!(_ messageBody: RestManager.CPRestBody!, andServiceUrl serviceUrl: Swift.String!)
+  @objc override dynamic public init()
+}
+@objc open class CPRestClientBase : ObjectiveC.NSObject {
+  @objc public var userInfo: CPUtilities.CPUserInfo!
+  final public let serviceApi: Swift.String
+  @objc override dynamic public init()
+  public init(_ userInfo: CPUtilities.CPUserInfo, _ serviceApi: Swift.String)
+  public func serviceUrl(path: Swift.String) -> Swift.String
+  public func resourceUrl(path: Swift.String) -> Swift.String
+  open func fetchFromServer(tag: Swift.String, url: Swift.String, responseBodyName: Swift.String, parameters: RestManager.CPRestRequestHttpParameters, completion: @escaping CPUtilities.FetchCompletionBlock)
+  open func deleteFromServer(tag: Swift.String, url: Swift.String, parameters: RestManager.CPRestRequestHttpParameters, completion: @escaping CPUtilities.DeleteCompletionBlock)
+  @objc deinit
+}

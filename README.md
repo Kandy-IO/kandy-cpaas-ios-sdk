@@ -30,6 +30,3 @@ The information about tutorials and documents can be found in the links below
 
 * `Tutorials`: [User Guide](https://kandy-io.github.io/kandy-cpaas-ios-sdk/tutorials)
 
-### Temporary Limitation
-
-- Kandy CPaaS iOS SDK version <b>2.4.0</b> and <b>2.5.0</b> have a known limitation with supporting Objective-C based projects. Swift projects are supported only
