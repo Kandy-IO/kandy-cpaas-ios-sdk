@@ -79,7 +79,7 @@ public typealias FetchChatGroupBlock = (CPUtilities.CPError?, CPMessagingService
   @objc public var status: CPMessagingService.CPChatParticipantStatus {
     @objc get
   }
-  @objc public var owner: CPMessagingService.CPChatGroupParticipant? {
+  @objc public var isAdmin: Swift.Bool {
     @objc get
   }
   @objc public func add(participant: CPMessagingService.CPChatGroupParticipant, completion: @escaping CPUtilities.ErrorCompletionBlock)
@@ -187,9 +187,11 @@ public typealias DownloadCompletionBlock = (CPUtilities.CPError?, Foundation.URL
   @objc public func subscribe(channelID: Swift.String, completion: @escaping CPUtilities.SubscribeCompletion)
   @objc public func unsubscribe(channelID: Swift.String, completion: @escaping CPUtilities.UnsubscribeCompletion)
   @objc public func createChatGroup(name: Swift.String, type: Swift.String, subject: Swift.String? = nil, image: Foundation.URL? = nil, participants: [CPMessagingService.CPChatGroupParticipant], completion: @escaping CPMessagingService.CreateChatGroupBlock)
+  @objc public func updateChatGroupProperties(groupID: Swift.String, name: Swift.String, subject: Swift.String? = nil, image: Swift.String? = nil, _ completion: @escaping CPUtilities.ErrorCompletionBlock)
   @objc public func deleteChatGroup(groupID: Swift.String, _ completion: @escaping CPUtilities.DeleteCompletionBlock)
   @objc public func fetchAllChatGroups(completion: @escaping CPMessagingService.FetchAllChatGroupsBlock)
   @objc public func fetchChatGroup(withKey: Swift.String, completion: @escaping CPMessagingService.FetchChatGroupBlock)
+  @objc public func changeGroupAdminRole(status: Swift.Bool, groupID: Swift.String, forParticipant: Swift.String, _ completion: @escaping CPUtilities.ErrorCompletionBlock)
   @objc deinit
 }
 @objc public protocol CPChatDelegate {

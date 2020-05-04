@@ -5,6 +5,15 @@ CPaaS iOS SDK change log.
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
+## 2.6.0 - 2020-04-05
+
+### Added
+- Groups can now have multiple admins and Group properties such as name, subject and image can be changed. `KAE-532`
+
+### Fixed
+- Switch Front/Back camera does not work in call. `KAE-616`
+- After Session Complete notification the end call DELETE request must be sent. `KAE-669`  
+
 ## 2.5.1 - 2020-04-14
 
 ### Fixed

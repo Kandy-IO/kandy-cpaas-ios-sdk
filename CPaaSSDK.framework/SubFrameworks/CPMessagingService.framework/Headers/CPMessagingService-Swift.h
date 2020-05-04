@@ -434,8 +434,17 @@ SWIFT_CLASS("_TtC18CPMessagingService11CPChatGroup")
 @property (nonatomic, copy) NSSet<CPChatGroupParticipant *> * _Nonnull participants;
 /// This variable represents the status of the self participant of this chat group.
 @property (nonatomic, readonly) enum CPChatParticipantStatus status;
-/// This variable represents the owner of this chat group.
-@property (nonatomic, readonly, strong) CPChatGroupParticipant * _Nullable owner;
+/// <ul>
+///   <li>
+///     Returns true if current user is admin of this group conversation.
+///   </li>
+///   <li>
+///   </li>
+///   <li>
+///     @return true if current user is admin of this group conversation, false otherwise
+///   </li>
+/// </ul>
+@property (nonatomic, readonly) BOOL isAdmin;
 /// This method is used to add a participant to this chat group.
 /// \param participant The participant to add to this chat group.
 ///
@@ -680,6 +689,18 @@ SWIFT_CLASS("_TtC18CPMessagingService13CPChatService")
 /// \param completion Code block to execute upon completion of chat group creation
 ///
 - (void)createChatGroupWithName:(NSString * _Nonnull)name type:(NSString * _Nonnull)type subject:(NSString * _Nullable)subject image:(NSURL * _Nullable)image participants:(NSArray<CPChatGroupParticipant *> * _Nonnull)participants completion:(void (^ _Nonnull)(CPError * _Nullable, CPChatGroup * _Nullable))completion;
+/// Public method to update a chat group object.
+/// \param groupID Unique identifier assigned by the server to the chat group
+///
+/// \param name User-friendly name of the chat group
+///
+/// \param subject Topic of discussion for the chat group
+///
+/// \param image URL of an image file to be used for the chat group
+///
+/// \param completion Code block to execute upon completion of chat group update
+///
+- (void)updateChatGroupPropertiesWithGroupID:(NSString * _Nonnull)groupID name:(NSString * _Nonnull)name subject:(NSString * _Nullable)subject image:(NSString * _Nullable)image :(void (^ _Nonnull)(CPError * _Nullable))completion;
 /// Public method used to delete a chat group using its unique identifier
 /// \param groupID Unique identifier assigned by the server to the chat group
 ///
@@ -696,6 +717,16 @@ SWIFT_CLASS("_TtC18CPMessagingService13CPChatService")
 /// \param completion Code block to call up completion of the fetch operation
 ///
 - (void)fetchChatGroupWithKey:(NSString * _Nonnull)withKey completion:(void (^ _Nonnull)(CPError * _Nullable, CPChatGroup * _Nullable))completion;
+/// Method which is can be used to change a group participant’s admin role
+/// \param status admin role status as bool
+///
+/// \param groupID the group ID which participant exists
+///
+/// \param forParticipant the participant’s ID
+///
+/// \param completion Code block to execute upon completion of group admin role change
+///
+- (void)changeGroupAdminRoleWithStatus:(BOOL)status groupID:(NSString * _Nonnull)groupID forParticipant:(NSString * _Nonnull)forParticipant :(void (^ _Nonnull)(CPError * _Nullable))completion;
 @end
 
 
@@ -1419,8 +1450,17 @@ SWIFT_CLASS("_TtC18CPMessagingService11CPChatGroup")
 @property (nonatomic, copy) NSSet<CPChatGroupParticipant *> * _Nonnull participants;
 /// This variable represents the status of the self participant of this chat group.
 @property (nonatomic, readonly) enum CPChatParticipantStatus status;
-/// This variable represents the owner of this chat group.
-@property (nonatomic, readonly, strong) CPChatGroupParticipant * _Nullable owner;
+/// <ul>
+///   <li>
+///     Returns true if current user is admin of this group conversation.
+///   </li>
+///   <li>
+///   </li>
+///   <li>
+///     @return true if current user is admin of this group conversation, false otherwise
+///   </li>
+/// </ul>
+@property (nonatomic, readonly) BOOL isAdmin;
 /// This method is used to add a participant to this chat group.
 /// \param participant The participant to add to this chat group.
 ///
@@ -1665,6 +1705,18 @@ SWIFT_CLASS("_TtC18CPMessagingService13CPChatService")
 /// \param completion Code block to execute upon completion of chat group creation
 ///
 - (void)createChatGroupWithName:(NSString * _Nonnull)name type:(NSString * _Nonnull)type subject:(NSString * _Nullable)subject image:(NSURL * _Nullable)image participants:(NSArray<CPChatGroupParticipant *> * _Nonnull)participants completion:(void (^ _Nonnull)(CPError * _Nullable, CPChatGroup * _Nullable))completion;
+/// Public method to update a chat group object.
+/// \param groupID Unique identifier assigned by the server to the chat group
+///
+/// \param name User-friendly name of the chat group
+///
+/// \param subject Topic of discussion for the chat group
+///
+/// \param image URL of an image file to be used for the chat group
+///
+/// \param completion Code block to execute upon completion of chat group update
+///
+- (void)updateChatGroupPropertiesWithGroupID:(NSString * _Nonnull)groupID name:(NSString * _Nonnull)name subject:(NSString * _Nullable)subject image:(NSString * _Nullable)image :(void (^ _Nonnull)(CPError * _Nullable))completion;
 /// Public method used to delete a chat group using its unique identifier
 /// \param groupID Unique identifier assigned by the server to the chat group
 ///
@@ -1681,6 +1733,16 @@ SWIFT_CLASS("_TtC18CPMessagingService13CPChatService")
 /// \param completion Code block to call up completion of the fetch operation
 ///
 - (void)fetchChatGroupWithKey:(NSString * _Nonnull)withKey completion:(void (^ _Nonnull)(CPError * _Nullable, CPChatGroup * _Nullable))completion;
+/// Method which is can be used to change a group participant’s admin role
+/// \param status admin role status as bool
+///
+/// \param groupID the group ID which participant exists
+///
+/// \param forParticipant the participant’s ID
+///
+/// \param completion Code block to execute upon completion of group admin role change
+///
+- (void)changeGroupAdminRoleWithStatus:(BOOL)status groupID:(NSString * _Nonnull)groupID forParticipant:(NSString * _Nonnull)forParticipant :(void (^ _Nonnull)(CPError * _Nullable))completion;
 @end
 
 
@@ -2406,8 +2468,17 @@ SWIFT_CLASS("_TtC18CPMessagingService11CPChatGroup")
 @property (nonatomic, copy) NSSet<CPChatGroupParticipant *> * _Nonnull participants;
 /// This variable represents the status of the self participant of this chat group.
 @property (nonatomic, readonly) enum CPChatParticipantStatus status;
-/// This variable represents the owner of this chat group.
-@property (nonatomic, readonly, strong) CPChatGroupParticipant * _Nullable owner;
+/// <ul>
+///   <li>
+///     Returns true if current user is admin of this group conversation.
+///   </li>
+///   <li>
+///   </li>
+///   <li>
+///     @return true if current user is admin of this group conversation, false otherwise
+///   </li>
+/// </ul>
+@property (nonatomic, readonly) BOOL isAdmin;
 /// This method is used to add a participant to this chat group.
 /// \param participant The participant to add to this chat group.
 ///
@@ -2652,6 +2723,18 @@ SWIFT_CLASS("_TtC18CPMessagingService13CPChatService")
 /// \param completion Code block to execute upon completion of chat group creation
 ///
 - (void)createChatGroupWithName:(NSString * _Nonnull)name type:(NSString * _Nonnull)type subject:(NSString * _Nullable)subject image:(NSURL * _Nullable)image participants:(NSArray<CPChatGroupParticipant *> * _Nonnull)participants completion:(void (^ _Nonnull)(CPError * _Nullable, CPChatGroup * _Nullable))completion;
+/// Public method to update a chat group object.
+/// \param groupID Unique identifier assigned by the server to the chat group
+///
+/// \param name User-friendly name of the chat group
+///
+/// \param subject Topic of discussion for the chat group
+///
+/// \param image URL of an image file to be used for the chat group
+///
+/// \param completion Code block to execute upon completion of chat group update
+///
+- (void)updateChatGroupPropertiesWithGroupID:(NSString * _Nonnull)groupID name:(NSString * _Nonnull)name subject:(NSString * _Nullable)subject image:(NSString * _Nullable)image :(void (^ _Nonnull)(CPError * _Nullable))completion;
 /// Public method used to delete a chat group using its unique identifier
 /// \param groupID Unique identifier assigned by the server to the chat group
 ///
@@ -2668,6 +2751,16 @@ SWIFT_CLASS("_TtC18CPMessagingService13CPChatService")
 /// \param completion Code block to call up completion of the fetch operation
 ///
 - (void)fetchChatGroupWithKey:(NSString * _Nonnull)withKey completion:(void (^ _Nonnull)(CPError * _Nullable, CPChatGroup * _Nullable))completion;
+/// Method which is can be used to change a group participant’s admin role
+/// \param status admin role status as bool
+///
+/// \param groupID the group ID which participant exists
+///
+/// \param forParticipant the participant’s ID
+///
+/// \param completion Code block to execute upon completion of group admin role change
+///
+- (void)changeGroupAdminRoleWithStatus:(BOOL)status groupID:(NSString * _Nonnull)groupID forParticipant:(NSString * _Nonnull)forParticipant :(void (^ _Nonnull)(CPError * _Nullable))completion;
 @end
 
 
@@ -3391,8 +3484,17 @@ SWIFT_CLASS("_TtC18CPMessagingService11CPChatGroup")
 @property (nonatomic, copy) NSSet<CPChatGroupParticipant *> * _Nonnull participants;
 /// This variable represents the status of the self participant of this chat group.
 @property (nonatomic, readonly) enum CPChatParticipantStatus status;
-/// This variable represents the owner of this chat group.
-@property (nonatomic, readonly, strong) CPChatGroupParticipant * _Nullable owner;
+/// <ul>
+///   <li>
+///     Returns true if current user is admin of this group conversation.
+///   </li>
+///   <li>
+///   </li>
+///   <li>
+///     @return true if current user is admin of this group conversation, false otherwise
+///   </li>
+/// </ul>
+@property (nonatomic, readonly) BOOL isAdmin;
 /// This method is used to add a participant to this chat group.
 /// \param participant The participant to add to this chat group.
 ///
@@ -3637,6 +3739,18 @@ SWIFT_CLASS("_TtC18CPMessagingService13CPChatService")
 /// \param completion Code block to execute upon completion of chat group creation
 ///
 - (void)createChatGroupWithName:(NSString * _Nonnull)name type:(NSString * _Nonnull)type subject:(NSString * _Nullable)subject image:(NSURL * _Nullable)image participants:(NSArray<CPChatGroupParticipant *> * _Nonnull)participants completion:(void (^ _Nonnull)(CPError * _Nullable, CPChatGroup * _Nullable))completion;
+/// Public method to update a chat group object.
+/// \param groupID Unique identifier assigned by the server to the chat group
+///
+/// \param name User-friendly name of the chat group
+///
+/// \param subject Topic of discussion for the chat group
+///
+/// \param image URL of an image file to be used for the chat group
+///
+/// \param completion Code block to execute upon completion of chat group update
+///
+- (void)updateChatGroupPropertiesWithGroupID:(NSString * _Nonnull)groupID name:(NSString * _Nonnull)name subject:(NSString * _Nullable)subject image:(NSString * _Nullable)image :(void (^ _Nonnull)(CPError * _Nullable))completion;
 /// Public method used to delete a chat group using its unique identifier
 /// \param groupID Unique identifier assigned by the server to the chat group
 ///
@@ -3653,6 +3767,16 @@ SWIFT_CLASS("_TtC18CPMessagingService13CPChatService")
 /// \param completion Code block to call up completion of the fetch operation
 ///
 - (void)fetchChatGroupWithKey:(NSString * _Nonnull)withKey completion:(void (^ _Nonnull)(CPError * _Nullable, CPChatGroup * _Nullable))completion;
+/// Method which is can be used to change a group participant’s admin role
+/// \param status admin role status as bool
+///
+/// \param groupID the group ID which participant exists
+///
+/// \param forParticipant the participant’s ID
+///
+/// \param completion Code block to execute upon completion of group admin role change
+///
+- (void)changeGroupAdminRoleWithStatus:(BOOL)status groupID:(NSString * _Nonnull)groupID forParticipant:(NSString * _Nonnull)forParticipant :(void (^ _Nonnull)(CPError * _Nullable))completion;
 @end
 
 

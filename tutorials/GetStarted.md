@@ -29,11 +29,13 @@ The applications which uses $KANDY$ MobileSDK can be built with the XCode 10.2+ 
 ### Cocoapods installation
 1. Add below pods to your Podfile (If you dont have any Podfile, visit this link to install cocoapods: https://guides.cocoapods.org/using/using-cocoapods.html)
 
-* pod 'KandyCPaaSMobileSDK'
+* pod 'KandyCPaaSMobileSDK', '~> $SDK_VERSION$'
 
 2. Go to project folder via command line and run "pod install" command and wait for cocoapods to finish installation of Kandy CPaaS MobileSDK & WebRTC frameworks and their dependencies
 
 ### Manual Installation
+ Before those steps you need to download **Kandy CPaaS iOS SDK** framework file from [this link](https://raw.githubusercontent.com/Kandy-IO/kandy-cpaas-ios-sdk/$SDK_VERSION$/dist/CPaaSSDK_$SDK_VERSION$.zip)
+
 1. Go to project settings and navigate to **Build Phases**.
 2. Add **CPaaSSDK.framework** under **Link Binary With Libraries** section.
 
@@ -110,7 +112,7 @@ configuration.restServerUrl = @"$KANDYFQDN$";
 configuration.restServerPort = @"443";
 configuration.useSecureConnection = YES;
 ```
-4. Getting access and id token is explained in [**Getting Access and Id Token from $KANDY$**](#getting-access-and-id-token-from-kandy) section in detail.
+4. Getting access and id token is explained in [**Getting Access and Id Token from $KANDY$**](GetStarted.md#getting-access-and-id-token-from-$KANDY$) section in detail.
 
 5. When all configurations are set correctly, connect method can be called as following.
 
@@ -121,8 +123,8 @@ import CPaaSSDK
 let services = [CPServiceInfo(type: .call, push: true), CPServiceInfo(type: .chat, push: true), CPServiceInfo(type: .sms, push: true)]
 
 cpaas = CPaaS(services: services)
-cpaas.authentication.delegate = self
-cpaas.authentication.connect(idToken: <ID-Token>, accessToken: <Access-Token>, lifetime: 3600) { (error, channelInfo) in
+cpaas.authenticationService.delegate = self
+cpaas.authenticationService.connect(idToken: <ID-Token>, accessToken: <Access-Token>, lifetime: 3600) { (error, channelInfo) in
     if let error = error {
         print("error occured: \(error.localizedDescription)")
         return
@@ -140,8 +142,8 @@ NSArray* services= @[[CPServiceInfo buildWithType:CPServiceTypeSms push:YES],
                     [CPServiceInfo buildWithType:CPServiceTypeChat push:YES]];
 
 cpaas = [[CPaaS alloc] initWithServices: services];
-cpaas.authentication.delegate = self;
-[cpaas.authentication connectWithIdToken:<YOUR_ID_TOKEN> accessToken:<YOUR_ACCESS_TOKEN> lifetime:lifetime completion:^(CPError * _Nullable error, NSString * _Nullable channelInfo) {
+cpaas.authenticationService.delegate = self;
+[cpaas.authenticationService connectWithIdToken:<YOUR_ID_TOKEN> accessToken:<YOUR_ACCESS_TOKEN> lifetime:lifetime completion:^(CPError * _Nullable error, NSString * _Nullable channelInfo) {
         if (error) {
         	NSLog(@"error occured: %@", error.localizedDescription);
         	return
@@ -160,7 +162,7 @@ cpaas.authentication.delegate = self;
 *Swift Code:*
 ```swift
 
-requestAccessToken(completion: @escaping (_ error: String?, _ accessToken: String?)->()) {
+func requestAccessToken(completion: @escaping (_ error: String?, _ accessToken: String?)->()) {
     var request = createAuthenticationRequest(with: self.clientID)
     var bodyStr = String(format: "grant_type=password&username=%@&password=%@&client_id=%@&scope=openid", UserConfigurations.sharedInstance.username!, self.password!, self.clientID)
     bodyStr = self.clientSecret != nil && self.clientSecret != "" ? bodyStr+"&clientSecret="+self.clientSecret : bodyStr
@@ -168,6 +170,16 @@ requestAccessToken(completion: @escaping (_ error: String?, _ accessToken: Strin
     
     self.makeAccessTokenRequest(request: request, completion: completion)
 }
+
+private func createAuthenticationRequest(with clientID: String) -> URLRequest {
+
+        let url = URL(string: "https://nvs-cpaas-oauth.kandy.io/cpaas/auth/v1/token")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        return request
+        
+    }
 
 private func makeAccessTokenRequest(request:URLRequest, completion: @escaping (_ error: String?, _ accessToken: String?)->()) {
     let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
@@ -221,6 +233,15 @@ private func makeAccessTokenRequest(request:URLRequest, completion: @escaping (_
     
     [request setHTTPBody:[bodyStr dataUsingEncoding:kCFStringEncodingUTF8]];
     [self makeAccessTokenRequest:request completion:completion];
+}
+
+- (NSMutableURLRequest *) createAuthenticationRequestWithClientID: (NSString *)_id {
+    NSString *urlStr = [NSString stringWithFormat:@"https:%@/cpaas/auth/v1/token", [[CPConfig sharedInstance] restServerUrl]];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    return request;
 }
 
 

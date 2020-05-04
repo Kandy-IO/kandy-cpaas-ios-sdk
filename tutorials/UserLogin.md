@@ -109,8 +109,14 @@ Authentication needs access token in order to get and establish Websocket subscr
 ```swift
 import CPaaSSDK
 
-cpaas.authentication.setToken("<YOUR_ACCESS_TOKEN>")
-cpaas.authentication.connect(idToken: "<YOUR_ID_TOKEN>", lifetime: 3600) {
+var cpaas: CPaaS!
+
+//Initialization of the CPaaS instance
+cpaas = CPaaS(services:[CPServiceInfo(type: .sms, push: true), CPServiceInfo(type: .chat, push: true),CPServiceInfo(type: .call, push: true), CPServiceInfo(type: .presence, push: false), CPServiceInfo(type: .addressbook, push: false)])
+    
+
+cpaas.authenticationService.setToken("<YOUR_ACCESS_TOKEN>")
+cpaas.authenticationService.connect(idToken: "<YOUR_ID_TOKEN>", lifetime: 3600) {
 (error, channelInfo) in
     if let error = error {
         print(error.localizedDescription)
@@ -124,8 +130,16 @@ cpaas.authentication.connect(idToken: "<YOUR_ID_TOKEN>", lifetime: 3600) {
 ```Objective-C
 @import CPaaSSDK;
 
-[cpaas.authentication setToken: @"<YOUR_ACCESS_TOKEN>"];
-[cpaas.authentication connectWithIdToken:@"<YOUR_ID_TOKEN>" lifetime:3600 completion:^(CPError * _Nullable error, NSString * _Nullable channelInfo) {
+//Initialization of the CPaaS instance
+NSArray* cpaasServices= @[[CPServiceInfo buildWithType:ServiceTypeSms push:YES],
+                              [CPServiceInfo buildWithType:ServiceTypeChat push:YES],
+                              [CPServiceInfo buildWithType:ServiceTypeCall push:YES],
+                              [CPServiceInfo buildWithType:ServiceTypePresence push:YES],
+                              [CPServiceInfo buildWithType:ServiceTypeAddressbook push:NO]];
+cpaas = [[CPaaS alloc] initWithServices:cpaasServices];
+
+[cpaas.authenticationService setToken: @"<YOUR_ACCESS_TOKEN>"];
+[cpaas.authenticationService connectWithIdToken:@"<YOUR_ID_TOKEN>" lifetime:3600 completion:^(CPError * _Nullable error, NSString * _Nullable channelInfo) {
     if (error) {
         NSLog(error.localizedDescription);
         return;
@@ -143,7 +157,7 @@ Establishes a connection for the user with given ID Token, which will last until
 ```swift
 import CPaaSSDK
 
-cpaas.authentication.connect(idToken: "<YOUR_ID_TOKEN>", accessToken: "<YOUR_ACCESS_TOKEN>", lifetime: 3600) {
+cpaas.authenticationService.connect(idToken: "<YOUR_ID_TOKEN>", accessToken: "<YOUR_ACCESS_TOKEN>", lifetime: 3600) {
 (error, channelInfo) in
     if let error = error {
         print(error.localizedDescription)
@@ -157,7 +171,7 @@ cpaas.authentication.connect(idToken: "<YOUR_ID_TOKEN>", accessToken: "<YOUR_ACC
 ```Objective-C
 @import CPaaSSDK;
 
-[cpaas.authentication connectWithIdToken:@"<YOUR_ID_TOKEN>" accessToken: @"<YOUR_ACCESS_TOKEN>" lifetime:3600 completion:^(CPError * _Nullable error, NSString * _Nullable channelInfo) {
+[cpaas.authenticationService connectWithIdToken:@"<YOUR_ID_TOKEN>" accessToken: @"<YOUR_ACCESS_TOKEN>" lifetime:3600 completion:^(CPError * _Nullable error, NSString * _Nullable channelInfo) {
     if (error) {
         NSLog(error.localizedDescription);
         return;
@@ -175,8 +189,8 @@ Channel-info consists of information about lifetime and channel URL of the Webso
 ```swift
 import CPaaSSDK
 
-cpaas.authentication.setToken("<YOUR_ACCESS_TOKEN>")
-cpaas.authentication.connect(username: "<YOUR_ID_TOKEN>", lifetime: 3600, channelInfo: "<CHANNEL-INFO>") {
+cpaas.authenticationService.setToken("<YOUR_ACCESS_TOKEN>")
+cpaas.authenticationService.connect(username: "<YOUR_ID_TOKEN>", lifetime: 3600, channelInfo: "<CHANNEL-INFO>") {
 (error, channelInfo) in
     if let error = error {
         print(error.localizedDescription)
@@ -190,8 +204,8 @@ cpaas.authentication.connect(username: "<YOUR_ID_TOKEN>", lifetime: 3600, channe
 ```Objective-C
 @import CPaaSSDK;
 
-[cpaas.authentication setToken: @"<YOUR_ACCESS_TOKEN>"];
-[cpaas.authentication connectWithIdToken:@"<YOUR_ID_TOKEN>" lifetime:3600 channelInfo: @"<CHANNEL-INFO>" completion:^(CPError * _Nullable error, NSString * _Nullable channelInfo) {
+[cpaas.authenticationService setToken: @"<YOUR_ACCESS_TOKEN>"];
+[cpaas.authenticationService connectWithIdToken:@"<YOUR_ID_TOKEN>" lifetime:3600 channelInfo: @"<CHANNEL-INFO>" completion:^(CPError * _Nullable error, NSString * _Nullable channelInfo) {
     if (error) {
         NSLog(error.localizedDescription);
         return;
@@ -209,7 +223,7 @@ Similar to the previous method, access token can be also given within the same m
 ```swift
 import CPaaSSDK
 
-cpaas.authentication.connect(idToken: "<YOUR_ID_TOKEN>", accessToken: "<YOUR_ACCESS_TOKEN>", lifetime: 3600, channelInfo: "<CHANNEL-INFO>") {
+cpaas.authenticationService.connect(idToken: "<YOUR_ID_TOKEN>", accessToken: "<YOUR_ACCESS_TOKEN>", lifetime: 3600, channelInfo: "<CHANNEL-INFO>") {
 (error, channelInfo) in
     if let error = error {
         print(error.localizedDescription)
@@ -223,7 +237,7 @@ cpaas.authentication.connect(idToken: "<YOUR_ID_TOKEN>", accessToken: "<YOUR_ACC
 ```Objective-C
 @import CPaaSSDK;
 
-[cpaas.authentication connectWithIdToken:@"<YOUR_ID_TOKEN>" accessToken:@"<YOUR_ACCESS_TOKEN>" lifetime:3600 channelInfo: @"<CHANNEL-INFO>" completion:^(CPError * _Nullable error, NSString * _Nullable channelInfo) {
+[cpaas.authenticationService connectWithIdToken:@"<YOUR_ID_TOKEN>" accessToken:@"<YOUR_ACCESS_TOKEN>" lifetime:3600 channelInfo: @"<CHANNEL-INFO>" completion:^(CPError * _Nullable error, NSString * _Nullable channelInfo) {
     if (error) {
         NSLog(error.localizedDescription);
         return;

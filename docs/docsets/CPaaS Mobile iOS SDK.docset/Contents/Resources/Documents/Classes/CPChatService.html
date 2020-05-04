@@ -14,7 +14,7 @@
     <a title="CPChatService Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CPaaS Mobile iOS SDK 1.0 Docs</a></p>
+        <p><a href="../index.html">CPaaS Mobile iOS SDK 2.6.0 Docs</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -1349,6 +1349,101 @@ This would be used when refreshing a conversation after receiving a conversation
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:@M@CPMessagingService@objc(cs)CPChatService(im)updateChatGroupPropertiesWithGroupID:name:subject:image::"></a>
+                    <a name="//apple_ref/swift/Method/updateChatGroupProperties(groupID:name:subject:image:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPMessagingService@objc(cs)CPChatService(im)updateChatGroupPropertiesWithGroupID:name:subject:image::">updateChatGroupProperties(groupID:name:subject:image:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Public method to update a chat group object.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateChatGroupProperties</span><span class="p">(</span><span class="nv">groupID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">subject</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ErrorCompletionBlock</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>groupID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Unique identifier assigned by the server to the chat group</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>User-friendly name of the chat group</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>subject</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Topic of discussion for the chat group</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>URL of an image file to be used for the chat group</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Code block to execute upon completion of chat group update</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:@M@CPMessagingService@objc(cs)CPChatService(im)deleteChatGroupWithGroupID::"></a>
                     <a name="//apple_ref/swift/Method/deleteChatGroup(groupID:_:)" class="dashAnchor"></a>
                     <a class="token" href="#/c:@M@CPMessagingService@objc(cs)CPChatService(im)deleteChatGroupWithGroupID::">deleteChatGroup(groupID:_:)</a>
@@ -1511,12 +1606,95 @@ This would be used when refreshing a conversation after receiving a conversation
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CPMessagingService@objc(cs)CPChatService(im)changeGroupAdminRoleWithStatus:groupID:forParticipant::"></a>
+                    <a name="//apple_ref/swift/Method/changeGroupAdminRole(status:groupID:forParticipant:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CPMessagingService@objc(cs)CPChatService(im)changeGroupAdminRoleWithStatus:groupID:forParticipant::">changeGroupAdminRole(status:groupID:forParticipant:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Method which is can be used to change a group participant&rsquo;s admin role</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">changeGroupAdminRole</span><span class="p">(</span><span class="nv">status</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">groupID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">forParticipant</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ErrorCompletionBlock</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>status</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>admin role status as bool</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>groupID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the group ID which participant exists</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>forParticipant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the participant&rsquo;s ID</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Code block to execute upon completion of group admin role change</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-04-14)</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-05-04)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
