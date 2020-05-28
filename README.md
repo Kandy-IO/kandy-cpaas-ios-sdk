@@ -34,7 +34,7 @@ Compatible iOS versions :
 
 Compatible XCode and Swift Versions :
 
-* XCode 11.x+
+* XCode 11.3.x+
 
 * Swift 5.1.2+
 
