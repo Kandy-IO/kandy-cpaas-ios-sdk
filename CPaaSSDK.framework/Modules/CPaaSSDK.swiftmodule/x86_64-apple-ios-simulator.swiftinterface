@@ -1,36 +1,36 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
 // swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CPaaSSDK
-import CPAddressBookService
-import CPAuthenticationService
-import CPCallService
-import CPMessagingService
-import CPPresenceService
-import CPPushService
+import CPAddressBookModule
+import CPAuthenticationModule
+import CPCallModule
+import CPMessagingModule
+import CPPresenceModule
+import CPPushModule
 import CPUtilities
 @_exported import CPaaSSDK
 import Swift
 @objc public class CPaaS : ObjectiveC.NSObject {
   @objc final public let version: Swift.String
-  @objc public var authenticationService: CPAuthenticationService.CPAuthenticationService! {
+  @objc public var authenticationService: CPAuthenticationModule.CPAuthenticationService! {
     get
     }
-  @objc public var pushService: CPPushService.CPPushService! {
+  @objc public var pushService: CPPushModule.CPPushService! {
     get
     }
-  @objc public var callService: CPCallService.CPCallService? {
+  @objc public var callService: CPCallModule.CPCallService? {
     get
     }
-  @objc public var smsService: CPMessagingService.CPSmsService? {
+  @objc public var smsService: CPMessagingModule.CPSmsService? {
     get
     }
-  @objc public var chatService: CPMessagingService.CPChatService? {
+  @objc public var chatService: CPMessagingModule.CPChatService? {
     get
     }
-  @objc public var presenceService: CPPresenceService.CPPresenceService? {
+  @objc public var presenceService: CPPresenceModule.CPPresenceService? {
     get
     }
-  @objc public var addressBookService: CPAddressBookService.CPAddressBookService? {
+  @objc public var addressBookService: CPAddressBookModule.CPAddressBookService? {
     get
     }
   @objc deinit

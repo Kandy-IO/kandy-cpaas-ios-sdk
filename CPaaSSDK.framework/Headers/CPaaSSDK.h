@@ -19,10 +19,10 @@ FOUNDATION_EXPORT const unsigned char CPaaSSDKVersionString[];
 
 #ifdef __OBJC__
 @import CPUtilities;
-@import CPAuthenticationService;
-@import CPMessagingService;
-@import CPAddressBookService;
-@import CPPresenceService;
-@import CPPushService;
-@import CPCallService;
+@import CPAuthenticationModule;
+@import CPMessagingModule;
+@import CPAddressBookModule;
+@import CPPresenceModule;
+@import CPPushModule;
+@import CPCallModule;
 #endif

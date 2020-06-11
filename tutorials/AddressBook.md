@@ -30,7 +30,9 @@ In default, addressbookId is `default`.
 
 #### Example Usage
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK
@@ -55,9 +57,9 @@ cpaas.addressBookService?.addContact(contact: entity,
 })
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 /// First, create CPContact Object.
@@ -80,6 +82,8 @@ entity.email = <#email address#>;
     NSLog("Contact is saved to the addressbook");
 }];
 ```
+<!-- tabs:end -->
+
 
 ### Updating a contact
 
@@ -87,7 +91,9 @@ $KANDY$ Mobile SDK provides `updateContact` ability to update an existing `CPCon
 
 #### Example Usage
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK
@@ -110,9 +116,9 @@ cpaas.addressBookService?.updateContact(contact: entity,
 })
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 /// Entity is the contact object that should be updated.
@@ -133,12 +139,17 @@ entity.email = <#new email address#>;
     NSLog("Contact is updated");
 }];
 ```
+<!-- tabs:end -->
 
 ### Getting all contacts
 
 In order to fetch all contacts from a specific adddress book, $KANDY$ Mobile SDK provides `retrieveContactList` API.
 
 #### Example Usage
+
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK
@@ -156,9 +167,9 @@ NSLog("Contact: \(contact)")
 })
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 /// cpaas is the main instance which holds logged-in user.
@@ -175,6 +186,7 @@ NSLog("Contact: %@", contact);
 }
 }];
 ```
+<!-- tabs:end -->
 
 ### Getting a contact
 
@@ -182,7 +194,9 @@ In order to get a single contact from a specific adddress book, $KANDY$ Mobile S
 
 #### Example Usage
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK
@@ -199,9 +213,9 @@ NSLog("Contact is retrieved successfuly - Contact: \(retrievedContact!)")
 })
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 /// cpaas is the main instance which holds logged-in user.
@@ -216,7 +230,7 @@ return;
 NSLog("Contact is retrieved successfuly - Contact: %@", retrievedContact);
 }];
 ```
-
+<!-- tabs:end -->
 
 ### Deleting a contact
 
@@ -224,7 +238,9 @@ In order to delete a single contact from a specific adddress book, $KANDY$ Mobil
 
 #### Example Usage
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK
@@ -242,9 +258,9 @@ cpaas.addressBookService?.deleteContact(identifier: entity.contactId,
 })
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 /// Entity is the contact object that should be removed.
@@ -260,6 +276,7 @@ cpaas.addressBookService?.deleteContact(identifier: entity.contactId,
     NSLog("Contact is deleted");
 }];
 ```
+<!-- tabs:end -->
 
 ### Directly updating or removing contact attributes
 
@@ -269,7 +286,9 @@ $KANDY$ Mobile SDK provides ability to updating or removing a specific contact a
 
 To update an attribute of the contact:
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK
@@ -285,9 +304,9 @@ cpaas.addressBookService?.updateAttribute(contactIdentifier: <#Contact Identifie
 })
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 /// cpaas is the main instance which holds logged-in user.
@@ -304,9 +323,13 @@ cpaas.addressBookService?.updateAttribute(contactIdentifier: <#Contact Identifie
     NSLog("Contact is deleted");
 }];
 ```
+<!-- tabs:end -->
+
 To remove an attribute, you need to provide ID of the attribute (`AttributeName`) to AddressBookService
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK
@@ -322,9 +345,9 @@ cpaas.addressBookService?.updateAttribute(contactIdentifier: <#Contact Identifie
 })
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 /// cpaas is the main instance which holds logged-in user.
@@ -340,6 +363,7 @@ cpaas.addressBookService?.updateAttribute(contactIdentifier: <#Contact Identifie
     NSLog("Contact is deleted");
 }];
 ```
+<!-- tabs:end -->
 
 ## Managing Address Book Lists
 
@@ -350,7 +374,9 @@ $KANDY$ Mobile SDK offers ability to manage address book lists.
 
 $KANDY$ Mobile SDK provides `addAddressBookList` ability to add `AddressBookList` objects to user's address book lists. `addAddressBookList` operation requires a new `AddressBookList` object with unique list ID.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK
@@ -369,9 +395,9 @@ cpaas.addressBookService?.addAddressBookList(addressbookList: exampleList, compl
 })
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 CPAddressBookList *exampleList = [[CPAddressBookList alloc] initWithListId:<#List Name#>];
@@ -390,6 +416,7 @@ CPAddressBookList *exampleList = [[CPAddressBookList alloc] initWithListId:<#Lis
 
 }];
 ```
+<!-- tabs:end -->
 
 ### Adding or updating contact's to address book list membership
 
@@ -397,7 +424,9 @@ Address Book list membership of the contact can be managed by `CPContact` object
 
 Example usage of adding or updating a contact to list on $KANDY$ Mobile SDK:
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK;
@@ -417,9 +446,9 @@ cpaas.addressBookService?.updateContact(contact: entity,
 })
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 /// Entity is the contact object that should be updated.
@@ -439,6 +468,7 @@ entity.lists = newListsArray;
     NSLog("Contact is updated");
 }];
 ```
+<!-- tabs:end -->
 
 Note that, this operation requires using `updateContact` operation, $KANDY$ Mobile SDK does not provide separate address book list API. Also, this operation will create a new address book list if that's not created previosly.
 
@@ -446,7 +476,9 @@ Note that, this operation requires using `updateContact` operation, $KANDY$ Mobi
 
 $KANDY$ Mobile SDK provides `updateAddressBookList` ability to update an existing `AddressBookList`s while maintaining its membership information.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK
@@ -466,9 +498,9 @@ cpaas.addressBookService?.updateAddressBookList(oldListId: existingList.listId, 
 })
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 CPAddressBookList *updatedList = [[CPAddressBookList alloc] initWithListId:<#List Name#>];
@@ -487,12 +519,15 @@ CPAddressBookList *updatedList = [[CPAddressBookList alloc] initWithListId:<#Lis
     NSLog("List is updated");
 }];
 ```
+<!-- tabs:end -->
 
 ### Getting all address book lists
 
 In order to fetch all address book lists from a specific adddress book, $KANDY$ Mobile SDK provides `retrieveAddressBookLists` API.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK
@@ -508,9 +543,9 @@ cpaas.addressBookService?.retrieveAddressBookList(completion: { (error, lists) i
 })
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 /// cpaas is the main instance which holds logged-in user.
@@ -524,6 +559,7 @@ cpaas.addressBookService?.retrieveAddressBookList(completion: { (error, lists) i
     NSLog("Lists are retrieved - Lists: %@", lists);
 }];
 ```
+<!-- tabs:end -->
 
 ### Getting an address book list
 
@@ -531,7 +567,9 @@ In order to get a address book list from a specific adddress book, $KANDY$ Mobil
 
 Example usage of the `getAddressBookList` API:
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK
@@ -547,9 +585,9 @@ cpaas.addressBookService?.getAddressBookList(listId: <#List Name#>, completion: 
 })
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 /// cpaas is the main instance which holds logged-in user.
@@ -563,6 +601,7 @@ cpaas.addressBookService?.getAddressBookList(listId: <#List Name#>, completion: 
     NSLog("List is retrieved");
 }];
 ```
+<!-- tabs:end -->
 
 ### Deleting an address book list
 
@@ -570,7 +609,9 @@ In order to delete a address book list, $KANDY$ Mobile SDK provides `deleteAddre
 
 Example usage of the `deleteAddressBookList` API:
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK
@@ -586,9 +627,9 @@ cpaas.addressBookService?.deleteAddressBookList(listId: <#List Name#>, completio
 })
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 /// cpaas is the main instance which holds logged-in user.
@@ -602,6 +643,7 @@ cpaas.addressBookService?.deleteAddressBookList(listId: <#List Name#>, completio
     NSLog("List is deleted");
 }];
 ```
+<!-- tabs:end -->
 
 ## Directory Search
 
@@ -679,7 +721,9 @@ Returns next chunk of contacts of the succeded directory search operation. Befor
 
 Let assume `UISearchController` will be used in the application in order to show users according to the what they are searching. In every update on the search controller will be called `updateSearchResults(for:)` method defined in `UISearchControllerDelegate`. For more details please see Apple Documentations.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK
@@ -718,9 +762,9 @@ func updateSearchResults(for searchController: UISearchController) {
 }
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
@@ -757,10 +801,13 @@ func updateSearchResults(for searchController: UISearchController) {
 
 }
 ```
+<!-- tabs:end -->
 
 ### Obtaining more results from `CPSearchResult`:
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK
@@ -782,9 +829,9 @@ func nextSearchResults(searchResult: CPSearchResult) {
 }
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 - (void)nextSearchResults:(CPSearchResult *)searchResult {
@@ -803,3 +850,4 @@ func nextSearchResults(searchResult: CPSearchResult) {
     }
 }
 ```
+<!-- tabs:end -->

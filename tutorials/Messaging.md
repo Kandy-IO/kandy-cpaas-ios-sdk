@@ -15,7 +15,10 @@ SMS messaging is managed by the SMS Service which can be called from the `CPaaS`
 
 In order to use the SMS service, the service provider object must be properly initialized. When properly initialized, the application will be registered to receive SMS notifications from the server.Note that,phone number should be assigned to the user before using the SMS Service.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 // import the SDK
 import CPaaSSDK
@@ -33,8 +36,9 @@ func initProvider() {
 }
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 @interface AppModel : NSObject <SmsDelegate>
@@ -59,12 +63,16 @@ func initProvider() {
     self.cpaas = [[CPaaS alloc] initWithConfig:config services: cpaasServices];
  }
 ```
+<!-- tabs:end -->
 
 ### Implement and Set Sms Delegate
 
 In order for the CPaaS SDK to notify the application of notifications received from the server, an SMS delegate must be set.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 import CPaaSSDK
 
@@ -94,8 +102,9 @@ class AppModel: CPSmsDelegate {
 }
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 -(id)init {
@@ -126,6 +135,7 @@ class AppModel: CPSmsDelegate {
 }
 @end
 ```
+<!-- tabs:end -->
 
 ## Fetching SMS Messages
 SMS messages are grouped into conversations with other users. A list of established conversations can be fetched from the server. For each conversation, the messages within that conversation may be fetched.
@@ -134,7 +144,10 @@ SMS messages are grouped into conversations with other users. A list of establis
 
 Retrieve a list of all conversation objects from the server. Use this list to populate the application model with existing conversations.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 import CPaaSSDK
 
@@ -151,8 +164,9 @@ self.cpaas.smsService!.fetchConversations(){
 }];
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 [self.cpaas.smsService fetchConversationsWithCompletion:^(CPError * _Nullable error, FetchResult * _Nonnull fetchResult) {
@@ -166,13 +180,17 @@ self.cpaas.smsService!.fetchConversations(){
     }
 }];
 ```
+<!-- tabs:end -->
 
 ### Fetch conversations by criteria from the server
 
 Retrieve a list of relevant conversation objects from the server. Using FetchCriteria, users can filter the participant, sender phone number and options.
 Options filter has provided search parameters; max, last message time and is a new message.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 import CPaaSSDK
 
@@ -194,8 +212,9 @@ self.cpaas.smsService.fetchConversations(criteria:FetchCriteria){
 }];
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 FetchCriteria *criteria = [[FetchCriteria alloc] init];
@@ -213,12 +232,16 @@ criteria.fetchOptions.max = 10;
     }
 }];
 ```
+<!-- tabs:end -->
 
 ### Fetch all messages from the server
 
 Retrieve a list of all message objects from the server.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 import CPaaSSDK
 
@@ -237,8 +260,9 @@ if let conversation = self.getSavedConversation(withParticipant: destination) {
 }
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 NSString* destination = @"18882223333";
@@ -254,12 +278,16 @@ CPConversation* conversation = [self getSavedConversationWithParticpant: destina
     }
 }];
 ```
+<!-- tabs:end -->
 
 ### Fetch a number of messages from the server
 
 Retrieve a list of message objects by filter from the server.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 import CPaaSSDK
 
@@ -280,8 +308,9 @@ if let conversation = self.getSavedConversation(withParticipant: destination) {
 }
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 NSString* destination = @"18882223333";
@@ -301,6 +330,7 @@ options.max = 10;
     }
 }];
 ```
+<!-- tabs:end -->
 
 ## Sending SMS Messages
 The Mobile SDK provides the ability to send SMS text messages.
@@ -309,7 +339,10 @@ The Mobile SDK provides the ability to send SMS text messages.
 
 Send an SMS message from a local address specified by the SMS Service within a list of available numbers to a single destination specified as the conversation participant with message content specified by withText. An implementer should specify a completion block to handle any response whether error or successful response.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 import CPaaSSDK
 
@@ -336,8 +369,9 @@ if let conversation = self.cpaas.smsService!.createConversation(fromAddress: loc
 }
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 [self.cpaas.smsService setSenderWithName:@"User Name" andAddress:@"user@domain.com"];
@@ -364,6 +398,7 @@ CPOutboundMessage* msg = [conversation createMessageWithText:@"Hello world"];
     }
 ];
 ```
+<!-- tabs:end -->
 
 ## Receiving SMS Messages
 Receiving SMS messages is an event driven process for new messages. See the application delegate method [**inboundMessageReceived**](#implement-and-set-smsdelegate) from the initialization procedure for receiving new SMS messages via notifications.

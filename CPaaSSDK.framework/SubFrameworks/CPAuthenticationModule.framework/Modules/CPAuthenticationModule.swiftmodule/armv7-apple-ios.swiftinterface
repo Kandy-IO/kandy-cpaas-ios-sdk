@@ -1,0 +1,42 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-module-flags: -target armv7-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CPAuthenticationModule
+import CPUtilities
+import Foundation
+import NotificationEngine
+import CPUtilities.Private
+import RestManager
+import Swift
+@objc public enum CPConnectionState : Swift.Int {
+  case disconnected = 0
+  case connected
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol CPAuthenticationDelegate : ObjectiveC.NSObjectProtocol {
+  @objc func connectionStatusChanged(state: CPAuthenticationModule.CPConnectionState)
+  @objc func onChannelInfoChanged(_ channelInfo: Swift.String)
+}
+@objc public class CPAuthenticationService : ObjectiveC.NSObject {
+  @objc public var delegate: CPAuthenticationModule.CPAuthenticationDelegate!
+  @objc public var connectionState: CPAuthenticationModule.CPConnectionState {
+    @objc get
+  }
+  public typealias ConnectionBlock = (CPUtilities.CPError?, Swift.String?) -> ()
+  public typealias DisconnectionBlock = (CPUtilities.CPError?) -> ()
+  public init(userInfo: CPUtilities.CPUserInfo, services: [CPUtilities.CPServiceProtocol])
+  @objc public func setToken(_ accessToken: Swift.String)
+  @objc public func connect(idToken: Swift.String, accessToken: Swift.String, lifetime: Swift.Int, completion: @escaping CPAuthenticationModule.CPAuthenticationService.ConnectionBlock)
+  @objc public func connect(idToken: Swift.String, lifetime: Swift.Int, completion: @escaping CPAuthenticationModule.CPAuthenticationService.ConnectionBlock)
+  @objc public func connect(idToken: Swift.String, accessToken: Swift.String, lifetime: Swift.Int, channelInfo: Swift.String, completion: @escaping CPAuthenticationModule.CPAuthenticationService.ConnectionBlock)
+  @objc public func connect(idToken: Swift.String, lifetime: Swift.Int, channelInfo: Swift.String, completion: @escaping CPAuthenticationModule.CPAuthenticationService.ConnectionBlock)
+  @objc public func disconnect(completion: @escaping CPAuthenticationModule.CPAuthenticationService.DisconnectionBlock)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension CPAuthenticationModule.CPConnectionState : Swift.Equatable {}
+extension CPAuthenticationModule.CPConnectionState : Swift.Hashable {}
+extension CPAuthenticationModule.CPConnectionState : Swift.RawRepresentable {}

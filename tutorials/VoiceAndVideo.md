@@ -21,7 +21,9 @@ Terminator should be defined by using `CPUriAddress` object.
 
 For video calls, remote video view and local video views should be set to `UIView` objects where they want to be appear.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK
@@ -50,9 +52,9 @@ service?.createOutGoingCall(<CallApplicationDelegate>, andTerminator: term, comp
 })
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 CPUriAddress *term = [[CPUriAddress alloc] initWithUsername:@"username" withDomain:@"domain"]];
@@ -78,6 +80,7 @@ CPCallService *service = cpaas.callService;
     [call establishAudioCall];
 }];
 ```
+<!-- tabs:end -->
 
 Call Application Delegate will be notified when any changes occurred during the call and can be managed by listening its protocol stubs.
 
@@ -85,7 +88,9 @@ Call Application Delegate will be notified when any changes occurred during the 
 
 When $KANDY$ Mobile SDK receives an incoming call, it calls incomingCall: method in the Call Application Delegate. Thus, `CallApplicationDelegate` should be implemented to the class where managed. Now, the application should receive incoming call events if any occurs.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK
@@ -93,13 +98,14 @@ import CPaaSSDK
 cpaas.callService?.callApplicationDelegate = self
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 [cpaas.callService setCallApplicationDelegate:self];
 ```
+<!-- tabs:end -->
 
 ### Managing Incoming Call
 
@@ -109,7 +115,9 @@ When incomingCall: method is notified with the received incoming call, call can 
 
 An incoming call can be accepted by calling the acceptCall: method on the incoming call instance which is received from `CallApplicationListener`.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK
@@ -126,9 +134,9 @@ func incomingCall(_ call: CPIncomingCallDelegate!) {
 }
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 - (void)incomingCall:(id<CPIncomingCallDelegate>)call {
@@ -142,12 +150,15 @@ func incomingCall(_ call: CPIncomingCallDelegate!) {
     [call acceptCall:NO];
 }
 ```
+<!-- tabs:end -->
 
 #### Rejecting Incoming Call
 
 An incoming call can be rejected by calling the rejectCall: method on the incoming call instance.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK
@@ -157,21 +168,24 @@ func incomingCall(_ call: CPIncomingCallDelegate!) {
 }
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 - (void)incomingCall:(id<CPIncomingCallDelegate>)call {
     [call rejectCall];
 }
 ```
+<!-- tabs:end -->
 
 #### Ignoring Incoming Call
 
 An incoming call can be ignored by calling the ignoreCall: method on the incoming call instance.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK
@@ -181,21 +195,24 @@ func incomingCall(_ call: CPIncomingCallDelegate!) {
 }
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 - (void)incomingCall:(id<CPIncomingCallDelegate>)call {
     [call ignoreCall];
 }
 ```
+<!-- tabs:end -->
 
 #### Forwarding Incoming Call
 
 An incoming call can be forwarded to another user by calling the forwardCall: method on the incoming call instance. After a successful invokation of the forward operation, call will be ended on the client which invoked the operation, the user whose address is given to forward operation will receive an incoming call from the originator side.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK
@@ -206,9 +223,9 @@ func incomingCall(_ call: CPIncomingCallDelegate!) {
 }
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 - (void)incomingCall:(id<CPIncomingCallDelegate>)call {
@@ -216,12 +233,15 @@ func incomingCall(_ call: CPIncomingCallDelegate!) {
     [call forwardCall:targetAddress];
 }
 ```
+<!-- tabs:end -->
 
 ## Managing Call Events
 
 Methods implemented in the Call Application Delegate are notified with the events occurred during the call, or `callStatusChanged` when state of the call is changed. By listening these methods, call events can be managed directly. To see all methods implemented in the **Call Application Delegate** see API Reference Documents.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK
@@ -231,15 +251,16 @@ func callStatusChanged(_ call: CPCallDelegate!, with callState: CPCallState!) {
 }
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 - (void)callStatusChanged:(id<CPCallDelegate>)call withState:(CPCallState *)callState {
     NSLog(@"Call Status changed to :%@", callState.type);
 }
 ```
+<!-- tabs:end -->
 
 ### Starting Call Events
 
@@ -255,7 +276,9 @@ Because audio of the call is managed by `AVAudioSession`, you can change route o
 
 To end an incoming or outgoing call, endCall: method on call instance can be called.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK
@@ -263,13 +286,14 @@ import CPaaSSDK
 call.endCall()
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 [call endCall];
 ```
+<!-- tabs:end -->
 
 #### To hold or unhold call
 
@@ -279,7 +303,9 @@ To resume to the call, `unholdCall` method should be called. Note that, these op
 
 Note that a call already in `On Hold` state may not be placed on hold. Similarly, attempting to `unhold` a call that is not in `On Hold` state will fail.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK
@@ -288,18 +314,21 @@ call.holdCall()
 call.unholdCall()
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 [call holdCall];
 [call unholdCall];
 ```
+<!-- tabs:end -->
 
 #### To start or stop sending video
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK
@@ -308,20 +337,23 @@ call.videoStart()
 call.videoStop()
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 [call videoStart];
 [call videoStop];
 ```
+<!-- tabs:end -->
 
 #### To mute or unmute call
 
 To stop sending audio from the microphone, `mute` method can be called. Until unmuting the call, participants cannot hear the voice from the device.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 import CPaaSSDK
@@ -330,15 +362,15 @@ call.mute()
 call.unmute()
 ```
 
-*Objective-C Code:*
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 @import CPaaSSDK;
 
 [call mute];
 [call unmute];
 ```
-
+<!-- tabs:end -->
 
 ## Anonymous Calls
 

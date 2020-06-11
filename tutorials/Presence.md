@@ -6,7 +6,10 @@ Presence publishing and watching are managed by the Presence Service which can b
 
 In order to use the Presence service, the service provider object must be properly initialized. When properly initialized, the application will be registered to receive Presence notifications from the server.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 // import the SDK
 import CPaaSSDK
@@ -24,8 +27,9 @@ func initProvider() {
 }
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 @interface AppModel : NSObject <CPPresenceDelegate>
@@ -45,12 +49,16 @@ func initProvider() {
     self.cpaas = [[CPaaS alloc] initWithServices: cpaasServices];
  }
 ```
+<!-- tabs:end -->
 
 ### Implement and Set PresenceDelegate
 
 In order for the Mobile SDK to notify the application of notifications received from the server, a presence delegate must be set.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 import CPaaSSDK
 
@@ -95,8 +103,9 @@ class AppModel: PresenceDelegate {
 }
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 - (id)init {
@@ -141,6 +150,7 @@ class AppModel: PresenceDelegate {
       [self.presentityList statusChangedWithPresentity:presentity];
 }
 ```
+<!-- tabs:end -->
 
 ## Publishing Presence
 An application publishes the status of a user by creating and updating a PresenceSource.
@@ -149,7 +159,10 @@ An application publishes the status of a user by creating and updating a Presenc
 
 Publish the presence activity of the local user by creating new PresenceSource or updating an existing PresenceSource.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 import CPaaSSDK
 
@@ -190,8 +203,9 @@ import CPaaSSDK
 	}
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
  /// Publish the local client status
@@ -228,6 +242,7 @@ import CPaaSSDK
     }];
 }
 ```
+<!-- tabs:end -->
 
 ## Watching User Presence
 An application watches the presence status of other users by creating a presentity list and subscribing for notifications concerning changes to that users in that list. An application may modify the membership of the presentity watch list after creation.
@@ -236,7 +251,10 @@ An application watches the presence status of other users by creating a presenti
 
 Watch the status of users by creating a PresentityList with the contacts to watch. Then subscribe for notifications about changes to the PresentityList.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 import CPaaSSDK
 
@@ -259,8 +277,9 @@ import CPaaSSDK
    }
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 	Array* contacts = @[@"user_a@domain.com", @"user_b@domain.com", @"user_c@domain.com"];
@@ -280,12 +299,16 @@ import CPaaSSDK
         }
     }];
 ```
+<!-- tabs:end -->
 
 ### Add User to Presentity List
 
 An application may choose add contacts to an existing PresentityList. No re-subscription to the list is necessary.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 import CPaaSSDK
 
@@ -299,8 +322,9 @@ import CPaaSSDK
     }
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
     CPPresentity* CPpresentity = [[CPPresentity alloc] initWithUserID:@"user_d@domain.com"];
@@ -311,12 +335,16 @@ import CPaaSSDK
         }
     }];
 ```
+<!-- tabs:end -->
 
 ### Remove User from Presentity List
 
 An application may choose remove contacts from a PresentityList.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 import CPaaSSDK
 
@@ -330,8 +358,9 @@ import CPaaSSDK
     }
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
     CPPresentity* presentity = [[CPPresentity alloc] initWithUserID:@"user_c@domain.com"];
@@ -342,3 +371,4 @@ import CPaaSSDK
         }
     }];
 ```
+<!-- tabs:end -->

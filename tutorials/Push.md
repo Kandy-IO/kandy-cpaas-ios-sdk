@@ -39,7 +39,9 @@ Registration can be done in two steps.
 
 ### Registering for tokens from iOS APIs
 
-_Swift Code:_
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 ...
@@ -87,9 +89,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PKPushRegistryDelegate, U
 }
 ```
 
-_Objective-C Code:_
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 ...
 @import PushKit;
 @import UserNotifications;
@@ -137,6 +139,7 @@ _Objective-C Code:_
 ...
 @end
 ```
+<!-- tabs:end -->
 
 ### Push Service Subscription
 
@@ -144,7 +147,9 @@ When device is registered to the APNS, `PKPushRegistryDelegate` and `UNUserNotif
 
 To be able to receive push notifications, applications must subscribe to push channels by using the  `refreshDeviceToken`  API of the  `CPPushService`. Fail and success calls will be transmitted through the completion block. If the registration is successful, a  `callbackURL`  will be returned.
 
-_Swift Code:_
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 ...
@@ -200,9 +205,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PKPushRegistryDelegate, U
 }
 ```
  
-_Objective-C Code:_
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 ...
 @import PushKit;
 @import UserNotifications;
@@ -274,12 +279,15 @@ _Objective-C Code:_
 ...
 @end
 ```
+<!-- tabs:end -->
 
 ### Updating Push Subscription
 
 iOS can update the push credentials (a.k.a device token) in some cases. The new credentials must be updated on the push server, so that the Mobile SDK can continue receiving push notifications.
 
-_Swift Code:_
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 ...
@@ -300,9 +308,9 @@ class PushModule {
 }
 ```
 
-_Objective-C Code:_
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 ...
 @import CPaaSSDK
 
@@ -327,14 +335,16 @@ _Objective-C Code:_
 }
 
 @end
-
 ```
+<!-- tabs:end -->
 
 ### Removing Push Subscription
 
 In order to stop receiving push notifications, app should remove the push subscription. Otherwise, app will continue to receive push notifications until the application removed from the device.
 
-_Swift Code:_
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 ...
@@ -355,9 +365,9 @@ class PushModule {
 
 ```
 
-_Objective-C Code:_
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 ...
 @import CPaaSSDK
 
@@ -380,8 +390,8 @@ _Objective-C Code:_
 }
 
 @end
-
 ```
+<!-- tabs:end -->
 
 ## Receiving Push Notifications
 
@@ -393,7 +403,9 @@ When device receives VoIP push notification, `PKPushRegistryDelegate` informs it
 
 Please note that in order to inject push payload, app should wait until SDK has been subscribed and connected.  
 
-_Swift Code:_
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 ...
@@ -451,9 +463,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PKPushRegistryDelegate, U
 }
 ```
 
-_Objective-C Code:_
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
 ...
 @import CPaaSSDK;
 @import PushKit;
@@ -513,6 +525,7 @@ _Objective-C Code:_
 ...
 @end
 ```
+<!-- tabs:end -->
 
 ### Standard Push Notification Callback
 
@@ -528,7 +541,9 @@ Silent notifications needs to handled by implementing `application(_:didReceiveR
 
 For more information please refer [handling notifications](https://developer.apple.com/documentation/usernotifications/handling_notifications_and_notification-related_actions).
 
-_Swift Code:_
+<!-- tabs:start -->
+
+#### ** Swift Code **
 
 ```swift
 ...
@@ -566,9 +581,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PKPushRegistryDelegate, U
 }
 ```
 
-_Objective-C Code:_
+#### ** Objective-C Code **
 
-```objective-c
+```objectivec
  ...
 @import CPaaSSDK;
 @import UserNotifications;
@@ -600,6 +615,7 @@ _Objective-C Code:_
 ...
 @end
 ```
+<!-- tabs:end -->
 
 ### Standard Push Notification Localization
 

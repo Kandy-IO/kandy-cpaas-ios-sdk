@@ -122,9 +122,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic) CPICEOptions iceOption;
 
 /**
- * Timeout of the ICE collection when using the ICE_TRICKLE.
+ * Specifies timeout value of ICE Collection.
+ * Default value is 10 and it means that waits 10 seconds for ice gathering.
+ * if it is set as 0, it means that waits until ice gathering completion.
  *
  * - Since: 1.0.0
+ * - Modified: 2.6.0
  */
 @property (nonatomic) NSTimeInterval ICECollectionTimeout;
 

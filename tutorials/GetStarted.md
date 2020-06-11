@@ -33,8 +33,10 @@ The applications which uses $KANDY$ MobileSDK can be built with the XCode 10.2+ 
 
 2. Go to project folder via command line and run "pod install" command and wait for cocoapods to finish installation of Kandy CPaaS MobileSDK & WebRTC frameworks and their dependencies
 
+If you have a trouble with getting latest version of *$KANDY$ iOS SDK* plaese run these suggested commands [here](https://gist.github.com/mbinna/4202236) in project directory where Podfile is located.
+
 ### Manual Installation
- Before those steps you need to download **Kandy CPaaS iOS SDK** framework file from [this link](https://raw.githubusercontent.com/Kandy-IO/kandy-cpaas-ios-sdk/$SDK_VERSION$/dist/CPaaSSDK_$SDK_VERSION$.zip)
+ Before those steps you need to download **$KANDY$ iOS SDK** framework file from [this link](https://raw.githubusercontent.com/Kandy-IO/kandy-cpaas-ios-sdk/$SDK_VERSION$/dist/CPaaSSDK_$SDK_VERSION$.zip)
 
 1. Go to project settings and navigate to **Build Phases**.
 2. Add **CPaaSSDK.framework** under **Link Binary With Libraries** section.
@@ -94,7 +96,10 @@ The applications which uses $KANDY$ MobileSDK can be built with the XCode 10.2+ 
 
 3. In order to set configurations for registering to $KANDY$, add followings in to login action.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 import CPaaSSDK
 
@@ -103,8 +108,10 @@ configuration.restServerUrl = "$KANDYFQDN$"
 configuration.restServerPort = "443"
 configuration.useSecureConnection = true
 ```
-*Objective-C Code:*
-```objective-c
+
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 CPConfig *configuration = [CPConfig sharedInstance];
@@ -112,11 +119,17 @@ configuration.restServerUrl = @"$KANDYFQDN$";
 configuration.restServerPort = @"443";
 configuration.useSecureConnection = YES;
 ```
+
+<!-- tabs:end -->
+
 4. Getting access and id token is explained in [**Getting Access and Id Token from $KANDY$**](GetStarted.md#getting-access-and-id-token-from-$KANDY$) section in detail.
 
 5. When all configurations are set correctly, connect method can be called as following.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 import CPaaSSDK
 
@@ -133,8 +146,9 @@ cpaas.authenticationService.connect(idToken: <ID-Token>, accessToken: <Access-To
     print("Channel Info: \(channelInfo!)")
 }
 ```
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 NSArray* services= @[[CPServiceInfo buildWithType:CPServiceTypeSms push:YES],
@@ -152,6 +166,7 @@ cpaas.authenticationService.delegate = self;
         NSLog(@"Channel Info: %@", channelInfo);
 }];
 ```
+<!-- tabs:end -->
 
 6. When $KANDY$ is registered, **connectionStatusChanged(state:)** method will be called by *CPAuthenticationDelegate*.
 
@@ -159,9 +174,11 @@ cpaas.authenticationService.delegate = self;
 
 ## Getting Access And Id Token from $KANDY$
 
-*Swift Code:*
-```swift
+<!-- tabs:start -->
 
+#### ** Swift Code **
+
+```swift
 func requestAccessToken(completion: @escaping (_ error: String?, _ accessToken: String?)->()) {
     var request = createAuthenticationRequest(with: self.clientID)
     var bodyStr = String(format: "grant_type=password&username=%@&password=%@&client_id=%@&scope=openid", UserConfigurations.sharedInstance.username!, self.password!, self.clientID)
@@ -173,7 +190,7 @@ func requestAccessToken(completion: @escaping (_ error: String?, _ accessToken: 
 
 private func createAuthenticationRequest(with clientID: String) -> URLRequest {
 
-        let url = URL(string: "https://nvs-cpaas-oauth.kandy.io/cpaas/auth/v1/token")!
+        let url = URL(string: "https://$KANDYFQDN$/cpaas/auth/v1/token")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
@@ -184,7 +201,7 @@ private func createAuthenticationRequest(with clientID: String) -> URLRequest {
 private func makeAccessTokenRequest(request:URLRequest, completion: @escaping (_ error: String?, _ accessToken: String?)->()) {
     let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
         if let error = error {
-            logWith("Can't get access token - Error: \(error.localizedDescription)")
+            print("Can't get access token - Error: \(error.localizedDescription)")
             completion(error.localizedDescription, nil)
             return
         } else if let response = response as? HTTPURLResponse {
@@ -192,7 +209,7 @@ private func makeAccessTokenRequest(request:URLRequest, completion: @escaping (_
                 if data != nil {
                     guard let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions(rawValue: 0)),
                         let jsonDictionary = json as? [String: AnyObject] else {
-                            logWith("Couldn't parse response body")
+                            print("Couldn't parse response body")
                             completion("Couldn't parse response body", nil)
                             return
                     }
@@ -220,12 +237,10 @@ private func makeAccessTokenRequest(request:URLRequest, completion: @escaping (_
     }
     task.resume()
 }
-
 ```
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
 
-
+```objectivec
 (void)requestAccessToken: (void (^)(NSString *_Nullable error, NSString *_Nullable accessToken, NSString *_Nullable accessTokenTimeOut))completion {
     NSMutableURLRequest *request = [self createAuthenticationRequestWithClientID:_clientID];
     NSString *bodyStr = [NSString stringWithFormat:@"grant_type=password&username=%@&password=%@&client_id=%@&scope=openid", UserConfigurations.sharedInstance.username!, self.password!, self.clientID];
@@ -255,7 +270,7 @@ private func makeAccessTokenRequest(request:URLRequest, completion: @escaping (_
             NSError *e = nil;
             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&e];
             if (!dict) {
-                logWith(@"Couldn't parse response body - Error: %@", e);
+                NSLog(@"Couldn't parse response body - Error: %@", e);
                 completion([NSString stringWithFormat:@"Couldn't parse response body - Error: %@", e], nil, nil);
             } else {
                 //YOUR_ACCESS_TOKEN
@@ -275,5 +290,5 @@ private func makeAccessTokenRequest(request:URLRequest, completion: @escaping (_
     }];
     [task resume];
 }
-
 ```
+<!-- tabs:end -->

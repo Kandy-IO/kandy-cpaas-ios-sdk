@@ -1,0 +1,6 @@
+framework module CPCallModule {
+  umbrella header "CPCallModule.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,123 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CPAddressBookModule
+import CPUtilities
+import Foundation
+import CPUtilities.Private
+import RestManager
+import Swift
+import UIKit
+@objc public class CPContact : ObjectiveC.NSObject {
+  @objc public var contactId: Swift.String
+  @objc public var firstName: Swift.String
+  @objc public var lastName: Swift.String
+  @objc public var email: Swift.String
+  @objc public var homePhoneNumber: Swift.String
+  @objc public var businessPhoneNumber: Swift.String
+  @objc public var fax: Swift.String
+  @objc public var mobile: Swift.String
+  @objc public var pager: Swift.String
+  @objc public var buddy: Swift.Bool
+  @objc public var photoUrl: Swift.String {
+    get
+    }
+  @objc public var conferenceUrl: Swift.String {
+    get
+    }
+  @objc public var username: Swift.String
+  @objc public var lists: Swift.Array<CPAddressBookModule.CPAddressBookList>
+  @objc public init(contactId: Swift.String)
+  @objc deinit
+}
+@objc public class CPAddressBookList : ObjectiveC.NSObject {
+  @objc public var listId: Swift.String
+  @objc public var resourceUrl: Swift.String
+  @objc public init(listId: Swift.String)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class CPSearchFilter : ObjectiveC.NSObject {
+  @objc public var type: CPAddressBookModule.CPAddressBook.FieldType {
+    get
+    }
+  @objc public var value: Swift.String! {
+    get
+    }
+  @objc public init(value: Swift.String, forType: CPAddressBookModule.CPAddressBook.FieldType)
+  @objc deinit
+}
+@objc public class CPAddressBook : ObjectiveC.NSObject {
+  @objc(CPAddressBookFieldType) public enum FieldType : Swift.Int, Swift.RawRepresentable {
+    public typealias RawValue = Swift.String
+    case name = 0
+    case firstname = 1
+    case lastname = 2
+    case username = 3
+    case phoneNumber = 4
+    public var rawValue: CPAddressBookModule.CPAddressBook.FieldType.RawValue {
+      get
+    }
+    public init?(rawValue: CPAddressBookModule.CPAddressBook.FieldType.RawValue)
+  }
+  @objc(CPAddressBookOrderType) public enum OrderType : Swift.Int, Swift.RawRepresentable {
+    public typealias RawValue = Swift.String
+    case ascending = 0
+    case descending = 1
+    public var rawValue: CPAddressBookModule.CPAddressBook.OrderType.RawValue {
+      get
+    }
+    public init?(rawValue: CPAddressBookModule.CPAddressBook.OrderType.RawValue)
+  }
+  @objc deinit
+}
+@objc public class CPSearch : ObjectiveC.NSObject {
+  @objc public var filter: CPAddressBookModule.CPSearchFilter
+  @objc public var sortBy: CPAddressBookModule.CPAddressBook.FieldType
+  @objc public var orderBy: CPAddressBookModule.CPAddressBook.OrderType
+  @objc public var limit: Swift.Int
+  @objc public var directoryId: Swift.String
+  @objc public init(filter: CPAddressBookModule.CPSearchFilter)
+  @objc deinit
+}
+@objc public class CPAddressBookService : ObjectiveC.NSObject, CPUtilities.CPServiceProtocol {
+  public typealias CPAddressBookRetrieveBlock = (CPUtilities.CPError?, Swift.Array<CPAddressBookModule.CPContact>?) -> ()
+  public typealias CPDirectorySearchRetrieveBlock = (CPUtilities.CPError?, CPAddressBookModule.CPSearchResult?) -> ()
+  public typealias CPAddressBookSuccessBlock = (CPUtilities.CPError?) -> ()
+  public typealias CPContactRetrieveBlock = (CPUtilities.CPError?, CPAddressBookModule.CPContact) -> ()
+  public typealias CPAddressBookListRetrieveBlock = (CPUtilities.CPError?, Swift.Array<CPAddressBookModule.CPAddressBookList>?) -> ()
+  public typealias CPAddressBookListBlock = (CPUtilities.CPError?, CPAddressBookModule.CPAddressBookList?) -> ()
+  public init(userInfo: CPUtilities.CPUserInfo, info: CPUtilities.CPServiceInfo)
+  @objc public func addContact(addressBookId: Swift.String = "default", contact: CPAddressBookModule.CPContact, completion: @escaping CPAddressBookModule.CPAddressBookService.CPAddressBookSuccessBlock)
+  @objc public func updateContact(addressBookId: Swift.String = "default", contact: CPAddressBookModule.CPContact, completion: @escaping CPAddressBookModule.CPAddressBookService.CPAddressBookSuccessBlock)
+  @objc public func retrieveContactList(addressBookId: Swift.String = "default", completion: @escaping CPAddressBookModule.CPAddressBookService.CPAddressBookRetrieveBlock)
+  @objc public func getContact(addressBookId: Swift.String = "default", contactId: Swift.String, completion: @escaping CPAddressBookModule.CPAddressBookService.CPContactRetrieveBlock)
+  @objc public func deleteContact(addressBookId: Swift.String = "default", identifier: Swift.String, completion: @escaping CPAddressBookModule.CPAddressBookService.CPAddressBookSuccessBlock)
+  @objc public func updateAttribute(addressBookId: Swift.String = "default", contactIdentifier: Swift.String, attributeId: Swift.String, attributeVal: Swift.String, completion: @escaping CPAddressBookModule.CPAddressBookService.CPAddressBookSuccessBlock)
+  @objc public func removeAttribute(addressBookId: Swift.String = "default", contactIdentifier: Swift.String, attributeId: Swift.String, completion: @escaping CPAddressBookModule.CPAddressBookService.CPAddressBookSuccessBlock)
+  @objc public func retrieveAddressBookList(addressBookId: Swift.String = "default", completion: @escaping CPAddressBookModule.CPAddressBookService.CPAddressBookListRetrieveBlock)
+  @objc public func addAddressBookList(addressBookId: Swift.String = "default", addressbookList: CPAddressBookModule.CPAddressBookList, completion: @escaping CPAddressBookModule.CPAddressBookService.CPAddressBookListBlock)
+  @objc public func updateAddressBookList(addressBookId: Swift.String = "default", oldListId: Swift.String, addressbookList: CPAddressBookModule.CPAddressBookList, completion: @escaping CPAddressBookModule.CPAddressBookService.CPAddressBookListBlock)
+  @objc public func deleteAddressBookList(addressBookId: Swift.String = "default", listId: Swift.String, completion: @escaping CPAddressBookModule.CPAddressBookService.CPAddressBookSuccessBlock)
+  @objc public func getAddressBookList(addressBookId: Swift.String = "default", listId: Swift.String, completion: @escaping CPAddressBookModule.CPAddressBookService.CPAddressBookListBlock)
+  @objc public func search(with search: CPAddressBookModule.CPSearch, completion: @escaping CPAddressBookModule.CPAddressBookService.CPDirectorySearchRetrieveBlock)
+  @objc public func serviceInfo() -> CPUtilities.CPServiceInfo
+  @objc public func subscribe(channelID: Swift.String, completion: @escaping CPUtilities.SubscribeCompletion)
+  @objc public func unsubscribe(channelID: Swift.String, completion: @escaping CPUtilities.UnsubscribeCompletion)
+  @objc public func notifications() -> [Swift.String]
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class CPSearchResult : ObjectiveC.NSObject {
+  @objc public var contacts: Swift.Array<CPAddressBookModule.CPContact>? {
+    get
+    }
+  @objc public var hasNext: Swift.Bool {
+    @objc get
+  }
+  @objc public func getNext(completion: @escaping CPAddressBookModule.CPAddressBookService.CPDirectorySearchRetrieveBlock)
+  @objc deinit
+}
+extension CPAddressBookModule.CPAddressBook.FieldType : Swift.Equatable {}
+extension CPAddressBookModule.CPAddressBook.FieldType : Swift.Hashable {}
+extension CPAddressBookModule.CPAddressBook.OrderType : Swift.Equatable {}
+extension CPAddressBookModule.CPAddressBook.OrderType : Swift.Hashable {}

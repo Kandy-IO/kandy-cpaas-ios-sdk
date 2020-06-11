@@ -19,7 +19,10 @@ Chat messaging is managed by the Chat Service which can be called from the `CPaa
 
 In order to use the Chat service, the service provider object must be properly initialized. When properly initialized, the application will be registered to receive Chat notifications from the server.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 // import the SDK
 import CPaaSSDK
@@ -36,8 +39,10 @@ func initProvider() {
     self.cpaas = CPaaS(services: servicesToEnable)
 }
 ```
-*Objective-C Code:*
-```objective-c
+
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 @interface AppModel : NSObject <CPChatDelegate>
@@ -57,12 +62,16 @@ func initProvider() {
     self.cpaas = [[CPaaS alloc] initWithServices: cpaasServices];
  }
 ```
+<!-- tabs:end -->
 
 ### Implement and Set ChatDelegate
 
 In order for the Mobile SDK to notify the application of notifications received from the server, a Chat delegate must be set.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 import CPaaSSDK
 
@@ -99,8 +108,9 @@ class AppModel: CPChatDelegate {
 	}
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 -(id)init {
@@ -140,6 +150,7 @@ class AppModel: CPChatDelegate {
 
 @end
 ```
+<!-- tabs:end -->
 
 ## Fetching Chat Messages
 Chat messages are grouped into conversations with other users. A list of established conversations can be fetched from the server. For each conversation, the messages within that conversation may be fetched.
@@ -148,7 +159,10 @@ Chat messages are grouped into conversations with other users. A list of establi
 
 Retrieve a list of all conversation objects from the server. Use this list to populate the application model with existing conversations.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 import CPaaSSDK
 
@@ -164,8 +178,9 @@ self.cpaas.chatService!.fetchConversations(){
 }
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 [self.cpaas.chatService fetchConversationsWithCompletion:^(CPError * _Nullable error, NSArray<CPConversation *> * _Nonnull newConversations) {
@@ -178,12 +193,16 @@ self.cpaas.chatService!.fetchConversations(){
     }
 }];
 ```
+<!-- tabs:end -->
 
 ### Fetch all messages from the server
 
 Retrieve a list of all message objects from the server.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 import CPaaSSDK
 
@@ -202,8 +221,9 @@ if let conversation = self.getSavedConversation(withParticipant: destination) {
 }
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 NSString* destination = @"user_b@domain.com";
@@ -219,12 +239,16 @@ CPConversation* conversation = [self getSavedConversationWithParticpant: destina
     }
 }];
 ```
+<!-- tabs:end -->
 
 ### Fetch a number of messages from the server
 
 Retrieve a list of message objects by filter from the server.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 import CPaaSSDK
 
@@ -245,8 +269,9 @@ if let conversation = self.getSavedConversation(withParticipant: destination) {
 }
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 NSString* destination = @"user_b@domain.com";
@@ -266,6 +291,7 @@ options.max = 10;
     }
 }];
 ```
+<!-- tabs:end -->
 
 ## Sending Chat Messages
 The Mobile SDK provides the ability to send text messages as well as messages with file attachments.
@@ -274,7 +300,10 @@ The Mobile SDK provides the ability to send text messages as well as messages wi
 
 Send a Chat message to a single destination specified as the conversation participant with message content specified by withText. An implementer should specify a completion block to handle any response whether error or successful response.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 import CPaaSSDK
 
@@ -298,8 +327,9 @@ if let conversation = self.cpaas.chatService!.createConversation(withParticipant
 }
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 NSString* destination = @"user_b@domain.com";
@@ -320,12 +350,16 @@ CPConversation* conversation = [self.cpaas.chatService  createConversationWithPa
     }
 ];
 ```
+<!-- tabs:end -->
 
 ### Send a Chat message with a file attachment
 
 Send a Chat message with a file attachment to a single destination specified as the conversation participant with message content specified by "text" and attachment specified by "withFile". An implementer may specify a code block for indicating progress to the user. An implementer should specify a completion block to handle any response whether error or successful response.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 import CPaaSSDK
 
@@ -357,8 +391,9 @@ if let conversation = self.cpaas.chatService!.createConversation(withParticipant
 }
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 NSString* destination = @"user_b@domain.com";
@@ -387,12 +422,16 @@ NSURL* userFile = [self chooseFile];
     }
 ];
 ```
+<!-- tabs:end -->
 
 ### Download a file attachment from the server
 
 After receiving or fetching a chat message with an attachment download the attachment file. The application may implement a progress handling code block for the purposes of indicating download progress to the user. An implementer should appropriately handle the downloaded file in the completion handler.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 import CPaaSSDK
 
@@ -421,8 +460,9 @@ if let attachment = message.files.first {
 }
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 CPFilePart* attachment = [message.files firstObject];
@@ -451,6 +491,7 @@ if (attachment != nil) {
 
 }
 ```
+<!-- tabs:end -->
 
 ## Receiving Chat Messages
 Receiving chat messages is an even driven process for new messages and an application requested event for message history. See the application delegate method [**inboundMessageReceived**](#implement-and-set-chatdelegate) from the initialization procedure for receiving new chat messages via notifications. See the Conversation [**fetchMessages**](#fetching-chat-messages) method from the fetching chat messages procedure.
@@ -462,7 +503,10 @@ An application may find it necessary to delete historical chat conversations. Me
 
 Delete an entire message thread from the server. This method will delete all messages associated with a particular participant.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 import CPaaSSDK
 
@@ -479,8 +523,9 @@ self.cpaas.chatService!.deleteConversation(withParticipant: destination) {
 }
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 NSString* destination = @"user_b@domain.com";
@@ -494,12 +539,16 @@ NSString* destination = @"user_b@domain.com";
     }
 }];
 ```
+<!-- tabs:end -->
 
 ### Delete a message from the server
 
 Delete a single message from a message thread. Each message has a unique identifier which can be used for deleting the message.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 import CPaaSSDK
 
@@ -519,8 +568,9 @@ if let conversation = self.getSavedConversation(withParticipant: destination) {
 }
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 NSString* destination = @"user_b@domain.com";
@@ -536,6 +586,7 @@ Conversation* conversation = [self getConversationWithParticipant:destination];
     }
 }];
 ```
+<!-- tabs:end -->
 
 ## Group Chat
 Group Chat messaging is managed by the Chat Service which can be called from the `CPaaS` instance.In order to receive and send events, the `CPaaS` instance should be connected first. To see how to connect and set configurations, check **Login** and **Configurations** sections.
@@ -546,7 +597,10 @@ Group Chat messaging is managed by the Chat Service which can be called from the
 After the app succesfully connected to backend and authenticated, already joined groups can be pulled from backend
 
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 // import the SDK
 import CPaaSSDK
@@ -563,13 +617,12 @@ func fetchGroupConversations(_ completion: @escaping (_ error: CPError?) -> () )
             completion(error)
         }
     }
-
 }
-
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 - (void) fetchGroupConversationsWithCompletion:(void (^)(CPError * _Nullable))completion {
@@ -582,12 +635,16 @@ func fetchGroupConversations(_ completion: @escaping (_ error: CPError?) -> () )
     }];
 }
 ```
+<!-- tabs:end -->
 
 ### Receiving joined groups icons
 After successfully receiving the list of groups which user has joined, the app can download the icons of the related groups from backend server
 
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 // import the SDK
 import CPaaSSDK
@@ -601,8 +658,9 @@ func downloadGroupChatIcon(remote:URL, local:URL, completion: @escaping Download
 
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 - (void) downloadIconFromRemote:(NSURL*)remote toLocal:(NSURL*)local completion:(void (^ _Nonnull)(CPError * _Nullable, NSURL * _Nullable))completion {
@@ -610,12 +668,15 @@ func downloadGroupChatIcon(remote:URL, local:URL, completion: @escaping Download
     [chatService downloadFromUrl:remote toFile:local progress:^(NSInteger x, NSInteger y) {} completion:completion];
 }
 ```
-
+<!-- tabs:end -->
 
 ### Upload Group Chat Image
 If the creator of the group wants to add an image before creating the group, the image file needs to be uploaded to server by using chat service.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 // import the SDK
 import CPaaSSDK
@@ -629,8 +690,9 @@ chatService.upload(withFile: imageURL, progress: { (_, _) in }) {
 }
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 [chatService uploadWithFile:image progress:^(NSInteger x, NSInteger y) {} completion:^(CPError * _Nullable error, FilePart * _Nullable filePart) {
@@ -641,13 +703,16 @@ chatService.upload(withFile: imageURL, progress: { (_, _) in }) {
     }
 }];
 ```
-
+<!-- tabs:end -->
 
 ### Create a Chat Group
 When group name and subject is decided, createGroupChat method of ChatGroup service must be called in order to create the groupchat and invite the participants.
 Upon succesfull creation of group, user creates the group conversation
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 // import the SDK
 import CPaaSSDK
@@ -669,8 +734,9 @@ chatService.createChatGroup(name: self.groupNameText.text!, type: "closed", subj
 }
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 [chatService createChatGroupWithName:name type:@"closed" subject:subject image:remoteURL participants:participants completion:^(CPError * _Nullable error, ChatGroup * _Nullable newChatGroup) {
@@ -682,13 +748,15 @@ chatService.createChatGroup(name: self.groupNameText.text!, type: "closed", subj
     completion(error, newChatGroup);
 }];
 ```
-
-
+<!-- tabs:end -->
 
 ### Add Participants To Already Created Group
 When the admin priviliged user wanted to add member to a current group, groupChat object's add method can be called. GroupChat object is initialized by Mobile SDK when createGroupChat method is called
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 // import the SDK
 import CPaaSSDK
@@ -704,8 +772,9 @@ self.chatGroup?.add(participant: participant) { (error) in
 }
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 NSString * address;
@@ -718,12 +787,16 @@ CPChatGroupParticipant * participant = [[CPChatGroupParticipant alloc] initWithA
     }
 }];
 ```
+<!-- tabs:end -->
 
 ### Remove Participants From Already Created Group
 When the admin priviliged user wants to remove a member from a current group, groupChat object's remove method must be called.
 GroupChat object is initialized by Mobile SDK when createGroupChat method is called
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 // import the SDK
 import CPaaSSDK
@@ -743,8 +816,9 @@ self.chatGroup?.remove(participant: member) {
 
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 // attempt delete from backend server
@@ -759,11 +833,15 @@ ChatGroupParticipant * member = [memberArray objectAtIndex:index];
     }
 }];
 ```
+<!-- tabs:end -->
 
 ### Delete chat group permanently
 If an admin privileged user wants to delete the chat group, deleteChatGroup method must be called
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 // import the SDK
 import CPaaSSDK
@@ -788,8 +866,9 @@ chatService.deleteChatGroup(groupID: <GROUP_ID>) { (error) in
 }
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 [chatService deleteWithConversation:<GROUP_ID> completion:^(CPError * _Nullable deleteConversationError) {
@@ -799,13 +878,17 @@ chatService.deleteChatGroup(groupID: <GROUP_ID>) { (error) in
     completion(deleteConversationError);
 }];
 ```
+<!-- tabs:end -->
 
 ### Receiving invitations
 When the current user added to a group, this delegate method will be triggered.
 Invitation parameter contains an invitation object that contains a copy of the group to be joined. The invitation object has methods for accept and decline.
 
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 // import the SDK
 import CPaaSSDK
@@ -824,8 +907,9 @@ func groupInvitationReceived(invitation:CPChatGroupInvitation) {
 
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 - (void)groupInvitationReceivedWithInvitation:(CPChatGroupInvitation * _Nonnull)invitation {
@@ -840,13 +924,16 @@ func groupInvitationReceived(invitation:CPChatGroupInvitation) {
     }
 }
 ```
-
+<!-- tabs:end -->
 
 ### Accept invitation from a group
 When a user is added to a group an invitation message is sent. Upon receiving the invitation, user either accepts it and joins the group or decline it remove self from the group.
 For accepting the invitation call the Mobile SDK group chat accept method
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 // import the SDK
 import CPaaSSDK
@@ -860,8 +947,9 @@ chatGroup.accept { (error) in
 }
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 [chatGroup acceptWithCompletion:^(CPError * _Nullable error) {
@@ -871,13 +959,16 @@ chatGroup.accept { (error) in
         });
     }];
 }];
-
 ```
+<!-- tabs:end -->
 
 ### Decline invitation from a group
 User can decline the invitation, then user will be removed from the group.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 // import the SDK
 import CPaaSSDK
@@ -891,8 +982,9 @@ chatGroup.decline{
 }
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 [chatGroup declineWithCompletion:^(CPError * _Nullable error) {
@@ -901,16 +993,18 @@ chatGroup.decline{
     }
     completion(error);
 }];
-
 ```
-
+<!-- tabs:end -->
 
 ### Receiving group participants status
 When a new user added to a group or removed from group, or any other status update happened about a group participant. This method will be trigered
 Participants parameter contains an array of chat group members that have updated status
 
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 // import the SDK
 import CPaaSSDK
@@ -921,21 +1015,24 @@ func groupParticipantStatus(participants:[ChatGroupParticipant]) {
 
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 - (void)groupParticipantStatusWithParticipants:(NSArray<CPChatGroupParticipant *> * _Nonnull)participants {
     //Get the info of the participants
 }
-
 ```
-
+<!-- tabs:end -->
 
 ### Group chat ended
 This delegate method is called when a group chat has ended. groupID parameter containts  the groupID of the group chat that ended.
 
-*Swift Code:*
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
 ```swift
 // import the SDK
 import CPaaSSDK
@@ -943,15 +1040,15 @@ import CPaaSSDK
 func groupChatEnded(groupID:String) {
 
 }
-
 ```
 
-*Objective-C Code:*
-```objective-c
+#### ** Objective-C Code **
+
+```objectivec
 @import CPaaSSDK;
 
 - (void)groupChatEndedWithGroupID:(NSString * _Nonnull)groupID {
 
 }
-
 ```
+<!-- tabs:end -->

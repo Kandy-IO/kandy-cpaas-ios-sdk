@@ -1,0 +1,4 @@
+framework module CPAuthenticationModule {
+  header "CPAuthenticationModule-Swift.h"
+  requires objc
+}

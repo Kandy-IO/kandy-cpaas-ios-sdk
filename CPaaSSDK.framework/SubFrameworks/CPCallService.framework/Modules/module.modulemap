@@ -1,6 +1,0 @@
-framework module CPCallService {
-  umbrella header "CPCallService.h"
-
-  export *
-  module * { export * }
-}

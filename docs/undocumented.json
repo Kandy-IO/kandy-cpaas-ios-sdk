@@ -1,220 +1,199 @@
 {
   "warnings": [
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/AddressBookService/CPAddressBookService/CPAddressBookService.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPAddressBookModule/CPAddressBookModule/CPAddressBookService.swift",
       "line": 406,
       "symbol": "CPAddressBookService.subscribe(channelID:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/AddressBookService/CPAddressBookService/CPAddressBookService.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPAddressBookModule/CPAddressBookModule/CPAddressBookService.swift",
       "line": 410,
       "symbol": "CPAddressBookService.unsubscribe(channelID:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/CPCallService/CPCallService/API/CPCallService.h",
-      "line": 16,
-      "symbol": "CPCallServiceVersionNumber",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/CPCallService/CPCallService/API/CPCallService.h",
-      "line": 19,
-      "symbol": "CPCallServiceVersionString",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/MessagingService/CPMessaging/CPConversation.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPMessagingModule/CPMessagingModule/CPConversation.swift",
       "line": 42,
       "symbol": "CPConversation.fromAddress",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/MessagingService/CPMessaging/Message.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPMessagingModule/CPMessagingModule/Message.swift",
       "line": 94,
       "symbol": "CPMessageStatus.conversationType",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPMessagingModule/CPMessagingModule/MessageService.swift",
       "line": 30,
       "symbol": "FetchOptions",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPMessagingModule/CPMessagingModule/MessageService.swift",
       "line": 31,
       "symbol": "FetchOptions.max",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPMessagingModule/CPMessagingModule/MessageService.swift",
       "line": 32,
       "symbol": "FetchOptions.next",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPMessagingModule/CPMessagingModule/MessageService.swift",
       "line": 33,
       "symbol": "FetchOptions.lastMessageTime",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPMessagingModule/CPMessagingModule/MessageService.swift",
       "line": 34,
       "symbol": "FetchOptions.isNew",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPMessagingModule/CPMessagingModule/MessageService.swift",
       "line": 37,
       "symbol": "FetchCriteria",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPMessagingModule/CPMessagingModule/MessageService.swift",
       "line": 38,
       "symbol": "FetchCriteria.localAddress",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPMessagingModule/CPMessagingModule/MessageService.swift",
       "line": 39,
       "symbol": "FetchCriteria.participant",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPMessagingModule/CPMessagingModule/MessageService.swift",
       "line": 40,
       "symbol": "FetchCriteria.fetchOptions",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPMessagingModule/CPMessagingModule/MessageService.swift",
       "line": 43,
       "symbol": "FetchedObjects",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPMessagingModule/CPMessagingModule/MessageService.swift",
       "line": 47,
       "symbol": "FetchResult",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPMessagingModule/CPMessagingModule/MessageService.swift",
       "line": 49,
       "symbol": "FetchResult.hasNext",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPMessagingModule/CPMessagingModule/MessageService.swift",
       "line": 50,
       "symbol": "FetchResult.result",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPMessagingModule/CPMessagingModule/MessageService.swift",
       "line": 59,
       "symbol": "FetchResult.getNext(completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPMessagingModule/CPMessagingModule/MessageService.swift",
       "line": 110,
       "symbol": "MessageService.getUserInfo()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/MessagingService/CPMessaging/MessageService.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPMessagingModule/CPMessagingModule/MessageService.swift",
       "line": 142,
       "symbol": "MessageService.fetchConversations(withFetchCriteria:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/MessagingService/ChatService/CPChatGroupParticipant.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPMessagingModule/ChatService/CPChatGroupParticipant.swift",
       "line": 20,
       "symbol": "CPChatParticipantStatus.Unknown",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/MessagingService/ChatService/CPChatGroupParticipant.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPMessagingModule/ChatService/CPChatGroupParticipant.swift",
       "line": 113,
       "symbol": "CPChatGroupParticipant.hash",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/MessagingService/ChatService/CPChatGroupParticipant.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPMessagingModule/ChatService/CPChatGroupParticipant.swift",
       "line": 117,
       "symbol": "CPChatGroupParticipant.isEqual(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/PresenceService/CPPresenceService/CPPresenceService.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPPresenceModule/CPPresenceModule/CPPresenceService.swift",
       "line": 65,
       "symbol": "CPPresenceService.restClient",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/PresenceService/CPPresenceService/CPPresentityList.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPPresenceModule/CPPresenceModule/CPPresentityList.swift",
       "line": 84,
       "symbol": "CPPresentityList.isEqual(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/PushService/CPPushService/CPCKInfo.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPPushModule/CPPushModule/CPCKInfo.swift",
       "line": 26,
       "symbol": "CPCKInfo.callerDisplayInfo",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/PushService/CPPushService/CPCKInfo.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPPushModule/CPPushModule/CPCKInfo.swift",
       "line": 34,
       "symbol": "CPCKInfo.callUUID",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/PushService/CPPushService/CPCKInfo.swift",
+      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Modules/CPPushModule/CPPushModule/CPCKInfo.swift",
       "line": 42,
       "symbol": "CPCKInfo.error",
       "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mobilesdk/jenkins/workspace/SPiDR/Mobile/CPaaS_Mobile/IOS_Release_Commit_Stage/CPaaSSDK/Services/PushService/CPPushService/CPPushService.swift",
-      "line": 287,
-      "symbol": "CPPushService.parsePushNotification(pushMessage:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
