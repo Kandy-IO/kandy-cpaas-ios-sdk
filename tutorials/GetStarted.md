@@ -13,7 +13,7 @@ This section contains the required steps for beginning your mobile application d
 
 ## Compatible XCode and Swift Versions
 
-The applications which uses $KANDY$ MobileSDK can be built with the XCode 10.2+ and Swift 4.2+ versions.
+The applications which uses $KANDY$ MobileSDK can be built with the XCode 11.x+ and Swift 5.1.2+ versions.
 
 ## Creating the iOS project
 
@@ -122,7 +122,7 @@ configuration.useSecureConnection = YES;
 
 <!-- tabs:end -->
 
-4. Getting access and id token is explained in [**Getting Access and Id Token from $KANDY$**](GetStarted.md#getting-access-and-id-token-from-$KANDY$) section in detail.
+4. Getting access and id token is explained in [**Getting Access and Id Token from Provider**](GetStarted.md#getting-access-and-id-token-from-provider) section in detail.
 
 5. When all configurations are set correctly, connect method can be called as following.
 
@@ -172,7 +172,7 @@ cpaas.authenticationService.delegate = self;
 
 ![alt text](img/get_started_5.png)
 
-## Getting Access And Id Token from $KANDY$
+## Getting Access and Id Token from Provider
 
 <!-- tabs:start -->
 
