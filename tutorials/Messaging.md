@@ -9,11 +9,11 @@
 ---
 # SMS Messaging
 
-SMS messaging is managed by the SMS Service which can be called from the `CPaaS` instance. In order to receive and send events, the `CPaaS` instance should be connected first. To see how to connect and set configurations, check **Login** and **Configurations** sections.
+SMS messaging is managed by the SMS Service which can be called from the `CPaaS` instance. In order to receive and send events, the `CPaaS` instance should be connected first. To see how to connect and set configurations, check **Login** and **Configurations** sections. **Note that**, phone number should be assigned to the user before using the SMS Service.
 
 ### Initialize the SMS Service
 
-In order to use the SMS service, the service provider object must be properly initialized. When properly initialized, the application will be registered to receive SMS notifications from the server.Note that,phone number should be assigned to the user before using the SMS Service.
+In order to use the SMS service, the service provider object must be properly initialized. When properly initialized, the application will be registered to receive SMS notifications from the server.
 
 <!-- tabs:start -->
 
