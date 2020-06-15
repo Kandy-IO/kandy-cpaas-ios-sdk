@@ -10,6 +10,9 @@ CPaaS iOS SDK change log.
 ### Fixed
 - Swift compiler issue with upper version of 5.1.2 is fixed. `KAE-695`
 
+### Note
+- When importing Kandy CPaaS Mobile SDK please use main module instead of submodule for preventing further backward compability issues. eg. `import CPaaSSDK` for Swift and `@import CPaaSSDK` for Objective-C
+
 ## 2.6.0 - 2020-04-05
 
 ### Added
