@@ -9,7 +9,9 @@
 ---
 # SMS Messaging
 
-SMS messaging is managed by the SMS Service which can be called from the `CPaaS` instance. In order to receive and send events, the `CPaaS` instance should be connected first. To see how to connect and set configurations, check **Login** and **Configurations** sections. **Note that**, phone number should be assigned to the user before using the SMS Service.
+SMS messaging is managed by the SMS Service which can be called from the `CPaaS` instance. In order to receive and send events, the `CPaaS` instance should be connected first. To see how to connect and set configurations, check **Login** and **Configurations** sections.
+
+ **Note that**, phone number should be assigned to the user before using the SMS Service.
 
 ### Initialize the SMS Service
 

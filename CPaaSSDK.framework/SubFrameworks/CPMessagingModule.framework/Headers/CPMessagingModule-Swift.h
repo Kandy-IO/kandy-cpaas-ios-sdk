@@ -785,9 +785,9 @@ SWIFT_CLASS("_TtC17CPMessagingModule9CPMessage")
 /// Recipient of of the message
 @property (nonatomic, readonly, copy) NSString * _Nonnull destination;
 /// Delivery status of the message
-@property (nonatomic, readonly, copy) NSString * _Nonnull status;
+@property (nonatomic, readonly) enum MessageDeliveryStatus status;
 /// Conversation type sms, chat, or group
-@property (nonatomic, readonly, copy) NSString * _Nonnull conversationType;
+@property (nonatomic, readonly) enum MessageSessionType conversationType;
 /// Delivery status for group members
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nullable groupStatus;
 /// The resource url of the conversation
@@ -830,7 +830,7 @@ SWIFT_CLASS("_TtC17CPMessagingModule20CPIsComposingMessage")
 /// User ID of party to receive the indication.
 @property (nonatomic, readonly, copy) NSString * _Nonnull destination;
 /// Conversation type sms, chat, or group
-@property (nonatomic, copy) NSString * _Nonnull conversationType;
+@property (nonatomic) enum MessageSessionType conversationType;
 /// State of composition <code>true</code> for active and <code>false</code> for idle.
 @property (nonatomic, readonly) BOOL active;
 /// Timestamp of last composition activity.
@@ -838,7 +838,7 @@ SWIFT_CLASS("_TtC17CPMessagingModule20CPIsComposingMessage")
 /// Expected refresh interval of composing indication.
 @property (nonatomic, readonly) NSUInteger refresh;
 /// Inbound or outbound direction of indication.
-@property (nonatomic, readonly, copy) NSString * _Nonnull direction;
+@property (nonatomic, readonly) enum MessageType direction;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 /// The unique identifier of this conversation as stored on the server
@@ -852,10 +852,10 @@ SWIFT_CLASS("_TtC17CPMessagingModule20CPIsComposingMessage")
 SWIFT_CLASS("_TtC17CPMessagingModule15CPMessageStatus")
 @interface CPMessageStatus : NSObject
 /// The new status of the message
-@property (nonatomic, readonly, copy) NSString * _Nonnull status;
+@property (nonatomic, readonly) enum MessageDeliveryStatus status;
 /// The participant with which the message is shared. This can be used to identify the conversation to which this notification applies.
 @property (nonatomic, readonly, copy) NSString * _Nonnull participant;
-@property (nonatomic, copy) NSString * _Nonnull conversationType;
+@property (nonatomic) enum MessageSessionType conversationType;
 /// The unique message identifier. This can be used to identify which message has changed.
 @property (nonatomic, readonly, copy) NSString * _Nonnull messageId;
 /// The local address used when sending the message
@@ -970,7 +970,7 @@ SWIFT_CLASS("_TtC17CPMessagingModule10CPTextPart")
 SWIFT_CLASS("_TtC17CPMessagingModule15CPThumbnailPart")
 @interface CPThumbnailPart : NSObject
 /// content type of the thumbnail
-@property (nonatomic, readonly, copy) NSString * _Nonnull contentType;
+@property (nonatomic, readonly) enum MessageContentType contentType;
 /// link to external server where thumbnail file is housed
 @property (nonatomic, readonly, copy) NSString * _Nonnull link;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -1807,9 +1807,9 @@ SWIFT_CLASS("_TtC17CPMessagingModule9CPMessage")
 /// Recipient of of the message
 @property (nonatomic, readonly, copy) NSString * _Nonnull destination;
 /// Delivery status of the message
-@property (nonatomic, readonly, copy) NSString * _Nonnull status;
+@property (nonatomic, readonly) enum MessageDeliveryStatus status;
 /// Conversation type sms, chat, or group
-@property (nonatomic, readonly, copy) NSString * _Nonnull conversationType;
+@property (nonatomic, readonly) enum MessageSessionType conversationType;
 /// Delivery status for group members
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nullable groupStatus;
 /// The resource url of the conversation
@@ -1852,7 +1852,7 @@ SWIFT_CLASS("_TtC17CPMessagingModule20CPIsComposingMessage")
 /// User ID of party to receive the indication.
 @property (nonatomic, readonly, copy) NSString * _Nonnull destination;
 /// Conversation type sms, chat, or group
-@property (nonatomic, copy) NSString * _Nonnull conversationType;
+@property (nonatomic) enum MessageSessionType conversationType;
 /// State of composition <code>true</code> for active and <code>false</code> for idle.
 @property (nonatomic, readonly) BOOL active;
 /// Timestamp of last composition activity.
@@ -1860,7 +1860,7 @@ SWIFT_CLASS("_TtC17CPMessagingModule20CPIsComposingMessage")
 /// Expected refresh interval of composing indication.
 @property (nonatomic, readonly) NSUInteger refresh;
 /// Inbound or outbound direction of indication.
-@property (nonatomic, readonly, copy) NSString * _Nonnull direction;
+@property (nonatomic, readonly) enum MessageType direction;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 /// The unique identifier of this conversation as stored on the server
@@ -1874,10 +1874,10 @@ SWIFT_CLASS("_TtC17CPMessagingModule20CPIsComposingMessage")
 SWIFT_CLASS("_TtC17CPMessagingModule15CPMessageStatus")
 @interface CPMessageStatus : NSObject
 /// The new status of the message
-@property (nonatomic, readonly, copy) NSString * _Nonnull status;
+@property (nonatomic, readonly) enum MessageDeliveryStatus status;
 /// The participant with which the message is shared. This can be used to identify the conversation to which this notification applies.
 @property (nonatomic, readonly, copy) NSString * _Nonnull participant;
-@property (nonatomic, copy) NSString * _Nonnull conversationType;
+@property (nonatomic) enum MessageSessionType conversationType;
 /// The unique message identifier. This can be used to identify which message has changed.
 @property (nonatomic, readonly, copy) NSString * _Nonnull messageId;
 /// The local address used when sending the message
@@ -1992,7 +1992,7 @@ SWIFT_CLASS("_TtC17CPMessagingModule10CPTextPart")
 SWIFT_CLASS("_TtC17CPMessagingModule15CPThumbnailPart")
 @interface CPThumbnailPart : NSObject
 /// content type of the thumbnail
-@property (nonatomic, readonly, copy) NSString * _Nonnull contentType;
+@property (nonatomic, readonly) enum MessageContentType contentType;
 /// link to external server where thumbnail file is housed
 @property (nonatomic, readonly, copy) NSString * _Nonnull link;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -2831,9 +2831,9 @@ SWIFT_CLASS("_TtC17CPMessagingModule9CPMessage")
 /// Recipient of of the message
 @property (nonatomic, readonly, copy) NSString * _Nonnull destination;
 /// Delivery status of the message
-@property (nonatomic, readonly, copy) NSString * _Nonnull status;
+@property (nonatomic, readonly) enum MessageDeliveryStatus status;
 /// Conversation type sms, chat, or group
-@property (nonatomic, readonly, copy) NSString * _Nonnull conversationType;
+@property (nonatomic, readonly) enum MessageSessionType conversationType;
 /// Delivery status for group members
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nullable groupStatus;
 /// The resource url of the conversation
@@ -2876,7 +2876,7 @@ SWIFT_CLASS("_TtC17CPMessagingModule20CPIsComposingMessage")
 /// User ID of party to receive the indication.
 @property (nonatomic, readonly, copy) NSString * _Nonnull destination;
 /// Conversation type sms, chat, or group
-@property (nonatomic, copy) NSString * _Nonnull conversationType;
+@property (nonatomic) enum MessageSessionType conversationType;
 /// State of composition <code>true</code> for active and <code>false</code> for idle.
 @property (nonatomic, readonly) BOOL active;
 /// Timestamp of last composition activity.
@@ -2884,7 +2884,7 @@ SWIFT_CLASS("_TtC17CPMessagingModule20CPIsComposingMessage")
 /// Expected refresh interval of composing indication.
 @property (nonatomic, readonly) NSUInteger refresh;
 /// Inbound or outbound direction of indication.
-@property (nonatomic, readonly, copy) NSString * _Nonnull direction;
+@property (nonatomic, readonly) enum MessageType direction;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 /// The unique identifier of this conversation as stored on the server
@@ -2898,10 +2898,10 @@ SWIFT_CLASS("_TtC17CPMessagingModule20CPIsComposingMessage")
 SWIFT_CLASS("_TtC17CPMessagingModule15CPMessageStatus")
 @interface CPMessageStatus : NSObject
 /// The new status of the message
-@property (nonatomic, readonly, copy) NSString * _Nonnull status;
+@property (nonatomic, readonly) enum MessageDeliveryStatus status;
 /// The participant with which the message is shared. This can be used to identify the conversation to which this notification applies.
 @property (nonatomic, readonly, copy) NSString * _Nonnull participant;
-@property (nonatomic, copy) NSString * _Nonnull conversationType;
+@property (nonatomic) enum MessageSessionType conversationType;
 /// The unique message identifier. This can be used to identify which message has changed.
 @property (nonatomic, readonly, copy) NSString * _Nonnull messageId;
 /// The local address used when sending the message
@@ -3016,7 +3016,7 @@ SWIFT_CLASS("_TtC17CPMessagingModule10CPTextPart")
 SWIFT_CLASS("_TtC17CPMessagingModule15CPThumbnailPart")
 @interface CPThumbnailPart : NSObject
 /// content type of the thumbnail
-@property (nonatomic, readonly, copy) NSString * _Nonnull contentType;
+@property (nonatomic, readonly) enum MessageContentType contentType;
 /// link to external server where thumbnail file is housed
 @property (nonatomic, readonly, copy) NSString * _Nonnull link;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -3853,9 +3853,9 @@ SWIFT_CLASS("_TtC17CPMessagingModule9CPMessage")
 /// Recipient of of the message
 @property (nonatomic, readonly, copy) NSString * _Nonnull destination;
 /// Delivery status of the message
-@property (nonatomic, readonly, copy) NSString * _Nonnull status;
+@property (nonatomic, readonly) enum MessageDeliveryStatus status;
 /// Conversation type sms, chat, or group
-@property (nonatomic, readonly, copy) NSString * _Nonnull conversationType;
+@property (nonatomic, readonly) enum MessageSessionType conversationType;
 /// Delivery status for group members
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nullable groupStatus;
 /// The resource url of the conversation
@@ -3898,7 +3898,7 @@ SWIFT_CLASS("_TtC17CPMessagingModule20CPIsComposingMessage")
 /// User ID of party to receive the indication.
 @property (nonatomic, readonly, copy) NSString * _Nonnull destination;
 /// Conversation type sms, chat, or group
-@property (nonatomic, copy) NSString * _Nonnull conversationType;
+@property (nonatomic) enum MessageSessionType conversationType;
 /// State of composition <code>true</code> for active and <code>false</code> for idle.
 @property (nonatomic, readonly) BOOL active;
 /// Timestamp of last composition activity.
@@ -3906,7 +3906,7 @@ SWIFT_CLASS("_TtC17CPMessagingModule20CPIsComposingMessage")
 /// Expected refresh interval of composing indication.
 @property (nonatomic, readonly) NSUInteger refresh;
 /// Inbound or outbound direction of indication.
-@property (nonatomic, readonly, copy) NSString * _Nonnull direction;
+@property (nonatomic, readonly) enum MessageType direction;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 /// The unique identifier of this conversation as stored on the server
@@ -3920,10 +3920,10 @@ SWIFT_CLASS("_TtC17CPMessagingModule20CPIsComposingMessage")
 SWIFT_CLASS("_TtC17CPMessagingModule15CPMessageStatus")
 @interface CPMessageStatus : NSObject
 /// The new status of the message
-@property (nonatomic, readonly, copy) NSString * _Nonnull status;
+@property (nonatomic, readonly) enum MessageDeliveryStatus status;
 /// The participant with which the message is shared. This can be used to identify the conversation to which this notification applies.
 @property (nonatomic, readonly, copy) NSString * _Nonnull participant;
-@property (nonatomic, copy) NSString * _Nonnull conversationType;
+@property (nonatomic) enum MessageSessionType conversationType;
 /// The unique message identifier. This can be used to identify which message has changed.
 @property (nonatomic, readonly, copy) NSString * _Nonnull messageId;
 /// The local address used when sending the message
@@ -4038,7 +4038,7 @@ SWIFT_CLASS("_TtC17CPMessagingModule10CPTextPart")
 SWIFT_CLASS("_TtC17CPMessagingModule15CPThumbnailPart")
 @interface CPThumbnailPart : NSObject
 /// content type of the thumbnail
-@property (nonatomic, readonly, copy) NSString * _Nonnull contentType;
+@property (nonatomic, readonly) enum MessageContentType contentType;
 /// link to external server where thumbnail file is housed
 @property (nonatomic, readonly, copy) NSString * _Nonnull link;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;

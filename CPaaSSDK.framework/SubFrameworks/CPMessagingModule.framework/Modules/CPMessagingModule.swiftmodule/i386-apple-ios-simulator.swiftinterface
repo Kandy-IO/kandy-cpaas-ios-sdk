@@ -145,7 +145,7 @@ public typealias FetchBlock = (CPUtilities.CPError?, CPMessagingModule.FetchResu
   @objc public var destination: Swift.String {
     get
     }
-  @objc public var conversationType: Swift.String
+  @objc public var conversationType: CPUtilities.MessageSessionType
   @objc public var active: Swift.Bool {
     get
     }
@@ -155,7 +155,7 @@ public typealias FetchBlock = (CPUtilities.CPError?, CPMessagingModule.FetchResu
   @objc public var refresh: Swift.UInt {
     get
     }
-  @objc public var direction: Swift.String {
+  @objc public var direction: CPUtilities.MessageType {
     get
     }
   @objc public var conversationID: Swift.String {
@@ -232,7 +232,7 @@ public typealias DownloadCompletionBlock = (CPUtilities.CPError?, Foundation.URL
   @objc deinit
 }
 @objc public class CPThumbnailPart : ObjectiveC.NSObject {
-  @objc public var contentType: Swift.String {
+  @objc public var contentType: CPUtilities.MessageContentType {
     get
     }
   @objc public var link: Swift.String {
@@ -265,11 +265,11 @@ public typealias DownloadCompletionBlock = (CPUtilities.CPError?, Foundation.URL
   @objc deinit
 }
 @objc public class CPMessageStatus : ObjectiveC.NSObject {
-  @objc final public let status: Swift.String
+  @objc final public let status: CPUtilities.MessageDeliveryStatus
   @objc public var participant: Swift.String {
     get
     }
-  @objc public var conversationType: Swift.String
+  @objc public var conversationType: CPUtilities.MessageSessionType
   @objc public var messageId: Swift.String {
     get
     }
@@ -290,10 +290,10 @@ public typealias DownloadCompletionBlock = (CPUtilities.CPError?, Foundation.URL
   @objc public var destination: Swift.String {
     get
     }
-  @objc public var status: Swift.String {
+  @objc public var status: CPUtilities.MessageDeliveryStatus {
     get
     }
-  @objc public var conversationType: Swift.String {
+  @objc public var conversationType: CPUtilities.MessageSessionType {
     get
     }
   @objc public var groupStatus: [Swift.String : Swift.String]? {

@@ -19,6 +19,51 @@ public typealias FetchCompletionBlock = (CPUtilities.CPError?, [Swift.AnyHashabl
   }
   public init?(rawValue: CPUtilities.ServiceType.RawValue)
 }
+@objc public enum MessageType : Swift.Int, Swift.RawRepresentable {
+  public typealias RawValue = Swift.String
+  case UNKNOWN = 0
+  case INBOUND = 1
+  case OUTBOUND = 2
+  public var rawValue: CPUtilities.MessageType.RawValue {
+    get
+  }
+  public init?(rawValue: CPUtilities.MessageType.RawValue)
+}
+@objc public enum MessageSessionType : Swift.Int, Swift.RawRepresentable {
+  public typealias RawValue = Swift.String
+  case UNKNOWN = 0
+  case SMS = 1
+  case ONE_TO_ONE = 2
+  case GROUP = 3
+  public var rawValue: CPUtilities.MessageSessionType.RawValue {
+    get
+  }
+  public init?(rawValue: CPUtilities.MessageSessionType.RawValue)
+}
+@objc public enum MessageDeliveryStatus : Swift.Int, Swift.RawRepresentable {
+  public typealias RawValue = Swift.String
+  case UNKNOWN = 0
+  case DELIVERED = 1
+  case DISPLAYED = 2
+  case FAILED = 3
+  case SENT = 4
+  public var rawValue: CPUtilities.MessageDeliveryStatus.RawValue {
+    get
+  }
+  public init?(rawValue: CPUtilities.MessageDeliveryStatus.RawValue)
+}
+@objc public enum MessageContentType : Swift.Int, Swift.RawRepresentable {
+  public typealias RawValue = Swift.String
+  case UNKNOWN = 0
+  case TEXT = 1
+  case FILE = 2
+  case JSON = 3
+  case URI = 4
+  public var rawValue: CPUtilities.MessageContentType.RawValue {
+    get
+  }
+  public init?(rawValue: CPUtilities.MessageContentType.RawValue)
+}
 @objc public enum CallEventType : Swift.Int, Swift.RawRepresentable {
   public typealias RawValue = Swift.String
   case ringing = 0

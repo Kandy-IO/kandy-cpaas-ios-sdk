@@ -242,6 +242,35 @@ typedef SWIFT_ENUM(NSInteger, CallNotificationType, open) {
   CallNotificationTypeIce = 4,
 };
 
+typedef SWIFT_ENUM(NSInteger, MessageContentType, open) {
+  MessageContentTypeUNKNOWN = 0,
+  MessageContentTypeTEXT = 1,
+  MessageContentTypeFILE = 2,
+  MessageContentTypeJSON = 3,
+  MessageContentTypeURI = 4,
+};
+
+typedef SWIFT_ENUM(NSInteger, MessageDeliveryStatus, open) {
+  MessageDeliveryStatusUNKNOWN = 0,
+  MessageDeliveryStatusDELIVERED = 1,
+  MessageDeliveryStatusDISPLAYED = 2,
+  MessageDeliveryStatusFAILED = 3,
+  MessageDeliveryStatusSENT = 4,
+};
+
+typedef SWIFT_ENUM(NSInteger, MessageSessionType, open) {
+  MessageSessionTypeUNKNOWN = 0,
+  MessageSessionTypeSMS = 1,
+  MessageSessionTypeONE_TO_ONE = 2,
+  MessageSessionTypeGROUP = 3,
+};
+
+typedef SWIFT_ENUM(NSInteger, MessageType, open) {
+  MessageTypeUNKNOWN = 0,
+  MessageTypeINBOUND = 1,
+  MessageTypeOUTBOUND = 2,
+};
+
 /// Types of services provided by CPaaS
 typedef SWIFT_ENUM(NSInteger, ServiceType, open) {
   ServiceTypeSms = 0,
@@ -497,6 +526,35 @@ typedef SWIFT_ENUM(NSInteger, CallNotificationType, open) {
   CallNotificationTypeSessionInvitation = 2,
   CallNotificationTypeAcceptance = 3,
   CallNotificationTypeIce = 4,
+};
+
+typedef SWIFT_ENUM(NSInteger, MessageContentType, open) {
+  MessageContentTypeUNKNOWN = 0,
+  MessageContentTypeTEXT = 1,
+  MessageContentTypeFILE = 2,
+  MessageContentTypeJSON = 3,
+  MessageContentTypeURI = 4,
+};
+
+typedef SWIFT_ENUM(NSInteger, MessageDeliveryStatus, open) {
+  MessageDeliveryStatusUNKNOWN = 0,
+  MessageDeliveryStatusDELIVERED = 1,
+  MessageDeliveryStatusDISPLAYED = 2,
+  MessageDeliveryStatusFAILED = 3,
+  MessageDeliveryStatusSENT = 4,
+};
+
+typedef SWIFT_ENUM(NSInteger, MessageSessionType, open) {
+  MessageSessionTypeUNKNOWN = 0,
+  MessageSessionTypeSMS = 1,
+  MessageSessionTypeONE_TO_ONE = 2,
+  MessageSessionTypeGROUP = 3,
+};
+
+typedef SWIFT_ENUM(NSInteger, MessageType, open) {
+  MessageTypeUNKNOWN = 0,
+  MessageTypeINBOUND = 1,
+  MessageTypeOUTBOUND = 2,
 };
 
 /// Types of services provided by CPaaS
@@ -758,6 +816,35 @@ typedef SWIFT_ENUM(NSInteger, CallNotificationType, open) {
   CallNotificationTypeIce = 4,
 };
 
+typedef SWIFT_ENUM(NSInteger, MessageContentType, open) {
+  MessageContentTypeUNKNOWN = 0,
+  MessageContentTypeTEXT = 1,
+  MessageContentTypeFILE = 2,
+  MessageContentTypeJSON = 3,
+  MessageContentTypeURI = 4,
+};
+
+typedef SWIFT_ENUM(NSInteger, MessageDeliveryStatus, open) {
+  MessageDeliveryStatusUNKNOWN = 0,
+  MessageDeliveryStatusDELIVERED = 1,
+  MessageDeliveryStatusDISPLAYED = 2,
+  MessageDeliveryStatusFAILED = 3,
+  MessageDeliveryStatusSENT = 4,
+};
+
+typedef SWIFT_ENUM(NSInteger, MessageSessionType, open) {
+  MessageSessionTypeUNKNOWN = 0,
+  MessageSessionTypeSMS = 1,
+  MessageSessionTypeONE_TO_ONE = 2,
+  MessageSessionTypeGROUP = 3,
+};
+
+typedef SWIFT_ENUM(NSInteger, MessageType, open) {
+  MessageTypeUNKNOWN = 0,
+  MessageTypeINBOUND = 1,
+  MessageTypeOUTBOUND = 2,
+};
+
 /// Types of services provided by CPaaS
 typedef SWIFT_ENUM(NSInteger, ServiceType, open) {
   ServiceTypeSms = 0,
@@ -1013,6 +1100,35 @@ typedef SWIFT_ENUM(NSInteger, CallNotificationType, open) {
   CallNotificationTypeSessionInvitation = 2,
   CallNotificationTypeAcceptance = 3,
   CallNotificationTypeIce = 4,
+};
+
+typedef SWIFT_ENUM(NSInteger, MessageContentType, open) {
+  MessageContentTypeUNKNOWN = 0,
+  MessageContentTypeTEXT = 1,
+  MessageContentTypeFILE = 2,
+  MessageContentTypeJSON = 3,
+  MessageContentTypeURI = 4,
+};
+
+typedef SWIFT_ENUM(NSInteger, MessageDeliveryStatus, open) {
+  MessageDeliveryStatusUNKNOWN = 0,
+  MessageDeliveryStatusDELIVERED = 1,
+  MessageDeliveryStatusDISPLAYED = 2,
+  MessageDeliveryStatusFAILED = 3,
+  MessageDeliveryStatusSENT = 4,
+};
+
+typedef SWIFT_ENUM(NSInteger, MessageSessionType, open) {
+  MessageSessionTypeUNKNOWN = 0,
+  MessageSessionTypeSMS = 1,
+  MessageSessionTypeONE_TO_ONE = 2,
+  MessageSessionTypeGROUP = 3,
+};
+
+typedef SWIFT_ENUM(NSInteger, MessageType, open) {
+  MessageTypeUNKNOWN = 0,
+  MessageTypeINBOUND = 1,
+  MessageTypeOUTBOUND = 2,
 };
 
 /// Types of services provided by CPaaS

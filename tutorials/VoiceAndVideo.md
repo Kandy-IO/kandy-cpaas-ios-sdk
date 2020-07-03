@@ -13,6 +13,8 @@
 
 Voice and Video calls are managed by the Call Service which can be called from `CPaaS` instance. In order to receive and send events, `CPaaS` instance should be connected first. To see how to connect and set configurations, check **Login** and **Configurations** sections.
 
+Note that, In order to be able to call PSTN destinations, your user/project should have at least one telephone number assigned. For WebRTC destinations telephone number assignment is not required.
+
 ## Creating Outgoing Call
 
 You can create **Outgoing Call Object** by calling `createOutgoingCall` method in Call Service.

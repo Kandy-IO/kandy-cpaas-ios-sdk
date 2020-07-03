@@ -12,7 +12,7 @@
 
 [CocoaPods](https://cocoapods.org/pods/KandyCPaaSMobileSDK) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate *Kandy CPaaS iOS SDK* into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
-`pod 'KandyCPaaSMobileSDK', '~> 2.7.0'`
+`pod 'KandyCPaaSMobileSDK', '~> 2.8.0'`
 
 ### Manual
 

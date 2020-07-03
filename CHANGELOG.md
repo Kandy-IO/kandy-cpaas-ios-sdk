@@ -5,13 +5,17 @@ CPaaS iOS SDK change log.
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
+## 2.8.0 - 2020-07-03
+
+### Changed
+- Type of `CPMessage.status` was changed as `MessageDeliveryStatus`
+- Type of `CPMessage.conversationType` was changed as `MessageSessionType`
+- Type of `CPIsComposingMessage.direction` was changed as `MessageType`
+
 ## 2.7.0 - 2020-06-12
 
 ### Fixed
 - Swift compiler issue with upper version of 5.1.2 is fixed. `KAE-695`
-
-### Note
-- When importing Kandy CPaaS Mobile SDK please use main module instead of submodule for preventing further backward compability issues. eg. `import CPaaSSDK` for Swift and `@import CPaaSSDK` for Objective-C
 
 ## 2.6.0 - 2020-04-05
 

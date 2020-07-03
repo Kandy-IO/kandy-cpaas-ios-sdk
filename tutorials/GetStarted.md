@@ -90,11 +90,6 @@ If you have a trouble with getting latest version of *$KANDY$ iOS SDK* plaese ru
 
 ### Using the $KANDY$ Mobile SDK in the iOS Project
 1. Open *Main.storyboard* and create a basic user interface which contains username, password text fields, and login button.
-<hr/>
-     <b>Note</b>, when importing $KANDY$ Mobile SDK please import main module instead of submodule for preventing further backward compability issues.
-     <br/>
-    eg. <code>import CPaaSSDK</code> for Swift and <code>@import CPaaSSDK</code> for Objective-C
-<hr/>
 2. Set **CPAuthenticationDelegate** to view controller and add protocol stubs.
 
 ![alt text](img/get_started_4.png)
@@ -178,6 +173,8 @@ cpaas.authenticationService.delegate = self;
 ![alt text](img/get_started_5.png)
 
 ## Getting Access and Id Token from Provider
+
+To get more information about `clientID`, please look [here](https://apimarket.att.com/developer/quickstarts/rest-api/get-started#get-started-authentication-and-authorization)
 
 <!-- tabs:start -->
 
