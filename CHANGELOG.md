@@ -12,6 +12,9 @@ CPaaS iOS SDK change log.
 - Type of `CPMessage.conversationType` was changed as `MessageSessionType`
 - Type of `CPIsComposingMessage.direction` was changed as `MessageType`
 
+### Note
+- These changes is not backward compatible please check your related code base.
+
 ## 2.7.0 - 2020-06-12
 
 ### Fixed
