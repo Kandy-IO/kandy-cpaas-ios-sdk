@@ -5,6 +5,11 @@ CPaaS iOS SDK change log.
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
+## 2.9.0 - 2020-07-22
+
+### Deprecated
+- The Property `CPSMSService.uriFormat` is depracated. It will be removed next releases. 
+
 ## 2.8.0 - 2020-07-03
 
 ### Changed
