@@ -12,7 +12,7 @@
 
 [CocoaPods](https://cocoapods.org/pods/KandyCPaaSMobileSDK) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate *Kandy CPaaS iOS SDK* into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
-`pod 'KandyCPaaSMobileSDK', '~> 2.9.0'`
+`pod 'KandyCPaaSMobileSDK', '~> 2.10.0'`
 
 ### Manual
 
@@ -30,13 +30,13 @@ The information about tutorials and documents can be found in the links below
 
 Compatible iOS versions :
 
-* iOS 10.x+
+* iOS 10.x+ (Note: There is known issue on iOS14 about Recording Indicator is still green when camera off)
 
 Compatible XCode and Swift Versions :
 
-* XCode 11.x+
+* XCode 11.2 - 11.6
 
-* Swift 5.1.2+
+* Swift 5.1.2 - 5.2.4
 
 Tested on :
 

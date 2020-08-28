@@ -93,7 +93,7 @@ import CPaaSSDK
 
 let configuration = CPConfig.sharedInstance()
 // Set the log level to 'TRACE_WEBRTC' to output more detailed logs. Default is 'TRACE'.
-configuration.logManager.logLevel = TRACE_WEBRTC
+configuration.logManager.logLevel = TRACE
 configuration.logManager.delegate = self
 ```
 
@@ -104,8 +104,91 @@ configuration.logManager.delegate = self
 
 CPConfig *configuration = [CPConfig sharedInstance];
 // Set the log level to 'TRACE_WEBRTC' to output more detailed logs. Default is 'TRACE'.
-[configuration.logManager setLogLevel:TRACE_WEBRTC];
+[configuration.logManager setLogLevel:TRACE];
 [configuration.logManager setDelegate:self];
+```
+<!-- tabs:end -->
+
+Our recommendation is to store the logs in memory and provide the ability to send them log file to our support team if issues are encountered. Please check our sample below.
+
+You can store logs like :
+
+<!-- tabs:start -->
+
+#### ** Swift Code **
+
+```swift
+class Logger: NSObject, CPLoggingDelegate {
+    private var handler: FileHandle?
+    override init() {
+        super.init()
+        initLogFile()
+        CPConfig.sharedInstance().logManager.delegate = self
+        CPConfig.sharedInstance().logManager.logLevel = .trace
+    }
+    private func initLogFile() {
+        let destPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let fullDestPath = NSURL(fileURLWithPath: destPath).appendingPathComponent("CPaaSLogs.log")
+        let fullDestPathString = fullDestPath!.path
+        if !FileManager.default.fileExists(atPath: fullDestPathString) {
+            do {
+                try "".write(toFile: fullDestPathString, atomically: true, encoding: String.Encoding.utf8)
+            } catch {
+                NSLog("Can't write to file to device directory - Error: \(error.localizedDescription)")
+            }
+        }
+        handler = FileHandle.init(forUpdatingAtPath: fullDestPathString)
+    }
+
+    func log(_ logLevel: CPLogLevel, withLogContext logContext: String, withMethodName methodName: Selector?, withMessage logMessage: String) {
+        let logString = "\(logLevel) - \(logContext.description) - \((methodName != nil) ? methodName!.description : "") - \(logMessage.description)"
+        if let logData = logString.data(using: String.Encoding.utf8) {
+            handler?.write(logData)
+        }
+        print(logString);
+    }
+}
+```
+
+#### ** Objective-C Code **
+
+```objectivec
+#define CONSOLE_LOG_PATH [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"CPaaSLogs.log"]
+
+@interface Logger : NSObject <CPLoggingDelegate>
+@end
+
+@implementation Logger
+
+NSFileHandle *handler;
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [CPConfig sharedInstance].logManager.delegate = self;
+        [[CPConfig sharedInstance].logManager setLogLevel:TRACE];
+    }
+    return self;
+}
+
+- (void) initLogFile {
+    if (![[NSFileManager defaultManager] fileExistsAtPath:CONSOLE_LOG_PATH]) {
+        [@"" writeToFile:CONSOLE_LOG_PATH atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    }
+    handler = [NSFileHandle fileHandleForUpdatingAtPath:CONSOLE_LOG_PATH];
+}
+
+- (void)log:(CPLogLevel)logLevel withLogContext:(NSString *)logContext withMethodName:(SEL)methodName withMessage:(NSString *)logMessage {
+    NSString *dateStr = [NSDateFormatter localizedStringFromDate:[NSDate date] dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterMediumStyle];
+    NSString *logStr = [NSString stringWithFormat:@"[%@]: %u - %@ - %@ - %@ \n", dateStr, logLevel, logContext, NSStringFromSelector(methodName),logMessage];
+    [handler seekToEndOfFile];
+    [handler writeData:[logStr dataUsingEncoding:NSUTF8StringEncoding]];
+    NSLog(@"%@", logStr);
+}
+
+@end
+
 ```
 <!-- tabs:end -->
 

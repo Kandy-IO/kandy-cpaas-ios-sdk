@@ -5,6 +5,11 @@ CPaaS iOS SDK change log.
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
+## 2.10.0 - 2020-08-28
+
+### Added
+- Trickle ICE support `KAE-79`
+
 ## 2.9.0 - 2020-07-22
 
 ### Deprecated
@@ -24,6 +29,9 @@ CPaaS iOS SDK change log.
 
 ### Fixed
 - Swift compiler issue with upper version of 5.1.2 is fixed. `KAE-695`
+
+### Note
+- When importing Kandy CPaaS Mobile SDK please use main module instead of submodule for preventing further backward compability issues. eg. `import CPaaSSDK` for Swift and `@import CPaaSSDK` for Objective-C
 
 ## 2.6.0 - 2020-04-05
 
