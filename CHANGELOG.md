@@ -10,6 +10,9 @@ CPaaS iOS SDK change log.
 ### Added
 - Trickle ICE support `KAE-79`
 
+### Limitation
+- There is known issue on iOS14 about Recording Indicator is still green when camera off
+
 ## 2.9.0 - 2020-07-22
 
 ### Deprecated
