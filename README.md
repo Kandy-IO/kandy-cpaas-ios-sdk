@@ -30,7 +30,7 @@ The information about tutorials and documents can be found in the links below
 
 Compatible iOS versions :
 
-* iOS 10.x+ (Note: There is known issue on iOS14 about Recording Indicator is still green when camera off)
+* iOS 10.x+ 
 
 Compatible XCode and Swift Versions :
 
