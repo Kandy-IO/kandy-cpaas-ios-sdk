@@ -8,13 +8,21 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a name="//apple_ref/swift/Class/CPAuthenticationService" class="dashAnchor"></a>
     <a title="CPAuthenticationService Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CPaaS Mobile iOS SDK 2.10.0 Docs</a></p>
+        <p><a href="../index.html">CPaaS Mobile iOS SDK 2.11.0 Docs</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -71,9 +79,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPCallState.html">CPCallState</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CPCallStatistic.html">CPCallStatistic</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPChatConversation.html">CPChatConversation</a>
@@ -182,9 +187,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPUriAddress.html">CPUriAddress</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CPValue.html">CPValue</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPVideoCodec.html">CPVideoCodec</a>
@@ -343,6 +345,7 @@
             <h1>CPAuthenticationService</h1>
               <div class="declaration">
                 <div class="language">
+                  
                   <pre class="highlight swift"><code><span class="kd">@objc</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="kt">CPAuthenticationService</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
@@ -528,7 +531,7 @@
                     <code>
                     <a name="/s:22CPAuthenticationModule0A7ServiceC8userInfo8servicesACSo06CPUserE0C_Say11CPUtilities17CPServiceProtocol_pGtcfc"></a>
                     <a name="//apple_ref/swift/Method/init(userInfo:services:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22CPAuthenticationModule0A7ServiceC8userInfo8servicesACSo06CPUserE0C_Say11CPUtilities17CPServiceProtocol_pGtcfc">init(userInfo:services:)</a>
+                    <a class="token" href="#/s:22CPAuthenticationModule0A7ServiceC8userInfo8servicesACSo06CPUserE0C_Say11CPUtilities17CPServiceProtocol_pGtcfc">init(userInfo:<wbr>services:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -599,7 +602,7 @@
                     <code>
                     <a name="/c:@M@CPAuthenticationModule@objc(cs)CPAuthenticationService(im)setToken:"></a>
                     <a name="//apple_ref/swift/Method/setToken(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPAuthenticationModule@objc(cs)CPAuthenticationService(im)setToken:">setToken(_:)</a>
+                    <a class="token" href="#/c:@M@CPAuthenticationModule@objc(cs)CPAuthenticationService(im)setToken:">setToken(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -646,7 +649,7 @@
                     <code>
                     <a name="/c:@M@CPAuthenticationModule@objc(cs)CPAuthenticationService(im)connectWithIdToken:accessToken:lifetime:completion:"></a>
                     <a name="//apple_ref/swift/Method/connect(idToken:accessToken:lifetime:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPAuthenticationModule@objc(cs)CPAuthenticationService(im)connectWithIdToken:accessToken:lifetime:completion:">connect(idToken:accessToken:lifetime:completion:)</a>
+                    <a class="token" href="#/c:@M@CPAuthenticationModule@objc(cs)CPAuthenticationService(im)connectWithIdToken:accessToken:lifetime:completion:">connect(idToken:<wbr>accessToken:<wbr>lifetime:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -717,7 +720,7 @@
                     <code>
                     <a name="/c:@M@CPAuthenticationModule@objc(cs)CPAuthenticationService(im)connectWithIdToken:lifetime:completion:"></a>
                     <a name="//apple_ref/swift/Method/connect(idToken:lifetime:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPAuthenticationModule@objc(cs)CPAuthenticationService(im)connectWithIdToken:lifetime:completion:">connect(idToken:lifetime:completion:)</a>
+                    <a class="token" href="#/c:@M@CPAuthenticationModule@objc(cs)CPAuthenticationService(im)connectWithIdToken:lifetime:completion:">connect(idToken:<wbr>lifetime:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -788,7 +791,7 @@
                     <code>
                     <a name="/c:@M@CPAuthenticationModule@objc(cs)CPAuthenticationService(im)connectWithIdToken:accessToken:lifetime:channelInfo:completion:"></a>
                     <a name="//apple_ref/swift/Method/connect(idToken:accessToken:lifetime:channelInfo:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPAuthenticationModule@objc(cs)CPAuthenticationService(im)connectWithIdToken:accessToken:lifetime:channelInfo:completion:">connect(idToken:accessToken:lifetime:channelInfo:completion:)</a>
+                    <a class="token" href="#/c:@M@CPAuthenticationModule@objc(cs)CPAuthenticationService(im)connectWithIdToken:accessToken:lifetime:channelInfo:completion:">connect(idToken:<wbr>accessToken:<wbr>lifetime:<wbr>channelInfo:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -883,7 +886,7 @@
                     <code>
                     <a name="/c:@M@CPAuthenticationModule@objc(cs)CPAuthenticationService(im)connectWithIdToken:lifetime:channelInfo:completion:"></a>
                     <a name="//apple_ref/swift/Method/connect(idToken:lifetime:channelInfo:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPAuthenticationModule@objc(cs)CPAuthenticationService(im)connectWithIdToken:lifetime:channelInfo:completion:">connect(idToken:lifetime:channelInfo:completion:)</a>
+                    <a class="token" href="#/c:@M@CPAuthenticationModule@objc(cs)CPAuthenticationService(im)connectWithIdToken:lifetime:channelInfo:completion:">connect(idToken:<wbr>lifetime:<wbr>channelInfo:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -966,7 +969,7 @@
                     <code>
                     <a name="/c:@M@CPAuthenticationModule@objc(cs)CPAuthenticationService(im)disconnectWithCompletion:"></a>
                     <a name="//apple_ref/swift/Method/disconnect(completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPAuthenticationModule@objc(cs)CPAuthenticationService(im)disconnectWithCompletion:">disconnect(completion:)</a>
+                    <a class="token" href="#/c:@M@CPAuthenticationModule@objc(cs)CPAuthenticationService(im)disconnectWithCompletion:">disconnect(completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1013,8 +1016,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-08-28)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-10-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

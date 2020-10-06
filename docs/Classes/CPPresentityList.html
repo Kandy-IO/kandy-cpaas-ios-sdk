@@ -8,13 +8,21 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a name="//apple_ref/swift/Class/CPPresentityList" class="dashAnchor"></a>
     <a title="CPPresentityList Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CPaaS Mobile iOS SDK 2.10.0 Docs</a></p>
+        <p><a href="../index.html">CPaaS Mobile iOS SDK 2.11.0 Docs</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -71,9 +79,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPCallState.html">CPCallState</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CPCallStatistic.html">CPCallStatistic</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPChatConversation.html">CPChatConversation</a>
@@ -182,9 +187,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPUriAddress.html">CPUriAddress</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CPValue.html">CPValue</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPVideoCodec.html">CPVideoCodec</a>
@@ -343,6 +345,7 @@
             <h1>CPPresentityList</h1>
               <div class="declaration">
                 <div class="language">
+                  
                   <pre class="highlight swift"><code><span class="kd">@objc</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="kt">CPPresentityList</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
@@ -403,7 +406,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">presentities</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/CPPresentity.html">CPPresentity</a></span><span class="o">&gt;</span></code></pre>
+<span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">presentities</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/CPPresentity.html">CPPresentity</a></span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -415,7 +418,7 @@
                     <code>
                     <a name="/c:@M@CPPresenceModule@objc(cs)CPPresentityList(im)isEqual:"></a>
                     <a name="//apple_ref/swift/Method/isEqual(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresentityList(im)isEqual:">isEqual(_:)</a>
+                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresentityList(im)isEqual:">isEqual(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -442,7 +445,7 @@
                     <code>
                     <a name="/s:16CPPresenceModule16CPPresentityListC20populatePresentities4jsonySDySSypG_tF"></a>
                     <a name="//apple_ref/swift/Method/populatePresentities(json:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16CPPresenceModule16CPPresentityListC20populatePresentities4jsonySDySSypG_tF">populatePresentities(json:)</a>
+                    <a class="token" href="#/s:16CPPresenceModule16CPPresentityListC20populatePresentities4jsonySDySSypG_tF">populatePresentities(json:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -469,7 +472,7 @@
                     <code>
                     <a name="/c:@M@CPPresenceModule@objc(cs)CPPresentityList(im)fetchStatusWithCompletion:"></a>
                     <a name="//apple_ref/swift/Method/fetchStatus(completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresentityList(im)fetchStatusWithCompletion:">fetchStatus(completion:)</a>
+                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresentityList(im)fetchStatusWithCompletion:">fetchStatus(completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -516,7 +519,7 @@
                     <code>
                     <a name="/c:@M@CPPresenceModule@objc(cs)CPPresentityList(im)fetchStatusWithPresentity:completion:"></a>
                     <a name="//apple_ref/swift/Method/fetchStatus(presentity:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresentityList(im)fetchStatusWithPresentity:completion:">fetchStatus(presentity:completion:)</a>
+                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresentityList(im)fetchStatusWithPresentity:completion:">fetchStatus(presentity:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -575,7 +578,7 @@
                     <code>
                     <a name="/c:@M@CPPresenceModule@objc(cs)CPPresentityList(im)addWithPresentity:completion:"></a>
                     <a name="//apple_ref/swift/Method/add(presentity:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresentityList(im)addWithPresentity:completion:">add(presentity:completion:)</a>
+                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresentityList(im)addWithPresentity:completion:">add(presentity:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -634,7 +637,7 @@
                     <code>
                     <a name="/c:@M@CPPresenceModule@objc(cs)CPPresentityList(im)removeWithPresentity:completion:"></a>
                     <a name="//apple_ref/swift/Method/remove(presentity:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresentityList(im)removeWithPresentity:completion:">remove(presentity:completion:)</a>
+                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresentityList(im)removeWithPresentity:completion:">remove(presentity:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -693,7 +696,7 @@
                     <code>
                     <a name="/c:@M@CPPresenceModule@objc(cs)CPPresentityList(im)subscribeWithCompletion:"></a>
                     <a name="//apple_ref/swift/Method/subscribe(completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresentityList(im)subscribeWithCompletion:">subscribe(completion:)</a>
+                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresentityList(im)subscribeWithCompletion:">subscribe(completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -740,7 +743,7 @@
                     <code>
                     <a name="/c:@M@CPPresenceModule@objc(cs)CPPresentityList(im)statusChangedWithPresentity:"></a>
                     <a name="//apple_ref/swift/Method/statusChanged(presentity:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresentityList(im)statusChangedWithPresentity:">statusChanged(presentity:)</a>
+                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresentityList(im)statusChangedWithPresentity:">statusChanged(presentity:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -787,8 +790,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-08-28)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-10-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

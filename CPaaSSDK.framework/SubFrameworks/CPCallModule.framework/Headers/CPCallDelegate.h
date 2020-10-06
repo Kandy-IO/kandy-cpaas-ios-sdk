@@ -260,10 +260,10 @@
 /**
  *  Gets RTP/RTCP Statistics for related call
  *
- * @param completion Completion Block with array which contains RTP/RTCP Statistics
+ * @param completion Completion Block with array which contains RTP/RTCP Statistics as JSON formatted String
  *
  * - Since: 1.0.0
  */
-- (void) getRTPStatistics:(void (^_Nonnull)(NSArray * _Nullable statistics))completion;
+- (void) getRTPStatistics:(void (^_Nonnull)(NSString * _Nullable statistics))completion;
 
 @end

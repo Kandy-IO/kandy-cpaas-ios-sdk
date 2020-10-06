@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
 // swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CPPresenceModule
 import CPUtilities
 import Foundation
@@ -7,16 +7,16 @@ import NotificationEngine
 import CPUtilities.Private
 import RestManager
 import Swift
-@objc public class CPPresentityListHandle : ObjectiveC.NSObject {
+@_hasMissingDesignatedInitializers @objc public class CPPresentityListHandle : ObjectiveC.NSObject {
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  @objc override dynamic public init()
   @objc deinit
+  @objc override dynamic public init()
 }
-@objc public class CPPresentityList : ObjectiveC.NSObject {
+@_hasMissingDesignatedInitializers @objc public class CPPresentityList : ObjectiveC.NSObject {
   @objc final public let name: Swift.String!
   @objc public var presentities: Swift.Set<CPPresenceModule.CPPresentity> {
     get
-    }
+  }
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
   public func populatePresentities(json: [Swift.String : Any])
   @objc public func fetchStatus(completion: @escaping CPPresenceModule.FetchPresentityListCompletionBlock)
@@ -25,25 +25,25 @@ import Swift
   @objc public func remove(presentity: CPPresenceModule.CPPresentity, completion: @escaping CPUtilities.ErrorCompletionBlock)
   @objc public func subscribe(completion: @escaping CPUtilities.ErrorCompletionBlock)
   @objc public func statusChanged(presentity: CPPresenceModule.CPPresentity)
-  @objc override dynamic public init()
   @objc deinit
+  @objc override dynamic public init()
 }
-@objc public class CPPresenceSource : ObjectiveC.NSObject {
+@_hasMissingDesignatedInitializers @objc public class CPPresenceSource : ObjectiveC.NSObject {
   @objc public var activity: CPPresenceModule.PresenceActivity! {
     get
-    }
+  }
   @objc public var duration: Swift.Int {
     get
-    }
+  }
   @objc public func updateActivity(activity: CPPresenceModule.PresenceActivity, completion: @escaping CPPresenceModule.CreatePresenceSourceCompletionBlock)
-  @objc override dynamic public init()
   @objc deinit
+  @objc override dynamic public init()
 }
-@objc public class CPPresentity : ObjectiveC.NSObject {
+@_hasMissingDesignatedInitializers @objc public class CPPresentity : ObjectiveC.NSObject {
   @objc final public let userID: Swift.String!
   @objc public var activity: CPPresenceModule.PresenceActivity! {
     get
-    }
+  }
   @objc public init(userID: Swift.String)
   @objc override dynamic public var hash: Swift.Int {
     @objc get
@@ -77,8 +77,8 @@ public typealias FetchPresentityListCompletionBlock = (CPUtilities.CPError?, CPP
   @objc public func fetchAllPresentityLists(completion: @escaping CPPresenceModule.FetchPresentityListsCompletionBlock)
   @objc public func fetchPresentityList(presentityList: CPPresenceModule.CPPresentityList, completion: @escaping CPPresenceModule.FetchPresentityListCompletionBlock)
   @objc public func deletePresentityList(presentityList: CPPresenceModule.CPPresentityList, completion: @escaping CPUtilities.DeleteCompletionBlock)
-  @objc override dynamic public init()
   @objc deinit
+  @objc override dynamic public init()
 }
 @objc public enum CPPresenceActivities : Swift.Int, Swift.RawRepresentable {
   public typealias RawValue = Swift.String
@@ -101,16 +101,16 @@ public typealias FetchPresentityListCompletionBlock = (CPUtilities.CPError?, CPP
     get
   }
 }
-@objc public class PresenceActivity : ObjectiveC.NSObject {
+@_hasMissingDesignatedInitializers @objc public class PresenceActivity : ObjectiveC.NSObject {
   @objc public var state: CPPresenceModule.CPPresenceActivities {
     get
-    }
+  }
   @objc public var other: Swift.String? {
     get
-    }
+  }
   @objc public var willing: Swift.Bool {
     get
-    }
+  }
   @objc public var string: Swift.String {
     @objc get
   }

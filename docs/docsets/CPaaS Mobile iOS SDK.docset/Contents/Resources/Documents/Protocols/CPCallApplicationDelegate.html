@@ -8,13 +8,21 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a name="//apple_ref/swift/Protocol/CPCallApplicationDelegate" class="dashAnchor"></a>
     <a title="CPCallApplicationDelegate Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CPaaS Mobile iOS SDK 2.10.0 Docs</a></p>
+        <p><a href="../index.html">CPaaS Mobile iOS SDK 2.11.0 Docs</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -71,9 +79,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPCallState.html">CPCallState</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CPCallStatistic.html">CPCallStatistic</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPChatConversation.html">CPChatConversation</a>
@@ -182,9 +187,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPUriAddress.html">CPUriAddress</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CPValue.html">CPValue</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPVideoCodec.html">CPVideoCodec</a>
@@ -343,7 +345,13 @@
             <h1>CPCallApplicationDelegate</h1>
               <div class="declaration">
                 <div class="language">
+                  <p class="aside-title">Objective-C</p>
                   <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CPCallApplicationDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CPCallApplicationDelegate</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
 
                 </div>
               </div>
@@ -364,7 +372,7 @@ This protocol must be conformed by classes which uses CPCallService</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)incomingCall:"></a>
                     <a name="//apple_ref/swift/Method/-incomingCall:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)incomingCall:">-incomingCall:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)incomingCall:">-incomingCall:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -416,7 +424,7 @@ Used for informing the application about new call.</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)callStatusChanged:withState:"></a>
                     <a name="//apple_ref/swift/Method/-callStatusChanged:withState:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)callStatusChanged:withState:">-callStatusChanged:withState:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)callStatusChanged:withState:">-callStatusChanged:<wbr>withState:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -480,7 +488,7 @@ Used for informing the application about new call.</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)callAdditionalInfoChanged:withDictionary:"></a>
                     <a name="//apple_ref/swift/Method/-callAdditionalInfoChanged:withDictionary:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)callAdditionalInfoChanged:withDictionary:">-callAdditionalInfoChanged:withDictionary:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)callAdditionalInfoChanged:withDictionary:">-callAdditionalInfoChanged:<wbr>withDictionary:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -544,7 +552,7 @@ Used for informing the application about new call.</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)mediaAttributesChanged:withMediaAttributes:"></a>
                     <a name="//apple_ref/swift/Method/-mediaAttributesChanged:withMediaAttributes:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)mediaAttributesChanged:withMediaAttributes:">-mediaAttributesChanged:withMediaAttributes:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)mediaAttributesChanged:withMediaAttributes:">-mediaAttributesChanged:<wbr>withMediaAttributes:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -608,7 +616,7 @@ Used for informing the application about new call.</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)establishCallSucceeded:"></a>
                     <a name="//apple_ref/swift/Method/-establishCallSucceeded:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)establishCallSucceeded:">-establishCallSucceeded:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)establishCallSucceeded:">-establishCallSucceeded:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -663,7 +671,7 @@ Used for informing the application about new call.</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)establishCallFailed:withError:"></a>
                     <a name="//apple_ref/swift/Method/-establishCallFailed:withError:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)establishCallFailed:withError:">-establishCallFailed:withError:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)establishCallFailed:withError:">-establishCallFailed:<wbr>withError:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -731,7 +739,7 @@ Used for informing the application about new call.</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)acceptCallSucceed:"></a>
                     <a name="//apple_ref/swift/Method/-acceptCallSucceed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)acceptCallSucceed:">-acceptCallSucceed:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)acceptCallSucceed:">-acceptCallSucceed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -786,7 +794,7 @@ Used for informing the application about new call.</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)acceptCallFailed:withError:"></a>
                     <a name="//apple_ref/swift/Method/-acceptCallFailed:withError:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)acceptCallFailed:withError:">-acceptCallFailed:withError:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)acceptCallFailed:withError:">-acceptCallFailed:<wbr>withError:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -854,7 +862,7 @@ Used for informing the application about new call.</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)rejectCallSuccedded:"></a>
                     <a name="//apple_ref/swift/Method/-rejectCallSuccedded:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)rejectCallSuccedded:">-rejectCallSuccedded:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)rejectCallSuccedded:">-rejectCallSuccedded:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -909,7 +917,7 @@ Used for informing the application about new call.</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)rejectCallFailed:withError:"></a>
                     <a name="//apple_ref/swift/Method/-rejectCallFailed:withError:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)rejectCallFailed:withError:">-rejectCallFailed:withError:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)rejectCallFailed:withError:">-rejectCallFailed:<wbr>withError:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -977,7 +985,7 @@ Used for informing the application about new call.</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)ignoreSucceed:"></a>
                     <a name="//apple_ref/swift/Method/-ignoreSucceed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)ignoreSucceed:">-ignoreSucceed:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)ignoreSucceed:">-ignoreSucceed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1032,7 +1040,7 @@ Used for informing the application about new call.</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)ignoreFailed:withError:"></a>
                     <a name="//apple_ref/swift/Method/-ignoreFailed:withError:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)ignoreFailed:withError:">-ignoreFailed:withError:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)ignoreFailed:withError:">-ignoreFailed:<wbr>withError:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1100,7 +1108,7 @@ Used for informing the application about new call.</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)endCallSucceeded:"></a>
                     <a name="//apple_ref/swift/Method/-endCallSucceeded:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)endCallSucceeded:">-endCallSucceeded:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)endCallSucceeded:">-endCallSucceeded:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1156,7 +1164,7 @@ This is the call back method for the endCall request</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)endCallFailed:withError:"></a>
                     <a name="//apple_ref/swift/Method/-endCallFailed:withError:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)endCallFailed:withError:">-endCallFailed:withError:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)endCallFailed:withError:">-endCallFailed:<wbr>withError:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1225,7 +1233,7 @@ This is the call back method for the endCall request</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)muteCallSucceed:"></a>
                     <a name="//apple_ref/swift/Method/-muteCallSucceed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)muteCallSucceed:">-muteCallSucceed:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)muteCallSucceed:">-muteCallSucceed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1280,7 +1288,7 @@ This is the call back method for the endCall request</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)muteCallFailed:withError:"></a>
                     <a name="//apple_ref/swift/Method/-muteCallFailed:withError:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)muteCallFailed:withError:">-muteCallFailed:withError:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)muteCallFailed:withError:">-muteCallFailed:<wbr>withError:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1348,7 +1356,7 @@ This is the call back method for the endCall request</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)unMuteCallSucceed:"></a>
                     <a name="//apple_ref/swift/Method/-unMuteCallSucceed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)unMuteCallSucceed:">-unMuteCallSucceed:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)unMuteCallSucceed:">-unMuteCallSucceed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1403,7 +1411,7 @@ This is the call back method for the endCall request</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)unMuteCallFailed:withError:"></a>
                     <a name="//apple_ref/swift/Method/-unMuteCallFailed:withError:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)unMuteCallFailed:withError:">-unMuteCallFailed:withError:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)unMuteCallFailed:withError:">-unMuteCallFailed:<wbr>withError:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1471,7 +1479,7 @@ This is the call back method for the endCall request</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)videoStartSucceed:"></a>
                     <a name="//apple_ref/swift/Method/-videoStartSucceed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)videoStartSucceed:">-videoStartSucceed:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)videoStartSucceed:">-videoStartSucceed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1526,7 +1534,7 @@ This is the call back method for the endCall request</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)videoStartFailed:withError:"></a>
                     <a name="//apple_ref/swift/Method/-videoStartFailed:withError:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)videoStartFailed:withError:">-videoStartFailed:withError:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)videoStartFailed:withError:">-videoStartFailed:<wbr>withError:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1594,7 +1602,7 @@ This is the call back method for the endCall request</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)videoStopSucceed:"></a>
                     <a name="//apple_ref/swift/Method/-videoStopSucceed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)videoStopSucceed:">-videoStopSucceed:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)videoStopSucceed:">-videoStopSucceed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1649,7 +1657,7 @@ This is the call back method for the endCall request</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)videoStopFailed:withError:"></a>
                     <a name="//apple_ref/swift/Method/-videoStopFailed:withError:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)videoStopFailed:withError:">-videoStopFailed:withError:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)videoStopFailed:withError:">-videoStopFailed:<wbr>withError:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1717,7 +1725,7 @@ This is the call back method for the endCall request</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)holdCallSucceed:"></a>
                     <a name="//apple_ref/swift/Method/-holdCallSucceed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)holdCallSucceed:">-holdCallSucceed:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)holdCallSucceed:">-holdCallSucceed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1772,7 +1780,7 @@ This is the call back method for the endCall request</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)holdCallFailed:withError:"></a>
                     <a name="//apple_ref/swift/Method/-holdCallFailed:withError:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)holdCallFailed:withError:">-holdCallFailed:withError:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)holdCallFailed:withError:">-holdCallFailed:<wbr>withError:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1840,7 +1848,7 @@ This is the call back method for the endCall request</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)unHoldCallSucceed:"></a>
                     <a name="//apple_ref/swift/Method/-unHoldCallSucceed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)unHoldCallSucceed:">-unHoldCallSucceed:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)unHoldCallSucceed:">-unHoldCallSucceed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1895,7 +1903,7 @@ This is the call back method for the endCall request</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)unHoldCallFailed:withError:"></a>
                     <a name="//apple_ref/swift/Method/-unHoldCallFailed:withError:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)unHoldCallFailed:withError:">-unHoldCallFailed:withError:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)unHoldCallFailed:withError:">-unHoldCallFailed:<wbr>withError:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1963,7 +1971,7 @@ This is the call back method for the endCall request</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)transferCallSucceed:"></a>
                     <a name="//apple_ref/swift/Method/-transferCallSucceed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)transferCallSucceed:">-transferCallSucceed:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)transferCallSucceed:">-transferCallSucceed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2015,7 +2023,7 @@ This is the call back method for the endCall request</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)transferCallFailed:withError:"></a>
                     <a name="//apple_ref/swift/Method/-transferCallFailed:withError:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)transferCallFailed:withError:">-transferCallFailed:withError:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)transferCallFailed:withError:">-transferCallFailed:<wbr>withError:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2080,7 +2088,7 @@ This is the call back method for the endCall request</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)forwardCallSucceed:"></a>
                     <a name="//apple_ref/swift/Method/-forwardCallSucceed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)forwardCallSucceed:">-forwardCallSucceed:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)forwardCallSucceed:">-forwardCallSucceed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2132,7 +2140,7 @@ This is the call back method for the endCall request</p>
                     <code>
                     <a name="/c:objc(pl)CPCallApplicationDelegate(im)forwardCallFailed:withError:"></a>
                     <a name="//apple_ref/swift/Method/-forwardCallFailed:withError:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)forwardCallFailed:withError:">-forwardCallFailed:withError:</a>
+                    <a class="token" href="#/c:objc(pl)CPCallApplicationDelegate(im)forwardCallFailed:withError:">-forwardCallFailed:<wbr>withError:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2197,8 +2205,8 @@ This is the call back method for the endCall request</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-08-28)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-10-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

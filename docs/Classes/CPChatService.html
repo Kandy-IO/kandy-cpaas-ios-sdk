@@ -8,13 +8,21 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a name="//apple_ref/swift/Class/CPChatService" class="dashAnchor"></a>
     <a title="CPChatService Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CPaaS Mobile iOS SDK 2.10.0 Docs</a></p>
+        <p><a href="../index.html">CPaaS Mobile iOS SDK 2.11.0 Docs</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -71,9 +79,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPCallState.html">CPCallState</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CPCallStatistic.html">CPCallStatistic</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPChatConversation.html">CPChatConversation</a>
@@ -182,9 +187,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPUriAddress.html">CPUriAddress</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CPValue.html">CPValue</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPVideoCodec.html">CPVideoCodec</a>
@@ -343,6 +345,7 @@
             <h1>CPChatService</h1>
               <div class="declaration">
                 <div class="language">
+                  
                   <pre class="highlight swift"><code><span class="kd">@objc</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="kt">CPChatService</span> <span class="p">:</span> <span class="kt"><a href="../Classes/MessageService.html">MessageService</a></span><span class="p">,</span> <span class="kt">CPServiceProtocol</span></code></pre>
 
@@ -387,7 +390,7 @@
                     <code>
                     <a name="/s:17CPMessagingModule13CPChatServiceC8userInfo4infoACSo06CPUserF0C_11CPUtilities09CPServiceF0Ctcfc"></a>
                     <a name="//apple_ref/swift/Method/init(userInfo:info:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17CPMessagingModule13CPChatServiceC8userInfo4infoACSo06CPUserF0C_11CPUtilities09CPServiceF0Ctcfc">init(userInfo:info:)</a>
+                    <a class="token" href="#/s:17CPMessagingModule13CPChatServiceC8userInfo4infoACSo06CPUserF0C_11CPUtilities09CPServiceF0Ctcfc">init(userInfo:<wbr>info:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -445,7 +448,7 @@
                     <code>
                     <a name="/c:@M@CPMessagingModule@objc(cs)CPChatService(im)createConversationWithParticipant:"></a>
                     <a name="//apple_ref/swift/Method/createConversation(withParticipant:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)createConversationWithParticipant:">createConversation(withParticipant:)</a>
+                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)createConversationWithParticipant:">createConversation(withParticipant:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -496,7 +499,7 @@
                     <code>
                     <a name="/c:@M@CPMessagingModule@objc(cs)CPChatService(im)createConversationWithGroup:"></a>
                     <a name="//apple_ref/swift/Method/createConversation(withGroup:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)createConversationWithGroup:">createConversation(withGroup:)</a>
+                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)createConversationWithGroup:">createConversation(withGroup:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -547,7 +550,7 @@
                     <code>
                     <a name="/c:@M@CPMessagingModule@objc(cs)CPChatService(im)uploadWithFile:progress:completion:"></a>
                     <a name="//apple_ref/swift/Method/upload(withFile:progress:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)uploadWithFile:progress:completion:">upload(withFile:progress:completion:)</a>
+                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)uploadWithFile:progress:completion:">upload(withFile:<wbr>progress:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -622,7 +625,7 @@
                     <code>
                     <a name="/c:@M@CPMessagingModule@objc(cs)CPChatService(im)mimeTypeForFile:"></a>
                     <a name="//apple_ref/swift/Method/mimeTypeFor(file:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)mimeTypeForFile:">mimeTypeFor(file:)</a>
+                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)mimeTypeForFile:">mimeTypeFor(file:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -673,7 +676,7 @@
                     <code>
                     <a name="/c:@M@CPMessagingModule@objc(cs)CPChatService(im)downloadFromUrl:toFile:progress:completion:"></a>
                     <a name="//apple_ref/swift/Method/download(fromUrl:toFile:progress:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)downloadFromUrl:toFile:progress:completion:">download(fromUrl:toFile:progress:completion:)</a>
+                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)downloadFromUrl:toFile:progress:completion:">download(fromUrl:<wbr>toFile:<wbr>progress:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -756,7 +759,7 @@
                     <code>
                     <a name="/c:@M@CPMessagingModule@objc(cs)CPChatService(im)fetchGroupConversationsWithCompletion:"></a>
                     <a name="//apple_ref/swift/Method/fetchGroupConversations(completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)fetchGroupConversationsWithCompletion:">fetchGroupConversations(completion:)</a>
+                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)fetchGroupConversationsWithCompletion:">fetchGroupConversations(completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -803,7 +806,7 @@
                     <code>
                     <a name="/c:@M@CPMessagingModule@objc(cs)CPChatService(im)fetchOneToOneConversationsWithCompletion:"></a>
                     <a name="//apple_ref/swift/Method/fetchOneToOneConversations(completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)fetchOneToOneConversationsWithCompletion:">fetchOneToOneConversations(completion:)</a>
+                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)fetchOneToOneConversationsWithCompletion:">fetchOneToOneConversations(completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -850,7 +853,7 @@
                     <code>
                     <a name="/c:@M@CPMessagingModule@objc(cs)CPChatService(im)fetchConversationWithGroupID:completion:"></a>
                     <a name="//apple_ref/swift/Method/fetchConversation(withGroupID:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)fetchConversationWithGroupID:completion:">fetchConversation(withGroupID:completion:)</a>
+                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)fetchConversationWithGroupID:completion:">fetchConversation(withGroupID:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -910,7 +913,7 @@ This would be used when refreshing a conversation after receiving a conversation
                     <code>
                     <a name="/c:@M@CPMessagingModule@objc(cs)CPChatService(im)fetchConversationWithParticipant:completion:"></a>
                     <a name="//apple_ref/swift/Method/fetchConversation(withParticipant:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)fetchConversationWithParticipant:completion:">fetchConversation(withParticipant:completion:)</a>
+                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)fetchConversationWithParticipant:completion:">fetchConversation(withParticipant:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -970,7 +973,7 @@ This would be used when refreshing a conversation after receiving a conversation
                     <code>
                     <a name="/c:@M@CPMessagingModule@objc(cs)CPChatService(im)deleteWithConversation:completion:"></a>
                     <a name="//apple_ref/swift/Method/delete(conversation:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)deleteWithConversation:completion:">delete(conversation:completion:)</a>
+                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)deleteWithConversation:completion:">delete(conversation:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1104,7 +1107,7 @@ This would be used when refreshing a conversation after receiving a conversation
                     <code>
                     <a name="/c:@M@CPMessagingModule@objc(cs)CPChatService(im)subscribeWithChannelID:completion:"></a>
                     <a name="//apple_ref/swift/Method/subscribe(channelID:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)subscribeWithChannelID:completion:">subscribe(channelID:completion:)</a>
+                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)subscribeWithChannelID:completion:">subscribe(channelID:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1162,7 +1165,7 @@ This would be used when refreshing a conversation after receiving a conversation
                     <code>
                     <a name="/c:@M@CPMessagingModule@objc(cs)CPChatService(im)unsubscribeWithChannelID:completion:"></a>
                     <a name="//apple_ref/swift/Method/unsubscribe(channelID:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)unsubscribeWithChannelID:completion:">unsubscribe(channelID:completion:)</a>
+                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)unsubscribeWithChannelID:completion:">unsubscribe(channelID:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1233,7 +1236,7 @@ This would be used when refreshing a conversation after receiving a conversation
                     <code>
                     <a name="/c:@M@CPMessagingModule@objc(cs)CPChatService(im)createChatGroupWithName:type:subject:image:participants:completion:"></a>
                     <a name="//apple_ref/swift/Method/createChatGroup(name:type:subject:image:participants:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)createChatGroupWithName:type:subject:image:participants:completion:">createChatGroup(name:type:subject:image:participants:completion:)</a>
+                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)createChatGroupWithName:type:subject:image:participants:completion:">createChatGroup(name:<wbr>type:<wbr>subject:<wbr>image:<wbr>participants:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1340,7 +1343,7 @@ This would be used when refreshing a conversation after receiving a conversation
                     <code>
                     <a name="/c:@M@CPMessagingModule@objc(cs)CPChatService(im)updateChatGroupPropertiesWithGroupID:name:subject:image::"></a>
                     <a name="//apple_ref/swift/Method/updateChatGroupProperties(groupID:name:subject:image:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)updateChatGroupPropertiesWithGroupID:name:subject:image::">updateChatGroupProperties(groupID:name:subject:image:_:)</a>
+                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)updateChatGroupPropertiesWithGroupID:name:subject:image::">updateChatGroupProperties(groupID:<wbr>name:<wbr>subject:<wbr>image:<wbr>_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1435,7 +1438,7 @@ This would be used when refreshing a conversation after receiving a conversation
                     <code>
                     <a name="/c:@M@CPMessagingModule@objc(cs)CPChatService(im)deleteChatGroupWithGroupID::"></a>
                     <a name="//apple_ref/swift/Method/deleteChatGroup(groupID:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)deleteChatGroupWithGroupID::">deleteChatGroup(groupID:_:)</a>
+                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)deleteChatGroupWithGroupID::">deleteChatGroup(groupID:<wbr>_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1494,7 +1497,7 @@ This would be used when refreshing a conversation after receiving a conversation
                     <code>
                     <a name="/c:@M@CPMessagingModule@objc(cs)CPChatService(im)fetchAllChatGroupsWithCompletion:"></a>
                     <a name="//apple_ref/swift/Method/fetchAllChatGroups(completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)fetchAllChatGroupsWithCompletion:">fetchAllChatGroups(completion:)</a>
+                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)fetchAllChatGroupsWithCompletion:">fetchAllChatGroups(completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1541,7 +1544,7 @@ This would be used when refreshing a conversation after receiving a conversation
                     <code>
                     <a name="/c:@M@CPMessagingModule@objc(cs)CPChatService(im)fetchChatGroupWithKey:completion:"></a>
                     <a name="//apple_ref/swift/Method/fetchChatGroup(withKey:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)fetchChatGroupWithKey:completion:">fetchChatGroup(withKey:completion:)</a>
+                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)fetchChatGroupWithKey:completion:">fetchChatGroup(withKey:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1600,7 +1603,7 @@ This would be used when refreshing a conversation after receiving a conversation
                     <code>
                     <a name="/c:@M@CPMessagingModule@objc(cs)CPChatService(im)changeGroupAdminRoleWithStatus:groupID:forParticipant::"></a>
                     <a name="//apple_ref/swift/Method/changeGroupAdminRole(status:groupID:forParticipant:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)changeGroupAdminRoleWithStatus:groupID:forParticipant::">changeGroupAdminRole(status:groupID:forParticipant:_:)</a>
+                    <a class="token" href="#/c:@M@CPMessagingModule@objc(cs)CPChatService(im)changeGroupAdminRoleWithStatus:groupID:forParticipant::">changeGroupAdminRole(status:<wbr>groupID:<wbr>forParticipant:<wbr>_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1683,8 +1686,8 @@ This would be used when refreshing a conversation after receiving a conversation
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-08-28)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-10-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

@@ -8,13 +8,21 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a name="//apple_ref/swift/Class/CPPresenceService" class="dashAnchor"></a>
     <a title="CPPresenceService Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CPaaS Mobile iOS SDK 2.10.0 Docs</a></p>
+        <p><a href="../index.html">CPaaS Mobile iOS SDK 2.11.0 Docs</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -71,9 +79,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPCallState.html">CPCallState</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CPCallStatistic.html">CPCallStatistic</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPChatConversation.html">CPChatConversation</a>
@@ -182,9 +187,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPUriAddress.html">CPUriAddress</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CPValue.html">CPValue</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPVideoCodec.html">CPVideoCodec</a>
@@ -343,6 +345,7 @@
             <h1>CPPresenceService</h1>
               <div class="declaration">
                 <div class="language">
+                  
                   <pre class="highlight swift"><code><span class="kd">@objc</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="kt">CPPresenceService</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">CPServiceProtocol</span></code></pre>
 
@@ -442,7 +445,7 @@
                     <code>
                     <a name="/s:16CPPresenceModule0A7ServiceC8userInfo4infoACSo06CPUserE0C_11CPUtilities09CPServiceE0Ctcfc"></a>
                     <a name="//apple_ref/swift/Method/init(userInfo:info:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16CPPresenceModule0A7ServiceC8userInfo4infoACSo06CPUserE0C_11CPUtilities09CPServiceE0Ctcfc">init(userInfo:info:)</a>
+                    <a class="token" href="#/s:16CPPresenceModule0A7ServiceC8userInfo4infoACSo06CPUserE0C_11CPUtilities09CPServiceE0Ctcfc">init(userInfo:<wbr>info:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,7 +590,7 @@
                     <code>
                     <a name="/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)subscribeWithChannelID:completion:"></a>
                     <a name="//apple_ref/swift/Method/subscribe(channelID:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)subscribeWithChannelID:completion:">subscribe(channelID:completion:)</a>
+                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)subscribeWithChannelID:completion:">subscribe(channelID:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -645,7 +648,7 @@
                     <code>
                     <a name="/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)unsubscribeWithChannelID:completion:"></a>
                     <a name="//apple_ref/swift/Method/unsubscribe(channelID:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)unsubscribeWithChannelID:completion:">unsubscribe(channelID:completion:)</a>
+                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)unsubscribeWithChannelID:completion:">unsubscribe(channelID:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -703,7 +706,7 @@
                     <code>
                     <a name="/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)refreshSubscriptionsWithExpiringInSeconds:completion:"></a>
                     <a name="//apple_ref/swift/Method/refreshSubscriptions(expiringInSeconds:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)refreshSubscriptionsWithExpiringInSeconds:completion:">refreshSubscriptions(expiringInSeconds:completion:)</a>
+                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)refreshSubscriptionsWithExpiringInSeconds:completion:">refreshSubscriptions(expiringInSeconds:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -783,7 +786,7 @@ next day, in this case use expiringInSeconds value of (24 * 60 * 60.0)</p>
                     <code>
                     <a name="/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)createPresenceSourceWithActivity:completion:"></a>
                     <a name="//apple_ref/swift/Method/createPresenceSource(activity:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)createPresenceSourceWithActivity:completion:">createPresenceSource(activity:completion:)</a>
+                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)createPresenceSourceWithActivity:completion:">createPresenceSource(activity:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -842,7 +845,7 @@ next day, in this case use expiringInSeconds value of (24 * 60 * 60.0)</p>
                     <code>
                     <a name="/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)updatePresenceSourceWithSource:activity:completion:"></a>
                     <a name="//apple_ref/swift/Method/updatePresenceSource(source:activity:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)updatePresenceSourceWithSource:activity:completion:">updatePresenceSource(source:activity:completion:)</a>
+                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)updatePresenceSourceWithSource:activity:completion:">updatePresenceSource(source:<wbr>activity:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -913,7 +916,7 @@ next day, in this case use expiringInSeconds value of (24 * 60 * 60.0)</p>
                     <code>
                     <a name="/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)fetchPresenceSourceWithCompletion:"></a>
                     <a name="//apple_ref/swift/Method/fetchPresenceSource(completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)fetchPresenceSourceWithCompletion:">fetchPresenceSource(completion:)</a>
+                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)fetchPresenceSourceWithCompletion:">fetchPresenceSource(completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -960,7 +963,7 @@ next day, in this case use expiringInSeconds value of (24 * 60 * 60.0)</p>
                     <code>
                     <a name="/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)fetchPresenceSourceWithSource:completion:"></a>
                     <a name="//apple_ref/swift/Method/fetchPresenceSource(source:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)fetchPresenceSourceWithSource:completion:">fetchPresenceSource(source:completion:)</a>
+                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)fetchPresenceSourceWithSource:completion:">fetchPresenceSource(source:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1019,7 +1022,7 @@ next day, in this case use expiringInSeconds value of (24 * 60 * 60.0)</p>
                     <code>
                     <a name="/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)deletePresenceSourceWithSource:completion:"></a>
                     <a name="//apple_ref/swift/Method/deletePresenceSource(source:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)deletePresenceSourceWithSource:completion:">deletePresenceSource(source:completion:)</a>
+                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)deletePresenceSourceWithSource:completion:">deletePresenceSource(source:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1091,7 +1094,7 @@ next day, in this case use expiringInSeconds value of (24 * 60 * 60.0)</p>
                     <code>
                     <a name="/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)createPresentityListWithName:presentities:completion:"></a>
                     <a name="//apple_ref/swift/Method/createPresentityList(name:presentities:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)createPresentityListWithName:presentities:completion:">createPresentityList(name:presentities:completion:)</a>
+                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)createPresentityListWithName:presentities:completion:">createPresentityList(name:<wbr>presentities:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1162,7 +1165,7 @@ next day, in this case use expiringInSeconds value of (24 * 60 * 60.0)</p>
                     <code>
                     <a name="/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)fetchAllPresentityListsWithCompletion:"></a>
                     <a name="//apple_ref/swift/Method/fetchAllPresentityLists(completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)fetchAllPresentityListsWithCompletion:">fetchAllPresentityLists(completion:)</a>
+                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)fetchAllPresentityListsWithCompletion:">fetchAllPresentityLists(completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1209,7 +1212,7 @@ next day, in this case use expiringInSeconds value of (24 * 60 * 60.0)</p>
                     <code>
                     <a name="/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)fetchPresentityListWithPresentityList:completion:"></a>
                     <a name="//apple_ref/swift/Method/fetchPresentityList(presentityList:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)fetchPresentityListWithPresentityList:completion:">fetchPresentityList(presentityList:completion:)</a>
+                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)fetchPresentityListWithPresentityList:completion:">fetchPresentityList(presentityList:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1268,7 +1271,7 @@ next day, in this case use expiringInSeconds value of (24 * 60 * 60.0)</p>
                     <code>
                     <a name="/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)deletePresentityListWithPresentityList:completion:"></a>
                     <a name="//apple_ref/swift/Method/deletePresentityList(presentityList:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)deletePresentityListWithPresentityList:completion:">deletePresentityList(presentityList:completion:)</a>
+                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)CPPresenceService(im)deletePresentityListWithPresentityList:completion:">deletePresentityList(presentityList:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1327,8 +1330,8 @@ next day, in this case use expiringInSeconds value of (24 * 60 * 60.0)</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-08-28)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-10-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

@@ -5,13 +5,18 @@ CPaaS iOS SDK change log.
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
+## 2.11.0 - 2020-10-05
+
+### Changed
+- Return type of `CPCall.getRTPStatistics` was changed as `String`
+
+### Fixed
+- Xcode 12 support was added
+
 ## 2.10.0 - 2020-08-28
 
 ### Added
 - Trickle ICE support `KAE-79`
-
-### Limitation
-- There is known issue on iOS14 about Recording Indicator is still green when camera off
 
 ## 2.9.0 - 2020-07-22
 

@@ -347,9 +347,9 @@ typedef NS_ENUM(NSInteger, WRTCConnectionState) {
 - (NSString *) getRemoteSDP;
 
 /**
- * Gets RTP statistics for related call
+ * Gets RTP statistics for related call as JSON formatted String
  */
-- (void)getRTPStatistics:(void (^)(NSArray *statistics))completion;
+- (void)getRTPStatistics:(void (^_Nonnull)(NSString * _Nullable statistics))completion;
 
 /**
  * Adds ICE Candidates to peer connection object

@@ -4,3 +4,8 @@ framework module CPWebRTC {
   export *
   module * { export * }
 }
+
+module CPWebRTC.Swift {
+    header "CPWebRTC-Swift.h"
+    requires objc
+}

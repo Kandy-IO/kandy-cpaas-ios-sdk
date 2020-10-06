@@ -29,7 +29,24 @@ The applications which uses $KANDY$ MobileSDK can be built with the XCode 11.x+ 
 ### Cocoapods installation
 1. Add below pods to your Podfile (If you dont have any Podfile, visit this link to install cocoapods: https://guides.cocoapods.org/using/using-cocoapods.html)
 
-* pod 'KandyCPaaSMobileSDK', '~> $SDK_VERSION$'
+```ruby
+...
+
+target 'YOUR_TARGET_NAME' do
+    pod 'KandyCPaaSMobileSDK', '~> $SDK_VERSION$'
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['ENABLE_BITCODE'] = 'NO'
+    end
+  end
+end
+
+...
+```
+
 
 2. Go to project folder via command line and run "pod install" command and wait for cocoapods to finish installation of Kandy CPaaS MobileSDK & WebRTC frameworks and their dependencies
 
@@ -224,9 +241,6 @@ private func makeAccessTokenRequest(request:URLRequest, completion: @escaping (_
                     let accessToken = jsonDictionary["access_token"] as? String
                     //YOUR_ID_TOKEN
                     if let idToken = jsonDictionary["id_token"] as? String { UserConfigurations.sharedInstance.idToken = idToken }
-                    if let refreshT = jsonDictionary["refresh_token"] as? String {
-                        self.refreshToken = refreshT
-                    }
                     
                     if let accessTokenStr = accessToken {
                         completion(nil, accessTokenStr)
@@ -282,7 +296,6 @@ private func makeAccessTokenRequest(request:URLRequest, completion: @escaping (_
             } else {
                 //YOUR_ACCESS_TOKEN
                 NSString *accessToken = dict[@"access_token"];
-                _refreshToken = dict[@"refresh_token"];
                 //YOUR_ID_TOKEN
                 NSString *idToken = dict[@"id_token"];
                 if (idToken) [[UserConfigurations sharedInstance] setIdToken:idToken];

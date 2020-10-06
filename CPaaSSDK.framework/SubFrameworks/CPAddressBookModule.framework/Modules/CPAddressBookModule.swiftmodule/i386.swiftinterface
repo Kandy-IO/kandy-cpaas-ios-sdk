@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
 // swift-module-flags: -target i386-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CPAddressBookModule
 import CPUtilities
 import Foundation
@@ -7,7 +7,7 @@ import CPUtilities.Private
 import RestManager
 import Swift
 import UIKit
-@objc public class CPContact : ObjectiveC.NSObject {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class CPContact : ObjectiveC.NSObject {
   @objc public var contactId: Swift.String
   @objc public var firstName: Swift.String
   @objc public var lastName: Swift.String
@@ -20,33 +20,33 @@ import UIKit
   @objc public var buddy: Swift.Bool
   @objc public var photoUrl: Swift.String {
     get
-    }
+  }
   @objc public var conferenceUrl: Swift.String {
     get
-    }
+  }
   @objc public var username: Swift.String
-  @objc public var lists: Swift.Array<CPAddressBookModule.CPAddressBookList>
+  @objc public var lists: [CPAddressBookModule.CPAddressBookList]
   @objc public init(contactId: Swift.String)
   @objc deinit
 }
-@objc public class CPAddressBookList : ObjectiveC.NSObject {
+@_hasMissingDesignatedInitializers @objc public class CPAddressBookList : ObjectiveC.NSObject {
   @objc public var listId: Swift.String
   @objc public var resourceUrl: Swift.String
   @objc public init(listId: Swift.String)
   @objc override dynamic public init()
   @objc deinit
 }
-@objc public class CPSearchFilter : ObjectiveC.NSObject {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class CPSearchFilter : ObjectiveC.NSObject {
   @objc public var type: CPAddressBookModule.CPAddressBook.FieldType {
     get
-    }
+  }
   @objc public var value: Swift.String! {
     get
-    }
+  }
   @objc public init(value: Swift.String, forType: CPAddressBookModule.CPAddressBook.FieldType)
   @objc deinit
 }
-@objc public class CPAddressBook : ObjectiveC.NSObject {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class CPAddressBook : ObjectiveC.NSObject {
   @objc(CPAddressBookFieldType) public enum FieldType : Swift.Int, Swift.RawRepresentable {
     public typealias RawValue = Swift.String
     case name = 0
@@ -70,7 +70,7 @@ import UIKit
   }
   @objc deinit
 }
-@objc public class CPSearch : ObjectiveC.NSObject {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class CPSearch : ObjectiveC.NSObject {
   @objc public var filter: CPAddressBookModule.CPSearchFilter
   @objc public var sortBy: CPAddressBookModule.CPAddressBook.FieldType
   @objc public var orderBy: CPAddressBookModule.CPAddressBook.OrderType
@@ -104,13 +104,13 @@ import UIKit
   @objc public func subscribe(channelID: Swift.String, completion: @escaping CPUtilities.SubscribeCompletion)
   @objc public func unsubscribe(channelID: Swift.String, completion: @escaping CPUtilities.UnsubscribeCompletion)
   @objc public func notifications() -> [Swift.String]
-  @objc override dynamic public init()
   @objc deinit
+  @objc override dynamic public init()
 }
-@objc public class CPSearchResult : ObjectiveC.NSObject {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class CPSearchResult : ObjectiveC.NSObject {
   @objc public var contacts: Swift.Array<CPAddressBookModule.CPContact>? {
     get
-    }
+  }
   @objc public var hasNext: Swift.Bool {
     @objc get
   }

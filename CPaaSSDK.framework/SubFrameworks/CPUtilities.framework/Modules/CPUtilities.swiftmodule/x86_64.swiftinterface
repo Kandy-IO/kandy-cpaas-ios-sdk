@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
 // swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CPUtilities
 @_exported import CPUtilities
 import Foundation
@@ -93,8 +93,8 @@ public typealias FetchCompletionBlock = (CPUtilities.CPError?, [Swift.AnyHashabl
   final public let push: Swift.Bool!
   public init(type: CPUtilities.ServiceType, push: Swift.Bool)
   @objc public static func build(type: CPUtilities.ServiceType, push: Swift.Bool) -> CPUtilities.CPServiceInfo
-  @objc override dynamic public init()
   @objc deinit
+  @objc override dynamic public init()
 }
 public enum CPSubscriptionState {
   case pending
@@ -110,7 +110,7 @@ public enum CPSubscriptionState {
 public class CPSubscriptionStatus {
   public var error: CPUtilities.CPError? {
     get
-    }
+  }
   public init()
   public func setState(notification: Swift.String, state: CPUtilities.CPSubscriptionState)
   public func saveError(_ error: CPUtilities.CPError?)

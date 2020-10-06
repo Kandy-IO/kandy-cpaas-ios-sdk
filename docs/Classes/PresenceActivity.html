@@ -8,13 +8,21 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a name="//apple_ref/swift/Class/PresenceActivity" class="dashAnchor"></a>
     <a title="PresenceActivity Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CPaaS Mobile iOS SDK 2.10.0 Docs</a></p>
+        <p><a href="../index.html">CPaaS Mobile iOS SDK 2.11.0 Docs</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -71,9 +79,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPCallState.html">CPCallState</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CPCallStatistic.html">CPCallStatistic</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPChatConversation.html">CPChatConversation</a>
@@ -182,9 +187,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPUriAddress.html">CPUriAddress</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CPValue.html">CPValue</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPVideoCodec.html">CPVideoCodec</a>
@@ -343,6 +345,7 @@
             <h1>PresenceActivity</h1>
               <div class="declaration">
                 <div class="language">
+                  
                   <pre class="highlight swift"><code><span class="kd">@objc</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="kt">PresenceActivity</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
@@ -375,7 +378,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">state</span><span class="p">:</span> <span class="kt"><a href="../Enums/CPPresenceActivities.html">CPPresenceActivities</a></span></code></pre>
+<span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">state</span><span class="p">:</span> <span class="kt"><a href="../Enums/CPPresenceActivities.html">CPPresenceActivities</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -403,7 +406,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+<span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -431,7 +434,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">willing</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+<span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">willing</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -471,7 +474,7 @@
                     <code>
                     <a name="/c:@M@CPPresenceModule@objc(cs)PresenceActivity(im)init:"></a>
                     <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)PresenceActivity(im)init:">init(_:)</a>
+                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)PresenceActivity(im)init:">init(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -499,7 +502,7 @@
                     <code>
                     <a name="/c:@M@CPPresenceModule@objc(cs)PresenceActivity(cm)makeOtherWithActivity:willing:"></a>
                     <a name="//apple_ref/swift/Method/makeOther(activity:willing:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)PresenceActivity(cm)makeOtherWithActivity:willing:">makeOther(activity:willing:)</a>
+                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)PresenceActivity(cm)makeOtherWithActivity:willing:">makeOther(activity:<wbr>willing:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -558,7 +561,7 @@
                     <code>
                     <a name="/c:@M@CPPresenceModule@objc(cs)PresenceActivity(cm)makeUnknownWithWilling:"></a>
                     <a name="//apple_ref/swift/Method/makeUnknown(willing:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)PresenceActivity(cm)makeUnknownWithWilling:">makeUnknown(willing:)</a>
+                    <a class="token" href="#/c:@M@CPPresenceModule@objc(cs)PresenceActivity(cm)makeUnknownWithWilling:">makeUnknown(willing:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -605,8 +608,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-08-28)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-10-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

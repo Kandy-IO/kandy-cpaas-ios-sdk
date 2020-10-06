@@ -8,13 +8,21 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a name="//apple_ref/swift/Class/CPAddressBookService" class="dashAnchor"></a>
     <a title="CPAddressBookService Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CPaaS Mobile iOS SDK 2.10.0 Docs</a></p>
+        <p><a href="../index.html">CPaaS Mobile iOS SDK 2.11.0 Docs</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -71,9 +79,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPCallState.html">CPCallState</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CPCallStatistic.html">CPCallStatistic</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPChatConversation.html">CPChatConversation</a>
@@ -182,9 +187,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPUriAddress.html">CPUriAddress</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CPValue.html">CPValue</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CPVideoCodec.html">CPVideoCodec</a>
@@ -343,6 +345,7 @@
             <h1>CPAddressBookService</h1>
               <div class="declaration">
                 <div class="language">
+                  
                   <pre class="highlight swift"><code><span class="kd">@objc</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="kt">CPAddressBookService</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">CPServiceProtocol</span></code></pre>
 
@@ -701,7 +704,7 @@ if upcoming search results will be needed.</p>
                     <code>
                     <a name="/s:19CPAddressBookModule0aB7ServiceC8userInfo4infoACSo06CPUserF0C_11CPUtilities09CPServiceF0Ctcfc"></a>
                     <a name="//apple_ref/swift/Method/init(userInfo:info:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:19CPAddressBookModule0aB7ServiceC8userInfo4infoACSo06CPUserF0C_11CPUtilities09CPServiceF0Ctcfc">init(userInfo:info:)</a>
+                    <a class="token" href="#/s:19CPAddressBookModule0aB7ServiceC8userInfo4infoACSo06CPUserF0C_11CPUtilities09CPServiceF0Ctcfc">init(userInfo:<wbr>info:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -759,7 +762,7 @@ if upcoming search results will be needed.</p>
                     <code>
                     <a name="/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)addContactWithAddressBookId:contact:completion:"></a>
                     <a name="//apple_ref/swift/Method/addContact(addressBookId:contact:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)addContactWithAddressBookId:contact:completion:">addContact(addressBookId:contact:completion:)</a>
+                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)addContactWithAddressBookId:contact:completion:">addContact(addressBookId:<wbr>contact:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -823,7 +826,7 @@ if upcoming search results will be needed.</p>
                     <code>
                     <a name="/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)updateContactWithAddressBookId:contact:completion:"></a>
                     <a name="//apple_ref/swift/Method/updateContact(addressBookId:contact:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)updateContactWithAddressBookId:contact:completion:">updateContact(addressBookId:contact:completion:)</a>
+                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)updateContactWithAddressBookId:contact:completion:">updateContact(addressBookId:<wbr>contact:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -887,7 +890,7 @@ if upcoming search results will be needed.</p>
                     <code>
                     <a name="/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)retrieveContactListWithAddressBookId:completion:"></a>
                     <a name="//apple_ref/swift/Method/retrieveContactList(addressBookId:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)retrieveContactListWithAddressBookId:completion:">retrieveContactList(addressBookId:completion:)</a>
+                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)retrieveContactListWithAddressBookId:completion:">retrieveContactList(addressBookId:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -939,7 +942,7 @@ if upcoming search results will be needed.</p>
                     <code>
                     <a name="/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)getContactWithAddressBookId:contactId:completion:"></a>
                     <a name="//apple_ref/swift/Method/getContact(addressBookId:contactId:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)getContactWithAddressBookId:contactId:completion:">getContact(addressBookId:contactId:completion:)</a>
+                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)getContactWithAddressBookId:contactId:completion:">getContact(addressBookId:<wbr>contactId:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1003,7 +1006,7 @@ if upcoming search results will be needed.</p>
                     <code>
                     <a name="/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)deleteContactWithAddressBookId:identifier:completion:"></a>
                     <a name="//apple_ref/swift/Method/deleteContact(addressBookId:identifier:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)deleteContactWithAddressBookId:identifier:completion:">deleteContact(addressBookId:identifier:completion:)</a>
+                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)deleteContactWithAddressBookId:identifier:completion:">deleteContact(addressBookId:<wbr>identifier:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1067,7 +1070,7 @@ if upcoming search results will be needed.</p>
                     <code>
                     <a name="/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)updateAttributeWithAddressBookId:contactIdentifier:attributeId:attributeVal:completion:"></a>
                     <a name="//apple_ref/swift/Method/updateAttribute(addressBookId:contactIdentifier:attributeId:attributeVal:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)updateAttributeWithAddressBookId:contactIdentifier:attributeId:attributeVal:completion:">updateAttribute(addressBookId:contactIdentifier:attributeId:attributeVal:completion:)</a>
+                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)updateAttributeWithAddressBookId:contactIdentifier:attributeId:attributeVal:completion:">updateAttribute(addressBookId:<wbr>contactIdentifier:<wbr>attributeId:<wbr>attributeVal:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1155,7 +1158,7 @@ if upcoming search results will be needed.</p>
                     <code>
                     <a name="/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)removeAttributeWithAddressBookId:contactIdentifier:attributeId:completion:"></a>
                     <a name="//apple_ref/swift/Method/removeAttribute(addressBookId:contactIdentifier:attributeId:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)removeAttributeWithAddressBookId:contactIdentifier:attributeId:completion:">removeAttribute(addressBookId:contactIdentifier:attributeId:completion:)</a>
+                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)removeAttributeWithAddressBookId:contactIdentifier:attributeId:completion:">removeAttribute(addressBookId:<wbr>contactIdentifier:<wbr>attributeId:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1231,7 +1234,7 @@ if upcoming search results will be needed.</p>
                     <code>
                     <a name="/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)retrieveAddressBookListWithAddressBookId:completion:"></a>
                     <a name="//apple_ref/swift/Method/retrieveAddressBookList(addressBookId:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)retrieveAddressBookListWithAddressBookId:completion:">retrieveAddressBookList(addressBookId:completion:)</a>
+                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)retrieveAddressBookListWithAddressBookId:completion:">retrieveAddressBookList(addressBookId:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1283,7 +1286,7 @@ if upcoming search results will be needed.</p>
                     <code>
                     <a name="/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)addAddressBookListWithAddressBookId:addressbookList:completion:"></a>
                     <a name="//apple_ref/swift/Method/addAddressBookList(addressBookId:addressbookList:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)addAddressBookListWithAddressBookId:addressbookList:completion:">addAddressBookList(addressBookId:addressbookList:completion:)</a>
+                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)addAddressBookListWithAddressBookId:addressbookList:completion:">addAddressBookList(addressBookId:<wbr>addressbookList:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1359,7 +1362,7 @@ if upcoming search results will be needed.</p>
                     <code>
                     <a name="/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)updateAddressBookListWithAddressBookId:oldListId:addressbookList:completion:"></a>
                     <a name="//apple_ref/swift/Method/updateAddressBookList(addressBookId:oldListId:addressbookList:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)updateAddressBookListWithAddressBookId:oldListId:addressbookList:completion:">updateAddressBookList(addressBookId:oldListId:addressbookList:completion:)</a>
+                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)updateAddressBookListWithAddressBookId:oldListId:addressbookList:completion:">updateAddressBookList(addressBookId:<wbr>oldListId:<wbr>addressbookList:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1447,7 +1450,7 @@ if upcoming search results will be needed.</p>
                     <code>
                     <a name="/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)deleteAddressBookListWithAddressBookId:listId:completion:"></a>
                     <a name="//apple_ref/swift/Method/deleteAddressBookList(addressBookId:listId:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)deleteAddressBookListWithAddressBookId:listId:completion:">deleteAddressBookList(addressBookId:listId:completion:)</a>
+                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)deleteAddressBookListWithAddressBookId:listId:completion:">deleteAddressBookList(addressBookId:<wbr>listId:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1523,7 +1526,7 @@ if upcoming search results will be needed.</p>
                     <code>
                     <a name="/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)getAddressBookListWithAddressBookId:listId:completion:"></a>
                     <a name="//apple_ref/swift/Method/getAddressBookList(addressBookId:listId:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)getAddressBookListWithAddressBookId:listId:completion:">getAddressBookList(addressBookId:listId:completion:)</a>
+                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)getAddressBookListWithAddressBookId:listId:completion:">getAddressBookList(addressBookId:<wbr>listId:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1599,7 +1602,7 @@ if upcoming search results will be needed.</p>
                     <code>
                     <a name="/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)searchWith:completion:"></a>
                     <a name="//apple_ref/swift/Method/search(with:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)searchWith:completion:">search(with:completion:)</a>
+                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)searchWith:completion:">search(with:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1707,7 +1710,7 @@ if upcoming search results will be needed.</p>
                     <code>
                     <a name="/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)subscribeWithChannelID:completion:"></a>
                     <a name="//apple_ref/swift/Method/subscribe(channelID:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)subscribeWithChannelID:completion:">subscribe(channelID:completion:)</a>
+                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)subscribeWithChannelID:completion:">subscribe(channelID:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1734,7 +1737,7 @@ if upcoming search results will be needed.</p>
                     <code>
                     <a name="/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)unsubscribeWithChannelID:completion:"></a>
                     <a name="//apple_ref/swift/Method/unsubscribe(channelID:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)unsubscribeWithChannelID:completion:">unsubscribe(channelID:completion:)</a>
+                    <a class="token" href="#/c:@M@CPAddressBookModule@objc(cs)CPAddressBookService(im)unsubscribeWithChannelID:completion:">unsubscribe(channelID:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1792,8 +1795,8 @@ if upcoming search results will be needed.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-08-28)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-10-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
