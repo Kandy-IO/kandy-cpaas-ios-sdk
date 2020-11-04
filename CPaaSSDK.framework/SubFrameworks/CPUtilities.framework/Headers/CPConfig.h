@@ -89,7 +89,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * - Since: 1.0.0
  */
-@property (nonatomic, strong) NSData* webSocketCertificate;
+@property (nonatomic, strong) NSData* _Nullable webSocketCertificate;
 
 /**
  * Indicates to use secure connection such as https, wss etc.
@@ -158,7 +158,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * - Since: 1.0.0
  */
-@property(nonatomic, strong) NSData *serverCertificate;
+@property(nonatomic, strong) NSData* _Nullable serverCertificate;
 
 /**
  * Sets the audio codec configurations. If parameter is null WebRTC defaults will be use.

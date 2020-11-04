@@ -383,3 +383,228 @@ Please refer to [Anonymous Calls](/developer/quickstarts/rest-api/voice-and-vide
 ### Creating an Anonymous Call
 
 A server-side component is suggested to be used for logging in to $KANDY$ along with Mobile SDK for an anonymous call scenario. Once the application establishes the login, application should be able create outgoing calls using the Call Service on $KANDY$ Mobile SDK. Creating an anonymous outgoing call follows the same procedure as if it is a regular outgoing call. The main difference is an anonymous user cannot receive an incoming call, so application will not receive and incoming call notification on $KANDY$ Mobile SDK.
+
+## Advanced Usage of Call Service
+
+### Retrieve Audio and Video RTP/RTCP Statistics
+
+$KANDY$ can retrieve audio and video RTP/RTCP statistics providing information including:
+
+* Number of packets lost
+* Number of packets sent/received
+* Number of bytes sent/received
+* Call Jitter received
+* RTT (round trip delay)
+* Local/Remote network addresses and ports
+* Audio/Video codec names
+
+**Note:** $KANDY$ does not keep the statistics after the call ends.It is application developer's responsibility to keep them. Since the statistics could be too long to log due to character limitation, it is adviced to write them to a file instead of logging for further usage. You can use the following class to see how to write it to a file :
+
+<!-- tabs:start -->
+
+#### ** Objective-C Code **
+
+```objectivec
+#import "DemoRTPLogger.h"
+
+void RTPLog(NSString *format, ...){
+    va_list args;
+    va_start(args, format);
+    NSString *logString = [[NSString alloc] initWithFormat:format arguments:args];
+    [[DemoRTPLogger getInstance] writeLogToFile:logString];
+    va_end(args);
+}
+
+@interface DemoRTPLogger(){
+    
+    NSFileHandle *myHandle;
+}
+
+@end
+
+@implementation DemoRTPLogger
+
+__strong static id _instance = nil;
+
+
++(instancetype)getInstance{
+    @synchronized (self) {
+        if(!_instance){
+            _instance = [[self alloc]init];
+        };
+    }
+    return _instance;
+}
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        [self initLogFile];
+    }
+    return self;
+}
+
+- (void) initLogFile{
+    if(myHandle) [myHandle closeFile];
+    
+    if(![[NSFileManager defaultManager] fileExistsAtPath:CONSOLE_RTP_LOG_PATH])
+        [@"" writeToFile:CONSOLE_RTP_LOG_PATH atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    
+    NSLog(@"Log File Path: %@", CONSOLE_RTP_LOG_PATH);
+    myHandle = [NSFileHandle fileHandleForUpdatingAtPath:CONSOLE_RTP_LOG_PATH];
+}
+
+- (void) writeLogToFile:(NSString *)log {
+    
+    NSString *dateString = [NSDateFormatter localizedStringFromDate:[NSDate date]
+                                                          dateStyle:NSDateFormatterShortStyle
+                                                          timeStyle:NSDateFormatterMediumStyle];
+    [myHandle seekToEndOfFile];
+    [myHandle writeData:[[dateString stringByAppendingFormat:@": %@\n", log] dataUsingEncoding:NSUTF8StringEncoding]];
+}
+-(void)clearLogs{
+    [@"" writeToFile:CONSOLE_RTP_LOG_PATH atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    [self initLogFile];
+    RTPLog(@"RTP Logs Cleaned");
+}
+-(void)closeFile{
+    [myHandle closeFile];
+}
+@end
+```
+
+#### ** Swift Code **
+
+```swift
+import Foundation
+
+class CallStatistics: NSObject {
+    
+    public static let sharedInstance = CallStatistics()
+    private var handler: FileHandle?
+    
+    override init() {
+        super.init()
+        initLogFile()
+    }
+    
+    private func initLogFile() {
+        let destPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let fullDestPath = NSURL(fileURLWithPath: destPath).appendingPathComponent("CallStatistics.log")
+        let fullDestPathString = fullDestPath!.path
+        if !FileManager.default.fileExists(atPath: fullDestPathString) {
+            do {
+                try "".write(toFile: fullDestPathString, atomically: true, encoding: String.Encoding.utf8)
+            } catch {
+                NSLog("Can't write to file to device directory - Error: \(error.localizedDescription)")
+            }
+        }
+        handler = FileHandle.init(forUpdatingAtPath: fullDestPathString)
+    }
+    
+    fileprivate func writeLogToFile(file: String, function: String, line: Int, queue: String, _ format: String, _ args: CVarArg...) {
+        let dateStr = DateFormatter.localizedString(from: Date(), dateStyle: .short, timeStyle: .medium)
+        let fileNameArr = file.components(separatedBy: "/")
+        let onlyTheFileName = fileNameArr.last ?? ""
+        let logStr = String(format: "[\(dateStr)]: [FUNCTION: \(function) AT \(onlyTheFileName).\(line) QUEUE: \(queue)] \(format) \n", args)
+        handler?.seekToEndOfFile()
+        if let logData = logStr.data(using: String.Encoding.utf8) {
+            handler?.write(logData)
+        }
+        let willLogged = String(format: format, args)
+        print(willLogged)
+    }
+    
+    func createZipFile() -> String {
+        let destPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let fullDestPath = NSURL(fileURLWithPath: destPath).appendingPathComponent("CallStatistics.log")
+        let fullDestPathString = fullDestPath!.path
+        let zipDest = fullDestPathString.appending(".zip")
+        SSZipArchive.createZipFile(atPath: zipDest, withFilesAtPaths: [fullDestPathString])
+        return zipDest
+    }
+    
+    func clearLogs() {
+        let destPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let fullDestPath = NSURL(fileURLWithPath: destPath).appendingPathComponent("CallStatistics.log")
+        let fullDestPathString = fullDestPath!.path
+        do {
+            try "".write(toFile: fullDestPathString, atomically: true, encoding: String.Encoding.utf8)
+        } catch {
+            NSLog("Can't write to file to device directory - Error: \(error.localizedDescription)")
+        }
+        initLogFile()
+        logWith("RTP Logs Cleaned")
+    }
+    func closeFile(){
+        handler?.closeFile()
+    }
+}
+
+func logRTP(_ format: String, file: String = #file, function: String = #function, line: Int = #line, args: CVarArg...) {
+    let queueName = OperationQueue.current?.name ?? ""
+    CallStatistics.sharedInstance.writeLogToFile(file: file, function: function, line: line, queue: queueName, format, args)
+    
+}
+```
+<!-- tabs:end -->
+
+
+Use the "getRTPStatistics" method in an Call object to retrieve a string in the JSON format containing RTP/RTCP statistics. The JSON-String includes objects of the RTCStatsReport class—a class which stores statistic details. This class has the following public variables:
+
+
+ * timestamp -- Indicates the time at which the sample was taken for this statistics object.
+ * type      -- Indicates the type of statistics the object contains. Types are listed below.
+ * id        -- Uniquely identifies the object.
+
+
+ ```javascript
+type {
+    "codec",            
+    "inbound-rtp",
+    "outbound-rtp",
+    "remote-inbound-rtp",
+    "remote-outbound-rtp",
+    "media-source",
+    "csrc",
+    "peer-connection",
+    "data-channel",
+    "stream",
+    "track",
+    "transceiver",
+    "sender",
+    "receiver",
+    "transport",
+    "sctp-transport",
+    "candidate-pair",
+    "local-candidate",
+    "remote-candidate",
+    "certificate",
+    "ice-server"
+}
+```
+
+#### Example: Retrieving statistics
+
+<!-- tabs:start -->
+
+#### ** Objective-C Code **
+
+```objectivec
+  [call getRTPStatistics:^(NSString * _Nullable statistics) {
+                if([call getCallState].type != CALLSTATES_ENDED && call != nil){
+                    RTPLog(statistics);
+            }
+                }];
+```
+
+#### ** Swift Code **
+
+```swift
+    call.getRTPStatistics { (stat) in
+            if(call.getCallState().type != .ended && (call != nil)) {
+                logRTP(stat!)
+            }
+        }
+```
+<!-- tabs:end -->

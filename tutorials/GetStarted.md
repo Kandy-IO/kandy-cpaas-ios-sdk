@@ -13,7 +13,7 @@ This section contains the required steps for beginning your mobile application d
 
 ## Compatible XCode and Swift Versions
 
-The applications which uses $KANDY$ MobileSDK can be built with the XCode 12.x+ and Swift 5.2.+ versions.
+The applications which uses $KANDY$ MobileSDK can be built with the XCode 11.x+ and Swift 5.1.2+ versions.
 
 ## Creating the iOS project
 
@@ -33,7 +33,7 @@ The applications which uses $KANDY$ MobileSDK can be built with the XCode 12.x+ 
 ...
 
 target 'YOUR_TARGET_NAME' do
-    pod 'KandyCPaaSMobileSDK', '~> $SDK_VERSION$ '
+    pod 'KandyCPaaSMobileSDK', '~> $SDK_VERSION$'
 end
 
 post_install do |installer|
