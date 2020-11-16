@@ -33,7 +33,7 @@ The applications which uses $KANDY$ MobileSDK can be built with the XCode 11.x+ 
 ...
 
 target 'YOUR_TARGET_NAME' do
-    pod 'KandyCPaaSMobileSDK', '~> $SDK_VERSION$'
+    pod 'KandyCPaaSMobileSDK', '~> $SDK_VERSION$ '
 end
 
 post_install do |installer|
