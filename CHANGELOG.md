@@ -5,6 +5,15 @@ CPaaS iOS SDK change log.
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
+## 2.13.0 - 2020-12-02
+
+### Removed
+- `useSecureConnection`, `domain`, `earlyMediaEnabled` and `DTLS` parameters removed from Configuration. `KAE-862`
+- `CPSMSService.uriFormat` removed `KAE-761`
+
+### Changed
+- `replaceCodecSet` parameter renamed as `codecPayloadTypeSet`. `KAE-862`
+
 ## 2.12.0 - 2020-11-04
 
 ## 2.11.0 - 2020-10-05

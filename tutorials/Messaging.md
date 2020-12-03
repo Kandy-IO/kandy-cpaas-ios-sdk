@@ -51,7 +51,6 @@ func initProvider() {
 - (void) initProvider {
     // Initiating configuration and assigning required parameters
     CPConfig* configuration = [CPConfig new];
-    configuration.useSecureConnection = YES;
     configuration.restServerUrl = @"cpaas.rbbn.com";
 
     // select the services that will be used by the application. Specify .sms for SMS service

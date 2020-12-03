@@ -16,7 +16,7 @@
 ...
 
 target 'YOUR_TARGET_NAME' do
-    pod 'KandyCPaaSMobileSDK', '~> 2.12.0'
+    pod 'KandyCPaaSMobileSDK', '~> 2.13.0'
 end
 
 post_install do |installer|

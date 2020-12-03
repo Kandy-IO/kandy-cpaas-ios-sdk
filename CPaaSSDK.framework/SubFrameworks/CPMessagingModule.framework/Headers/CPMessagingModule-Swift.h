@@ -907,7 +907,6 @@ SWIFT_PROTOCOL("_TtP17CPMessagingModule13CPSmsDelegate_")
 - (void)outboundMessageSentWithMessage:(CPOutboundMessage * _Nonnull)message;
 @end
 
-enum CPUriFormat : NSInteger;
 
 /// This class is used to manage SMS services such as sending and receiving SMS messages.
 SWIFT_CLASS("_TtC17CPMessagingModule12CPSmsService")
@@ -916,8 +915,6 @@ SWIFT_CLASS("_TtC17CPMessagingModule12CPSmsService")
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull localAddressList;
 /// An application that needs notifications should implement an SmsDelegate compliant class and set this member as an instance of that class.
 @property (nonatomic, strong) id <CPSmsDelegate> _Nullable delegate;
-/// This specifies the URI format the application would like to use for destination addresses.
-@property (nonatomic) enum CPUriFormat uriFormat;
 /// Public interface to create an SMS conversation object derived from the Conversation base class.
 /// \param fromAddress The address from which this message should originate.
 ///
@@ -983,16 +980,6 @@ SWIFT_CLASS("_TtC17CPMessagingModule15CPThumbnailPart")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
-/// Format style of the URI that will be used for remote participant when sending a message.
-typedef SWIFT_ENUM(NSInteger, CPUriFormat, open) {
-/// None
-  CPUriFormatNone = 0,
-/// SIP
-  CPUriFormatSip = 1,
-/// Telephone
-  CPUriFormatTel = 2,
-};
 
 
 SWIFT_CLASS("_TtC17CPMessagingModule13FetchCriteria")
@@ -1937,7 +1924,6 @@ SWIFT_PROTOCOL("_TtP17CPMessagingModule13CPSmsDelegate_")
 - (void)outboundMessageSentWithMessage:(CPOutboundMessage * _Nonnull)message;
 @end
 
-enum CPUriFormat : NSInteger;
 
 /// This class is used to manage SMS services such as sending and receiving SMS messages.
 SWIFT_CLASS("_TtC17CPMessagingModule12CPSmsService")
@@ -1946,8 +1932,6 @@ SWIFT_CLASS("_TtC17CPMessagingModule12CPSmsService")
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull localAddressList;
 /// An application that needs notifications should implement an SmsDelegate compliant class and set this member as an instance of that class.
 @property (nonatomic, strong) id <CPSmsDelegate> _Nullable delegate;
-/// This specifies the URI format the application would like to use for destination addresses.
-@property (nonatomic) enum CPUriFormat uriFormat;
 /// Public interface to create an SMS conversation object derived from the Conversation base class.
 /// \param fromAddress The address from which this message should originate.
 ///
@@ -2013,16 +1997,6 @@ SWIFT_CLASS("_TtC17CPMessagingModule15CPThumbnailPart")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
-/// Format style of the URI that will be used for remote participant when sending a message.
-typedef SWIFT_ENUM(NSInteger, CPUriFormat, open) {
-/// None
-  CPUriFormatNone = 0,
-/// SIP
-  CPUriFormatSip = 1,
-/// Telephone
-  CPUriFormatTel = 2,
-};
 
 
 SWIFT_CLASS("_TtC17CPMessagingModule13FetchCriteria")
@@ -2969,7 +2943,6 @@ SWIFT_PROTOCOL("_TtP17CPMessagingModule13CPSmsDelegate_")
 - (void)outboundMessageSentWithMessage:(CPOutboundMessage * _Nonnull)message;
 @end
 
-enum CPUriFormat : NSInteger;
 
 /// This class is used to manage SMS services such as sending and receiving SMS messages.
 SWIFT_CLASS("_TtC17CPMessagingModule12CPSmsService")
@@ -2978,8 +2951,6 @@ SWIFT_CLASS("_TtC17CPMessagingModule12CPSmsService")
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull localAddressList;
 /// An application that needs notifications should implement an SmsDelegate compliant class and set this member as an instance of that class.
 @property (nonatomic, strong) id <CPSmsDelegate> _Nullable delegate;
-/// This specifies the URI format the application would like to use for destination addresses.
-@property (nonatomic) enum CPUriFormat uriFormat;
 /// Public interface to create an SMS conversation object derived from the Conversation base class.
 /// \param fromAddress The address from which this message should originate.
 ///
@@ -3045,16 +3016,6 @@ SWIFT_CLASS("_TtC17CPMessagingModule15CPThumbnailPart")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
-/// Format style of the URI that will be used for remote participant when sending a message.
-typedef SWIFT_ENUM(NSInteger, CPUriFormat, open) {
-/// None
-  CPUriFormatNone = 0,
-/// SIP
-  CPUriFormatSip = 1,
-/// Telephone
-  CPUriFormatTel = 2,
-};
 
 
 SWIFT_CLASS("_TtC17CPMessagingModule13FetchCriteria")
@@ -3999,7 +3960,6 @@ SWIFT_PROTOCOL("_TtP17CPMessagingModule13CPSmsDelegate_")
 - (void)outboundMessageSentWithMessage:(CPOutboundMessage * _Nonnull)message;
 @end
 
-enum CPUriFormat : NSInteger;
 
 /// This class is used to manage SMS services such as sending and receiving SMS messages.
 SWIFT_CLASS("_TtC17CPMessagingModule12CPSmsService")
@@ -4008,8 +3968,6 @@ SWIFT_CLASS("_TtC17CPMessagingModule12CPSmsService")
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull localAddressList;
 /// An application that needs notifications should implement an SmsDelegate compliant class and set this member as an instance of that class.
 @property (nonatomic, strong) id <CPSmsDelegate> _Nullable delegate;
-/// This specifies the URI format the application would like to use for destination addresses.
-@property (nonatomic) enum CPUriFormat uriFormat;
 /// Public interface to create an SMS conversation object derived from the Conversation base class.
 /// \param fromAddress The address from which this message should originate.
 ///
@@ -4075,16 +4033,6 @@ SWIFT_CLASS("_TtC17CPMessagingModule15CPThumbnailPart")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
-/// Format style of the URI that will be used for remote participant when sending a message.
-typedef SWIFT_ENUM(NSInteger, CPUriFormat, open) {
-/// None
-  CPUriFormatNone = 0,
-/// SIP
-  CPUriFormatSip = 1,
-/// Telephone
-  CPUriFormatTel = 2,
-};
 
 
 SWIFT_CLASS("_TtC17CPMessagingModule13FetchCriteria")

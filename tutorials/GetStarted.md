@@ -128,7 +128,6 @@ import CPaaSSDK
 let configuration = CPConfig.sharedInstance()
 configuration.restServerUrl = "$KANDYFQDN$"
 configuration.restServerPort = "443"
-configuration.useSecureConnection = true
 ```
 
 #### ** Objective-C Code **
@@ -139,7 +138,6 @@ configuration.useSecureConnection = true
 CPConfig *configuration = [CPConfig sharedInstance];
 configuration.restServerUrl = @"$KANDYFQDN$";
 configuration.restServerPort = @"443";
-configuration.useSecureConnection = YES;
 ```
 
 <!-- tabs:end -->

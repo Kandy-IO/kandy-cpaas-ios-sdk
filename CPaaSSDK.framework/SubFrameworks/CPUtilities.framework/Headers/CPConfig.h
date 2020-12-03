@@ -34,13 +34,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CPConfig : NSObject
 
 /**
- * Domain of SIP URI used in call or SMS requests.
- *
- * - Since: 1.0.0
- */
-@property (nonatomic, strong) NSString *domain;
-
-/**
  * Device token which is used when receiving remote notifications.
  * - Since: 2.3.0
  */
@@ -61,7 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Server Port information of the baseUrl used for REST request.
- *
+ * Default value is 443.
  * - Since: 1.0.0
  */
 @property (nonatomic, strong) NSString *restServerPort;
@@ -75,6 +68,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Port information used in web socket connection creation.
+ * Default value is 443.
  * - Returns: String
  * - Since: 1.0.0
  */
@@ -91,13 +85,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong) NSData* _Nullable webSocketCertificate;
 
-/**
- * Indicates to use secure connection such as https, wss etc.
- * Default value is TRUE (meaning use HTTPS and WSS)
- *
- * - Since: 1.0.0
- */
-@property (nonatomic) BOOL useSecureConnection;
 
 /**
  * Sets the preferred set of codecs to use in audio and video calls.
@@ -107,11 +94,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) CPCodecSet *preferredCodecSet;
 
 /**
- * Sets ReplaceCodecSet to modify payload numbers of audio and video codecs
+ * Sets codecPayloadTypeSet to modify payload numbers of audio and video codecs
  *
  * - Since: 1.4.0
  */
-@property (nonatomic, strong) NSArray<CPCodecToReplace *> * _Nullable replaceCodecSet;
+@property (nonatomic, strong) NSArray<CPCodecToReplace *> * _Nullable codecPayloadTypeSet;
 
 /**
  * Sets the ICE option as ICE_VANILLA or ICE_TRICKLE.
@@ -142,7 +129,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Sets initial video resolution for video.
  * Value should be one of the AVCaptureSessionPreset strings.
  *
- * If camera does not support the specified value or videoResolution value is to nil medium resolution will be used.
+ * If camera does not support the specified value or videoResolution value is to nil 720p resolution will be used as default.
  * @see AVCaptureSessionPreset
  *
  * - Since: 1.0.0
@@ -173,6 +160,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Video orientation can be changed according to application status bar orientation
  * or device orientation. Camera can be bind to this notifications or not to be bind
  * anything.
+ * Default value is device orientation.
  *
  * - Since: 1.0.0
  */
@@ -181,6 +169,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Sets the default camera position mode.
  * @see AVCaptureDevicePosition
+ * Default value is front camera.
  *
  * - Since: 1.0.0
  */
@@ -197,7 +186,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Sets audio session configuration.
  * @see AVAudioSession
- *
+ * Default value is not set, so it will use default value of WebRTC.
  * - Since: 1.0.0
  */
 @property (nonatomic, strong) CPAudioSessionConfiguration *audioSessionConfiguration;
@@ -209,24 +198,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property(strong, nonatomic, readonly) CPLogManager *logManager;
 
-/**
- * Sets the DTLS enabled or disabled.
- * Default value is NO.
- *
- * - Since: 1.0.0
- */
-@property (nonatomic)BOOL dtlsEnabled;
-
-/**
- * Sets the early media feature enabled or disabled.
- * Default value is YES.
- *
- * - Since: 1.0.0
- */
-@property (nonatomic)BOOL earlyMediaEnabled;
 
 /**
  * Sending audit message frequency (seconds).
+ * Default value is 30 seconds.
  *
  * - Since: 1.0.0
  */
@@ -235,6 +210,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Forces to disable media transfer when media on hold is active. It helps to fix some
  * MOH issues on PSTN calls
+ * Default value is NO.
  *
  * @since 1.0.2
  */
@@ -242,6 +218,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Bandwidth limit of receiving media
+ * If not set, WebRTC values are used.
  *
  * @since 1.7.0
  */

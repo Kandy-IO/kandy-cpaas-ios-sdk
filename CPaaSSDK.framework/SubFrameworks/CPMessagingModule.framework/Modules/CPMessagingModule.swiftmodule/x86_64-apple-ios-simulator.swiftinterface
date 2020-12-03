@@ -209,7 +209,6 @@ public typealias DownloadCompletionBlock = (CPUtilities.CPError?, Foundation.URL
     get
   }
   @objc public var delegate: CPMessagingModule.CPSmsDelegate?
-  @objc public var uriFormat: CPMessagingModule.CPUriFormat
   public init(userInfo: CPUtilities.CPUserInfo, info: CPUtilities.CPServiceInfo)
   @objc public func createConversation(fromAddress: Swift.String, withParticipant: Swift.String) -> CPMessagingModule.CPConversation?
   @objc override public func fetchConversations(withFetchCriteria: CPMessagingModule.FetchCriteria, completion: @escaping CPMessagingModule.FetchBlock)
@@ -386,18 +385,5 @@ public typealias SendCompletionBlock = (CPUtilities.CPError?, CPMessagingModule.
   @objc override dynamic public init()
   @objc deinit
 }
-@objc public enum CPUriFormat : Swift.Int {
-  case none = 0
-  case sip
-  case tel
-  public typealias RawValue = Swift.Int
-  public init?(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
-    get
-  }
-}
 extension CPMessagingModule.CPChatParticipantStatus : Swift.Equatable {}
 extension CPMessagingModule.CPChatParticipantStatus : Swift.Hashable {}
-extension CPMessagingModule.CPUriFormat : Swift.Equatable {}
-extension CPMessagingModule.CPUriFormat : Swift.Hashable {}
-extension CPMessagingModule.CPUriFormat : Swift.RawRepresentable {}

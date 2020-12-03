@@ -586,6 +586,8 @@ type {
 
 #### Example: Retrieving statistics
 
+It is recommended to call this method every 10 seconds as long as call continues.
+
 <!-- tabs:start -->
 
 #### ** Objective-C Code **

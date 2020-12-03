@@ -48,7 +48,6 @@ import CPaaSSDK
 
 let configuration = CPConfig.sharedInstance()
 configuration.restServerUrl = "$KANDYFQDN$"
-configuration.useSecureConnection = true
 
 // Setting ICE Servers
 let iceServers: CPICEServers = CPICEServers()
@@ -66,7 +65,6 @@ configuration.iceServers = iceServers
 
 CPConfig *configuration = [CPConfig sharedInstance];
 configuration.restServerUrl = @"$KANDYFQDN$";
-configuration.useSecureConnection = YES;
 
 // Setting ICE Servers
 CPICEServers *iceServers = [[CPICEServers alloc] init];

@@ -17,7 +17,7 @@
     <a title="CPConfig Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CPaaS Mobile iOS SDK 2.12.0 Docs</a></p>
+        <p><a href="../index.html">CPaaS Mobile iOS SDK 2.13.0 Docs</a></p>
         <p class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -245,9 +245,6 @@
                 <a href="../Enums/CPPresenceActivities.html">CPPresenceActivities</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/CPUriFormat.html">CPUriFormat</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Enums/CPVideoCodecTypes.html">CPVideoCodecTypes</a>
               </li>
             </ul>
@@ -366,43 +363,6 @@
           <section class="section task-group-section">
             <div class="task-group">
               <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)CPConfig(py)domain"></a>
-                    <a name="//apple_ref/swift/Property/domain" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)CPConfig(py)domain">domain</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Domain of SIP URI used in call or SMS requests.</p>
-<div class="aside aside-since">
-    <p class="aside-title">Since</p>
-    1.0.0
-
-</div>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">domain</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">domain</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -527,7 +487,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Server Port information of the baseUrl used for REST request.</p>
+                        <p>Server Port information of the baseUrl used for REST request.
+Default value is 443.</p>
 <div class="aside aside-since">
     <p class="aside-title">Since</p>
     1.0.0
@@ -605,7 +566,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Port information used in web socket connection creation.</p>
+                        <p>Port information used in web socket connection creation.
+Default value is 443.</p>
 <div class="aside aside-since">
     <p class="aside-title">Since</p>
     1.0.0
@@ -676,44 +638,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)CPConfig(py)useSecureConnection"></a>
-                    <a name="//apple_ref/swift/Property/useSecureConnection" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)CPConfig(py)useSecureConnection">useSecureConnection</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Indicates to use secure connection such as https, wss etc.
- Default value is TRUE (meaning use HTTPS and WSS)</p>
-<div class="aside aside-since">
-    <p class="aside-title">Since</p>
-    1.0.0
-
-</div>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">useSecureConnection</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">useSecureConnection</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/c:objc(cs)CPConfig(py)preferredCodecSet"></a>
                     <a name="//apple_ref/swift/Property/preferredCodecSet" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)CPConfig(py)preferredCodecSet">preferredCodecSet</a>
@@ -751,9 +675,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)CPConfig(py)replaceCodecSet"></a>
-                    <a name="//apple_ref/swift/Property/replaceCodecSet" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)CPConfig(py)replaceCodecSet">replaceCodecSet</a>
+                    <a name="/c:objc(cs)CPConfig(py)codecPayloadTypeSet"></a>
+                    <a name="//apple_ref/swift/Property/codecPayloadTypeSet" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)CPConfig(py)codecPayloadTypeSet">codecPayloadTypeSet</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -761,7 +685,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Sets ReplaceCodecSet to modify payload numbers of audio and video codecs</p>
+                        <p>Sets codecPayloadTypeSet to modify payload numbers of audio and video codecs</p>
 <div class="aside aside-since">
     <p class="aside-title">Since</p>
     1.4.0
@@ -773,12 +697,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/CPCodecToReplace.html">CPCodecToReplace</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">replaceCodecSet</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/CPCodecToReplace.html">CPCodecToReplace</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">codecPayloadTypeSet</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">replaceCodecSet</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/CPCodecToReplace.html">CPCodecToReplace</a></span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">codecPayloadTypeSet</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/CPCodecToReplace.html">CPCodecToReplace</a></span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -917,7 +841,7 @@
                         <p>Sets initial video resolution for video.
  Value should be one of the AVCaptureSessionPreset strings.</p>
 
-<p>If camera does not support the specified value or videoResolution value is to nil medium resolution will be used.</p>
+<p>If camera does not support the specified value or videoResolution value is to nil 720p resolution will be used as default.</p>
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p>AVCaptureSessionPreset</p>
@@ -1039,7 +963,8 @@
                         <p>Sets the camera orientation type of video capturer.
  Video orientation can be changed according to application status bar orientation
  or device orientation. Camera can be bind to this notifications or not to be bind
- anything.</p>
+ anything.
+ Default value is device orientation.</p>
 <div class="aside aside-since">
     <p class="aside-title">Since</p>
     1.0.0
@@ -1079,7 +1004,8 @@
                         <p>Sets the default camera position mode.</p>
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    <p>AVCaptureDevicePosition</p>
+    <p>AVCaptureDevicePosition
+Default value is front camera.</p>
 
 </div><div class="aside aside-since">
     <p class="aside-title">Since</p>
@@ -1157,11 +1083,12 @@
                         <p>Sets audio session configuration.</p>
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    <p>AVAudioSession</p>
+    AVAudioSession
+Default value is not set, so it will use default value of WebRTC.
 
 </div><div class="aside aside-since">
     <p class="aside-title">Since</p>
-    <p>1.0.0</p>
+    1.0.0
 
 </div>
 
@@ -1222,82 +1149,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)CPConfig(py)dtlsEnabled"></a>
-                    <a name="//apple_ref/swift/Property/dtlsEnabled" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)CPConfig(py)dtlsEnabled">dtlsEnabled</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sets the DTLS enabled or disabled.
- Default value is NO.</p>
-<div class="aside aside-since">
-    <p class="aside-title">Since</p>
-    1.0.0
-
-</div>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">dtlsEnabled</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dtlsEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)CPConfig(py)earlyMediaEnabled"></a>
-                    <a name="//apple_ref/swift/Property/earlyMediaEnabled" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)CPConfig(py)earlyMediaEnabled">earlyMediaEnabled</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sets the early media feature enabled or disabled.
- Default value is YES.</p>
-<div class="aside aside-since">
-    <p class="aside-title">Since</p>
-    1.0.0
-
-</div>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">earlyMediaEnabled</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">earlyMediaEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/c:objc(cs)CPConfig(py)auditFrequency"></a>
                     <a name="//apple_ref/swift/Property/auditFrequency" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)CPConfig(py)auditFrequency">auditFrequency</a>
@@ -1308,7 +1159,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Sending audit message frequency (seconds).</p>
+                        <p>Sending audit message frequency (seconds).
+ Default value is 30 seconds.</p>
 <div class="aside aside-since">
     <p class="aside-title">Since</p>
     1.0.0
@@ -1346,7 +1198,8 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Forces to disable media transfer when media on hold is active. It helps to fix some
- MOH issues on PSTN calls</p>
+ MOH issues on PSTN calls
+ Default value is NO.</p>
 
 <p>@since 1.0.2</p>
 
@@ -1380,7 +1233,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Bandwidth limit of receiving media</p>
+                        <p>Bandwidth limit of receiving media
+ If not set, WebRTC values are used.</p>
 
 <p>@since 1.7.0</p>
 
@@ -1447,7 +1301,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-11-04)</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-12-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
