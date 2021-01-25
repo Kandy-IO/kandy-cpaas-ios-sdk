@@ -54,6 +54,14 @@ Compatible XCode and Swift Versions :
 
 * Swift 5.2.x+
 
+Known Issues in XCode 12.3 :
+- When building your project you will get these errors 
+</br>`Building for iOS Simulator, but the linked and embedded framework ‘CPaaSSDK.framework’ was built for iOS + iOS Simulator.` 
+</br>`Building for iOS Simulator, but the linked and embedded framework ‘WebRTC.framework’ was built for iOS + iOS Simulator.`
+
+Workaround :
+- Set `Validate Workspace` to `YES` in the Build Settings tab to avoid these errors
+
 Tested on :
 
 * iPhone 5S, 5C, 6S, 7, 7+, 8, X, iPad mini, iPad 4, and iPad Air
