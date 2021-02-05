@@ -17,7 +17,7 @@
     <a title="CPCallService Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CPaaS Mobile iOS SDK 2.14.0 Docs</a></p>
+        <p><a href="../index.html">CPaaS Mobile iOS SDK 2.15.0 Docs</a></p>
         <p class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -243,6 +243,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/CPPresenceActivities.html">CPPresenceActivities</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPRingingFeedbackOptions.html">CPRingingFeedbackOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPScalingStyles.html">CPScalingStyles</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/CPVideoCodecTypes.html">CPVideoCodecTypes</a>
@@ -811,15 +817,74 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)CPCallService(im)rotateCameraOrientationToPosition:"></a>
-                    <a name="//apple_ref/swift/Method/-rotateCameraOrientationToPosition:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)CPCallService(im)rotateCameraOrientationToPosition:">-rotateCameraOrientationToPosition:<wbr></a>
+                    <a name="/c:objc(cs)CPCallService(im)rotateCameraWithOrientation:"></a>
+                    <a name="//apple_ref/swift/Method/-rotateCameraWithOrientation:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)CPCallService(im)rotateCameraWithOrientation:">-rotateCameraWithOrientation:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>@brief Rotates camera to specified orientation.
+Calling this method with parameters UIDeviceOrientationUnknown, UIDeviceOrientationFaceUpand UIDeviceOrientationFaceDown will not cause any changes on the camera.</p>
+
+<p>@since 2.14.0</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">rotateCameraWithOrientation</span><span class="p">:(</span><span class="n">id</span><span class="p">)</span><span class="nv">orientation</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">rotateCamera</span><span class="p">(</span><span class="n">withOrientation</span> <span class="nv">orientation</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>orientation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>UIDeviceOrientation value that will be used for camera orientation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)CPCallService(im)rotateCameraOrientationToPosition:"></a>
+                    <a name="//apple_ref/swift/Method/-rotateCameraOrientationToPosition:" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)CPCallService(im)rotateCameraOrientationToPosition:">-rotateCameraOrientationToPosition:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        <p>Use rotateCameraWithOrientation: instead</p>
+
+                      </div>
                       <div class="abstract">
                         <p>Rotates camera to specified orientation</p>
 <div class="aside aside-since">
@@ -1085,7 +1150,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-12-30)</p>
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2021-02-05)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

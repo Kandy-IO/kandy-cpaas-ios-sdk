@@ -17,7 +17,7 @@
     <a title="CPConfig Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CPaaS Mobile iOS SDK 2.14.0 Docs</a></p>
+        <p><a href="../index.html">CPaaS Mobile iOS SDK 2.15.0 Docs</a></p>
         <p class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -243,6 +243,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/CPPresenceActivities.html">CPPresenceActivities</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPRingingFeedbackOptions.html">CPRingingFeedbackOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CPScalingStyles.html">CPScalingStyles</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/CPVideoCodecTypes.html">CPVideoCodecTypes</a>
@@ -991,6 +997,44 @@ Default value is 443.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)CPConfig(py)scalingStyle"></a>
+                    <a name="//apple_ref/swift/Property/scalingStyle" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)CPConfig(py)scalingStyle">scalingStyle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Scaling style parameter for local and remote video views.
+Default value is SCALINGSTYLE_ASPECT_RATIO_FIT</p>
+<div class="aside aside-since">
+    <p class="aside-title">Since</p>
+    2.15.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Enums/CPScalingStyles.html">CPScalingStyles</a></span> <span class="n">scalingStyle</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">scalingStyle</span><span class="p">:</span> <span class="kt"><a href="../Enums/CPScalingStyles.html">CPScalingStyles</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)CPConfig(py)cameraPosition"></a>
                     <a name="//apple_ref/swift/Property/cameraPosition" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)CPConfig(py)cameraPosition">cameraPosition</a>
@@ -1223,6 +1267,41 @@ Default value is not set, so it will use default value of WebRTC.
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)CPConfig(py)ringingFeedbackOption"></a>
+                    <a name="//apple_ref/swift/Property/ringingFeedbackOption" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)CPConfig(py)ringingFeedbackOption">ringingFeedbackOption</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ringing feedback configuration parameter.
+Default value is CLIENT.</p>
+
+<p>@since 2.15.0</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Enums/CPRingingFeedbackOptions.html">CPRingingFeedbackOptions</a></span> <span class="n">ringingFeedbackOption</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">ringingFeedbackOption</span><span class="p">:</span> <span class="kt"><a href="../Enums/CPRingingFeedbackOptions.html">CPRingingFeedbackOptions</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)CPConfig(py)receiveBandwidthLimit"></a>
                     <a name="//apple_ref/swift/Property/receiveBandwidthLimit" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)CPConfig(py)receiveBandwidthLimit">receiveBandwidthLimit</a>
@@ -1301,7 +1380,7 @@ Default value is not set, so it will use default value of WebRTC.
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2020-12-30)</p>
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external">Ribbon Communications Inc.</a>. All rights reserved. (Last updated: 2021-02-05)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

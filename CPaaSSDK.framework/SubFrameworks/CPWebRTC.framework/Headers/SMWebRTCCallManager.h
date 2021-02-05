@@ -111,9 +111,9 @@
 /**
  * Rotates camera to specified orientation
  *
- * @param AVCaptureVideoOrientation value that will be used for camera orientation
+ * @param UIDeviceOrientation value that will be used for camera orientation
  */
-- (void) rotateCameraOrientationToPosition:(AVCaptureVideoOrientation) orientation;
+-(void) rotateCameraWithOrientation:(UIDeviceOrientation) orientation;
 
 /**
  * Gets and sets useManualAudio property of RTCAudioSession

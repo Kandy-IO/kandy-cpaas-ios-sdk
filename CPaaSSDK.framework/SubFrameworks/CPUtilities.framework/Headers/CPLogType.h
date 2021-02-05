@@ -29,9 +29,6 @@ typedef NS_ENUM(NSInteger, CPLogLevel)
     /// finer-grained informational events
     TRACE NS_SWIFT_NAME(trace),
     
-    /// method start and finishes
-    VERBOSE NS_SWIFT_NAME(verbose),
-    
     /// enables webrtc sensitive logging
     TRACE_WEBRTC NS_SWIFT_NAME(traceWebRTC)
 };

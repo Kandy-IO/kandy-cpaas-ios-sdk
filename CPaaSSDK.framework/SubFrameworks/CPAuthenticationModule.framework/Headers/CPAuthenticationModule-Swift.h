@@ -300,9 +300,9 @@ SWIFT_CLASS("_TtC22CPAuthenticationModule23CPAuthenticationService")
 /// since:
 /// 1.0.0
 typedef SWIFT_ENUM(NSInteger, CPConnectionState, open) {
-/// Connection is not established between Authentication Service
+/// Connection is not established between Authentication Service. Authentication needs to be re-established.
   CPConnectionStateDisconnected = 0,
-/// Successfuly connected to the Authentication Service
+/// Successfuly connected to the Authentication Service.
   CPConnectionStateConnected = 1,
 };
 
@@ -613,9 +613,9 @@ SWIFT_CLASS("_TtC22CPAuthenticationModule23CPAuthenticationService")
 /// since:
 /// 1.0.0
 typedef SWIFT_ENUM(NSInteger, CPConnectionState, open) {
-/// Connection is not established between Authentication Service
+/// Connection is not established between Authentication Service. Authentication needs to be re-established.
   CPConnectionStateDisconnected = 0,
-/// Successfuly connected to the Authentication Service
+/// Successfuly connected to the Authentication Service.
   CPConnectionStateConnected = 1,
 };
 
@@ -928,9 +928,9 @@ SWIFT_CLASS("_TtC22CPAuthenticationModule23CPAuthenticationService")
 /// since:
 /// 1.0.0
 typedef SWIFT_ENUM(NSInteger, CPConnectionState, open) {
-/// Connection is not established between Authentication Service
+/// Connection is not established between Authentication Service. Authentication needs to be re-established.
   CPConnectionStateDisconnected = 0,
-/// Successfuly connected to the Authentication Service
+/// Successfuly connected to the Authentication Service.
   CPConnectionStateConnected = 1,
 };
 
@@ -1241,9 +1241,9 @@ SWIFT_CLASS("_TtC22CPAuthenticationModule23CPAuthenticationService")
 /// since:
 /// 1.0.0
 typedef SWIFT_ENUM(NSInteger, CPConnectionState, open) {
-/// Connection is not established between Authentication Service
+/// Connection is not established between Authentication Service. Authentication needs to be re-established.
   CPConnectionStateDisconnected = 0,
-/// Successfuly connected to the Authentication Service
+/// Successfuly connected to the Authentication Service.
   CPConnectionStateConnected = 1,
 };
 

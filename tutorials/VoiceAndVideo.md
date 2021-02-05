@@ -610,3 +610,84 @@ It is recommended to call this method every 10 seconds as long as call continues
         }
 ```
 <!-- tabs:end -->
+
+
+#### Ringing feedback
+
+If the receiving party prefers the information that it has successfully received the call, it can notify the calling party by the `ringingFeedbackOption` method. 
+
+The default value of this method is CLIENT. If you want to change this value, you must do so before registration.
+
+Possible values of the ringingFeedbackOption configuration parameter are NONE and CLIENT.
+
+* NONE: There will be no ringing feedback.
+
+* CLIENT: Client based ringing feedback.
+
+When ringingFeedbackOption is NONE, CPaaS SDK will not send ringing feedback.
+
+<div class="page-break"></div>
+
+###### Example: Setting ringing feedback feature
+
+<!-- tabs:start -->
+
+#### ** Objective-C Code **
+
+```objectivec
+// There will be no ringing feedback.
+[[CPConfig sharedInstance] setRingingFeedbackOption:NONE];
+// Client based ringing feedback.
+[[CPConfig sharedInstance] setRingingFeedbackOption:CLIENT];
+//User can register now
+```
+
+#### ** Swift Code **
+
+```swift
+// There will be no ringing feedback.
+CPConfig.getInstance().ringingFeedbackOption = .none
+// Client based ringing feedback.
+CPConfig.getInstance().ringingFeedbackOption = .client
+//User can register now
+```
+<!-- tabs:end -->
+
+###### Example: Sending ringing feedback
+
+<!-- tabs:start -->
+
+#### ** Objective-C Code **
+
+```objectivec
+- (void) incomingCall:(id<CPIncomingCallDelegate>)call
+{
+    [call sendRingingFeedback];
+    // Perform actions related to the incoming call
+}
+
+- (void) sendRingingFeedbackSucceed:(id<CPIncomingCallDelegate>)call
+{
+    NSLog(@"Send ringing feedback succeeded");
+}
+- (void) sendRingingFeedbackFailed:(id<CPIncomingCallDelegate>)call withError:(CPError *)error{
+    NSLog(@"Send ringing feedback failed");
+}
+```
+
+#### ** Swift Code **
+
+```swift
+func incomingCall(_ call: CPIncomingCallDelegate) {
+    call.sendRingingFeedback()
+}
+
+func sendRingingFeedbackSucceed(_ call: CPCallDelegate) {
+    NSLog("Send ringing feedback succeeded")
+}
+
+func sendRingingFeedbackFailed(_ call: CPCallDelegate, withError error: CPError) {
+    NSLog("Send ringing feedback failed")
+}
+```
+<!-- tabs:end -->

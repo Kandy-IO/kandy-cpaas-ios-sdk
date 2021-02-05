@@ -14,6 +14,8 @@
 #import "CPCameraOrientationModes.h"
 #import "CPICEOptions.h"
 #import "CPLogType.h"
+#import "CPScalingStyles.h"
+#import "CPRingingFeedbackOptions.h"
 
 @class CPICEServers;
 @class CPCodecSet;
@@ -167,6 +169,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic) CPCameraOrientationMode orientationMode;
 
 /**
+ * Scaling style parameter for local and remote video views.
+ * Default value is SCALINGSTYLE_ASPECT_RATIO_FIT
+ * - Since: 2.15.0
+ */
+@property(nonatomic) CPScalingStyles scalingStyle;
+
+/**
  * Sets the default camera position mode.
  * @see AVCaptureDevicePosition
  * Default value is front camera.
@@ -215,6 +224,14 @@ NS_ASSUME_NONNULL_BEGIN
  * @since 1.0.2
  */
 @property(nonatomic) BOOL  forceDisableMediaOnHold;
+
+/**
+ *Ringing feedback configuration parameter.
+ *Default value is CLIENT.
+ *
+ *@since 2.15.0
+ */
+@property(nonatomic) CPRingingFeedbackOptions ringingFeedbackOption;
 
 /**
  * Bandwidth limit of receiving media

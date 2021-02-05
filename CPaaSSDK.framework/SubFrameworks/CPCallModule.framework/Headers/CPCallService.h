@@ -124,12 +124,22 @@
                               completion:(void (^)(id<CPOutgoingCallDelegate> call, CPError *error))callHandler;
 
 /**
+ @brief Rotates camera to specified orientation.
+ Calling this method with parameters UIDeviceOrientationUnknown, UIDeviceOrientationFaceUpand UIDeviceOrientationFaceDown will not cause any changes on the camera.
+ 
+ @param orientation  UIDeviceOrientation value that will be used for camera orientation.
+ 
+ @since 2.14.0
+ */
+-(void) rotateCameraWithOrientation:(UIDeviceOrientation) orientation;
+
+/**
  *  Rotates camera to specified orientation
  *
  * @param orientation AVCaptureVideoOrientation value that will be used for camera orientation
  * - Since: 1.0.0
  */
--(void) rotateCameraOrientationToPosition:(AVCaptureVideoOrientation) orientation;
+-(void) rotateCameraOrientationToPosition:(AVCaptureVideoOrientation) orientation __deprecated_msg("Use rotateCameraWithOrientation: instead");
 
 /**
  * Returns the active call objects.

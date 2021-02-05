@@ -42,8 +42,6 @@
 }
 
 - (void) onFinish:(SMRestResponse *)response {
-    [logManager logMethodStarted:TAG withMethodName:_cmd];
-    
     if(nil != response) {
         if (completionBlock) {
             NSMutableDictionary * messageBodyDictionary = nil;
@@ -55,12 +53,9 @@
             completionBlock(nil, messageBodyDictionary);
         }
     }
-    
-    [logManager logMethodFinished:TAG withMethodName:_cmd];
 }
 
 - (void)onFailed:(CPError *) error{
-    [logManager logMethodStarted:TAG withMethodName:_cmd];
     
     if(!error)
         error = [[CPError alloc] initWithDomain:MOBILE_ERROR_DOMAIN code:ERROR_NULL_PARAMETER description:@"Rest failed."];
@@ -68,8 +63,6 @@
     [logManager log:ERROR withLogContext:TAG withMethodName:_cmd withMessage:[NSString stringWithFormat: @"Request failed. Error Code %ld -- Error description: %@",(long)error.code , error.description]];
     
     if(completionBlock) completionBlock(error, nil);
-    
-    [logManager logMethodFinished:TAG withMethodName:_cmd];
 }
 
 

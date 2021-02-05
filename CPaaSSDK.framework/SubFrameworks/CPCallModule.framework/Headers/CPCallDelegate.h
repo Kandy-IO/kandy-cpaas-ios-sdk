@@ -14,7 +14,6 @@
 #import <AVFoundation/AVFoundation.h>
 #import "CPCallStates.h"
 
-
 @class CPCallState;
 @class CPUriAddress;
 @class CPMediaAttributes;

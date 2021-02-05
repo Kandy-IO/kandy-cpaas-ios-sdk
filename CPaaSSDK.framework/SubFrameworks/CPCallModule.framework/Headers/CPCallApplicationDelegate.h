@@ -134,6 +134,25 @@ NS_ASSUME_NONNULL_BEGIN
 - (void) ignoreFailed:(id<CPCallDelegate>) call withError:(CPError *)error;
 
 /**
+ * Method invoked when attempt to sendRingingFeedback an incoming call has succeeded.
+ * @param call performed sendRingingFeedback successfully
+ * @see [IncomingCallDelegate sendRingingFeedback]
+ * @since 2.15.0
+ *
+ */
+- (void) sendRingingFeedbackSucceed:(id<CPIncomingCallDelegate>) call;
+
+/**
+ * Method invoked when attempt to sendRingingFeedback an incoming call has failed.
+ * @param call that coludn't send ringing feedback
+ * @param error definition of failure
+ * @see [IncomingCallDelegate sendRingingFeedback]
+ * @since 2.15.0
+ *
+ */
+- (void) sendRingingFeedbackFailed:(id<CPIncomingCallDelegate>) call withError:(CPError *) error;
+
+/**
  * This method is invoked when endCall has succeeded.
  * This is the call back method for the endCall request
  * @param call performed end successfully

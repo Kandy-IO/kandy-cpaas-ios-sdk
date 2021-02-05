@@ -5,6 +5,11 @@ CPaaS iOS SDK change log.
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
+## 2.15.0 - 2021-02-04
+
+### Added
+- Ringing feedback options`KAE-889` 
+
 ## 2.14.0 - 2020-12-30
 
 ## 2.13.0 - 2020-12-02

@@ -24,24 +24,6 @@ NS_ASSUME_NONNULL_BEGIN
  **/
 -(void)log:(CPLogLevel)logLevel withLogContext:(NSString *)logContext withMethodName:(SEL) methodName withMessage:(NSString*)logMessage;
 
-/**
- * Log method that calls the LoggingInterface implementation defined in Configuration
- * @param logContext NSString which includes package and class name
- * @param methodName SEL
- *
- * - Since: 1.0.0
- **/
--(void) logMethodStarted:(NSString *) logContext withMethodName:(SEL) methodName;
-
-/**
- * Log method that calls the LoggingInterface implementation defined in Configuration
- * @param logContext NSString which includes package and class name
- * @param methodName SEL
- *
- * - Since: 1.0.0
- **/
--(void) logMethodFinished:(NSString *) logContext withMethodName:(SEL)methodName;
-
 @end
 
 NS_ASSUME_NONNULL_END
