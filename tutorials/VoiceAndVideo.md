@@ -405,37 +405,54 @@ $KANDY$ can retrieve audio and video RTP/RTCP statistics providing information i
 #### ** Objective-C Code **
 
 ```objectivec
-#import "DemoRTPLogger.h"
+#define CONSOLE_RTP_LOG_PATH [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"CallStatistics.log"]
+#define MAX_CALL_LENGTH 5
 
-void RTPLog(NSString *format, ...){
-    va_list args;
-    va_start(args, format);
-    NSString *logString = [[NSString alloc] initWithFormat:format arguments:args];
-    [[DemoRTPLogger getInstance] writeLogToFile:logString];
-    va_end(args);
-}
-
-@interface DemoRTPLogger(){
-    
-    NSFileHandle *myHandle;
+@interface CallStatistics(){
+    NSFileHandle *handler;
+    /**
+      Example Data Structure of callStatistics
+        [
+         [
+          "callId1",
+            [
+              STATISTICS_DICTIONARY,
+              STATISTICS_DICTIONARY,
+              STATISTICS_DICTIONARY,
+              ....
+            ]
+         ],
+         [
+          "callId2",
+            [
+              STATISTICS_DICTIONARY,
+              STATISTICS_DICTIONARY,
+              STATISTICS_DICTIONARY,
+              ....
+            ]
+         ],
+         ....
+        ]
+     */
+    NSMutableArray<id> *callStatistics;
 }
 
 @end
 
-@implementation DemoRTPLogger
+@implementation CallStatistics
 
 __strong static id _instance = nil;
 
-
-+(instancetype)getInstance{
++ (instancetype)getInstance{
     @synchronized (self) {
         if(!_instance){
-            _instance = [[self alloc]init];
+            _instance = [[self alloc] init];
         };
     }
     return _instance;
 }
-- (id)init
+
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -444,44 +461,78 @@ __strong static id _instance = nil;
     return self;
 }
 
-- (void) initLogFile{
-    if(myHandle) [myHandle closeFile];
-    
-    if(![[NSFileManager defaultManager] fileExistsAtPath:CONSOLE_RTP_LOG_PATH])
+-(void) initLogFile{
+    if(![[NSFileManager defaultManager] fileExistsAtPath:CONSOLE_RTP_LOG_PATH]){
         [@"" writeToFile:CONSOLE_RTP_LOG_PATH atomically:YES encoding:NSUTF8StringEncoding error:nil];
-    
-    NSLog(@"Log File Path: %@", CONSOLE_RTP_LOG_PATH);
-    myHandle = [NSFileHandle fileHandleForUpdatingAtPath:CONSOLE_RTP_LOG_PATH];
+    }
+    handler = [NSFileHandle fileHandleForUpdatingAtPath:CONSOLE_RTP_LOG_PATH];
+    NSData *json = [handler readDataToEndOfFile];
+    callStatistics = [[NSMutableArray alloc] init];
+    if (json.length > 0) {
+        [self mapCallStatisticsArrayFromJson:json];
+    }
 }
 
-- (void) writeLogToFile:(NSString *)log {
-    
-    NSString *dateString = [NSDateFormatter localizedStringFromDate:[NSDate date]
-                                                          dateStyle:NSDateFormatterShortStyle
-                                                          timeStyle:NSDateFormatterMediumStyle];
-    [myHandle seekToEndOfFile];
-    [myHandle writeData:[[dateString stringByAppendingFormat:@": %@\n", log] dataUsingEncoding:NSUTF8StringEncoding]];
+- (void) mapCallStatisticsArrayFromJson:(NSData *) jsonData {
+    NSError *jsonError;
+    id json = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&jsonError];
+    if(jsonError) return;
+    for (id x in json) [callStatistics addObject:x];
 }
--(void)clearLogs{
+
+-(BOOL) checkIsNewCallWithCallId:(NSString *) callId {
+    for (NSMutableArray *x in callStatistics) {
+        NSString *tmpId = (NSString *) x.firstObject;
+        if([callId isEqualToString:tmpId]) return NO;
+    }
+    return YES;
+}
+
+- (void) saveStatisticsWithCallId:(NSString *)callId andStatistics:(NSString *)stats {
+    
+    if([self checkIsNewCallWithCallId:callId]) {
+        if (callStatistics.count == MAX_CALL_LENGTH) [callStatistics removeObjectAtIndex:0];
+        [callStatistics addObject: [NSMutableArray arrayWithObjects:callId, [NSMutableArray array], nil]];
+    }
+    
+    NSError *statsError;
+    NSDictionary *statsDict = [NSJSONSerialization
+                          JSONObjectWithData: [stats dataUsingEncoding:NSUTF8StringEncoding]
+                          options:NSJSONReadingMutableContainers
+                          error:&statsError];
+    [callStatistics.lastObject[1] addObject: statsDict];
+}
+
+- (void) writeLogToFile {
+    NSError *statsError;
+    NSData *data = [NSJSONSerialization dataWithJSONObject:callStatistics options:kNilOptions error:&statsError];
+    [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] writeToFile:CONSOLE_RTP_LOG_PATH atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    logWith(@"RTPStatistics has been wrote file");
+    
+}
+
+- (void)clearLogs{
     [@"" writeToFile:CONSOLE_RTP_LOG_PATH atomically:YES encoding:NSUTF8StringEncoding error:nil];
     [self initLogFile];
-    RTPLog(@"RTP Logs Cleaned");
+    logWith(@"RTP Logs Cleaned");
 }
--(void)closeFile{
-    [myHandle closeFile];
-}
+
 @end
 ```
 
 #### ** Swift Code **
 
 ```swift
-import Foundation
+struct StatsModel {
+    var callId:String
+    var stats:[Any]
+}
 
 class CallStatistics: NSObject {
     
     public static let sharedInstance = CallStatistics()
     private var handler: FileHandle?
+    private var callStatistics:[StatsModel] = []
     
     override init() {
         super.init()
@@ -489,62 +540,83 @@ class CallStatistics: NSObject {
     }
     
     private func initLogFile() {
-        let destPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
-        let fullDestPath = NSURL(fileURLWithPath: destPath).appendingPathComponent("CallStatistics.log")
-        let fullDestPathString = fullDestPath!.path
+        let fullDestPathString = getLogFilePath()
         if !FileManager.default.fileExists(atPath: fullDestPathString) {
             do {
                 try "".write(toFile: fullDestPathString, atomically: true, encoding: String.Encoding.utf8)
             } catch {
-                NSLog("Can't write to file to device directory - Error: \(error.localizedDescription)")
+                logWith("Can't write to file to device directory - Error: \(error.localizedDescription)")
             }
         }
         handler = FileHandle.init(forUpdatingAtPath: fullDestPathString)
-    }
-    
-    fileprivate func writeLogToFile(file: String, function: String, line: Int, queue: String, _ format: String, _ args: CVarArg...) {
-        let dateStr = DateFormatter.localizedString(from: Date(), dateStyle: .short, timeStyle: .medium)
-        let fileNameArr = file.components(separatedBy: "/")
-        let onlyTheFileName = fileNameArr.last ?? ""
-        let logStr = String(format: "[\(dateStr)]: [FUNCTION: \(function) AT \(onlyTheFileName).\(line) QUEUE: \(queue)] \(format) \n", args)
-        handler?.seekToEndOfFile()
-        if let logData = logStr.data(using: String.Encoding.utf8) {
-            handler?.write(logData)
+        let json = handler!.readDataToEndOfFile()
+        if json.count > 0 {
+            self.mapCallStatisticsArrayFromJson(json)
         }
-        let willLogged = String(format: format, args)
-        print(willLogged)
     }
     
-    func createZipFile() -> String {
+    func mapCallStatisticsArrayFromJson(_ jsonData:Data) {
+        let json = try! JSONSerialization.jsonObject(with: jsonData, options:.allowFragments) as! [[Any]]
+        for x:[Any] in json {
+            callStatistics.append(StatsModel(callId: x[0] as! String, stats: x[1] as! [Any]))
+        }
+       
+    }
+
+    func checkIsNewCall(_ callId:String!) -> Bool {
+        for x in callStatistics {
+            if (callId == x.callId) {return false}
+         }
+        return true
+    }
+
+    func saveStatistics(_ callId:String, stats:String!) {
+        if self.checkIsNewCall(callId) {
+            if callStatistics.count == 5 {
+                callStatistics.remove(at: 0)
+            }
+            callStatistics.append(StatsModel(callId: callId, stats: []))
+        }
+        let statsDict = try! JSONSerialization.jsonObject(with: stats.data(using: .utf8)!, options: .mutableContainers) as! NSDictionary
+        let lastIndex = callStatistics.count - 1
+        callStatistics[lastIndex].stats.append(statsDict)
+    }
+    
+    func createJsonArray() -> [Any] {
+        var jsonArray:[Any] = []
+        for statsModel in callStatistics {
+            jsonArray.append([statsModel.callId,statsModel.stats])
+        }
+        return jsonArray;
+    }
+    
+    func getLogFilePath() -> String {
         let destPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
         let fullDestPath = NSURL(fileURLWithPath: destPath).appendingPathComponent("CallStatistics.log")
-        let fullDestPathString = fullDestPath!.path
-        let zipDest = fullDestPathString.appending(".zip")
-        SSZipArchive.createZipFile(atPath: zipDest, withFilesAtPaths: [fullDestPathString])
-        return zipDest
+        return fullDestPath!.path
+    }
+
+    func writeLogToFile() {
+        let data = try! JSONSerialization.data(withJSONObject: createJsonArray(), options: .fragmentsAllowed)
+        let jsonString:String! = String(data:data, encoding:.utf8)
+        do {
+            try jsonString.write(toFile: getLogFilePath(), atomically:true, encoding: String.Encoding.utf8)
+        } catch {
+            logWith("Can't write to file to device directory - Error: \(error.localizedDescription)")
+        }
+        logWith("RTPStatistics has been wrote file")
     }
     
     func clearLogs() {
-        let destPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
-        let fullDestPath = NSURL(fileURLWithPath: destPath).appendingPathComponent("CallStatistics.log")
-        let fullDestPathString = fullDestPath!.path
         do {
-            try "".write(toFile: fullDestPathString, atomically: true, encoding: String.Encoding.utf8)
+            try "".write(toFile: getLogFilePath(), atomically: true, encoding: String.Encoding.utf8)
         } catch {
-            NSLog("Can't write to file to device directory - Error: \(error.localizedDescription)")
+            logWith("Can't write to file to device directory - Error: \(error.localizedDescription)")
         }
+        callStatistics = []
         initLogFile()
         logWith("RTP Logs Cleaned")
     }
-    func closeFile(){
-        handler?.closeFile()
-    }
-}
-
-func logRTP(_ format: String, file: String = #file, function: String = #function, line: Int = #line, args: CVarArg...) {
-    let queueName = OperationQueue.current?.name ?? ""
-    CallStatistics.sharedInstance.writeLogToFile(file: file, function: function, line: line, queue: queueName, format, args)
-    
 }
 ```
 <!-- tabs:end -->
@@ -594,10 +666,12 @@ It is recommended to call this method every 10 seconds as long as call continues
 
 ```objectivec
   [call getRTPStatistics:^(NSString * _Nullable statistics) {
-                if([call getCallState].type != CALLSTATES_ENDED && call != nil){
-                    RTPLog(statistics);
+            if ([call getCallState].type != CALLSTATES_ENDED && call != nil){
+                [[CallStatistics getInstance] saveStatisticsWithCallId:call.sessionId andStatistics:statistics];
+            } else {
+                [[CallStatistics getInstance] writeLogToFile];
             }
-                }];
+    }];
 ```
 
 #### ** Swift Code **
@@ -605,7 +679,9 @@ It is recommended to call this method every 10 seconds as long as call continues
 ```swift
     call.getRTPStatistics { (stat) in
             if(call.getCallState().type != .ended && (call != nil)) {
-                logRTP(stat!)
+                CallStatistics.sharedInstance.saveStatistics(call.id, stats: stat)
+            }else{
+                CallStatistics.sharedInstance.writeLogToFile()
             }
         }
 ```
