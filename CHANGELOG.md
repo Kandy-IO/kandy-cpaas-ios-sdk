@@ -5,6 +5,12 @@ CPaaS iOS SDK change log.
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
+## 2.17.0 - 2021-03-26
+
+### Added
+- XCFramework support was added
+- `(NSArray<NSDictionary *> *) getAvailableCodecs:(CPCodecType)codecType` added to CPCallDelegate class in order to get available codec attributes.
+
 ## 2.15.0 - 2021-02-04
 
 ### Added

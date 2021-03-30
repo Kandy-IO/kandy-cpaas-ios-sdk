@@ -1,0 +1,24 @@
+framework module CPUtilities {
+    umbrella header "CPUtilities.h"
+    
+    export *
+    module * { export * }
+    
+    explicit module Private {
+        header "CPTurnCredential.h"
+        header "CPUtility.h"
+        header "CPLogManager+Internal.h"
+        header "CPCodecSet+Internal.h"
+        header "CPThreadManager.h"
+        header "SMRestResponseStatus.h"
+        header "SMRestResponseStatusMapper.h"
+        header "CPConstants.h"
+        
+        export CPUtilities
+    }
+}
+
+module CPUtilities.Swift {
+    header "CPUtilities-Swift.h"
+    requires objc
+}

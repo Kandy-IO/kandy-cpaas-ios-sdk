@@ -16,7 +16,7 @@
 ...
 
 target 'YOUR_TARGET_NAME' do
-    pod 'KandyCPaaSMobileSDK', '~> 2.16.0'
+    pod 'KandyCPaaSMobileSDK', '~> 2.17.0'
 end
 
 post_install do |installer|
@@ -32,7 +32,7 @@ end
 
 ### Manual
 
-Alternatively *Kandy CPaaS iOS SDK* can be manually integrated to your project with the [followed steps](https://kandy-io.github.io/kandy-cpaas-ios-sdk/tutorials/#/GetStarted?id=manual-installation).
+Alternatively *Kandy CPaaS iOS SDK* can be manually integrated to your project with the [followed steps](https://kandy-io.github.io/kandy-cpaas-ios-sdk/tutorials/#/GetStarted?id=manual-installation-after-v2170).
 
 ## Documentation
 
@@ -46,22 +46,14 @@ The information about tutorials and documents can be found in the links below
 
 Compatible iOS versions :
 
-* iOS 10.x+
+* iOS 11.x+
 
 Compatible XCode and Swift Versions :
 
-* XCode 12.x+ (iOS Simulator arm64 architecture is ***not supported*** yet)
+* XCode 12.x+
 
 * Swift 5.2.x+
 
-Known Issues in XCode 12.3 :
-- When building your project you will get these errors 
-</br>`Building for iOS Simulator, but the linked and embedded framework ‘CPaaSSDK.framework’ was built for iOS + iOS Simulator.` 
-</br>`Building for iOS Simulator, but the linked and embedded framework ‘WebRTC.framework’ was built for iOS + iOS Simulator.`
-
-Workaround :
-- Set `Validate Workspace` to `YES` in the Build Settings tab to avoid these errors
-
 Tested on :
 
-* iPhone 5S, 5C, 6S, 7, 7+, 8, X, iPad mini, iPad 4, and iPad Air
+* iPhone 6S, 7, 7+, 8, X, iPad mini and iPad Air

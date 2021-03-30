@@ -53,6 +53,8 @@ end
 If you have a trouble with getting latest version of *$KANDY$ iOS SDK* plaese run these suggested commands [here](https://gist.github.com/mbinna/4202236) in project directory where Podfile is located.
 
 ### Manual Installation
+**IMPORTANT:** This installation section applies to **$KANDY$ iOS SDK** versions prior to v2.17.0. If you are using a more recent version, follow the instructions [here](GetStarted?id=manual-installation-after-v2170).
+
  Before those steps you need to download **$KANDY$ iOS SDK** framework file from [this link](https://raw.githubusercontent.com/Kandy-IO/kandy-cpaas-ios-sdk/$SDK_VERSION$/dist/CPaaSSDK_$SDK_VERSION$.zip)
 
 1. Go to project settings and navigate to **Build Phases**.
@@ -88,10 +90,66 @@ If you have a trouble with getting latest version of *$KANDY$ iOS SDK* plaese ru
 
   **Note:** If framework is located in different place rather than main directory of project, above line should be modified accordingly.
 
-**CPaaS SDK** is now ready to implementation.
-
 
 6. The following part shows how to use **$KANDY$ Mobile SDK** with basic features. While codes are shared for both *Swift* and *Objective-C* languages, some parts may need different implementations, are also indicated.
+
+  **If the project language is selected as *Swift*, do the following:**
+  * Navigate to the **Build Settings** in the project settings.
+  * Search for **Other Linker Flags** listed under the **Linking** and click.
+  * Click **+** button in the list appeared next under to the **Other Linker Flags**.
+  * Type *-ObjC* and close the panel.
+
+  ![alt text](img/get_started_3.png)
+
+  * In order to run framework, search for **Enable Bitcode** option listed under the **Build Options**, and change it to the **NO**.
+
+  $KANDY$ Mobile SDK is now ready to use in the application.
+
+### Manual Installation (After v2.17.0)
+Support for XCFramework has been added to **$KANDY$ iOS SDK** with the v2.17.0 release. You can install **$KANDY$ iOS SDK** as XCFramework by following the steps below. (more information about XCFramework, see [link](https://help.apple.com/xcode/mac/11.4/#/dev6f6ac218b)).
+
+First of all, you must have the **$KANDY$ iOS SDK** XCFramework file for installation. You can download from [this link](https://raw.githubusercontent.com/Kandy-IO/kandy-cpaas-ios-sdk/$SDK_VERSION$/dist/CPaaSSDK_$SDK_VERSION$.zip).
+
+1. Go to project settings and navigate to **General**.
+2. Add **CPaaSSDK.xcframework** and **WebRTC.xcframework** under **Framework, Libraries, and Embedded Content** section.
+
+![Adding CPaaSSDK XCFramework to Project](img/get_started_6.png)
+
+3. Add the following frameworks to the project under the **Link Binary With Libraries**:
+	* AvFoundation.framework
+	* SystemConfiguration.framework
+	* CFNetwork.framework
+	* Security.framework
+	* OpenGLES.framework
+	* QuartzCore.framework
+	* AudioToolbox.framework
+	* CoreAudio.framework
+	* CoreMedia.framework
+	* CoreVideo.framework
+	* CoreGraphics.framework
+	* UIKit.framework
+	* Foundation.framework
+	* GLKit.framework
+	* libc++.tbd
+	* libsqlite3.tbd
+	* libstdc++.6.0.9.tbd
+	* libstdc++.tbd
+	* libicucore.tbd
+
+4. Under the **Build Settings** section, search for **Framework Search Paths** and add the following paths:
+
+    **Debug & Release** Any iOS Simulator SDK: 
+    `$(PROJECT_DIR)/CPaaSSDK.xcframework/ios-arm64_x86_64-simulator/CPaaSSDK.framework/SubFrameworks/`
+
+    **Debug & Release** Any iOS SDK: 
+    `$(PROJECT_DIR)/CPaaSSDK.xcframework/ios-arm64/CPaaSSDK.framework/SubFrameworks/`
+
+    ![Fremework Search Paths](img/get_started_7.png)
+    
+
+    **Note:** If framework is located in different place rather than main directory of project, above line should be modified accordingly.
+
+5. The following part shows how to use **$KANDY$ Mobile SDK** with basic features. While codes are shared for both *Swift* and *Objective-C* languages, some parts may need different implementations, are also indicated.
 
   **If the project language is selected as *Swift*, do the following:**
   * Navigate to the **Build Settings** in the project settings.
