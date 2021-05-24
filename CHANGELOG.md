@@ -5,6 +5,8 @@ CPaaS iOS SDK change log.
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
+## 2.18.0 - 2021-04-26
+
 ## 2.17.0 - 2021-03-26
 
 ### Added
@@ -16,9 +18,20 @@ CPaaS iOS SDK change log.
 ### Added
 - Ringing feedback options`KAE-889` 
 
+### Fixed
+- First time build issue is fixed. `KAE-812`
+- Cannot make multiple calls in a short time is fixed. `KAE-891`
+- Cannot make anonymous call is fixed. `KAE-924`
+- WebRTC video orientation parameter should sync with Call Service video orientation is fixed. `KAE-916`
+- WebSocket link created infinitely after WiFi reconnect is fixed. `KAE-911`
+- Connection state change issue is fixed. `KAE-902`
+
 ## 2.14.0 - 2020-12-30
 
 ## 2.13.0 - 2020-12-02
+
+### Fixed
+- Printing call states is fixed. `KAE-885`
 
 ### Removed
 - `useSecureConnection`, `domain`, `earlyMediaEnabled` and `DTLS` parameters removed from Configuration. `KAE-862`
