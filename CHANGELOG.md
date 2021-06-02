@@ -5,6 +5,12 @@ CPaaS iOS SDK change log.
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
+## 2.19.0 - 2021-06-01
+
+### Fixed
+- Support for compressed push types is fixed. `KAE-984`
+- Cannot receive notification about admin assignation in group chat is fixed. `KAE-976`
+
 ## 2.18.0 - 2021-04-26
 
 ## 2.17.0 - 2021-03-26
@@ -20,7 +26,7 @@ CPaaS iOS SDK change log.
 
 ### Fixed
 - First time build issue is fixed. `KAE-812`
-- Cannot make multiple calls in a short time is fixed. `KAE-891`
+- Cannot make multiple calls in short time is fixed. `KAE-891`
 - Cannot make anonymous call is fixed. `KAE-924`
 - WebRTC video orientation parameter should sync with Call Service video orientation is fixed. `KAE-916`
 - WebSocket link created infinitely after WiFi reconnect is fixed. `KAE-911`
