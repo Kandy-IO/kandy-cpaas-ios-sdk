@@ -9,4 +9,4 @@
  *
  */
 
-#define CPaaS_SDK_VERSION @"2.20.0"
+#define CPaaS_SDK_VERSION @"2.21.0"
