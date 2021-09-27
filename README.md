@@ -50,10 +50,16 @@ Compatible iOS versions :
 
 Compatible XCode and Swift Versions :
 
-* XCode 12.x+
+* XCode 12.x, 13.x (Only for Cocoapods build)
 
 * Swift 5.2.x+
 
 Tested on :
 
-* iPhone 6S, 7, 7+, 8, X, iPad mini and iPad Air
+* iPhone 6S, 7, 7+, 8, X, 11, 11 Pro, iPad mini and iPad Air
+
+## Known Issues
+
+* Build issues with manuel SDK integration on XCode 13.x version.
+
+* Build issues on systems using Apple Silicon M1 chip.

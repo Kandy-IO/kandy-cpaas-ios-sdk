@@ -5,6 +5,14 @@ CPaaS iOS SDK change log.
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
+## 2.22.0 - 2021-09-27
+
+### Known Issues
+
+- Build issues with manuel SDK integration on XCode 13.x version.
+
+- Build issues on systems using Apple Silicon M1 chip.
+
 ## 2.21.0 - 2021-08-16
 
 ## 2.20.0 - 2021-06-29

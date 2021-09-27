@@ -98,4 +98,9 @@ FOUNDATION_EXPORT const unsigned char NotificationEngineVersionString[];
  */
 + (NSTimeInterval) disconnectedTime;
 
+/**
+ * Websocket connect time
+ */
+@property NSDate *connectTime;
+
 @end

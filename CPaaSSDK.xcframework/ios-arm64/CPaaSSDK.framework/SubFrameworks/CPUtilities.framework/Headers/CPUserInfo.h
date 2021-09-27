@@ -77,6 +77,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong) CPTurnCredential *turnCredentials;
 
+/**
+ * Channel lifetime of the websocket.
+ * - Returns: Integer
+ * - Since: 2.22.0
+ */
+@property (nonatomic) NSInteger channelLifeTime;
+
 NS_ASSUME_NONNULL_END
 
 @end
