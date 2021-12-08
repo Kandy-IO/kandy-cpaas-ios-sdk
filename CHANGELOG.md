@@ -5,6 +5,20 @@ CPaaS iOS SDK change log.
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
+## 2.23.1 - 2021-12-07
+
+### Fixed
+- Build issues on systems using Apple Silicon M1 chip fixed.
+
+## 2.23.0 - 2021-11-03
+
+### Fixed
+- XCode 13 compile issues were fixed.
+
+### Known Issues
+
+- Build issues on systems using Apple Silicon M1 chip.
+
 ## 2.22.0 - 2021-09-27
 
 ### Known Issues

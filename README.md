@@ -16,7 +16,7 @@
 ...
 
 target 'YOUR_TARGET_NAME' do
-    pod 'KandyCPaaSMobileSDK', '~> 2.23.0'
+    pod 'KandyCPaaSMobileSDK', '~> 2.23.1'
 end
 
 post_install do |installer|
@@ -60,4 +60,3 @@ Tested on :
 
 ## Known Issues
 
-* Build issues on systems using Apple Silicon M1 chip.
