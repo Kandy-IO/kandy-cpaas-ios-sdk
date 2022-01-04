@@ -5,6 +5,8 @@ CPaaS iOS SDK change log.
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
+## 2.24.0 - 2022-01-03
+
 ## 2.23.1 - 2021-12-07
 
 ### Fixed
