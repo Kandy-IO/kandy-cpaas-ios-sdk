@@ -5,6 +5,17 @@ CPaaS iOS SDK change log.
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
+## 3.0.0 - 2022-02-28
+
+### Added
+- Upgrading WebRTC to M97. `KAE-1153`
+    - With the M97 upgrade, WebRTC backward compatibility is broken, so there might be problem with Cisco and Transfer calls.
+
+### Fixed
+- SendingRingingFeedBack functionality is fixed. `KAE-1213`
+- Missing architecture arm64 is fixed. `KAE-1191`
+- Call state after consultative transfer is fixed. `KAE-1131` `KAE-1047`
+
 ## 2.24.0 - 2022-01-03
 
 ## 2.23.1 - 2021-12-07
