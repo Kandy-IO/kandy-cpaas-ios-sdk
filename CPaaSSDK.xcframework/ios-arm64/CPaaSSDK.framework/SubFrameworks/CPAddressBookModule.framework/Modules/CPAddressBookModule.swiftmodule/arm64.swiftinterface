@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CPAddressBookModule
 import CPUtilities
 import Foundation
@@ -7,6 +7,7 @@ import CPUtilities.Private
 import RestManager
 import Swift
 import UIKit
+import _Concurrency
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class CPContact : ObjectiveC.NSObject {
   @objc public var contactId: Swift.String
   @objc public var firstName: Swift.String
@@ -33,7 +34,6 @@ import UIKit
   @objc public var listId: Swift.String
   @objc public var resourceUrl: Swift.String
   @objc public init(listId: Swift.String)
-  @objc override dynamic public init()
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class CPSearchFilter : ObjectiveC.NSObject {
@@ -80,12 +80,12 @@ import UIKit
   @objc deinit
 }
 @objc public class CPAddressBookService : ObjectiveC.NSObject, CPUtilities.CPServiceProtocol {
-  public typealias CPAddressBookRetrieveBlock = (CPUtilities.CPError?, Swift.Array<CPAddressBookModule.CPContact>?) -> ()
-  public typealias CPDirectorySearchRetrieveBlock = (CPUtilities.CPError?, CPAddressBookModule.CPSearchResult?) -> ()
-  public typealias CPAddressBookSuccessBlock = (CPUtilities.CPError?) -> ()
-  public typealias CPContactRetrieveBlock = (CPUtilities.CPError?, CPAddressBookModule.CPContact) -> ()
-  public typealias CPAddressBookListRetrieveBlock = (CPUtilities.CPError?, Swift.Array<CPAddressBookModule.CPAddressBookList>?) -> ()
-  public typealias CPAddressBookListBlock = (CPUtilities.CPError?, CPAddressBookModule.CPAddressBookList?) -> ()
+  public typealias CPAddressBookRetrieveBlock = (_ error: CPUtilities.CPError?, _ contactList: Swift.Array<CPAddressBookModule.CPContact>?) -> ()
+  public typealias CPDirectorySearchRetrieveBlock = (_ error: CPUtilities.CPError?, _ result: CPAddressBookModule.CPSearchResult?) -> ()
+  public typealias CPAddressBookSuccessBlock = (_ error: CPUtilities.CPError?) -> ()
+  public typealias CPContactRetrieveBlock = (_ error: CPUtilities.CPError?, _ contact: CPAddressBookModule.CPContact) -> ()
+  public typealias CPAddressBookListRetrieveBlock = (_ error: CPUtilities.CPError?, _ addressBookLists: Swift.Array<CPAddressBookModule.CPAddressBookList>?) -> ()
+  public typealias CPAddressBookListBlock = (_ error: CPUtilities.CPError?, _ addressBookList: CPAddressBookModule.CPAddressBookList?) -> ()
   public init(userInfo: CPUtilities.CPUserInfo, info: CPUtilities.CPServiceInfo)
   @objc public func addContact(addressBookId: Swift.String = "default", contact: CPAddressBookModule.CPContact, completion: @escaping CPAddressBookModule.CPAddressBookService.CPAddressBookSuccessBlock)
   @objc public func updateContact(addressBookId: Swift.String = "default", contact: CPAddressBookModule.CPContact, completion: @escaping CPAddressBookModule.CPAddressBookService.CPAddressBookSuccessBlock)
@@ -105,7 +105,6 @@ import UIKit
   @objc public func unsubscribe(channelID: Swift.String, completion: @escaping CPUtilities.UnsubscribeCompletion)
   @objc public func notifications() -> [Swift.String]
   @objc deinit
-  @objc override dynamic public init()
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class CPSearchResult : ObjectiveC.NSObject {
   @objc public var contacts: Swift.Array<CPAddressBookModule.CPContact>? {

@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CPaaSSDK
 import CPAddressBookModule
 import CPAuthenticationModule
@@ -10,6 +10,7 @@ import CPPushModule
 import CPUtilities
 @_exported import CPaaSSDK
 import Swift
+import _Concurrency
 @_inheritsConvenienceInitializers @objc public class CPaaS : ObjectiveC.NSObject {
   @objc final public let version: Swift.String
   @objc public var authenticationService: CPAuthenticationModule.CPAuthenticationService! {
@@ -36,6 +37,6 @@ import Swift
   @objc deinit
   @objc override dynamic public init()
 }
-extension CPaaS {
+extension CPaaSSDK.CPaaS {
   @objc convenience dynamic public init?(services: [CPUtilities.CPServiceInfo])
 }

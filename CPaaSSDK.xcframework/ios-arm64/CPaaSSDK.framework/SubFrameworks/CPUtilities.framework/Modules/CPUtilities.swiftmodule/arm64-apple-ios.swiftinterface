@@ -1,12 +1,13 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CPUtilities
 @_exported import CPUtilities
 import Foundation
 import Swift
-public typealias DeleteCompletionBlock = (CPUtilities.CPError?) -> ()
-public typealias ErrorCompletionBlock = (CPUtilities.CPError?) -> ()
-public typealias FetchCompletionBlock = (CPUtilities.CPError?, [Swift.AnyHashable : Any]?) -> ()
+import _Concurrency
+public typealias DeleteCompletionBlock = (_ error: CPUtilities.CPError?) -> ()
+public typealias ErrorCompletionBlock = (_ error: CPUtilities.CPError?) -> ()
+public typealias FetchCompletionBlock = (_ error: CPUtilities.CPError?, _ response: [Swift.AnyHashable : Any]?) -> ()
 @objc public enum ServiceType : Swift.Int, Swift.RawRepresentable {
   public typealias RawValue = Swift.String
   case sms = 0
@@ -94,7 +95,6 @@ public typealias FetchCompletionBlock = (CPUtilities.CPError?, [Swift.AnyHashabl
   public init(type: CPUtilities.ServiceType, push: Swift.Bool)
   @objc public static func build(type: CPUtilities.ServiceType, push: Swift.Bool) -> CPUtilities.CPServiceInfo
   @objc deinit
-  @objc override dynamic public init()
 }
 public enum CPSubscriptionState {
   case pending
@@ -102,10 +102,10 @@ public enum CPSubscriptionState {
   case subscribed
   case unsubscribed
   public static func == (a: CPUtilities.CPSubscriptionState, b: CPUtilities.CPSubscriptionState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
 public class CPSubscriptionStatus {
   public var error: CPUtilities.CPError? {
@@ -119,8 +119,8 @@ public class CPSubscriptionStatus {
   public func failed() -> Swift.Bool
   @objc deinit
 }
-public typealias SubscribeCompletion = (Swift.String, CPUtilities.CPError?) -> ()
-public typealias UnsubscribeCompletion = (CPUtilities.CPError?) -> ()
+public typealias SubscribeCompletion = (_ notification: Swift.String, _ error: CPUtilities.CPError?) -> ()
+public typealias UnsubscribeCompletion = (_ error: CPUtilities.CPError?) -> ()
 @objc public protocol CPServiceProtocol : ObjectiveC.NSObjectProtocol {
   @objc func serviceInfo() -> CPUtilities.CPServiceInfo
   @objc func notifications() -> [Swift.String]
@@ -136,6 +136,6 @@ open class CPSubscriptionInfo : Swift.Hashable {
   final public let resourceURL: Swift.String
   public var expires: Swift.UInt64
   public init(channelID: Swift.String, resourceURL: Swift.String)
-  @objc deinit
   open func hash(into hasher: inout Swift.Hasher)
+  @objc deinit
 }
