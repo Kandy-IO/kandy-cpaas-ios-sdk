@@ -16,7 +16,7 @@
 ...
 
 target 'YOUR_TARGET_NAME' do
-    pod 'KandyCPaaSMobileSDK', '~> 3.0.0'
+    pod 'KandyCPaaSMobileSDK', '~> 3.1.0'
 end
 
 post_install do |installer|
@@ -50,7 +50,7 @@ Compatible iOS versions :
 
 Compatible XCode and Swift Versions :
 
-* XCode 12.x
+* XCode 13.2.x
 
 * Swift 5.2.x+
 
@@ -60,3 +60,4 @@ Tested on :
 
 ## Known Issues
 
+Xcode 13 and Xcode 13.1 may crash due to using Swift Concurrency. [Apple Clang Compiler Known Issue](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_2-release-notes)
