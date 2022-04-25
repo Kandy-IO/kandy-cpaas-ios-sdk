@@ -5,6 +5,11 @@ CPaaS iOS SDK change log.
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
+## 3.2.0 - 2022-04-25
+
+### Fixed
+- Fetching messages according to time criteria fixed on FetchOptions(). `KAE-1255` 
+
 ## 3.1.0 - 2022-03-28
 
 ## 3.0.0 - 2022-02-28

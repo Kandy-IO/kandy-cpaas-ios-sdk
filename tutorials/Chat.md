@@ -241,9 +241,13 @@ CPConversation* conversation = [self getSavedConversationWithParticpant: destina
 ```
 <!-- tabs:end -->
 
-### Fetch a number of messages from the server
+### Fetch messages by criteria from the server
 
-Retrieve a list of message objects by filter from the server.
+Retrieve a list of message objects by filter from the server. You can filter messages options using FetchOptions.
+FetchOptions filter has provided filter parameters; max, lastMessageTime and isNew.
+* max: Filters the maximum number of messages according to max parameter 
+* lastMessageTime: Filters  the messages according to lastMessageTime parameter
+* isNew: Specifies message delivery status
 
 <!-- tabs:start -->
 
@@ -254,7 +258,8 @@ import CPaaSSDK
 
 let destination: String = "user_b@domain.com"
 let options : FetchOptions = FetchOptions()
-options.max = 10
+options.max = 10 // A maximum of 10 messages will be fetched.
+options.lastMessageTime = 1650619984 // Fetches the messages written after 22 April 2022  09:33:03
 if let conversation = self.getSavedConversation(withParticipant: destination) {
     conversation?.fetchMessages(options:options) {
         (error: CPError?, fetchResult:FetchResult?) -> Void in
@@ -278,8 +283,8 @@ NSString* destination = @"user_b@domain.com";
 CPConversation* conversation = [self getSavedConversationWithParticpant: destination];
 
 FetchOptions * options = [[FetchOptions alloc] init];
-options.max = 10;
-
+options.max = 10;  // A maximum of 10 messages will be fetched.
+options.lastMessageTime = 1650619984; // Fetches the messages written after 22 April 2022  09:33:03
 [conversation fetchMessagesWithFetchOptions:options completion:^(CPError * _Nullable error, FetchResult * _Nullable fetchResult) {
     if (error == nil) {
       for (CPMessage* message in fetchResult.result) {
