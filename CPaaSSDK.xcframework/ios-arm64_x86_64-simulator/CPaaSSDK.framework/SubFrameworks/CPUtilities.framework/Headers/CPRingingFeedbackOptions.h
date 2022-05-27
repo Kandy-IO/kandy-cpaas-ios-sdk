@@ -12,17 +12,18 @@
 /**
  * Enum values for ringing feedback options
  *
- *NONE --> There will be no ringing feedback.
- *CLIENT --> Client based ringing feedback.
+ *APP --> Ringing Feedback is reponsibility of application.
+ *AUTO --> Auto ringing feedback mechanism by SDK.
  *
  * @since 2.15.0
+ * @updated 3.3.0
  **/
 
 typedef NS_ENUM(NSInteger, CPRingingFeedbackOptions) {
     
-    /** There will be no ringing feedback. */
-    NONE NS_SWIFT_NAME(none),
+    /** Ringing Feedback is reponsibility of application. */
+    APP NS_SWIFT_NAME(app),
     
-    /**  Client based ringing feedback. */
-    CLIENT NS_SWIFT_NAME(client),
+    /**  Auto ringing feedback mechanism by SDK. */
+    AUTO NS_SWIFT_NAME(auto),
 };
