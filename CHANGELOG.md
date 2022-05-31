@@ -7,6 +7,13 @@ CPaaS iOS SDK change log.
 
 ## 3.3.0 - 2022-05-27
 
+### Added
+- Added support for handling notifications with the same id. `KAE-1276`
+
+### Changed
+- Ringing feedback parameters have been rearranged. 
+    - The `CLIENT` parameter has been changed to `AUTO` and the `NONE` parameter has been changed to `APP`. `KAE-1268`
+
 ## 3.2.0 - 2022-04-25
 
 ### Fixed
